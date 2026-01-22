@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\CategoryRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data JPA\",\n    \"Java Persistence API (JPA)\"\n  ],\n  \"role\": \"Repository interface for managing Category entities in the database.\",\n  \"key_features\": [\n    \"Extends JpaRepository for CRUD operations\",\n    \"Provides a method to find a Category by its name\"\n  ],\n  \"key_code\": [\n    \"public interface CategoryRepository extends JpaRepository<Category, Long>\",\n    \"Optional<Category> findByName(String name)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves managing categories, possibly for a content management system or an e-commerce application.\"\n  ]\n}\n```"
+}

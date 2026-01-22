@@ -1,0 +1,126 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\query\\RequireReviewQueryRepository.java",
+    "language": "java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "repository",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "review",
+      "submission",
+      "required",
+      "code"
+    ],
+    "entities": [
+      "RequiredCodeReviewResponseDto",
+      "ReviewRematchTargetQueryDto"
+    ],
+    "modules": [
+      "repository",
+      "query"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "필요한 리뷰 조회",
+      "verb_object": "리뷰 조회",
+      "inputs": [
+        "Long userId"
+      ],
+      "outputs": [
+        "List<RequiredCodeReviewResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "리뷰 재매칭 대상 조회",
+      "verb_object": "재매칭 대상 조회",
+      "inputs": [
+        "Long submissionId"
+      ],
+      "outputs": [
+        "List<ReviewRematchTargetQueryDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "필요한 리뷰 삭제",
+      "verb_object": "리뷰 삭제",
+      "inputs": [
+        "Long userId",
+        "Long programId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository",
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "유지보수 용이",
+      "재사용 가능성",
+      "단일 책임 원칙 준수",
+      "테스트 용이성"
+    ],
+    "risks": [
+      "의존성 주입 문제",
+      "예외 처리 부족",
+      "성능 저하 가능성",
+      "동시성 문제",
+      "확장성 부족"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리",
+      "로깅",
+      "트랜잭션 관리",
+      "보안 검증"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "RequiredCodeReviewResponseDto"
+    },
+    {
+      "type": "import",
+      "text": "ReviewRematchTargetQueryDto"
+    },
+    {
+      "type": "call",
+      "text": "getRequiredReviews(Long userId)"
+    },
+    {
+      "type": "call",
+      "text": "findAllReviewRematchTargets(Long submissionId)"
+    },
+    {
+      "type": "call",
+      "text": "deleteRequiredReviewsByUserAndProgram(Long userId, Long programId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+query",
+      "review+submission"
+    ],
+    "related_files_guess": []
+  }
+}

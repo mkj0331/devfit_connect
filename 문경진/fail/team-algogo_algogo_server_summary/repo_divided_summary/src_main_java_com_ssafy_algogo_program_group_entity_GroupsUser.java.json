@@ -1,0 +1,128 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\GroupsUser.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "group",
+      "user",
+      "role",
+      "program"
+    ],
+    "entities": [
+      "GroupsUser",
+      "ProgramUser",
+      "Program",
+      "User"
+    ],
+    "modules": [
+      "group",
+      "entity"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 사용자 생성",
+      "verb_object": "사용자 생성",
+      "inputs": [
+        "ProgramUserStatus",
+        "Program",
+        "User",
+        "GroupRole"
+      ],
+      "outputs": [
+        "GroupsUser"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "그룹 역할 업데이트",
+      "verb_object": "역할 업데이트",
+      "inputs": [
+        "GroupRole"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Factory Method"
+    ],
+    "cross_cutting": [
+      "Validation"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 역할 관리",
+      "유연한 객체 생성",
+      "안전한 접근 제어",
+      "유지보수 용이",
+      "명시적 생성자 사용"
+    ],
+    "risks": [
+      "역할 변경 시 데이터 무결성 문제",
+      "잘못된 입력에 대한 예외 처리 부족",
+      "상속으로 인한 복잡성 증가",
+      "의존성 주입 문제",
+      "동시성 문제"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리",
+      "로깅",
+      "유효성 검사",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table(name = \"group_rooms_users\")"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "call",
+      "text": "super(programUserStatus, program, user)"
+    },
+    {
+      "type": "call",
+      "text": "create(ProgramUserStatus, Program, User, GroupRole)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+group",
+      "user+role"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramUser.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java"
+    ]
+  }
+}

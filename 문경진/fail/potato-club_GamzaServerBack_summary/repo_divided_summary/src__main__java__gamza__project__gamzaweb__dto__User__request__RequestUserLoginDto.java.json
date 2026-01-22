@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\User\\request\\RequestUserLoginDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"사용자 로그인 요청 데이터 전송 객체\",\n  \"key_features\": [\n    \"사용자의 이메일과 비밀번호를 저장\",\n    \"로그인 요청 시 필요한 데이터 구조 제공\"\n  ],\n  \"key_code\": [\n    \"private String email;\",\n    \"private String password;\"\n  ],\n  \"project_hints\": [\n    \"사용자 인증 및 로그인 기능을 포함하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\aop\\AdminCheckParamAOP.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring AOP\",\n    \"Jakarta Servlet\",\n    \"Lombok\"\n  ],\n  \"role\": \"이 파일은 관리자 권한을 확인하고, 해당 권한이 있는 사용자의 정보를 가져오는 역할을 수행합니다.\",\n  \"key_features\": [\n    \"사용자의 액세스 토큰을 검증하여 관리자 권한을 확인\",\n    \"관리자 권한이 없는 경우 예외를 발생시킴\",\n    \"사용자의 ID를 추출하여 데이터베이스에서 사용자 정보를 조회\"\n  ],\n  \"key_code\": [\n    \"if(!userRole.equals(\\\"0\\\")) { throw new UnAuthorizedException(\\\"401 NOT ADMIN\\\", ErrorCode.UNAUTHORIZED_EXCEPTION); }\",\n    \"Long userId = jwtTokenProvider.extractId(accessToken);\",\n    \"return jpaAssistance.getUserPkValue(userId);\"\n  ],\n  \"project_hints\": [\n    \"이 프로젝트는 사용자 인증 및 권한 관리와 관련된 웹 애플리케이션으로 보입니다.\",\n    \"특히 관리자 권한을 가진 사용자만 접근할 수 있는 기능을 제공하는 시스템으로 추측됩니다.\"\n  ]\n}\n```"
+}

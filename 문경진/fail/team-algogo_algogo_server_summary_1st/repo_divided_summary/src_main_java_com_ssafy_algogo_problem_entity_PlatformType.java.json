@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\PlatformType.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Enum\"],\n  \"role\": \"Defines an enumeration for different types of programming platforms.\",\n  \"key_features\": [\"Enumeration of platform types\", \"Easy categorization of platforms\"],\n  \"key_code\": [\"public enum PlatformType {\", \"BOJ,\", \"PROGRAMMERS,\", \"SWEA\"],\n  \"project_hints\": [\"The project may involve solving algorithmic problems from various platforms.\"]\n}\n```"
+}

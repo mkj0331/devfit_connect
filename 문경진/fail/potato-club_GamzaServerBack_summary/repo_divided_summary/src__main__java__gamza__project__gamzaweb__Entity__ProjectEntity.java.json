@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\ProjectEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Persistence (JPA)\",\n    \"Lombok\"\n  ],\n  \"role\": \"이 파일은 프로젝트의 데이터베이스 엔티티를 정의하며, 프로젝트 관련 정보를 저장하고 관리하는 역할을 담당합니다.\",\n  \"key_features\": [\n    \"프로젝트의 기본 정보(이름, 설명, 상태 등)를 저장\",\n    \"이미지, 협력자, 신청서 등의 관련 엔티티와의 관계 설정\",\n    \"프로젝트의 상태 및 승인 상태를 관리하는 메서드 제공\",\n    \"협력자를 추가하고 확인하는 기능 제공\"\n  ],\n  \"key_code\": [\n    \"@Entity\",\n    \"@Id\",\n    \"@GeneratedValue(strategy = GenerationType.IDENTITY)\",\n    \"public void addProjectCollaborator(List<CollaboratorEntity> collaborators) { this.collaborators.addAll(collaborators); }\",\n    \"public boolean isCollaborator(Long userId) { return collaborators.stream().anyMatch(collaborator -> collaborator.getUser().getId().equals(userId)); }\"\n  ],\n  \"project_hints\": [\n    \"프로젝트 관리 시스템 또는 협업 플랫폼과 관련된 주제\"\n  ]\n}\n```"
+}

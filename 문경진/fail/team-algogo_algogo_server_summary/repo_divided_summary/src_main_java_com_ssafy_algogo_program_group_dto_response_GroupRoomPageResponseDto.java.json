@@ -1,0 +1,131 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GroupRoomPageResponseDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "GroupRoom",
+      "Page",
+      "Response",
+      "DTO"
+    ],
+    "entities": [
+      "GroupRoomResponseDto",
+      "PageInfo",
+      "SortInfo"
+    ],
+    "modules": [
+      "group",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹룸 페이지 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "Page<GroupRoomResponseDto>",
+        "boolean isUser"
+      ],
+      "outputs": [
+        "GroupRoomPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "페이지 정보 추출",
+      "verb_object": "정보 추출",
+      "inputs": [
+        "Page<GroupRoomResponseDto>"
+      ],
+      "outputs": [
+        "PageInfo"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "정렬 정보 추출",
+      "verb_object": "정렬 정보 추출",
+      "inputs": [
+        "Page<GroupRoomResponseDto>"
+      ],
+      "outputs": [
+        "SortInfo"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Spring 프레임워크 활용",
+      "DTO 패턴 사용",
+      "페이지네이션 지원",
+      "정렬 정보 포함"
+    ],
+    "risks": [
+      "데이터 유효성 검사 부족",
+      "예외 처리 미비",
+      "의존성 증가",
+      "확장성 문제",
+      "테스트 부족"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "API 문서화",
+      "로깅",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Page;"
+    },
+    {
+      "type": "call",
+      "text": "new GroupRoomPageResponseDto(...)"
+    },
+    {
+      "type": "call",
+      "text": "PageInfo.of(groupRoomResponseDto)"
+    },
+    {
+      "type": "call",
+      "text": "SortInfo.of(groupRoomResponseDto)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "group+room",
+      "api+response"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GroupRoomResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\GroupRoomRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\service\\GroupRoomService.java"
+    ]
+  }
+}

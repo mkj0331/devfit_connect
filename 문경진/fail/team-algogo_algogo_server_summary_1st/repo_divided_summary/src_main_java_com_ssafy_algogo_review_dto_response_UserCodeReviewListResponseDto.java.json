@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\UserCodeReviewListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jackson\",\n    \"Java Records\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for user code review list response\",\n  \"key_features\": [\n    \"Encapsulates pagination information through PageInfo\",\n    \"Holds a list of user code review responses\",\n    \"Uses JSON serialization with Jackson annotations\"\n  ],\n  \"key_code\": [\n    \"public record UserCodeReviewListResponseDto(PageInfo pageInfo, List<UserCodeReviewResponseDto> receiveCodeReviews)\",\n    \"public static UserCodeReviewListResponseDto from(PageInfo pageInfo, List<UserCodeReviewResponseDto> receiveCodeReviews)\"\n  ],\n  \"project_hints\": [\n    \"Part of a code review system\",\n    \"Handles user code reviews\",\n    \"Supports pagination in responses\"\n  ]\n}\n```"
+}

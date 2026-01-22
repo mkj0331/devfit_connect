@@ -1,0 +1,162 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\query\\GroupQueryRepositoryImpl.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "QueryDSL"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Group",
+      "Program",
+      "User",
+      "Invite",
+      "Join"
+    ],
+    "entities": [
+      "GroupRoom",
+      "Program",
+      "ProgramUserStatus",
+      "ProgramInvite",
+      "ProgramJoin"
+    ],
+    "modules": [
+      "group",
+      "program",
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 초대 조회",
+      "verb_object": "초대 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "GetReceivedGroupInviteResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "그룹 참여 요청 조회",
+      "verb_object": "참여 요청 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "GetSentGroupJoinResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    },
+    {
+      "name": "그룹 정보 조회",
+      "verb_object": "정보 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "GroupRoomResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "내 그룹 정보 조회",
+      "verb_object": "내 그룹 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "MyGroupRoomResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.75
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository",
+      "DTO"
+    ],
+    "cross_cutting": [
+      "Transaction"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 접근 방식",
+      "DTO 사용",
+      "Spring 기반",
+      "QueryDSL 활용",
+      "Repository 패턴 적용"
+    ],
+    "risks": [
+      "복잡한 쿼리로 인한 성능 저하",
+      "예외 처리 미비",
+      "동시성 문제 가능성",
+      "유저 상태 관리의 복잡성",
+      "테스트 부족 가능성"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "예외 처리",
+      "유효성 검사",
+      "성능 모니터링",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.querydsl.jpa.impl.JPAQueryFactory;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Repository"
+    },
+    {
+      "type": "call",
+      "text": "fetch();"
+    },
+    {
+      "type": "query",
+      "text": "from(programJoin)"
+    },
+    {
+      "type": "query",
+      "text": "leftJoin(memberUser)"
+    },
+    {
+      "type": "query",
+      "text": "where(programJoin.user.id.eq(userId))"
+    },
+    {
+      "type": "query",
+      "text": "groupBy(programJoin.id)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "api+repository",
+      "group+program"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetReceivedGroupInviteResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetSentGroupJoinResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\GroupRoom.java"
+    ]
+  }
+}

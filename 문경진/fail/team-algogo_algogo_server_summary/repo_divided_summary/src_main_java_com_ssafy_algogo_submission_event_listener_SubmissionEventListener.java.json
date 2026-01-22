@@ -1,0 +1,129 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\listener\\SubmissionEventListener.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "submission",
+      "event",
+      "review",
+      "match"
+    ],
+    "entities": [
+      "SubmissionEvent",
+      "SubmissionRematchEvent",
+      "ReviewRematchTargetQueryDto"
+    ],
+    "modules": [
+      "event",
+      "listener",
+      "service"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 이벤트 처리",
+      "verb_object": "이벤트 처리",
+      "inputs": [
+        "SubmissionEvent"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "리뷰어 매칭"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "재매칭 이벤트 처리",
+      "verb_object": "재매칭 이벤트 처리",
+      "inputs": [
+        "SubmissionRematchEvent"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "리뷰어 매칭"
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Event Listener"
+    ],
+    "cross_cutting": [
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "트랜잭션 관리",
+      "비즈니스 로직 분리",
+      "이벤트 기반 아키텍처",
+      "Lombok 사용",
+      "의존성 주입"
+    ],
+    "risks": [
+      "트랜잭션 실패 시 데이터 불일치",
+      "이벤트 처리 지연",
+      "의존성 주입 실패"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "예외 처리",
+      "유효성 검사",
+      "단위 테스트",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Component"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequiredArgsConstructor"
+    },
+    {
+      "type": "annotation",
+      "text": "@TransactionalEventListener"
+    },
+    {
+      "type": "call",
+      "text": "reviewMatchService.matchReviewers"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.event.SubmissionEvent"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.event.SubmissionRematchEvent"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "event+listener",
+      "submission+service",
+      "review+matching"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\SubmissionEvent.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\SubmissionRematchEvent.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\ReviewMatchService.java"
+    ]
+  }
+}

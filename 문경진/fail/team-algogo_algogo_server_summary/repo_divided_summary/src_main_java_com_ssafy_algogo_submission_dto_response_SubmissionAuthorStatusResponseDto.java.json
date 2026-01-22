@@ -1,0 +1,94 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionAuthorStatusResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "submission",
+      "author",
+      "status",
+      "response"
+    ],
+    "entities": [
+      "SubmissionAuthorStatusResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 상태 확인",
+      "verb_object": "상태 확인",
+      "inputs": [
+        "canMoreSubmission"
+      ],
+      "outputs": [
+        "Boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간결한 데이터 구조",
+      "명확한 책임",
+      "불변 객체 사용"
+    ],
+    "risks": [
+      "확장성 부족",
+      "유효성 검사 미비"
+    ],
+    "missing_standard_checks": [
+      "null 체크",
+      "유효성 검사",
+      "문서화",
+      "예외 처리",
+      "변경 이력 관리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": ""
+    },
+    {
+      "type": "annotation",
+      "text": ""
+    },
+    {
+      "type": "call",
+      "text": ""
+    },
+    {
+      "type": "query",
+      "text": ""
+    },
+    {
+      "type": "endpoint",
+      "text": ""
+    },
+    {
+      "type": "config",
+      "text": ""
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "submission+dto",
+      "response+status"
+    ],
+    "related_files_guess": []
+  }
+}

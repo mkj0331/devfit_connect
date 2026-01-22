@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\entity\\CampaignUser.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Persistence\",\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Entity class representing a user in a campaign, extending a program user.\",\n  \"key_features\": [\n    \"Inherits from ProgramUser\",\n    \"Uses JPA annotations for database mapping\",\n    \"Includes validation for penalty count\"\n  ],\n  \"key_code\": [\n    \"@Entity\",\n    \"@Table(name = \\\"campaigns_users\\\")\",\n    \"@NotNull\",\n    \"@Column(name = \\\"penalty_cnt\\\")\"\n  ],\n  \"project_hints\": [\n    \"Campaign management system\",\n    \"User management within campaigns\",\n    \"Tracking penalties for users in campaigns\"\n  ]\n}\n```"
+}

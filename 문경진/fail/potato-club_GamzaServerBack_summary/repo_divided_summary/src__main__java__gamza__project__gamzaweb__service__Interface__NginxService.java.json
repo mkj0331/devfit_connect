@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\service\\Interface\\NginxService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"NginxService 인터페이스는 Nginx 설정 파일 생성을 위한 메서드를 정의합니다.\",\n  \"key_features\": [\n    \"Nginx 설정 파일 생성을 위한 메서드 정의\",\n    \"애플리케이션 이름과 포트를 인자로 받음\"\n  ],\n  \"key_code\": [\n    \"void generateNginxConf(String applicationName, int port);\"\n  ],\n  \"project_hints\": [\n    \"Nginx 서버 설정을 자동화하거나 관리하는 웹 애플리케이션 프로젝트\"\n  ]\n}\n```"
+}

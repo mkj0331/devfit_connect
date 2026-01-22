@@ -1,0 +1,71 @@
+{
+  "portfolio": {
+    "name": "문경진",
+    "contact": {
+      "email": "mkj0331@naver.com",
+      "phone": "010-9483-9059"
+    },
+    "contents": [
+      {
+        "section": "Skills",
+        "skills": [
+          "Data Analysis",
+          "Pandas",
+          "NumPy",
+          "SQL",
+          "Prompt Engineering",
+          "Feature Engineering",
+          "Text Embedding",
+          "Vector DB",
+          "Data Sampling",
+          "CTGAN",
+          "ML 모델",
+          "Tableau",
+          "OCR"
+        ]
+      },
+      {
+        "section": "Experience",
+        "projects": [
+          {
+            "title": "삼성 청년 SW-AI 아카데미",
+            "duration": "2025-07 to 2025-12",
+            "description": "Track 기반 데이터 분석 머신러닝 SQL 시각화 전반 학습 음원 가사 차트 데이터 실시간 수집 및 처리",
+            "technologies": [
+              "Flink",
+              "Kafka",
+              "Spark",
+              "PostgreSQL"
+            ],
+            "role": "엔드투엔드 서비스 프로젝트 수행"
+          },
+          {
+            "title": "SRI 데이터 경진대회",
+            "duration": "2025-07 to 2025-08",
+            "description": "수원시 내부 설문 데이터를 분석해 시민 선호와 도시 특성 도출",
+            "outcome": "우수상 수상",
+            "technologies": [
+              "Python"
+            ]
+          },
+          {
+            "title": "NCSoft Vision AI Team",
+            "duration": "2024-08",
+            "description": "이미지 텍스트 데이터셋 수집 및 정제",
+            "role": "데이터 Construction Assistant"
+          },
+          {
+            "title": "FSI AI X Data Challenge 2024",
+            "duration": "2024-08-05 to 2024-08-30",
+            "description": "금융 사기 거래 분류 모델 개발",
+            "outcome": "18위 달성",
+            "technologies": [
+              "Python",
+              "XGBoost"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

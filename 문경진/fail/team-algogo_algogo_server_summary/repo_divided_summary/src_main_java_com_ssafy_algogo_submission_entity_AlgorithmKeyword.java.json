@@ -1,0 +1,111 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\AlgorithmKeyword.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Lombok"
+    ],
+    "libraries": [
+      "Hibernate"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "algorithm",
+      "keyword"
+    ],
+    "entities": [
+      "AlgorithmKeyword",
+      "Algorithm"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "키워드 생성",
+      "verb_object": "키워드 생성",
+      "inputs": [
+        "keyword",
+        "algorithm_id"
+      ],
+      "outputs": [
+        "AlgorithmKeyword"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "키워드 삭제",
+      "verb_object": "키워드 삭제",
+      "inputs": [
+        "algorithm_id"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": [
+      "Cascade Delete"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검증",
+      "불변 객체 생성",
+      "지연 로딩 지원"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "의존성 증가"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "단위 테스트",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "annotation",
+      "text": "@ManyToOne"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.persistence.*"
+    },
+    {
+      "type": "import",
+      "text": "lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+model"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Algorithm.java"
+    ]
+  }
+}

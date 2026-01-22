@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\Enums\\BaseTime.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Jakarta Persistence\",\n    \"Lombok\"\n  ],\n  \"role\": \"이 파일은 엔티티의 생성 및 수정 시간을 자동으로 관리하는 역할을 합니다.\",\n  \"key_features\": [\n    \"생성 날짜 및 수정 날짜 자동 기록\",\n    \"Auditing 기능을 통한 데이터 관리\"\n  ],\n  \"key_code\": [\n    \"@CreatedDate\",\n    \"@LastModifiedDate\"\n  ],\n  \"project_hints\": [\n    \"이 프로젝트는 데이터베이스 엔티티의 생성 및 수정 시간을 관리하는 웹 애플리케이션일 가능성이 높습니다.\"\n  ]\n}\n```"
+}

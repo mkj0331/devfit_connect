@@ -1,0 +1,49 @@
+{
+  "batch_id": 13,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "JPA (Java Persistence API)",
+    "Transactional Management",
+    "DTO (Data Transfer Object)",
+    "Spring MVC",
+    "Jackson",
+    "Hibernate",
+    "Jakarta Validation",
+    "Lombok",
+    "Java Records",
+    "Java Collections",
+    "Spring Data"
+  ],
+  "batch_role": "Problem Set Management and Group Service Implementation",
+  "key_features": [
+    "Creating and managing group rooms",
+    "Fetching user's group rooms with pagination",
+    "Handling group invites and join requests",
+    "Retrieving category list",
+    "Searching problem sets by title or description",
+    "Pagination support for search results",
+    "Validation for creating and modifying problem sets",
+    "Encapsulating responses for problem sets and categories",
+    "Handling deletion of program problems"
+  ],
+  "related_files": [
+    "GroupServiceImpl.java",
+    "ProblemSetController.java",
+    "ProblemSetCreateRequestDto.java",
+    "ProblemSetModifyRequestDto.java",
+    "ProgramProblemsDeleteRequestDto.java",
+    "CategoryListResponseDto.java",
+    "CategoryResponseDto.java",
+    "MyProblemSetPageResponseDto.java",
+    "ProblemSetListResponseDto.java",
+    "ProblemSetProblemsPageResponseDto.java"
+  ],
+  "project_hints": [
+    "The project appears to be focused on a problem set management system, possibly for educational or competitive programming purposes.",
+    "User collaboration features and group management functionalities are integral to the system.",
+    "Efficient retrieval and management of problem sets and categories are emphasized."
+  ]
+}

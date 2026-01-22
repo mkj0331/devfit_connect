@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\request\\ApplyProgramInviteRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for applying to a program invitation\",\n  \"key_features\": [\n    \"Validation of userId with @NotNull annotation\",\n    \"Builder pattern for object creation\",\n    \"Constructor accessibility control using Lombok annotations\"\n  ],\n  \"key_code\": [\n    \"@NotNull(message = \\\"userId is required\\\")\",\n    \"Long userId;\",\n    \"@Builder\",\n    \"@NoArgsConstructor(access = AccessLevel.PROTECTED)\",\n    \"@AllArgsConstructor(access = AccessLevel.PRIVATE)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves a program or event invitation system.\",\n    \"User management or program participation features may be present.\"\n  ]\n}\n```"
+}

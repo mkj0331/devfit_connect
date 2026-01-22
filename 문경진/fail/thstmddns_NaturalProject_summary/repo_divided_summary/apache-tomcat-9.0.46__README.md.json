@@ -1,0 +1,4 @@
+{
+  "path": "apache-tomcat-9.0.46\\README.md",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java Servlet\",\n    \"JavaServer Pages\",\n    \"Java Expression Language\",\n    \"Java WebSocket\"\n  ],\n  \"role\": \"이 파일은 Apache Tomcat 소프트웨어에 대한 소개 및 문서화 역할을 하며, 설치 및 사용 방법에 대한 정보를 제공합니다.\",\n  \"key_features\": [\n    \"오픈 소스 구현\",\n    \"Java 웹 애플리케이션을 위한 서블릿 및 JSP 지원\",\n    \"문서 웹 애플리케이션 제공\",\n    \"커뮤니티 지원 및 참여 유도\"\n  ],\n  \"key_code\": [\n    \"문서 웹 애플리케이션에 접근하기 위한 URL: http://localhost:8080/docs/\"\n  ],\n  \"project_hints\": [\n    \"Apache Tomcat은 Java 기반의 웹 서버 및 서블릿 컨테이너로, 대규모 웹 애플리케이션을 지원하는 프로젝트입니다.\"\n  ]\n}\n```"
+}

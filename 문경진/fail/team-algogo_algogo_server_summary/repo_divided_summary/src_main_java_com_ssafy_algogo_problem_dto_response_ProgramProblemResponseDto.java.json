@@ -1,0 +1,129 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProgramProblemResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProgramProblem",
+      "ProblemResponseDto",
+      "DifficultyViewType",
+      "UserDifficultyType"
+    ],
+    "entities": [
+      "ProgramProblem",
+      "ProblemResponseDto"
+    ],
+    "modules": [
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "정답률 계산",
+      "verb_object": "정답률 계산",
+      "inputs": [
+        "ProgramProblem"
+      ],
+      "outputs": [
+        "Double accuracy"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "난이도 점수 계산",
+      "verb_object": "난이도 점수 계산",
+      "inputs": [
+        "ProgramProblem"
+      ],
+      "outputs": [
+        "Integer difficultyScore"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "DTO 생성",
+      "verb_object": "DTO 생성",
+      "inputs": [
+        "ProgramProblem"
+      ],
+      "outputs": [
+        "ProgramProblemResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "정확한 계산 로직",
+      "유지보수 용이성",
+      "재사용 가능성",
+      "명확한 책임 분리"
+    ],
+    "risks": [
+      "NullPointerException 가능성",
+      "입력 데이터 유효성 검사 부족",
+      "성능 저하 가능성",
+      "의존성 증가",
+      "복잡성 증가"
+    ],
+    "missing_standard_checks": [
+      "입력 데이터 검증",
+      "예외 처리",
+      "로깅",
+      "단위 테스트",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import java.time.LocalDateTime;"
+    },
+    {
+      "type": "call",
+      "text": "ProgramProblemResponseDto.from(programProblem)"
+    },
+    {
+      "type": "call",
+      "text": "programProblem.getSubmissionCount()"
+    },
+    {
+      "type": "call",
+      "text": "programProblem.getSolvedCount()"
+    },
+    {
+      "type": "call",
+      "text": "programProblem.getProblem().getDifficultyType()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "problem+entity",
+      "program+problem"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\ProgramProblem.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProblemResponseDto.java"
+    ]
+  }
+}

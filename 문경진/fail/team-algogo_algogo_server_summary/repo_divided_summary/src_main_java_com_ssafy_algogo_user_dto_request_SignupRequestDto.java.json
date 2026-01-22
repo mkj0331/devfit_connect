@@ -1,0 +1,142 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\SignupRequestDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "회원가입",
+      "이메일",
+      "비밀번호",
+      "닉네임"
+    ],
+    "entities": [
+      "SignupRequestDto"
+    ],
+    "modules": [
+      "user",
+      "dto",
+      "request"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "회원가입 요청 검증",
+      "verb_object": "검증 요청",
+      "inputs": [
+        "email",
+        "password",
+        "nickname"
+      ],
+      "outputs": [
+        "검증 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "이메일 형식 검증",
+      "verb_object": "검증 이메일",
+      "inputs": [
+        "email"
+      ],
+      "outputs": [
+        "유효성 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "비밀번호 형식 검증",
+      "verb_object": "검증 비밀번호",
+      "inputs": [
+        "password"
+      ],
+      "outputs": [
+        "유효성 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "닉네임 형식 검증",
+      "verb_object": "검증 닉네임",
+      "inputs": [
+        "nickname"
+      ],
+      "outputs": [
+        "유효성 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Validation"
+    ],
+    "cross_cutting": [
+      "보안"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검증을 위한 어노테이션 사용",
+      "Lombok을 통한 코드 간결성",
+      "명확한 오류 메시지 제공"
+    ],
+    "risks": [
+      "정규식 오류로 인한 잘못된 검증",
+      "어노테이션 의존성으로 인한 테스트 어려움"
+    ],
+    "missing_standard_checks": [
+      "유효성 검증 테스트",
+      "예외 처리 로직",
+      "API 문서화",
+      "보안 감사",
+      "성능 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotBlank"
+    },
+    {
+      "type": "annotation",
+      "text": "@Pattern"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotBlank"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.Pattern"
+    },
+    {
+      "type": "import",
+      "text": "lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto",
+      "validation+request",
+      "signup+process"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\controller\\SignupController.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\SignupService.java"
+    ]
+  }
+}

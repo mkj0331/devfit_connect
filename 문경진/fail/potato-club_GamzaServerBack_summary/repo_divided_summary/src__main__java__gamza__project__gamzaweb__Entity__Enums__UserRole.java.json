@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\Enums\\UserRole.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"사용자 역할을 정의하는 열거형(enum) 클래스\",\n  \"key_features\": [\n    \"사용자 역할을 구분하여 관리\",\n    \"각 역할에 따른 권한 부여 가능\"\n  ],\n  \"key_code\": [\n    \"public enum UserRole {\",\n    \"    ADMIN,\",\n    \"    MEMBER,\",\n    \"    USER,\",\n    \"    BLACK_USER\",\n    \"}\"\n  ],\n  \"project_hints\": [\n    \"사용자 관리 및 권한 시스템을 포함하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

@@ -1,0 +1,82 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewListResponseDto.java",
+    "language": "java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "CodeReview",
+      "Response"
+    ],
+    "entities": [
+      "CodeReviewListResponseDto",
+      "CodeReviewTreeResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 목록 생성",
+      "verb_object": "리뷰 목록 생성",
+      "inputs": [
+        "List<CodeReviewTreeResponseDto> reviews"
+      ],
+      "outputs": [
+        "CodeReviewListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Null 처리",
+      "불변 객체 사용"
+    ],
+    "risks": [
+      "타입 안전성 문제",
+      "Jackson 의존성"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Error handling",
+      "Logging"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "call",
+      "text": "from(List<CodeReviewTreeResponseDto> reviews)"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.List"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "review+code",
+      "api+response"
+    ],
+    "related_files_guess": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\GroupRole.java",
+    "language": "Java",
+    "frameworks": [
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "Domain",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Group",
+      "Role",
+      "Admin",
+      "Manager",
+      "User"
+    ],
+    "entities": [
+      "GroupRole"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "역할 확인",
+      "verb_object": "역할 확인",
+      "inputs": [
+        "GroupRole required"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Enum",
+      "Getter"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 역할 정의",
+      "간단한 구조",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "역할 추가 시 코드 수정 필요",
+      "Enum의 확장성 제한"
+    ],
+    "missing_standard_checks": [
+      "Javadoc",
+      "Validation",
+      "Unit Test"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import lombok.AllArgsConstructor"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@AllArgsConstructor"
+    },
+    {
+      "type": "call",
+      "text": "hasAtLeast(GroupRole required)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "role+management",
+      "enum+definition"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\service\\GroupService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\controller\\GroupController.java"
+    ]
+  }
+}

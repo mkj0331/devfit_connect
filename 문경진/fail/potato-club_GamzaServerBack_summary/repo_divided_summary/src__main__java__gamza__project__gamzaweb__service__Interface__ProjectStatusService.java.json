@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\service\\Interface\\ProjectStatusService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"이 파일은 프로젝트의 배포 단계와 관련된 상태를 관리하는 서비스 인터페이스를 정의합니다.\",\n  \"key_features\": [\n    \"프로젝트의 배포 단계를 전송하는 기능을 제공\",\n    \"ProjectEntity와 DeploymentStep을 매개변수로 받는 메서드 정의\"\n  ],\n  \"key_code\": [\n    \"void sendDeploymentStep(ProjectEntity project, DeploymentStep step);\"\n  ],\n  \"project_hints\": [\n    \"프로젝트는 배포 관리 또는 상태 추적과 관련된 시스템일 가능성이 있음\"\n  ]\n}\n```"
+}

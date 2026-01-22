@@ -1,0 +1,42 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\analyst\\controller\\AnalystController.java",
+  "project_subject_signals": [
+    "analyst",
+    "analyst_service",
+    "analyst_controller",
+    "financial_analysis"
+  ],
+  "frameworks": [
+    "Spring",
+    "Spring Boot"
+  ],
+  "libraries": [
+    "lombok",
+    "slf4j",
+    "swagger-ui"
+  ],
+  "core_features": [
+    {
+      "feature_name": "지출 금액 조회 API",
+      "feature_description": "사용자의 지출 금액 관련 정보를 조회하는 API 엔드포인트를 제공합니다.",
+      "implementation_method": "Spring Boot의 @RestController, @GetMapping, @PathVariable 어노테이션을 사용하여 RESTful API를 구현하고, AnalystService의 메소드를 호출하여 데이터를 반환합니다.",
+      "job_value": "RESTful API 설계 및 Spring Boot 기반 웹 애플리케이션 개발 역량을 보여줍니다."
+    },
+    {
+      "feature_name": "월별 지출 상세 조회",
+      "feature_description": "특정 연도와 월의 지출 상세 정보를 조회하는 기능을 제공합니다.",
+      "implementation_method": "HTTP GET 요청을 통해 연도와 월을 경로 변수로 받아 AnalystService의 getMonthAmount 메소드를 실행합니다.",
+      "job_value": "요청 파라미터를 동적으로 처리하고 특정 기간의 데이터를 조회하는 로직 구현 능력을 보여줍니다."
+    },
+    {
+      "feature_name": "이번 달 지출 조회",
+      "feature_description": "현재 시점의 이번 달 지출 정보를 조회하는 기능을 제공합니다.",
+      "implementation_method": " '/current-month' 경로로 GET 요청을 받아 AnalystService의 getCurrentMonthAmount 메소드를 호출하여 데이터를 조회합니다.",
+      "job_value": "시간 기반의 데이터 필터링 및 조회 기능 구현 역량을 보여줍니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "API 응답에 대한 상세 설명 및 예시를 Swagger 문서에 추가하여 가독성을 높일 수 있습니다.",
+    "각 API 엔드포인트에 대한 적절한 에러 핸들링 및 응답 코드 정의를 통해 안정성을 강화할 수 있습니다."
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\UserDifficultyType.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Enumeration for user difficulty types\",\n  \"key_features\": [\n    \"Defines different levels of difficulty for users\",\n    \"Provides a structured way to categorize difficulty\"\n  ],\n  \"key_code\": [\n    \"public enum UserDifficultyType {\",\n    \"  EASY,\",\n    \"  MEDIUM,\",\n    \"  HARD\",\n    \"}\"\n  ],\n  \"project_hints\": [\n    \"Could be part of a gaming or educational application where user difficulty levels are relevant\",\n    \"Might be used to tailor content or challenges based on user skill level\"\n  ]\n}\n```"
+}

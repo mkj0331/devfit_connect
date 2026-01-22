@@ -1,0 +1,114 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\GroupRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Data JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Group",
+      "Repository",
+      "Room"
+    ],
+    "entities": [
+      "GroupRoom"
+    ],
+    "modules": [
+      "group",
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 방 저장",
+      "verb_object": "그룹 방 저장",
+      "inputs": [
+        "GroupRoom entity"
+      ],
+      "outputs": [
+        "저장된 GroupRoom"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "그룹 방 조회",
+      "verb_object": "그룹 방 조회",
+      "inputs": [
+        "Long id"
+      ],
+      "outputs": [
+        "GroupRoom entity"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Spring Data JPA 사용",
+      "인터페이스 기반 설계",
+      "유지보수 용이",
+      "확장성 높음",
+      "표준화된 데이터 접근 방식"
+    ],
+    "risks": [
+      "JPA 성능 이슈",
+      "트랜잭션 관리 필요",
+      "동시성 문제 발생 가능",
+      "예외 처리 미비",
+      "의존성 주입 오류 가능성"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "예외 처리",
+      "트랜잭션 관리",
+      "로그 기록",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Repository"
+    },
+    {
+      "type": "annotation",
+      "text": "@Repository"
+    },
+    {
+      "type": "call",
+      "text": "extends JpaRepository<GroupRoom, Long>"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "group+repository"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\GroupRoom.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\query\\GroupQueryRepository.java"
+    ]
+  }
+}

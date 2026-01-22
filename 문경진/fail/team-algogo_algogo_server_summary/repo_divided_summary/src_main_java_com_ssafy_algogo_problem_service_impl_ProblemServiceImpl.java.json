@@ -1,0 +1,131 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\service\\impl\\ProblemServiceImpl.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "문제",
+      "프로그램",
+      "검색",
+      "상세"
+    ],
+    "entities": [
+      "Problem",
+      "ProgramProblem",
+      "ProblemDetailResponseDto",
+      "ProblemListResponseDto",
+      "ProblemResponseDto"
+    ],
+    "modules": [
+      "problem",
+      "service"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 상세 조회",
+      "verb_object": "상세 조회",
+      "inputs": [
+        "programProblemId"
+      ],
+      "outputs": [
+        "ProblemDetailResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "문제 검색",
+      "verb_object": "검색",
+      "inputs": [
+        "keyword"
+      ],
+      "outputs": [
+        "ProblemListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 예외 처리",
+      "트랜잭션 관리",
+      "DTO 사용",
+      "유효성 검사",
+      "검색 기능"
+    ],
+    "risks": [
+      "예외 발생 시 정보 노출",
+      "입력 값 검증 부족",
+      "성능 저하 가능성",
+      "의존성 주입 실패",
+      "동시성 문제"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "입력 값 검증",
+      "API 문서화",
+      "유닛 테스트",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "annotation",
+      "text": "@Transactional"
+    },
+    {
+      "type": "call",
+      "text": "programProblemRepository.findById(programProblemId)"
+    },
+    {
+      "type": "call",
+      "text": "problemRepository.searchByKeyword(escapeKeyword)"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.advice.CustomException"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.problem.dto.response.ProblemDetailResponseDto"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "problem+service",
+      "db+jpa",
+      "api+service"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\repository\\ProblemRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\repository\\ProgramProblemRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProblemResponseDto.java"
+    ]
+  }
+}

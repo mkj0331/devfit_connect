@@ -1,0 +1,4 @@
+{
+  "path": "HELP.md",
+  "summary": "```json\n{\n  \"language\": \"Markdown\",\n  \"technologies\": [\n    \"Gradle\",\n    \"Spring Boot\",\n    \"Spring Web\",\n    \"Spring Data JPA\",\n    \"OCI image\"\n  ],\n  \"role\": \"Documentation\",\n  \"key_features\": [\n    \"Reference documentation links for Gradle and Spring Boot\",\n    \"Guides for building RESTful services and accessing data\",\n    \"Additional links for Gradle Build Scans\"\n  ],\n  \"key_code\": [],\n  \"project_hints\": [\n    \"Focus on building web services using Spring Boot\",\n    \"Utilization of JPA for data access\",\n    \"Packaging applications as OCI images\"\n  ]\n}\n```"
+}

@@ -1,0 +1,152 @@
+{
+  "batch_id": 18,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "JPA",
+    "QueryDSL",
+    "Lombok",
+    "Jakarta EE"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "리뷰 관리",
+      "domain_tags": [
+        "review",
+        "code review",
+        "user",
+        "submission"
+      ],
+      "responsibilities": [
+        "리뷰 생성",
+        "리뷰 조회",
+        "리뷰 수정",
+        "리뷰 삭제",
+        "리뷰 수신 조회",
+        "완료된 리뷰 조회"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Repository",
+        "Transactional"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\query\\ReviewQueryRepositoryImpl.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\service\\ReviewService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\service\\impl\\ReviewServiceImpl.java"
+      ],
+      "evidence": [
+        "import com.ssafy.algogo.review.dto.request.CreateCodeReviewRequestDto;",
+        "createCodeReview(CreateCodeReviewRequestDto reviewRequest, Long userId)",
+        "reviewRepository.getReceiveReviews(userId, pageSafe, sizeSafe)"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "입력 검증 부족 가능성",
+        "예외 처리 미비",
+        "동시성 문제 발생 가능성"
+      ]
+    },
+    {
+      "cluster_name": "제출 관리",
+      "domain_tags": [
+        "submission",
+        "user",
+        "program",
+        "stats"
+      ],
+      "responsibilities": [
+        "제출 통계 조회",
+        "유저 제출 상태 조회",
+        "제출 목록 조회"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Service"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\controller\\SubmissionController.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\SubmissionService.java"
+      ],
+      "evidence": [
+        "submissionService.getSubmissionStatsInfos(customUserDetails.getUserId(), programProblemId)",
+        "@GetMapping(\"/stats/{programProblemId}\")"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "보안 취약점 가능성",
+        "예외 처리 부족",
+        "유효성 검사 미비"
+      ]
+    },
+    {
+      "cluster_name": "알고리즘 검색",
+      "domain_tags": [
+        "algorithm",
+        "search",
+        "response"
+      ],
+      "responsibilities": [
+        "알고리즘 검색"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "RestController"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\controller\\AlgorithmController.java"
+      ],
+      "evidence": [
+        "algorithmService.searchAlgorithmWithKeyword(keyword)",
+        "@RequestMapping(\"/api/v1/algorithms\")"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "입력 검증 부족",
+        "예외 처리 미비"
+      ]
+    },
+    {
+      "cluster_name": "DTO 관리",
+      "domain_tags": [
+        "dto",
+        "data transfer",
+        "validation"
+      ],
+      "responsibilities": [
+        "DTO 생성",
+        "DTO 유효성 검사"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "Builder",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\SubmissionRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\AlgorithmGuideDto.java"
+      ],
+      "evidence": [
+        "@NotNull",
+        "@NotBlank"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "유효성 검사 실패 시 예외 처리 필요",
+        "NullPointerException 가능성"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "review",
+    "submission",
+    "algorithm",
+    "dto",
+    "validation"
+  ]
+}

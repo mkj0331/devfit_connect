@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\service\\Interface\\AdminService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Jakarta EE\"],\n  \"role\": \"이 파일은 관리자(Admin) 관련 서비스 인터페이스를 정의하여 사용자 및 프로젝트 승인/거부, 실행 신청 관리 등의 기능을 제공하는 역할을 한다.\",\n  \"key_features\": [\n    \"사용자 가입 승인 및 거부 기능\",\n    \"프로젝트 승인 및 거부 기능\",\n    \"실행 신청 승인 및 제거 기능\",\n    \"페이지네이션을 통한 사용자 및 프로젝트 목록 조회 기능\"\n  ],\n  \"key_code\": [\n    \"void userSignUpApproveByAdmin(Long id);\",\n    \"void userSignUpApproveRefusedByAdmin(Long id);\",\n    \"Page<ResponseNotApproveDto> notApproveUserList(Pageable pageable);\",\n    \"Page<ProjectListNotApproveResponse> notApproveProjectList(Pageable pageable);\"\n  ],\n  \"project_hints\": [\n    \"이 프로젝트는 사용자 관리 및 프로젝트 관리 시스템으로, 관리자 기능을 중심으로 한 웹 애플리케이션일 가능성이 높다.\"\n  ]\n}\n```"
+}

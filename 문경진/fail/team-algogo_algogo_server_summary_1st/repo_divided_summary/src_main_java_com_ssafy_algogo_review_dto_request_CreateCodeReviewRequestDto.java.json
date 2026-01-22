@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\request\\CreateCodeReviewRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for creating a code review request\",\n  \"key_features\": [\n    \"Validation annotations to ensure required fields are present\",\n    \"Builder pattern for object creation\",\n    \"Immutable object with private constructor\"\n  ],\n  \"key_code\": [\n    \"@NotNull(message = \\\"submissionId is required\\\")\",\n    \"@NotBlank(message = \\\"content is required\\\")\",\n    \"private Long submissionId;\",\n    \"private String content;\"\n  ],\n  \"project_hints\": [\n    \"Code review functionality\",\n    \"Submission management\",\n    \"Collaboration tools for developers\"\n  ]\n}\n```"
+}

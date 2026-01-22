@@ -1,0 +1,36 @@
+{
+  "batch_id": 11,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Jackson",
+    "Spring Framework",
+    "Java Records",
+    "Java Collections",
+    "Spring Data"
+  ],
+  "batch_role": "Data Transfer Objects (DTOs) for group management functionalities",
+  "key_features": [
+    "Encapsulates various group-related data such as member lists, invites, and room information",
+    "Utilizes Java records for immutability and concise data representation",
+    "Includes JSON serialization configurations to manage null values"
+  ],
+  "related_files": [
+    "CheckGroupNameResponseDto.java",
+    "GetGroupMemberListResponseDto.java",
+    "GetGroupMemberResponseDto.java",
+    "GetReceivedGroupInviteListResponseDto.java",
+    "GetReceivedGroupInviteResponseDto.java",
+    "GetSentGroupJoinListResponseDto.java",
+    "GetSentGroupJoinResponseDto.java",
+    "GroupRoomPageResponseDto.java",
+    "GroupRoomResponseDto.java",
+    "MyGroupRoomPageResponseDto.java"
+  ],
+  "project_hints": [
+    "Part of a group management system",
+    "Handles functionalities related to group invitations, member management, and room management",
+    "Supports pagination and sorting for group room data"
+  ]
+}

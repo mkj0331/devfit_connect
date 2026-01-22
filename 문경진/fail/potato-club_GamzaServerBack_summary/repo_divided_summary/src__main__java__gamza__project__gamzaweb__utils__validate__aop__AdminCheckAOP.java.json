@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\aop\\AdminCheckAOP.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"AspectJ\",\n    \"Lombok\",\n    \"Jakarta Servlet\"\n  ],\n  \"role\": \"이 파일은 관리자 권한을 체크하는 AOP(Aspect-Oriented Programming) 기능을 담당합니다.\",\n  \"key_features\": [\n    \"특정 메소드에 AdminCheck 어노테이션이 붙어 있을 경우, 해당 메소드 호출 전에 관리자 권한을 체크합니다.\",\n    \"JWT 토큰을 통해 사용자의 역할을 추출하고, 권한이 없을 경우 예외를 발생시킵니다.\"\n  ],\n  \"key_code\": [\n    \"@Pointcut(\\\"@annotation(AdminCheck)\\\")\",\n    \"String token = jwtTokenProvider.resolveAccessToken(request);\",\n    \"if (!userRole.equals(\\\"0\\\")) { throw new UnAuthorizedException(...); }\"\n  ],\n  \"project_hints\": [\n    \"이 파일은 사용자 권한 관리 및 보안 관련 기능을 포함하고 있어, 사용자 인증 및 권한 부여 시스템을 갖춘 웹 애플리케이션 프로젝트일 가능성이 높습니다.\"\n  ]\n}\n```"
+}

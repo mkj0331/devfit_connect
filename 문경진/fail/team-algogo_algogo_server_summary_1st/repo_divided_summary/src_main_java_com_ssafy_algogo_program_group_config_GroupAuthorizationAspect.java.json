@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupAuthorizationAspect.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring AOP\",\n    \"Spring Security\",\n    \"Lombok\",\n    \"JPA\"\n  ],\n  \"role\": \"그룹 권한 체크를 위한 AOP(Aspect-Oriented Programming) 구현\",\n  \"key_features\": [\n    \"현재 로그인한 사용자의 권한을 확인\",\n    \"메서드에 붙은 @GroupAuthorize 어노테이션을 통해 최소 권한 요구\",\n    \"그룹 ID를 메서드 파라미터에서 추출\",\n    \"권한 부족 시 CustomException 발생\"\n  ],\n  \"key_code\": [\n    \"@Before(\\\"@annotation(groupAuthorize)\\\")\",\n    \"Authentication authentication = SecurityContextHolder.getContext().getAuthentication();\",\n    \"if (!actualRole.hasAtLeast(requiredRole)) { throw new CustomException(...); }\",\n    \"private Long extractGroupId(JoinPoint joinPoint)\"\n  ],\n  \"project_hints\": [\n    \"그룹 관리 및 권한 부여 시스템\",\n    \"사용자 권한 기반의 접근 제어\",\n    \"AOP를 활용한 코드 중복 최소화\"\n  ]\n}\n```"
+}

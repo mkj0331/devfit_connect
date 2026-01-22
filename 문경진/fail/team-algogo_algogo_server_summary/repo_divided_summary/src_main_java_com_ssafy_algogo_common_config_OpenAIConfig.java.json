@@ -1,0 +1,108 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\OpenAIConfig.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Configuration",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "OpenAI",
+      "API",
+      "WebClient"
+    ],
+    "entities": [
+      "OpenAIConfig"
+    ],
+    "modules": [
+      "config"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "웹 클라이언트 생성",
+      "verb_object": "웹 클라이언트 생성",
+      "inputs": [],
+      "outputs": [
+        "WebClient"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "API 키 설정",
+      "verb_object": "API 키 설정",
+      "inputs": [
+        "apiKey"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "모델 설정",
+      "verb_object": "모델 설정",
+      "inputs": [
+        "model"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Configuration",
+      "Bean"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Spring의 의존성 주입 사용",
+      "Lombok을 통한 코드 간결성",
+      "외부 API와의 통신 설정"
+    ],
+    "risks": [
+      "API 키 노출 위험",
+      "잘못된 API URL 설정 가능성"
+    ],
+    "missing_standard_checks": [
+      "환경 변수 유효성 검사",
+      "예외 처리 로직",
+      "로깅 설정"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Configuration"
+    },
+    {
+      "type": "annotation",
+      "text": "@Value"
+    },
+    {
+      "type": "call",
+      "text": "WebClient.builder()"
+    },
+    {
+      "type": "config",
+      "text": "OPENAI_API_URL"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "api+config",
+      "webclient+setup"
+    ],
+    "related_files_guess": []
+  }
+}

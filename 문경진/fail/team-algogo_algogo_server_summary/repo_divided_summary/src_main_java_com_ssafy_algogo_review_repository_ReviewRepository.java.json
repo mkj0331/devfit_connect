@@ -1,0 +1,142 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\ReviewRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Review",
+      "Submission",
+      "User",
+      "ProgramType"
+    ],
+    "entities": [
+      "Review",
+      "Submission",
+      "User",
+      "ProgramProblem",
+      "Program"
+    ],
+    "modules": [
+      "repository",
+      "query"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 조회",
+      "verb_object": "리뷰 조회",
+      "inputs": [
+        "submissionId"
+      ],
+      "outputs": [
+        "List<Review>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "사용자 리뷰 존재 여부 확인",
+      "verb_object": "리뷰 존재 여부 확인",
+      "inputs": [
+        "userId",
+        "submissionId"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "리뷰와 사용자 정보 조회",
+      "verb_object": "리뷰와 사용자 정보 조회",
+      "inputs": [
+        "reviewId"
+      ],
+      "outputs": [
+        "Optional<Review>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "제출 ID로 프로그램 타입 이름 조회",
+      "verb_object": "프로그램 타입 이름 조회",
+      "inputs": [
+        "submissionId"
+      ],
+      "outputs": [
+        "Optional<String>"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 메서드 이름",
+      "JPA를 통한 간편한 데이터 접근",
+      "Optional 사용으로 null 처리"
+    ],
+    "risks": [
+      "JPA 쿼리 성능 문제",
+      "Optional 사용으로 인한 복잡성 증가"
+    ],
+    "missing_standard_checks": [
+      "트랜잭션 관리",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository"
+    },
+    {
+      "type": "call",
+      "text": "findAllBySubmission_IdOrderByCreatedAtAsc"
+    },
+    {
+      "type": "call",
+      "text": "existsByUser_IdAndSubmission_IdAndParentReviewIsNull"
+    },
+    {
+      "type": "query",
+      "text": "select r from Review r join fetch r.user where r.id = :reviewId"
+    },
+    {
+      "type": "query",
+      "text": "select pt.name from Submission s join s.programProblem pp join pp.program p join p.programType pt where s.id = :submissionId"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "review+repository",
+      "submission+review"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\review\\entity\\Review.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\query\\ReviewQueryRepository.java"
+    ]
+  }
+}

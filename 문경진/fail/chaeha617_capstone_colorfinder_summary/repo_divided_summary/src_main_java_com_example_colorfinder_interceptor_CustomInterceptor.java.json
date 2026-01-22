@@ -1,0 +1,133 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\interceptor\\CustomInterceptor.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Interceptor",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Interceptor",
+      "Authentication",
+      "User",
+      "ModelAndView"
+    ],
+    "entities": [
+      "USERS"
+    ],
+    "modules": [
+      "UserService",
+      "UserRepository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 인증 처리",
+      "verb_object": "인증 처리",
+      "inputs": [
+        "HttpServletRequest",
+        "HttpServletResponse"
+      ],
+      "outputs": [
+        "ModelAndView"
+      ],
+      "side_effects": [
+        "로그인 상태에 따라 모델에 데이터 추가"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "로그인 상태 확인",
+      "verb_object": "상태 확인",
+      "inputs": [
+        "Authentication"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "사용자 정보 추가",
+      "verb_object": "정보 추가",
+      "inputs": [
+        "USERS"
+      ],
+      "outputs": [
+        "ModelAndView"
+      ],
+      "side_effects": [
+        "콘솔 로그 출력"
+      ],
+      "confidence": 0.75
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Interceptor"
+    ],
+    "cross_cutting": [
+      "보안",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "사용자 인증 처리",
+      "모델에 데이터 추가",
+      "예외 처리 로직 포함"
+    ],
+    "risks": [
+      "예외 발생 시 사용자 경험 저하",
+      "로그인 상태 관리의 복잡성"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "유효성 검사",
+      "단위 테스트",
+      "API 문서화",
+      "성능 모니터링"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Component"
+    },
+    {
+      "type": "call",
+      "text": "userService.getUserById(userId)"
+    },
+    {
+      "type": "call",
+      "text": "modelAndView.addObject()"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.web.servlet.HandlerInterceptor"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.servlet.http.HttpServletRequest"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+interceptor",
+      "user+service",
+      "web+mvc"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\service\\UserService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\UserRepository.java"
+    ]
+  }
+}

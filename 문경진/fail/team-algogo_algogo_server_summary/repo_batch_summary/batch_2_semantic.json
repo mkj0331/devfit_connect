@@ -1,0 +1,184 @@
+{
+  "batch_id": 2,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "JPA",
+    "Lombok",
+    "Jackson",
+    "Jakarta EE"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "알림 관리",
+      "domain_tags": [
+        "alarm",
+        "notification",
+        "user",
+        "repository",
+        "service"
+      ],
+      "responsibilities": [
+        "알림 생성",
+        "알림 조회",
+        "읽지 않은 알림 수 카운트",
+        "알림 삭제"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Spring Service",
+        "Spring Data JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\alarm\\entity\\AlarmPayload.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\alarm\\repository\\AlarmRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\alarm\\service\\AlarmService.java"
+      ],
+      "evidence": [
+        "AlarmPayload 생성자 호출",
+        "findByUserIdOrderByCreatedAtDesc",
+        "countByUserIdAndIsReadFalse"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "SQL 인젝션 가능성",
+        "예외 처리 부족",
+        "동시성 문제"
+      ]
+    },
+    {
+      "cluster_name": "알림 타입 관리",
+      "domain_tags": [
+        "alarm",
+        "type",
+        "repository"
+      ],
+      "responsibilities": [
+        "알람 타입 생성",
+        "알람 타입 조회"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "Entity",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\alarm\\entity\\AlarmType.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\alarm\\repository\\AlarmTypeRepository.java"
+      ],
+      "evidence": [
+        "@Entity",
+        "findByName"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "데이터 무결성 문제",
+        "API 문서화 부족"
+      ]
+    },
+    {
+      "cluster_name": "SSE 이벤트 스트리밍",
+      "domain_tags": [
+        "sse",
+        "event",
+        "repository",
+        "user"
+      ],
+      "responsibilities": [
+        "SseEmitter 추가",
+        "SseEmitter 조회",
+        "SseEmitter 제거",
+        "모든 SseEmitter 제거"
+      ],
+      "implementation_signals": [
+        "ConcurrentHashMap",
+        "CopyOnWriteArrayList",
+        "Spring"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\alarm\\repository\\SseEmitterRepository.java"
+      ],
+      "evidence": [
+        "emitters.computeIfAbsent",
+        "emitters.remove"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "메모리 누수 가능성",
+        "동시성 문제 발생 가능성"
+      ]
+    },
+    {
+      "cluster_name": "인증 처리",
+      "domain_tags": [
+        "auth",
+        "login",
+        "logout",
+        "token"
+      ],
+      "responsibilities": [
+        "로그인 처리",
+        "로그아웃 처리",
+        "유저 정보 확인"
+      ],
+      "implementation_signals": [
+        "Spring Security",
+        "DTO",
+        "REST API"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\controller\\AuthController.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\AuthService.java"
+      ],
+      "evidence": [
+        "authService.login",
+        "authService.logout"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "보안 취약점 가능성",
+        "예외 처리 미비"
+      ]
+    },
+    {
+      "cluster_name": "로그인 요청 DTO",
+      "domain_tags": [
+        "auth",
+        "dto",
+        "login",
+        "request"
+      ],
+      "responsibilities": [
+        "로그인 요청 처리"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\request\\LocalLoginRequestDto.java"
+      ],
+      "evidence": [
+        "@NotBlank(message = \"Email is required\")",
+        "@NotBlank(message = \"Password is required\")"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "입력값 검증 부족 시 보안 취약점"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "alarm",
+    "notification",
+    "auth",
+    "sse",
+    "dto",
+    "repository",
+    "service"
+  ]
+}

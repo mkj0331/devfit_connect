@@ -1,0 +1,113 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramCategory.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Hibernate"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "program",
+      "category"
+    ],
+    "entities": [
+      "ProgramCategory",
+      "Program",
+      "Category"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 카테고리 생성",
+      "verb_object": "카테고리 생성",
+      "inputs": [
+        "Program",
+        "Category"
+      ],
+      "outputs": [
+        "ProgramCategory"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "프로그램 카테고리 삭제",
+      "verb_object": "카테고리 삭제",
+      "inputs": [
+        "ProgramCategory"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": [
+      "Cascade Delete"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 관계 설정",
+      "유효성 검사",
+      "불변 객체 사용"
+    ],
+    "risks": [
+      "Lazy Loading으로 인한 N+1 문제",
+      "Cascade Delete로 인한 데이터 손실"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@ManyToOne"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.persistence.*"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotNull"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+relationship"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Category.java"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "batch_id": 4,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "Spring Security",
+    "Lombok",
+    "JPA",
+    "AWS SDK for Java",
+    "Amazon S3",
+    "CloudFront",
+    "WebClient",
+    "Querydsl",
+    "Jakarta Persistence"
+  ],
+  "batch_role": "Web application with user authentication, error handling, and integration with external services.",
+  "key_features": [
+    "User authentication and authorization using Spring Security",
+    "Custom exception handling and standardized error responses",
+    "Asynchronous processing for improved performance",
+    "Integration with AWS S3 for file storage and retrieval",
+    "Configuration for OpenAI API integration",
+    "Dynamic querying capabilities using Querydsl"
+  ],
+  "related_files": [
+    "CustomUserDetailsService.java",
+    "CustomException.java",
+    "CustomExceptionHandler.java",
+    "ErrorCode.java",
+    "ErrorResponse.java",
+    "SuccessResponse.java",
+    "AsyncConfig.java",
+    "AwsS3Config.java",
+    "OpenAIConfig.java",
+    "QuerydslConfig.java"
+  ],
+  "project_hints": [
+    "Focus on building a robust web application with user management features",
+    "Emphasis on error handling and user experience",
+    "Utilization of cloud services for file management and AI integration"
+  ]
+}

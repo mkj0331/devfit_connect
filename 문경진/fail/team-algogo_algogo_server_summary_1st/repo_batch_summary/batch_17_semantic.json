@@ -1,0 +1,44 @@
+{
+  "batch_id": 17,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Jackson",
+    "Java 11+",
+    "Record Types",
+    "Jakarta Persistence (JPA)",
+    "Hibernate",
+    "Lombok",
+    "Spring Framework",
+    "Spring Data JPA",
+    "QueryDSL"
+  ],
+  "batch_role": "Code review management system",
+  "key_features": [
+    "Data Transfer Objects (DTOs) for user code review responses",
+    "Entity classes for managing reviews, review requirements, and user reactions",
+    "Repository interfaces for CRUD operations and custom queries",
+    "Support for pagination and complex queries",
+    "Unique constraints for user and submission relationships",
+    "Methods for updating review statuses and managing user interactions"
+  ],
+  "related_files": [
+    "UserCodeReviewResponseDto.java",
+    "RequireReview.java",
+    "Review.java",
+    "UserReviewReaction.java",
+    "RequireReviewRepository.java",
+    "ReviewRepository.java",
+    "UserReviewReactionRepository.java",
+    "RequireReviewQueryRepository.java",
+    "RequireReviewQueryRepositoryImpl.java",
+    "ReviewQueryRepository.java"
+  ],
+  "project_hints": [
+    "The project involves a review system where users can submit work for review.",
+    "User interactions with reviews are tracked, including likes and content updates.",
+    "Focus on managing review requirements based on user and submission identifiers.",
+    "Code review management system with user-specific review tracking and submission-based review matching."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\CustomException.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "lombok"
+    ],
+    "layer_guess": "exception handling",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "CustomException",
+      "ErrorCode"
+    ],
+    "entities": [
+      "ErrorCode"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "예외 생성",
+      "verb_object": "예외 생성",
+      "inputs": [
+        "message",
+        "errorCode",
+        "data"
+      ],
+      "outputs": [
+        "CustomException instance"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Exception Handling"
+    ],
+    "cross_cutting": [
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 예외 처리",
+      "유연한 데이터 전달",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "예외 메시지의 불명확성",
+      "ErrorCode의 정의 불명확"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "유효성 검사",
+      "커스텀 예외 메시지"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import lombok.Getter;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "call",
+      "text": "super(message)"
+    },
+    {
+      "type": "call",
+      "text": "this.errorCode = errorCode"
+    },
+    {
+      "type": "call",
+      "text": "this.data = data"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "exception+handling",
+      "error+management"
+    ],
+    "related_files_guess": []
+  }
+}

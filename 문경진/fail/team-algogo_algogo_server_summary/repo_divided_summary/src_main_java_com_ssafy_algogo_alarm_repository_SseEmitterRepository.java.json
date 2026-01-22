@@ -1,0 +1,151 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\alarm\\repository\\SseEmitterRepository.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "SseEmitter",
+      "알람",
+      "유저",
+      "이벤트 스트림"
+    ],
+    "entities": [
+      "SseEmitter",
+      "User"
+    ],
+    "modules": [
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "SseEmitter 추가",
+      "verb_object": "SseEmitter 추가",
+      "inputs": [
+        "userId",
+        "emitter"
+      ],
+      "outputs": [
+        "emitter"
+      ],
+      "side_effects": [
+        "emitters 맵에 추가"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "SseEmitter 조회",
+      "verb_object": "SseEmitter 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "List<SseEmitter>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "SseEmitter 제거",
+      "verb_object": "SseEmitter 제거",
+      "inputs": [
+        "userId",
+        "emitter"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "emitters 맵에서 제거"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "name": "모든 SseEmitter 제거",
+      "verb_object": "모든 SseEmitter 제거",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "emitters 맵에서 모든 emitter 제거"
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "ConcurrentHashMap",
+      "CopyOnWriteArrayList"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": [
+      "동시성"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "스레드 안전성",
+      "유저별 관리",
+      "효율적인 데이터 접근",
+      "Spring 프레임워크 활용",
+      "Lombok으로 코드 간결화"
+    ],
+    "risks": [
+      "메모리 누수 가능성",
+      "동시성 문제 발생 가능성",
+      "예외 처리 미비",
+      "성능 저하 가능성",
+      "유저 관리 복잡성"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "예외 처리",
+      "로깅",
+      "단위 테스트",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Component"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.concurrent.ConcurrentHashMap;"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.concurrent.CopyOnWriteArrayList;"
+    },
+    {
+      "type": "call",
+      "text": "emitters.computeIfAbsent"
+    },
+    {
+      "type": "call",
+      "text": "emitters.remove"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "alarm+sse",
+      "repository+data_management",
+      "user+subscription"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\alarm\\service\\AlarmService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\alarm\\controller\\AlarmController.java"
+    ]
+  }
+}

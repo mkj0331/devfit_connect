@@ -1,0 +1,156 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\controller\\AuthController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "auth",
+      "login",
+      "logout",
+      "user",
+      "token"
+    ],
+    "entities": [
+      "AuthService",
+      "JwtTokenProvider",
+      "LocalLoginRequestDto",
+      "AuthResultDto",
+      "MeResponseDto"
+    ],
+    "modules": [
+      "auth"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "로그인",
+      "verb_object": "로그인 처리",
+      "inputs": [
+        "LocalLoginRequestDto",
+        "HttpServletRequest",
+        "HttpServletResponse"
+      ],
+      "outputs": [
+        "SuccessResponse"
+      ],
+      "side_effects": [
+        "Authorization 헤더 설정",
+        "RefreshToken 쿠키 추가",
+        "기존 쿠키 삭제"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "로그아웃",
+      "verb_object": "로그아웃 처리",
+      "inputs": [
+        "CustomUserDetails",
+        "HttpServletResponse"
+      ],
+      "outputs": [
+        "SuccessResponse"
+      ],
+      "side_effects": [
+        "Token 쿠키 삭제"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "유저 정보 조회",
+      "verb_object": "유저 정보 확인",
+      "inputs": [
+        "CustomUserDetails"
+      ],
+      "outputs": [
+        "SuccessResponse"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "REST API"
+    ],
+    "cross_cutting": [
+      "보안",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 API 구조",
+      "DTO 사용으로 인한 데이터 전송 최적화",
+      "Spring Security 통합",
+      "Lombok으로 인한 코드 간결성",
+      "HTTP 상태 코드 관리"
+    ],
+    "risks": [
+      "보안 취약점 가능성",
+      "예외 처리 미비",
+      "의존성 주입 실패 가능성",
+      "토큰 관리 오류",
+      "사용자 인증 실패"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리 로깅",
+      "API 문서화",
+      "보안 감사",
+      "성능 모니터링"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@RestController"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequestMapping(\"/api/v1/auths\")"
+    },
+    {
+      "type": "call",
+      "text": "authService.login(requestDto, request, response)"
+    },
+    {
+      "type": "call",
+      "text": "authService.logout(userId)"
+    },
+    {
+      "type": "call",
+      "text": "authService.me(userId)"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.web.bind.annotation.*"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.servlet.http.HttpServletRequest"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+controller",
+      "auth+service",
+      "api+v1"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\AuthService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\request\\LocalLoginRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\AuthResultDto.java"
+    ]
+  }
+}

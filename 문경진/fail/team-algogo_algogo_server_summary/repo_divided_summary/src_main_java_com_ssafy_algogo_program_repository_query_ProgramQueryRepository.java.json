@@ -1,0 +1,173 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\query\\ProgramQueryRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "problemset",
+      "program",
+      "category",
+      "user"
+    ],
+    "entities": [
+      "ProblemSetResponseDto",
+      "ProblemSetWithMatchResponseDto"
+    ],
+    "modules": [
+      "repository",
+      "query"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "문제집 조회",
+      "verb_object": "문제집 리스트 조회",
+      "inputs": [
+        "keyword",
+        "categoryName",
+        "sortBy",
+        "sortDirection",
+        "size",
+        "page"
+      ],
+      "outputs": [
+        "List<ProblemSetResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "문제집 상세 조회",
+      "verb_object": "문제집 상세 조회",
+      "inputs": [
+        "programId"
+      ],
+      "outputs": [
+        "ProblemSetResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "문제집 수 카운트",
+      "verb_object": "문제집 수 카운트",
+      "inputs": [
+        "keyword",
+        "categoryName"
+      ],
+      "outputs": [
+        "long"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "내가 참여한 문제집 조회",
+      "verb_object": "내가 참여한 문제집 조회",
+      "inputs": [
+        "programIds",
+        "userId",
+        "pageable"
+      ],
+      "outputs": [
+        "Page<ProblemSetResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "문제집 검색",
+      "verb_object": "문제집 검색",
+      "inputs": [
+        "keyword",
+        "pageable"
+      ],
+      "outputs": [
+        "Page<ProblemSetResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository",
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "유연한 검색 기능",
+      "카운트 기능 제공",
+      "DTO 사용으로 데이터 전송 최적화",
+      "Spring Data JPA 활용"
+    ],
+    "risks": [
+      "복잡한 쿼리로 인한 성능 저하 가능성",
+      "입력 값 검증 부족",
+      "페이지네이션 처리 오류 가능성",
+      "동시성 문제 발생 가능성",
+      "잘못된 정렬 기준 사용 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 값 검증",
+      "예외 처리",
+      "로깅",
+      "트랜잭션 관리",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Page;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Pageable;"
+    },
+    {
+      "type": "call",
+      "text": "findProblemSetWithCategoriesAndPopularity"
+    },
+    {
+      "type": "call",
+      "text": "countProblemSetWithFilter"
+    },
+    {
+      "type": "call",
+      "text": "findProblemSetDetail"
+    },
+    {
+      "type": "call",
+      "text": "searchProblemSetByTitleOrDescription"
+    },
+    {
+      "type": "call",
+      "text": "findMyJoinProblemSets"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "api+repository",
+      "problemset+query"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetWithMatchResponseDto.java"
+    ]
+  }
+}

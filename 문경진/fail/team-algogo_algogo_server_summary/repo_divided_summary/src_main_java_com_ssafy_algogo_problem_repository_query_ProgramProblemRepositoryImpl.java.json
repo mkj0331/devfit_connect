@@ -1,0 +1,141 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\repository\\query\\ProgramProblemRepositoryImpl.java",
+    "language": "java",
+    "frameworks": [
+      "Spring",
+      "QueryDSL"
+    ],
+    "libraries": [],
+    "layer_guess": "Repository",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProgramProblem",
+      "Problem",
+      "DifficultyType"
+    ],
+    "entities": [
+      "ProgramProblemResponseDto",
+      "QProgramProblem",
+      "QProblem"
+    ],
+    "modules": [
+      "repository",
+      "query"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 문제 조회",
+      "verb_object": "문제 조회",
+      "inputs": [
+        "programId",
+        "sortBy",
+        "sortDirection",
+        "pageable"
+      ],
+      "outputs": [
+        "Page<ProgramProblemResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "난이도 점수 계산",
+      "verb_object": "점수 계산",
+      "inputs": [
+        "DifficultyType"
+      ],
+      "outputs": [
+        "Integer"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "정답률 계산",
+      "verb_object": "정답률 계산",
+      "inputs": [
+        "submissionCount",
+        "solvedCount"
+      ],
+      "outputs": [
+        "Double"
+      ],
+      "side_effects": [],
+      "confidence": 0.75
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA",
+      "QueryDSL"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "Pagination"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "효율적인 데이터 조회",
+      "유연한 정렬 기능",
+      "명확한 DTO 사용",
+      "페이징 처리",
+      "난이도 점수 계산"
+    ],
+    "risks": [
+      "복잡한 쿼리로 인한 성능 저하",
+      "정렬 기준의 유효성 문제",
+      "예외 처리 부족",
+      "의존성 주입 실패 가능성",
+      "데이터 일관성 문제"
+    ],
+    "missing_standard_checks": [
+      "입력 값 검증",
+      "예외 처리 로직",
+      "로깅",
+      "성능 모니터링",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.querydsl.jpa.impl.JPAQueryFactory;"
+    },
+    {
+      "type": "call",
+      "text": "queryFactory.select(...).from(pp)"
+    },
+    {
+      "type": "query",
+      "text": "pp.program.id.eq(programId)"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequiredArgsConstructor"
+    },
+    {
+      "type": "call",
+      "text": "PageableExecutionUtils.getPage(content, pageable, ...)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "api+repository",
+      "query+dsl"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\repository\\ProgramProblemRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProgramProblemResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\Problem.java"
+    ]
+  }
+}

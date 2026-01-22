@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\dctutil\\DockerProvider.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Docker Java API\",\n    \"Spring Framework\",\n    \"JPA (Java Persistence API)\"\n  ],\n  \"role\": \"Docker 관련 작업을 수행하는 유틸리티 클래스\",\n  \"key_features\": [\n    \"Dockerfile 압축 해제 및 검증\",\n    \"프로젝트 승인 상태 업데이트\",\n    \"이미지 빌드 요청 처리\"\n  ],\n  \"key_code\": [\n    \"private Path extractDockerfileFromZip(String parentDirectory, String projectName) throws IOException { ... }\",\n    \"public void updateProjectApprovalFixedState(ProjectEntity project) { ... }\",\n    \"private void updateProjectApprovalState(ProjectEntity project) { ... }\"\n  ],\n  \"project_hints\": [\n    \"Docker를 이용한 컨테이너화 및 배포 관리 시스템\",\n    \"프로젝트 승인 및 이미지 빌드 관련 기능을 제공하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

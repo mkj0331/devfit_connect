@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\ProjectTaskScheduler.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\"\n  ],\n  \"role\": \"이 파일은 프로젝트의 배포 단계 처리를 주기적으로 수행하는 스케줄러 역할을 합니다.\",\n  \"key_features\": [\n    \"정기적으로 배포 단계 업데이트 요청을 처리\",\n    \"프로젝트 엔티티를 조회하고 업데이트\",\n    \"배포 단계 큐에서 요청을 폴링\"\n  ],\n  \"key_code\": [\n    \"@Scheduled(fixedRate = 5000)\",\n    \"List<DeploymentUpdateRequest> updateRequests = deploymentStepQueue.pollQueue();\",\n    \"projectOpt.ifPresent(project -> { project.updateDeploymentStep(update.getStep().getDescription()); projectRepository.save(project); });\"\n  ],\n  \"project_hints\": [\n    \"프로젝트는 배포 관리 또는 자동화와 관련된 시스템일 가능성이 높음.\",\n    \"사용자 요청에 따라 프로젝트의 배포 단계를 동적으로 업데이트하는 기능을 포함.\"\n  ]\n}\n```"
+}

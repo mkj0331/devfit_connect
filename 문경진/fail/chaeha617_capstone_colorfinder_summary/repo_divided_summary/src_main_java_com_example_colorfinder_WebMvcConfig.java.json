@@ -1,0 +1,103 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\WebMvcConfig.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Configuration",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "WebMvc",
+      "Interceptor",
+      "Resource"
+    ],
+    "entities": [
+      "CustomInterceptor"
+    ],
+    "modules": [
+      "WebMvcConfig"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "인터셉터 추가",
+      "verb_object": "인터셉터 추가",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "정적 리소스 핸들링",
+      "verb_object": "정적 리소스 핸들링",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Configuration",
+      "Bean"
+    ],
+    "cross_cutting": [
+      "Security",
+      "Logging"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "구성 관리 용이",
+      "로깅 기능 포함",
+      "인터셉터를 통한 요청 처리"
+    ],
+    "risks": [
+      "인터셉터의 성능 저하 가능성",
+      "정적 리소스 경로 변경 시 오류 발생 가능성"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "보안 설정 검토",
+      "테스트 케이스 추가"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Configuration"
+    },
+    {
+      "type": "annotation",
+      "text": "@EnableWebMvc"
+    },
+    {
+      "type": "call",
+      "text": "registry.addInterceptor(customInterceptor())"
+    },
+    {
+      "type": "config",
+      "text": "excludePathPatterns"
+    },
+    {
+      "type": "config",
+      "text": "addResourceHandlers"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "web+mvc",
+      "interceptor+security"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\interceptor\\CustomInterceptor.java"
+    ]
+  }
+}

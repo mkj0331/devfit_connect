@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\MeResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java Records\",\n    \"LocalDateTime\",\n    \"DTO (Data Transfer Object)\",\n    \"Entity Mapping\"\n  ],\n  \"role\": \"This file defines a Data Transfer Object (DTO) for user information in the authentication context.\",\n  \"key_features\": [\n    \"Encapsulates user-related data\",\n    \"Provides a static method to create an instance from a User entity\",\n    \"Uses Java's record feature for immutability and simplicity\"\n  ],\n  \"key_code\": [\n    \"public record MeResponseDto(...)\",\n    \"public static MeResponseDto from(User user) {...}\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves user authentication and management.\",\n    \"It may be part of a larger application dealing with user profiles and roles.\"\n  ]\n}\n```"
+}

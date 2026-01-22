@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\error\\requestError\\ForbiddenException.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Java EE\"],\n  \"role\": \"이 파일은 비즈니스 로직에서 발생할 수 있는 'Forbidden' 예외를 처리하는 역할을 한다.\",\n  \"key_features\": [\n    \"사용자가 권한이 없는 요청을 했을 때 예외를 발생시킨다.\",\n    \"비즈니스 로직에서의 예외 처리를 통해 안정성을 높인다.\"\n  ],\n  \"key_code\": [\n    \"public ForbiddenException(String message, ErrorCode errorCode) {\",\n    \"    super(message, errorCode);\",\n    \"}\"\n  ],\n  \"project_hints\": [\n    \"이 프로젝트는 웹 애플리케이션으로, 사용자 권한 관리 및 접근 제어와 관련된 기능을 포함하고 있을 가능성이 높다.\"\n  ]\n}\n```"
+}

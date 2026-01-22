@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\service\\impl\\ReviewServiceImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"JPA (Java Persistence API)\",\n    \"Transactional Management\"\n  ],\n  \"role\": \"Review Service Implementation\",\n  \"key_features\": [\n    \"Fetches received code reviews for a user with pagination\",\n    \"Fetches completed code reviews for a user with pagination\",\n    \"Handles default values for pagination parameters\"\n  ],\n  \"key_code\": [\n    \"getReceiveReviews(Long userId, Integer page, Integer size)\",\n    \"getDoneReviews(Long userId, Integer page, Integer size)\"\n  ],\n  \"project_hints\": [\n    \"Code review management system\",\n    \"User interaction with code reviews\",\n    \"Handling of user-specific review data\"\n  ]\n}\n```"
+}

@@ -1,0 +1,103 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\request\\UserSubmissionRequestDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "submission",
+      "request",
+      "user",
+      "dto"
+    ],
+    "entities": [
+      "UserSubmissionRequestDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 제출 요청 생성",
+      "verb_object": "제출 요청 생성",
+      "inputs": [
+        "nickname",
+        "language",
+        "isSuccess",
+        "programType",
+        "algorithm",
+        "platform"
+      ],
+      "outputs": [
+        "UserSubmissionRequestDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "제출 성공 여부 확인",
+      "verb_object": "성공 여부 확인",
+      "inputs": [
+        "isSuccess"
+      ],
+      "outputs": [
+        "Boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Lombok 사용으로 코드 간결함",
+      "명확한 데이터 구조",
+      "유연한 객체 생성"
+    ],
+    "risks": [
+      "DTO의 유효성 검증 부족",
+      "private 생성자 사용으로 인한 테스트 어려움"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "문서화 주석"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@NoArgsConstructor"
+    },
+    {
+      "type": "annotation",
+      "text": "@AllArgsConstructor"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+request",
+      "submission+user"
+    ],
+    "related_files_guess": []
+  }
+}

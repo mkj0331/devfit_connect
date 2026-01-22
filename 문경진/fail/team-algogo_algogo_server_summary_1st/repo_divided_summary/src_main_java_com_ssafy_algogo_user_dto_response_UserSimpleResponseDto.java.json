@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UserSimpleResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java Records\", \"DTO (Data Transfer Object)\", \"Java 11+\"],\n  \"role\": \"User Data Transfer Object\",\n  \"key_features\": [\n    \"Immutable data structure\",\n    \"Encapsulation of user-related data\",\n    \"Simplified data transfer between layers\"\n  ],\n  \"key_code\": [\n    \"public record UserSimpleResponseDto(Long userId, String profileImage, String nickname) {}\"\n  ],\n  \"project_hints\": [\n    \"User management system\",\n    \"Profile handling\",\n    \"Data representation for API responses\"\n  ]\n}\n```"
+}

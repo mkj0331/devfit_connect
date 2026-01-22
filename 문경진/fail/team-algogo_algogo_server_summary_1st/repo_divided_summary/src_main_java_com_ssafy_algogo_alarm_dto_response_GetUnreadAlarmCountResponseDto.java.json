@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\alarm\\dto\\response\\GetUnreadAlarmCountResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java 17 (record feature)\", \"Spring Framework (추정)\"],\n  \"role\": \"데이터 전송 객체 (DTO)로서, 읽지 않은 알람의 개수를 클라이언트에 전달하는 역할\",\n  \"key_features\": [\"불변 객체\", \"간결한 코드\", \"자동 생성된 getter 메서드\"],\n  \"key_code\": [\"public record GetUnreadAlarmCountResponseDto(long alarmCount) {}\"],\n  \"project_hints\": [\"알람 시스템\", \"읽지 않은 알람 카운트 관리\", \"서버와 클라이언트 간 데이터 전송\"]\n}\n```"
+}

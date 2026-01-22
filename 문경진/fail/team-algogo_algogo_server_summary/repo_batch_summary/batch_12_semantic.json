@@ -1,0 +1,147 @@
+{
+  "batch_id": 12,
+  "batch_mixture_flag": true,
+  "languages": [
+    "java"
+  ],
+  "technologies": [
+    "Jackson",
+    "Lombok",
+    "Spring",
+    "JPA",
+    "QueryDSL"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "그룹 방 관리",
+      "domain_tags": [
+        "group",
+        "room",
+        "management",
+        "entity",
+        "repository"
+      ],
+      "responsibilities": [
+        "그룹 방 생성",
+        "그룹 방 정보 변경",
+        "그룹 방 저장",
+        "그룹 방 조회",
+        "모든 그룹룸 조회",
+        "그룹룸 상세 조회"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Repository",
+        "Entity",
+        "Spring Data JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\GroupRoom.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\GroupRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\query\\GroupQueryRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\query\\GroupQueryRepositoryImpl.java"
+      ],
+      "evidence": [
+        "GroupRoom entity",
+        "findAllGroupRooms(String keyword, Pageable pageable)",
+        "@Entity",
+        "@Repository"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "JPA 성능 이슈",
+        "트랜잭션 관리 필요",
+        "동시성 문제 발생 가능"
+      ]
+    },
+    {
+      "cluster_name": "그룹 사용자 관리",
+      "domain_tags": [
+        "user",
+        "group",
+        "role",
+        "status",
+        "management"
+      ],
+      "responsibilities": [
+        "그룹 사용자 생성",
+        "그룹 역할 업데이트",
+        "프로그램 사용자 조회",
+        "활성 프로그램 ID 조회",
+        "프로그램 사용자 상태 카운트"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "Repository",
+        "Entity",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\GroupsUser.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\GroupUserRepository.java"
+      ],
+      "evidence": [
+        "GroupsUser entity",
+        "findByProgramIdAndUserId(Long programId, Long userId)",
+        "@Entity"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "역할 변경 시 데이터 무결성 문제",
+        "동시성 문제",
+        "예외 처리 부족"
+      ]
+    },
+    {
+      "cluster_name": "그룹 초대 및 상태 관리",
+      "domain_tags": [
+        "invite",
+        "status",
+        "program",
+        "user",
+        "management"
+      ],
+      "responsibilities": [
+        "그룹 초대 상태 조회",
+        "그룹 초대 삭제",
+        "그룹 정보 조회",
+        "내 그룹 정보 조회"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Repository",
+        "QueryDSL"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\service\\GroupService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\query\\GroupQueryRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\query\\GroupQueryRepositoryImpl.java"
+      ],
+      "evidence": [
+        "getGroupInviteState(Long programId)",
+        "findReceivedGroupInvitesWithRoom(Long userId)",
+        "@Repository"
+      ],
+      "confidence": 0.75,
+      "risks_or_unknowns": [
+        "복잡한 비즈니스 로직",
+        "예외 처리 누락 가능성",
+        "성능 저하 우려"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "group",
+    "room",
+    "user",
+    "invite",
+    "status",
+    "management",
+    "repository",
+    "entity",
+    "service",
+    "jpa"
+  ]
+}

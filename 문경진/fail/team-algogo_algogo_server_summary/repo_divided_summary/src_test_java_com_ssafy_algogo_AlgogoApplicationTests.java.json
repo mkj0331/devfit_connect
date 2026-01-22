@@ -1,0 +1,77 @@
+{
+  "file": {
+    "path": "src\\test\\java\\com\\ssafy\\algogo\\AlgogoApplicationTests.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring Boot"
+    ],
+    "libraries": [
+      "JUnit"
+    ],
+    "layer_guess": "Test",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "test",
+      "context",
+      "application"
+    ],
+    "entities": [],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "컨텍스트 로드",
+      "verb_object": "컨텍스트 로드",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Test",
+      "Spring Boot Test"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "JUnit 사용",
+      "Spring Boot 통합 테스트",
+      "간단한 테스트 구조"
+    ],
+    "risks": [
+      "테스트 커버리지 부족"
+    ],
+    "missing_standard_checks": [
+      "테스트 케이스 설명",
+      "예외 처리 테스트",
+      "다양한 입력값 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@SpringBootTest"
+    },
+    {
+      "type": "call",
+      "text": "contextLoads()"
+    },
+    {
+      "type": "import",
+      "text": "import org.junit.jupiter.api.Test"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "test+springboot",
+      "application+test"
+    ],
+    "related_files_guess": []
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\RedisJwtService.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok",
+      "Spring Data Redis"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "JWT",
+      "Redis",
+      "Token",
+      "User",
+      "IP"
+    ],
+    "entities": [
+      "User",
+      "Token"
+    ],
+    "modules": [
+      "Auth",
+      "Service"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "토큰 저장",
+      "verb_object": "save token",
+      "inputs": [
+        "userId",
+        "token",
+        "ip"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "Redis에 데이터 저장"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "토큰 조회",
+      "verb_object": "find token",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "token"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "IP 조회",
+      "verb_object": "find IP",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "ip"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "토큰 검증",
+      "verb_object": "validate token",
+      "inputs": [
+        "userId",
+        "token",
+        "ip"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "토큰 삭제",
+      "verb_object": "delete token",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "Redis에서 데이터 삭제"
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "Redis"
+    ],
+    "patterns": [],
+    "cross_cutting": [
+      "캐시",
+      "보안"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "Redis를 통한 빠른 데이터 접근",
+      "Optional 사용으로 NPE 방지",
+      "명확한 책임 분리",
+      "Lombok을 통한 코드 간결성",
+      "유효성 검증 로직 포함"
+    ],
+    "risks": [
+      "Redis 의존성",
+      "토큰 유효성 검사 실패 시 처리 미비",
+      "IP 검증의 보안 취약점",
+      "데이터 일관성 문제",
+      "예외 처리 부족"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "예외 처리",
+      "유효성 검사",
+      "단위 테스트",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequiredArgsConstructor"
+    },
+    {
+      "type": "call",
+      "text": "redisTemplate.opsForHash().put"
+    },
+    {
+      "type": "call",
+      "text": "redisTemplate.expire"
+    },
+    {
+      "type": "call",
+      "text": "redisTemplate.opsForHash().get"
+    },
+    {
+      "type": "call",
+      "text": "redisTemplate.delete"
+    },
+    {
+      "type": "call",
+      "text": "redisTemplate.hasKey"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+jwt",
+      "cache+redis",
+      "token+management"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\controller\\AuthController.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\JwtTokenProvider.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\repository\\UserRepository.java"
+    ]
+  }
+}

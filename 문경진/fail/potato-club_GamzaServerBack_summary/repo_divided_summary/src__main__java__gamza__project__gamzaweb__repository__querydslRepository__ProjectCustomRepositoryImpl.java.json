@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\repository\\querydslRepository\\ProjectCustomRepositoryImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"QueryDSL\",\n    \"JPA\"\n  ],\n  \"role\": \"이 파일은 프로젝트의 사용자 정의 리포지토리 구현체로, 데이터베이스에서 프로젝트와 관련된 이미지를 함께 조회하는 기능을 담당합니다.\",\n  \"key_features\": [\n    \"프로젝트와 관련된 이미지 정보를 함께 조회\",\n    \"승인된 프로젝트만 필터링\",\n    \"고정 상태에 따른 조건 필터링\",\n    \"업데이트 날짜 기준으로 정렬\"\n  ],\n  \"key_code\": [\n    \"return jpaQueryFactory.selectFrom(project).join(project.imageEntity, image).fetchJoin()\"\n  ],\n  \"project_hints\": [\n    \"프로젝트 관리 또는 이미지 관련 기능을 제공하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

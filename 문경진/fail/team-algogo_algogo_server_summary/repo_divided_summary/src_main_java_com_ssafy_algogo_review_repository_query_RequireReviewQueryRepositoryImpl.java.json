@@ -1,0 +1,127 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\query\\RequireReviewQueryRepositoryImpl.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "QueryDSL"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "review",
+      "submission",
+      "program",
+      "user"
+    ],
+    "entities": [
+      "RequireReview",
+      "Submission",
+      "ProgramProblem",
+      "User"
+    ],
+    "modules": [
+      "review",
+      "submission",
+      "program"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 재매칭 대상 조회",
+      "verb_object": "리뷰 재매칭 대상 조회",
+      "inputs": [
+        "submissionId"
+      ],
+      "outputs": [
+        "List<ReviewRematchTargetQueryDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "필요한 리뷰 삭제",
+      "verb_object": "필요한 리뷰 삭제",
+      "inputs": [
+        "userId",
+        "programId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA",
+      "QueryDSL"
+    ],
+    "patterns": [
+      "Repository",
+      "DTO"
+    ],
+    "cross_cutting": [
+      "Transactional"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "효율적인 데이터 조회",
+      "트랜잭션 관리",
+      "DTO 사용",
+      "QueryDSL 활용"
+    ],
+    "risks": [
+      "복잡한 쿼리로 인한 성능 저하",
+      "예외 처리 부족",
+      "동시성 문제 가능성",
+      "의존성 주입 실패",
+      "잘못된 데이터 삭제"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리 로직",
+      "로깅",
+      "성능 모니터링",
+      "유닛 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.review.dto.response.ReviewRematchTargetQueryDto;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Repository"
+    },
+    {
+      "type": "call",
+      "text": "query.from(requireReview)"
+    },
+    {
+      "type": "query",
+      "text": "requireReview.targetSubmission.id.eq(submissionId)"
+    },
+    {
+      "type": "call",
+      "text": "query.delete(requireReview)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "review+submission",
+      "api+repository"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\ReviewRematchTargetQueryDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Submission.java"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramTypeRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Data JPA"
+    ],
+    "layer_guess": "Repository Layer",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProgramType"
+    ],
+    "entities": [
+      "ProgramType"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 타입 조회",
+      "verb_object": "이름으로 프로그램 타입 찾기",
+      "inputs": [
+        "name: String"
+      ],
+      "outputs": [
+        "Optional<ProgramType>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간단한 CRUD 인터페이스 제공",
+      "Optional 사용으로 null 처리 용이",
+      "Spring Data JPA 활용"
+    ],
+    "risks": [
+      "이름으로 찾기 기능의 성능 문제",
+      "예외 처리 미비 가능성"
+    ],
+    "missing_standard_checks": [
+      "트랜잭션 관리",
+      "유효성 검사",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.Optional"
+    },
+    {
+      "type": "annotation",
+      "text": "@Repository"
+    },
+    {
+      "type": "call",
+      "text": "findByName(String name)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+programType"
+    ],
+    "related_files_guess": []
+  }
+}

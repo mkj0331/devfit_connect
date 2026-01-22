@@ -1,0 +1,151 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\WebSecurityConfig.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Security"
+    ],
+    "layer_guess": "Configuration",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "security",
+      "authentication",
+      "authorization",
+      "login",
+      "logout"
+    ],
+    "entities": [
+      "UserDetailService"
+    ],
+    "modules": [
+      "WebSecurityConfig"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "웹 보안 구성",
+      "verb_object": "보안 설정",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "사용자 인증",
+      "verb_object": "인증 관리",
+      "inputs": [
+        "HttpSecurity",
+        "BCryptPasswordEncoder",
+        "UserDetailService"
+      ],
+      "outputs": [
+        "AuthenticationManager"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "CSRF 비활성화",
+      "verb_object": "CSRF 비활성화",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "폼 로그인 설정",
+      "verb_object": "로그인 페이지 설정",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "정적 리소스 무시",
+      "verb_object": "정적 리소스 무시",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.6
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Configuration",
+      "Bean"
+    ],
+    "cross_cutting": [
+      "Security"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "구성의 명확성",
+      "유연한 보안 설정",
+      "사용자 정의 가능성",
+      "CSRF 비활성화 옵션",
+      "정적 리소스 관리"
+    ],
+    "risks": [
+      "CSRF 비활성화로 인한 보안 취약점",
+      "잘못된 인증 설정 가능성",
+      "로그인 페이지 노출 위험",
+      "정적 리소스 접근 제어 미비",
+      "인증 관리자 설정 오류"
+    ],
+    "missing_standard_checks": [
+      "HTTPS 강제화",
+      "세션 관리 정책",
+      "로그 기록",
+      "입력 검증",
+      "보안 헤더 설정"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Configuration"
+    },
+    {
+      "type": "annotation",
+      "text": "@Bean"
+    },
+    {
+      "type": "call",
+      "text": "web.ignoring()"
+    },
+    {
+      "type": "call",
+      "text": "http.authorizeRequests()"
+    },
+    {
+      "type": "call",
+      "text": "http.formLogin()"
+    },
+    {
+      "type": "call",
+      "text": "http.logout()"
+    },
+    {
+      "type": "call",
+      "text": "http.csrf().disable()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+security",
+      "web+configuration",
+      "user+management"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\UserDetailService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\SecurityController.java"
+    ]
+  }
+}

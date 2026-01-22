@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\ErrorCode.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\",\n    \"HTTP Status Codes\"\n  ],\n  \"role\": \"Error Code Enumeration\",\n  \"key_features\": [\n    \"Defines common error codes for the application\",\n    \"Associates HTTP status codes with specific error messages\",\n    \"Categorizes errors into common, authentication, file/image, and server-related issues\"\n  ],\n  \"key_code\": [\n    \"BAD_REQUEST(HttpStatus.BAD_REQUEST, \\\"BAD_REQUEST\\\")\",\n    \"UNAUTHORIZED(HttpStatus.UNAUTHORIZED, \\\"UNAUTHORIZED\\\")\",\n    \"INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, \\\"INTERNAL_SERVER_ERROR\\\")\"\n  ],\n  \"project_hints\": [\n    \"Error handling in a web application\",\n    \"REST API development\",\n    \"User authentication and file management\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\Enums\\ProjectState.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"이 파일은 프로젝트의 상태를 정의하는 열거형(enum)으로, 프로젝트의 진행 상태를 관리하는 역할을 한다.\",\n  \"key_features\": [\n    \"프로젝트의 상태를 PLAN, PROGRESS, DONE으로 구분하여 관리\",\n    \"프로젝트의 진행 상태를 명확하게 표현\"\n  ],\n  \"key_code\": [\n    \"public enum ProjectState {\",\n    \"    PLAN,\",\n    \"    PROGRESS,\",\n    \"    DONE\",\n    \"}\"\n  ],\n  \"project_hints\": [\n    \"프로젝트 관리 또는 작업 흐름 관리 시스템과 관련된 주제\"\n  ]\n}\n```"
+}

@@ -1,0 +1,92 @@
+{
+  "batch_id": 19,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Lombok",
+    "Spring",
+    "JPA"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "제출 요청/응답 DTO 생성",
+      "domain_tags": [
+        "dto",
+        "submission",
+        "response",
+        "algorithm"
+      ],
+      "responsibilities": [
+        "사용자 제출 요청 DTO 생성",
+        "알고리즘 목록 응답 DTO 생성",
+        "제출 응답 DTO 생성",
+        "제출 목록 응답 DTO 생성",
+        "제출 통계 응답 DTO 생성"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\request\\UserSubmissionRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\AlgorithmListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\AlgorithmResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionStatsInfosResponseDto.java"
+      ],
+      "evidence": [
+        "UserSubmissionRequestDto",
+        "AlgorithmListResponseDto",
+        "SubmissionResponseDto",
+        "SubmissionListResponseDto",
+        "SubmissionStatsInfosResponseDto"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "DTO의 유효성 검증 부족",
+        "확장성 문제",
+        "null 체크 미비"
+      ]
+    },
+    {
+      "cluster_name": "제출 상태/활성 확인 DTO 생성",
+      "domain_tags": [
+        "dto",
+        "submission",
+        "status",
+        "active"
+      ],
+      "responsibilities": [
+        "제출 활성 상태 확인 DTO 생성",
+        "제출 상태 확인 DTO 생성"
+      ],
+      "implementation_signals": [
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionAuthorActiveResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionAuthorStatusResponseDto.java"
+      ],
+      "evidence": [
+        "SubmissionAuthorActiveResponseDto",
+        "SubmissionAuthorStatusResponseDto"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "유효성 검사 미비",
+        "확장성 부족"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "dto",
+    "submission",
+    "response",
+    "algorithm",
+    "status",
+    "active"
+  ]
+}

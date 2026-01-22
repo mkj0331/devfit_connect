@@ -1,0 +1,138 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\controller\\ReviewController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Controller",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Code Review",
+      "User",
+      "Review List"
+    ],
+    "entities": [
+      "ReviewService",
+      "CustomUserDetails"
+    ],
+    "modules": [
+      "review",
+      "auth"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "내가 해야할 리뷰 리스트 조회",
+      "verb_object": "리뷰 리스트 조회",
+      "inputs": [
+        "customUserDetails.getUserId()"
+      ],
+      "outputs": [
+        "RequiredCodeReviewListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "내가 받은 리뷰 리스트 조회",
+      "verb_object": "리뷰 리스트 조회",
+      "inputs": [
+        "customUserDetails.getUserId()",
+        "page",
+        "size"
+      ],
+      "outputs": [
+        "UserCodeReviewListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "내가 한 리뷰 리스트 조회",
+      "verb_object": "리뷰 리스트 조회",
+      "inputs": [
+        "customUserDetails.getUserId()",
+        "page",
+        "size"
+      ],
+      "outputs": [
+        "UserCodeReviewListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Service"
+    ],
+    "cross_cutting": [
+      "Security",
+      "Validation"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 API 설계",
+      "유효성 검사 사용",
+      "성공 응답 처리",
+      "RESTful 원칙 준수",
+      "사용자 인증"
+    ],
+    "risks": [
+      "예외 처리 부족",
+      "페이지네이션 로직 미비",
+      "보안 취약점 가능성",
+      "의존성 주입 오류",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "로깅",
+      "단위 테스트",
+      "보안 감사",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@GetMapping(\"/lists/receive\")"
+    },
+    {
+      "type": "call",
+      "text": "reviewService.getRequiredReviews(customUserDetails.getUserId())"
+    },
+    {
+      "type": "endpoint",
+      "text": "/lists/done"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.review.service.ReviewService;"
+    },
+    {
+      "type": "annotation",
+      "text": "@AuthenticationPrincipal CustomUserDetails customUserDetails"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "review+controller",
+      "auth+security",
+      "api+response"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\review\\service\\ReviewService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\CustomUserDetails.java"
+    ]
+  }
+}

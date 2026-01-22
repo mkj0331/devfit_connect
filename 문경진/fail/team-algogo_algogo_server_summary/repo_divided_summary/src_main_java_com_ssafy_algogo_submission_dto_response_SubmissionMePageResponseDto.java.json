@@ -1,0 +1,109 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionMePageResponseDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Submission",
+      "Page",
+      "Response",
+      "Dto"
+    ],
+    "entities": [
+      "SubmissionMePageResponseDto",
+      "PageInfo",
+      "SortInfo",
+      "SubmissionMeResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "페이지 정보 생성",
+      "verb_object": "페이지 정보 생성",
+      "inputs": [
+        "Page<SubmissionMeResponseDto> userSubmissionResponseDto"
+      ],
+      "outputs": [
+        "SubmissionMePageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "정렬 정보 생성",
+      "verb_object": "정렬 정보 생성",
+      "inputs": [
+        "Page<SubmissionMeResponseDto> userSubmissionResponseDto"
+      ],
+      "outputs": [
+        "SortInfo"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Spring 프레임워크 사용",
+      "불변 객체 사용",
+      "페이지네이션 지원",
+      "정렬 정보 포함"
+    ],
+    "risks": [
+      "DTO의 확장성 문제",
+      "데이터 유효성 검사 부족",
+      "의존성 증가"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "API 문서화",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Page;"
+    },
+    {
+      "type": "call",
+      "text": "PageInfo.of(userSubmissionResponseDto)"
+    },
+    {
+      "type": "call",
+      "text": "SortInfo.of(userSubmissionResponseDto)"
+    },
+    {
+      "type": "call",
+      "text": "userSubmissionResponseDto.getContent()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "submission+page",
+      "api+response"
+    ],
+    "related_files_guess": []
+  }
+}

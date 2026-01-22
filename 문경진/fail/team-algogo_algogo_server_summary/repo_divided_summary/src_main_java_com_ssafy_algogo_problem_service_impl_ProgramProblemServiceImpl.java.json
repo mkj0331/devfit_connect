@@ -1,0 +1,136 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\service\\impl\\ProgramProblemServiceImpl.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "프로그램",
+      "문제",
+      "요청",
+      "삭제",
+      "생성"
+    ],
+    "entities": [
+      "Program",
+      "Problem",
+      "ProgramProblem"
+    ],
+    "modules": [
+      "service",
+      "repository",
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 생성",
+      "verb_object": "문제 생성",
+      "inputs": [
+        "ProgramProblemCreateRequestDto"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "CustomException 발생"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "문제 삭제",
+      "verb_object": "문제 삭제",
+      "inputs": [
+        "Long programId",
+        "ProgramProblemDeleteRequestDto"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 예외 처리",
+      "트랜잭션 관리",
+      "DTO 사용",
+      "JPA를 통한 데이터 접근",
+      "Lombok을 통한 코드 간결성"
+    ],
+    "risks": [
+      "CustomException 처리 누락 가능성",
+      "잘못된 ID 처리",
+      "데이터 무결성 문제",
+      "성능 저하 가능성",
+      "동시성 문제"
+    ],
+    "missing_standard_checks": [
+      "입력 유효성 검증",
+      "로깅",
+      "API 문서화",
+      "단위 테스트",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.advice.CustomException;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Service;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "annotation",
+      "text": "@Transactional"
+    },
+    {
+      "type": "call",
+      "text": "programRepository.findById(programId)"
+    },
+    {
+      "type": "call",
+      "text": "problemRepository.findAllById(new HashSet<>(problemIdList))"
+    },
+    {
+      "type": "query",
+      "text": "programProblemRepository.saveAll(programProblemList)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "problem+service",
+      "program+repository",
+      "dto+request"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemCreateRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\repository\\ProgramProblemRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\ProgramProblem.java"
+    ]
+  }
+}

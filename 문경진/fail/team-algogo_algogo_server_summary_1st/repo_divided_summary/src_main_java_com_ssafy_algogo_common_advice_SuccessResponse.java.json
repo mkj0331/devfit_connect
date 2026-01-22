@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\SuccessResponse.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Lombok\"\n  ],\n  \"role\": \"SuccessResponse 클래스는 API 요청이 성공했을 때의 응답 형식을 정의합니다.\",\n  \"key_features\": [\n    \"message와 data 필드를 포함하여 성공적인 응답을 구성\",\n    \"정적 메서드 success를 통해 SuccessResponse 객체를 쉽게 생성\"\n  ],\n  \"key_code\": [\n    \"private String message;\",\n    \"private Object data;\",\n    \"public static SuccessResponse success(String message, Object data) { return new SuccessResponse(message, data); }\"\n  ],\n  \"project_hints\": [\n    \"API 응답 처리\",\n    \"성공적인 결과를 클라이언트에 전달하는 기능\"\n  ]\n}\n```"
+}

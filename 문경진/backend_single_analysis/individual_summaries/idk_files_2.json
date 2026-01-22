@@ -1,0 +1,32 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\account\\controller\\TransactionController.java",
+  "project_subject_signals": [
+    "account",
+    "transaction"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "lombok",
+    "slf4j",
+    "swagger-v3",
+    "spring-web",
+    "spring-http",
+    "spring-context",
+    "spring-beans",
+    "spring-core"
+  ],
+  "core_features": [
+    {
+      "feature_name": "계좌 입출금 내역 조회 API",
+      "feature_description": "사용자의 계좌 입출금 내역을 조회하는 기능을 제공한다.",
+      "implementation_method": "HTTP GET 요청을 받아 `TransactionService`의 `getTransaction` 메서드를 호출하여 데이터를 조회하고 `ResultResponse` 형태로 반환한다.",
+      "job_value": "RESTful API 설계 및 구현 능력을 보여주며, 서비스 계층과의 연동을 통한 기능 구현 역량을 나타낸다."
+    }
+  ],
+  "improvement_suggestions": [
+    "HTTP GET 요청에 대한 파라미터(예: 계좌 ID, 조회 기간 등)를 추가하여 조회 기능을 더욱 상세하게 제어할 수 있도록 개선할 수 있습니다.",
+    "입출금 내역 조회 시 발생할 수 있는 예외 처리를 명확하게 정의하고, 이에 대한 응답을 제공하여 API 안정성을 높일 수 있습니다."
+  ]
+}

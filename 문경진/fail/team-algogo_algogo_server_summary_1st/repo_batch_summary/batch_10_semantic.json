@@ -1,0 +1,41 @@
+{
+  "batch_id": 10,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring AOP",
+    "Spring Security",
+    "Lombok",
+    "JPA",
+    "Java Annotations",
+    "Spring Framework",
+    "Spring MVC",
+    "REST API",
+    "Jakarta Validation"
+  ],
+  "batch_role": "그룹 관리 및 권한 부여 시스템의 구현",
+  "key_features": [
+    "사용자 권한 기반의 접근 제어",
+    "그룹 관련 기능 관리",
+    "그룹 초대 및 가입 요청 처리",
+    "DTO를 통한 데이터 전송 및 검증"
+  ],
+  "related_files": [
+    "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupAuthorizationAspect.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupAuthorize.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupId.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\controller\\GroupController.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\CheckGroupNameRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\CreateGroupRoomRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupInviteStateRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupJoinStateRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupMemberRoleRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupRoomRequestDto.java"
+  ],
+  "project_hints": [
+    "AOP를 활용한 코드 중복 최소화",
+    "그룹 관리 및 사용자 권한 관리 시스템",
+    "사용자 참여 및 그룹 기능 관리"
+  ]
+}

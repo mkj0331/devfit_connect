@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\ProgramUserStatus.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Enumeration for user status in a program\",\n  \"key_features\": [\n    \"Defines user status options\",\n    \"Provides a way to represent user states in the program\"\n  ],\n  \"key_code\": [\n    \"public enum ProgramUserStatus {\",\n    \"    ACTIVE,\",\n    \"    WITHDRAW\",\n    \"}\"\n  ],\n  \"project_hints\": [\n    \"User management within a program\",\n    \"Tracking user engagement and status\"\n  ]\n}\n```"
+}

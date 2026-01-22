@@ -1,0 +1,145 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\SubmissionAiEvaluationServiceImpl.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "evaluation",
+      "submission",
+      "algorithm"
+    ],
+    "entities": [
+      "Submission",
+      "Algorithm",
+      "Problem"
+    ],
+    "modules": [
+      "submission",
+      "evaluation"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "AI 평가 생성",
+      "verb_object": "평가 생성",
+      "inputs": [
+        "submissionId",
+        "score",
+        "reason"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "제출 정보 업데이트"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "평가 이유 생성",
+      "verb_object": "이유 생성",
+      "inputs": [
+        "reasonPrompt"
+      ],
+      "outputs": [
+        "reason"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "평가 결과 저장",
+      "verb_object": "결과 저장",
+      "inputs": [
+        "submissionId",
+        "score",
+        "reason"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "DB 업데이트"
+      ],
+      "confidence": 0.85
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "예외 처리",
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 예외 처리",
+      "유지보수 용이성",
+      "의존성 주입 사용",
+      "로깅 기능",
+      "비즈니스 로직 분리"
+    ],
+    "risks": [
+      "예외 발생 시 시스템 중단 가능성",
+      "데이터 무결성 문제",
+      "성능 저하 가능성",
+      "의존성 과다",
+      "테스트 부족"
+    ],
+    "missing_standard_checks": [
+      "입력 값 검증",
+      "로깅 수준 조정",
+      "성능 모니터링",
+      "보안 검토",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.repository.SubmissionRepository;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Service;"
+    },
+    {
+      "type": "call",
+      "text": "submissionRepository.findById(submissionId)"
+    },
+    {
+      "type": "call",
+      "text": "submission.updateAiEvaluation(score, reason)"
+    },
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "annotation",
+      "text": "@Transactional"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "evaluation+submission",
+      "ai+service",
+      "db+jpa"
+    ],
+    "related_files_guess": [
+      "src/main/java/com/ssafy/algogo/submission/repository/SubmissionRepository.java",
+      "src/main/java/com/ssafy/algogo/submission/service/OpenAiEvaluationService.java"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\service\\Interface\\UserService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Jakarta EE\", \"Spring Framework (추정)\"],\n  \"role\": \"사용자 관련 서비스 기능을 정의하는 인터페이스\",\n  \"key_features\": [\n    \"회원가입 기능\",\n    \"로그인 기능\",\n    \"로그아웃 기능\",\n    \"토큰 재발급 기능\",\n    \"헤더에 토큰 설정 기능\",\n    \"사용자 목록 조회 기능\"\n  ],\n  \"key_code\": [\n    \"void signUp(RequestUserSignUpDto dto, HttpServletResponse response);\",\n    \"void login(RequestUserLoginDto dto, HttpServletResponse response);\",\n    \"void logout(HttpServletRequest request);\",\n    \"void reissueToken(HttpServletRequest request, HttpServletResponse response);\",\n    \"void setTokenInHeader(String email, HttpServletResponse response);\",\n    \"ResponseUserList userList();\"\n  ],\n  \"project_hints\": [\n    \"사용자 인증 및 관리 시스템\",\n    \"웹 애플리케이션의 사용자 서비스\",\n    \"회원가입 및 로그인 기능을 포함한 사용자 관리\"\n  ]\n}\n```"
+}

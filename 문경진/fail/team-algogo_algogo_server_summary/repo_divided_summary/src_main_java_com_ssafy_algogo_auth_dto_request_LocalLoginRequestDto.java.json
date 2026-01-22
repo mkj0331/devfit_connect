@@ -1,0 +1,92 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\request\\LocalLoginRequestDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "login",
+      "request",
+      "authentication"
+    ],
+    "entities": [
+      "LocalLoginRequestDto"
+    ],
+    "modules": [
+      "auth",
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "로그인 요청",
+      "verb_object": "로그인 요청",
+      "inputs": [
+        "email",
+        "password"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder"
+    ],
+    "cross_cutting": [
+      "Validation"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사 포함",
+      "Lombok 사용으로 코드 간결",
+      "명확한 필드 정의"
+    ],
+    "risks": [
+      "입력값 검증 부족 시 보안 취약점",
+      "예외 처리 미비 가능성"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "길이 제한",
+      "형식 검증"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotBlank(message = \"Email is required\")"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotBlank(message = \"Password is required\")"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.validation.constraints.NotBlank;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.*;"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+dto",
+      "login+request"
+    ],
+    "related_files_guess": []
+  }
+}

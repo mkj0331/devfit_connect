@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java Records\",\n    \"DTO (Data Transfer Object)\",\n    \"Java Collections\"\n  ],\n  \"role\": \"This file defines a data transfer object for the response of a problem set list in the application.\",\n  \"key_features\": [\n    \"Encapsulates pagination information through PageInfo.\",\n    \"Encapsulates sorting information through SortInfo.\",\n    \"Contains a list of problem set responses.\"\n  ],\n  \"key_code\": [\n    \"public record ProblemSetListResponseDto(PageInfo page, SortInfo sort, List<ProblemSetResponseDto> problemSetList)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves managing and displaying problem sets, possibly for a coding or algorithm practice platform.\"\n  ]\n}\n```"
+}

@@ -1,0 +1,41 @@
+{
+  "batch_id": 20,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "Java Records",
+    "Java Collections",
+    "Spring Data",
+    "Jakarta Persistence (JPA)",
+    "Jakarta Validation",
+    "Lombok",
+    "Hibernate",
+    "Jackson"
+  ],
+  "batch_role": "Submission management system for a programming problem-solving platform.",
+  "key_features": [
+    "Handles submission statistics and pagination.",
+    "Defines entities for algorithms, submissions, and their relationships.",
+    "Supports AI evaluation of submissions.",
+    "Manages event-driven architecture for submission-related events."
+  ],
+  "related_files": [
+    "SubmissionStatsPageResponseDto.java",
+    "SubmissionStatsResponseDto.java",
+    "TrendIdsResponseDto.java",
+    "Algorithm.java",
+    "AlgorithmKeyword.java",
+    "Submission.java",
+    "SubmissionAlgorithm.java",
+    "SubmissionAiEvaluationEvent.java",
+    "SubmissionEvent.java",
+    "SubmissionRematchEvent.java"
+  ],
+  "project_hints": [
+    "The project likely involves a submission system for coding challenges or educational purposes.",
+    "Focus on user submissions, their statistics, and associated algorithms.",
+    "Integration with AI for evaluating submissions and managing events related to submissions."
+  ]
+}

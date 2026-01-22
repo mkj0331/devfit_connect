@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\JoinStatus.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Enumeration for representing the status of a join request.\",\n  \"key_features\": [\n    \"Defines three possible statuses: PENDING, DENIED, ACCEPTED\",\n    \"Used to manage and track the state of join requests in the application\"\n  ],\n  \"key_code\": [\n    \"public enum JoinStatus {\",\n    \"    PENDING,\",\n    \"    DENIED,\",\n    \"    ACCEPTED\",\n    \"}\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves user management or group joining functionalities.\",\n    \"The enum can be used in workflows where users can apply to join groups or events.\"\n  ]\n}\n```"
+}

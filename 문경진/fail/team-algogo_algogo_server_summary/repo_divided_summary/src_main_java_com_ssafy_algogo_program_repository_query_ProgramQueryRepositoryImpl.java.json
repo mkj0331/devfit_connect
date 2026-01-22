@@ -1,0 +1,132 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\query\\ProgramQueryRepositoryImpl.java",
+    "language": "java",
+    "frameworks": [
+      "Spring",
+      "QueryDSL"
+    ],
+    "libraries": [],
+    "layer_guess": "Repository",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "program",
+      "problem",
+      "category",
+      "user",
+      "status"
+    ],
+    "entities": [
+      "Program",
+      "ProgramType",
+      "ProgramCategory",
+      "ProgramUser",
+      "Problem"
+    ],
+    "modules": [
+      "repository",
+      "query"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 조회",
+      "verb_object": "프로그램 조회",
+      "inputs": [
+        "userId",
+        "programIds",
+        "pageable"
+      ],
+      "outputs": [
+        "List<ProblemSetResponseDto>",
+        "Long"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "문제 세트 응답 생성",
+      "verb_object": "문제 세트 응답 생성",
+      "inputs": [
+        "dto",
+        "categoriesMap",
+        "totalParticipantsMap",
+        "problemCountMap"
+      ],
+      "outputs": [
+        "ProblemSetResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA",
+      "QueryDSL"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 접근 방식",
+      "유연한 쿼리 구성",
+      "DTO 사용으로 인한 데이터 전송 최적화",
+      "활성 사용자 상태 필터링",
+      "페이지네이션 지원"
+    ],
+    "risks": [
+      "복잡한 쿼리로 인한 성능 저하 가능성",
+      "예외 처리 부족",
+      "유효성 검사 미비",
+      "의존성 주입 문제",
+      "동시성 문제"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "로깅",
+      "유효성 검사",
+      "트랜잭션 관리",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.querydsl.jpa.impl.JPAQueryFactory;"
+    },
+    {
+      "type": "call",
+      "text": "fetch();"
+    },
+    {
+      "type": "query",
+      "text": "from(program)"
+    },
+    {
+      "type": "query",
+      "text": "innerJoin(program.programType, programType)"
+    },
+    {
+      "type": "query",
+      "text": "where(program.id.in(programIds))"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "api+repository",
+      "query+dsl"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\ProblemSetResponseDto.java"
+    ]
+  }
+}

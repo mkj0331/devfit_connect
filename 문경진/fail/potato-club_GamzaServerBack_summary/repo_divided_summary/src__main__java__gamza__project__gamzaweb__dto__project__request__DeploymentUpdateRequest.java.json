@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\project\\request\\DeploymentUpdateRequest.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 배포 업데이트 요청을 처리하는 데이터 전송 객체(DTO)로, 배포 단계와 관련된 정보를 담고 있습니다.\",\n  \"key_features\": [\n    \"배포 업데이트 요청을 위한 ID와 단계 정보를 포함\",\n    \"Lombok을 사용하여 코드의 간결성을 높임\"\n  ],\n  \"key_code\": [\n    \"private Long id;\",\n    \"private DeploymentStep step;\"\n  ],\n  \"project_hints\": [\n    \"배포 관리 또는 배포 프로세스와 관련된 시스템\"\n  ]\n}\n```"
+}

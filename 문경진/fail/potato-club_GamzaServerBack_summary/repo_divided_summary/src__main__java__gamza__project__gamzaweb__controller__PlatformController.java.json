@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\controller\\PlatformController.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Boot\",\n    \"Spring Web\",\n    \"Swagger\",\n    \"Jakarta EE\"\n  ],\n  \"role\": \"플랫폼 관련 API를 관리하는 컨트롤러\",\n  \"key_features\": [\n    \"플랫폼 생성\",\n    \"플랫폼 리스트 조회\",\n    \"플랫폼 삭제\"\n  ],\n  \"key_code\": [\n    \"@PostMapping(\\\"/create\\\")\",\n    \"platformService.createPlatform(dto);\",\n    \"@GetMapping(\\\"/list\\\")\",\n    \"return platformService.getAllPlatformList();\",\n    \"@DeleteMapping(\\\"/{id}\\\")\",\n    \"platformService.deletePlatform(id);\"\n  ],\n  \"project_hints\": [\n    \"플랫폼 관리 시스템\",\n    \"관리자 권한을 요구하는 API\",\n    \"플랫폼 생성 및 삭제 기능 제공\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\controller\\UserController.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Boot\",\n    \"Spring MVC\",\n    \"Jakarta Validation\",\n    \"Lombok\",\n    \"Spring Security\"\n  ],\n  \"role\": \"User Controller\",\n  \"key_features\": [\n    \"회원가입 기능\",\n    \"이메일 중복 확인\",\n    \"프로필 사진 업데이트 및 삭제\",\n    \"그룹룸 내 사용자 검색\",\n    \"이메일 인증 코드 발송\",\n    \"이메일 인증\",\n    \"임시 비밀번호 발송\"\n  ],\n  \"key_code\": [\n    \"@PostMapping(\\\"/signup\\\")\",\n    \"@PostMapping(\\\"/check/emails\\\")\",\n    \"@GetMapping(\\\"/search/members\\\")\",\n    \"@PostMapping(\\\"/emails/verification/request\\\")\",\n    \"@PostMapping(\\\"/find-password/{email}\\\")\"\n  ],\n  \"project_hints\": [\n    \"사용자 관리 시스템\",\n    \"회원가입 및 인증 관련 기능\",\n    \"이메일 기반의 사용자 인증\"\n  ]\n}\n```"
+}

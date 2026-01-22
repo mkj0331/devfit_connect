@@ -1,0 +1,32 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\member\\repository\\MemberRepository.java",
+  "project_subject_signals": [
+    "member",
+    "repository"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "Spring Data JPA",
+    "Java Standard Library"
+  ],
+  "core_features": [
+    {
+      "feature_name": "회원 정보 조회",
+      "feature_description": "전화번호 또는 연결 정보를 통해 회원 정보를 조회한다.",
+      "implementation_method": "JpaRepository 인터페이스를 상속받아 Spring Data JPA의 기본 메소드와 커스텀 쿼리 메소드를 활용한다.",
+      "job_value": "데이터 영속성 관리를 위한 Spring Data JPA 기반의 Repository 패턴 구현 역량을 보여준다."
+    },
+    {
+      "feature_name": "회원 존재 여부 확인",
+      "feature_description": "전화번호를 기준으로 회원이 시스템에 존재하는지 확인한다.",
+      "implementation_method": "JpaRepository를 통해 existsByPhoneNumber 메소드를 제공한다.",
+      "job_value": "데이터의 중복 방지 및 무결성 확보를 위한 엔티티 존재 여부 확인 로직 구현 역량을 보여준다."
+    }
+  ],
+  "improvement_suggestions": [
+    "회원 정보 조회 시 전화번호 외 다른 식별자(예: 이메일, 사용자 ID)에 대한 조회 메소드 추가를 고려할 수 있습니다.",
+    "연결 정보(connectionInformation)의 의미와 사용 사례에 따라, 해당 필드의 명확성을 높이거나 복합적인 조건으로 조회하는 메소드 추가를 검토할 수 있습니다."
+  ]
+}

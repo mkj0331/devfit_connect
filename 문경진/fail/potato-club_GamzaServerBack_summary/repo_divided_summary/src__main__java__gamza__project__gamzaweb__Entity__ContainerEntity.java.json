@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\ContainerEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Persistence\",\n    \"Lombok\"\n  ],\n  \"role\": \"ContainerEntity는 데이터베이스에서 컨테이너 정보를 관리하는 엔티티 클래스입니다.\",\n  \"key_features\": [\n    \"컨테이너 ID와 이미지 ID를 저장\",\n    \"사용자와의 관계를 설정 (ManyToOne)\",\n    \"애플리케이션과의 관계를 설정 (OneToOne)\"\n  ],\n  \"key_code\": [\n    \"@Entity\",\n    \"@Id\",\n    \"@GeneratedValue(strategy = GenerationType.IDENTITY)\",\n    \"@Column(nullable = false)\",\n    \"@ManyToOne\",\n    \"@OneToOne\"\n  ],\n  \"project_hints\": [\n    \"컨테이너 관리 시스템 또는 애플리케이션 배포 관련 프로젝트\"\n  ]\n}\n```"
+}

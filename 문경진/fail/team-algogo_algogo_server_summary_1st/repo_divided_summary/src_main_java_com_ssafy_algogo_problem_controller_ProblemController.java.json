@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\controller\\ProblemController.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Boot\",\n    \"Lombok\",\n    \"RESTful API\"\n  ],\n  \"role\": \"Controller for handling problem-related requests in the application.\",\n  \"key_features\": [\n    \"Fetches a specific problem by ID\",\n    \"Searches for problems based on a keyword\"\n  ],\n  \"key_code\": [\n    \"@GetMapping(\\\"/{programProblemId}\\\")\",\n    \"problemService.getProblem(programProblemId)\",\n    \"@GetMapping(\\\"search\\\")\",\n    \"problemService.searchProblems(keyword)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves managing programming problems or challenges.\",\n    \"The use of SuccessResponse suggests a focus on standardized API responses.\"\n  ]\n}\n```"
+}

@@ -1,0 +1,156 @@
+{
+  "batch_id": 25,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Spring Data JPA",
+    "JUnit",
+    "Lombok",
+    "JavaMail"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "사용자 관리 및 인증",
+      "domain_tags": [
+        "user",
+        "signup",
+        "auth",
+        "email",
+        "nickname",
+        "profile"
+      ],
+      "responsibilities": [
+        "회원 가입 처리",
+        "이메일 중복 확인",
+        "닉네임 중복 확인",
+        "사용자 정보 조회",
+        "사용자 정보 수정",
+        "회원가입 이메일 인증",
+        "임시 비밀번호 발급",
+        "비밀번호 변경"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Service",
+        "Transactional"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\repository\\UserRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\UserService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\impl\\UserServiceImpl.java"
+      ],
+      "evidence": [
+        "import org.springframework.data.jpa.repository.JpaRepository",
+        "signup(SignupRequestDto dto)",
+        "isAvailableEmail(CheckDuplicateEmailRequestDto checkDuplicateEmailRequestDto)",
+        "javaMailSender.send(message);",
+        "passwordEncoder.encode(tempPassword);"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "입력 데이터 검증 부족 가능성",
+        "예외 처리 미비",
+        "동시성 문제 발생 가능성",
+        "이메일 발송 실패 시 예외 처리",
+        "비밀번호 보안 취약점"
+      ]
+    },
+    {
+      "cluster_name": "이메일 및 비밀번호 관리",
+      "domain_tags": [
+        "email",
+        "notification",
+        "password",
+        "management"
+      ],
+      "responsibilities": [
+        "이메일 인증 처리",
+        "임시 비밀번호 발급",
+        "비밀번호 변경"
+      ],
+      "implementation_signals": [
+        "JavaMail",
+        "Transactional"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\impl\\UserServiceImpl.java"
+      ],
+      "evidence": [
+        "javaMailSender.send(message);",
+        "passwordEncoder.encode(tempPassword);",
+        "user.updatePassword(encodedPassword);"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "이메일 발송 실패 시 예외 처리",
+        "비밀번호 보안 취약점"
+      ]
+    },
+    {
+      "cluster_name": "사용자 데이터 조회",
+      "domain_tags": [
+        "user",
+        "data",
+        "search"
+      ],
+      "responsibilities": [
+        "사용자 정보 조회",
+        "사용자 정보 수정"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "JPA repository"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\UserService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\impl\\UserServiceImpl.java"
+      ],
+      "evidence": [
+        "getOneUserInfo(Long userId)",
+        "updateUserInfo(Long userId, UpdateUserInfoRequestDto updateUserInfoRequestDto)"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "입력 데이터 검증 부족 가능성",
+        "예외 처리 미비"
+      ]
+    },
+    {
+      "cluster_name": "테스트 환경 설정",
+      "domain_tags": [
+        "test",
+        "spring",
+        "application"
+      ],
+      "responsibilities": [
+        "컨텍스트 로드 테스트"
+      ],
+      "implementation_signals": [
+        "JUnit",
+        "Spring Boot Test"
+      ],
+      "related_files": [
+        "src\\test\\java\\com\\ssafy\\algogo\\AlgogoApplicationTests.java"
+      ],
+      "evidence": [
+        "@SpringBootTest",
+        "contextLoads()"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "테스트 커버리지 부족"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "user+management",
+    "auth+service",
+    "email+notification",
+    "password+management",
+    "test+springboot"
+  ]
+}

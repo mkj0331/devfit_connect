@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\SignupResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java 11 or higher\",\n    \"Spring Framework\",\n    \"JPA (Java Persistence API)\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for user signup response\",\n  \"key_features\": [\n    \"Encapsulates user signup response data\",\n    \"Provides a static method to create an instance from a User entity\",\n    \"Uses Java Record for immutable data representation\"\n  ],\n  \"key_code\": [\n    \"public record SignupResponseDto(...)\",\n    \"public static SignupResponseDto from(User user) { ... }\"\n  ],\n  \"project_hints\": [\n    \"User management system\",\n    \"Signup functionality\",\n    \"Data encapsulation and transfer\"\n  ]\n}\n```"
+}

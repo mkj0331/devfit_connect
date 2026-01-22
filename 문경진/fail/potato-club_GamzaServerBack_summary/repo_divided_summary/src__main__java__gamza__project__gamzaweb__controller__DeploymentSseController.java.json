@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\controller\\DeploymentSseController.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"SSE (Server-Sent Events)\",\n    \"Jackson\"\n  ],\n  \"role\": \"이 파일은 프로젝트의 배포 상태를 클라이언트에 실시간으로 전송하는 기능을 담당합니다.\",\n  \"key_features\": [\n    \"클라이언트의 배포 상태 구독 기능\",\n    \"최신 배포 상태를 클라이언트에 즉시 전송\",\n    \"배포 상태 업데이트 기능\",\n    \"응답이 종료된 Emitter 관리\"\n  ],\n  \"key_code\": [\n    \"SseEmitter emitter = new SseEmitter(10 * 60 * 1000L);\",\n    \"emitters.computeIfAbsent(projectId, k -> new CopyOnWriteArrayList<>()).add(emitter);\",\n    \"deploymentStepCache.put(projectId, step);\",\n    \"emitter.send(jsonData);\"\n  ],\n  \"project_hints\": [\n    \"프로젝트는 소프트웨어 배포 관리 시스템으로 추정되며, 실시간으로 배포 상태를 모니터링하고 알림을 제공하는 기능을 포함하고 있습니다.\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\dctutil\\DockerDataStore.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Docker Java API\",\n    \"Lombok\"\n  ],\n  \"role\": \"Docker 클라이언트를 관리하고 Singleton 패턴을 통해 인스턴스를 제공하는 유틸리티 클래스\",\n  \"key_features\": [\n    \"Docker 클라이언트 인스턴스 생성 및 관리\",\n    \"Singleton 패턴 구현\",\n    \"Docker 호스트 설정\"\n  ],\n  \"key_code\": [\n    \"public static synchronized DockerDataStore getInstance() {\",\n    \"if (instance == null) {\",\n    \"instance = new DockerDataStore();\",\n    \"}\",\n    \"return instance;\",\n    \"}\",\n    \"DockerClientConfig config = DefaultDockerClientConfig.createDefaultConfigBuilder()\",\n    \".withDockerHost(\\\"tcp://100.78.112.64:2375\\\")\",\n    \".build();\"\n  ],\n  \"project_hints\": [\n    \"Docker를 이용한 컨테이너 관리 또는 배포 관련 프로젝트\"\n  ]\n}\n```"
+}

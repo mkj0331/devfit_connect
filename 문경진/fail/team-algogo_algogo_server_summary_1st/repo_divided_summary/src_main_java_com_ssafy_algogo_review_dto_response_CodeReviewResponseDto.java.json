@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Jackson\",\n    \"Java Records\",\n    \"LocalDateTime\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for Code Review responses\",\n  \"key_features\": [\n    \"Encapsulates review data for API responses\",\n    \"Uses Jackson annotations for JSON serialization\",\n    \"Supports hierarchical structure with child reviews\"\n  ],\n  \"key_code\": [\n    \"public record CodeReviewResponseDto(...)\",\n    \"public static CodeReviewResponseDto from(Review review)\"\n  ],\n  \"project_hints\": [\n    \"Code review system\",\n    \"User-generated content\",\n    \"Review hierarchy with parent-child relationships\"\n  ]\n}\n```"
+}

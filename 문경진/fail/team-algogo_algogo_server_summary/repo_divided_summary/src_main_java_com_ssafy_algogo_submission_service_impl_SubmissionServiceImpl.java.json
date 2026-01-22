@@ -1,0 +1,113 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\SubmissionServiceImpl.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "submission",
+      "program",
+      "user",
+      "review"
+    ],
+    "entities": [
+      "User",
+      "Program",
+      "Submission"
+    ],
+    "modules": [
+      "submission",
+      "program",
+      "review"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 통계 조회",
+      "verb_object": "제출 통계 조회",
+      "inputs": [
+        "programProblemId"
+      ],
+      "outputs": [
+        "SubmissionStatsInfosResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "사용자 제출 가능 여부 확인",
+      "verb_object": "사용자 제출 가능 여부 확인",
+      "inputs": [
+        "userId",
+        "programId"
+      ],
+      "outputs": [
+        "SubmissionAuthorStatusResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 예외 처리",
+      "DTO 사용으로 인한 데이터 전송 최적화",
+      "JPA를 통한 데이터 접근"
+    ],
+    "risks": [
+      "예외 처리 미비로 인한 시스템 불안정성",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "로깅",
+      "트랜잭션 관리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.advice.CustomException;"
+    },
+    {
+      "type": "call",
+      "text": "submissionRepository.countSubmissionsByProgramProblemId(programProblemId)"
+    },
+    {
+      "type": "call",
+      "text": "userRepository.findById(userId)"
+    },
+    {
+      "type": "query",
+      "text": "programRepository.getProgramTypeByProgramId(programId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "submission+service",
+      "program+repository",
+      "user+repository"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\SubmissionRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\repository\\UserRepository.java"
+    ]
+  }
+}

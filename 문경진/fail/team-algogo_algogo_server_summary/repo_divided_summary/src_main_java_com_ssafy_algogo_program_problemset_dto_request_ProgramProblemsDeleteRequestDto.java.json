@@ -1,0 +1,91 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\ProgramProblemsDeleteRequestDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Program",
+      "Problems",
+      "Delete",
+      "Request",
+      "Dto"
+    ],
+    "entities": [
+      "ProgramProblemsDeleteRequestDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 삭제 요청",
+      "verb_object": "문제 삭제",
+      "inputs": [
+        "programProblemIds"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Lombok 사용으로 코드 간결성",
+      "Immutable 객체 생성",
+      "유효성 검사 용이"
+    ],
+    "risks": [
+      "NullPointerException 가능성",
+      "입력값 검증 부족",
+      "변경 불가능한 필드로 인한 유연성 저하"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "annotation",
+      "text": "@NoArgsConstructor"
+    },
+    {
+      "type": "annotation",
+      "text": "@AllArgsConstructor"
+    },
+    {
+      "type": "field",
+      "text": "private List<Long> programProblemIds;"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+request",
+      "program+problems",
+      "delete+request"
+    ],
+    "related_files_guess": []
+  }
+}

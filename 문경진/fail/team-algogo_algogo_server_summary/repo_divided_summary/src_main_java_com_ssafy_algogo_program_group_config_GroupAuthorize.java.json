@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupAuthorize.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Configuration/Aspect",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "GroupAuthorize",
+      "GroupRole",
+      "USER"
+    ],
+    "entities": [
+      "GroupRole"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "역할 검증",
+      "verb_object": "역할 검증",
+      "inputs": [
+        "사용자 역할"
+      ],
+      "outputs": [
+        "검증 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Annotation"
+    ],
+    "cross_cutting": [
+      "보안"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "유연한 역할 관리",
+      "재사용 가능성",
+      "명확한 역할 정의"
+    ],
+    "risks": [
+      "역할 변경 시 오류 가능성",
+      "기본값 의존성",
+      "주석 미비"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "문서화",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@interface GroupAuthorize"
+    },
+    {
+      "type": "annotation",
+      "text": "@Target(ElementType.METHOD)"
+    },
+    {
+      "type": "annotation",
+      "text": "@Retention(RetentionPolicy.RUNTIME)"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.program.group.entity.GroupRole"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+role",
+      "security+annotation"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\GroupRole.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\controller\\GroupController.java"
+    ]
+  }
+}

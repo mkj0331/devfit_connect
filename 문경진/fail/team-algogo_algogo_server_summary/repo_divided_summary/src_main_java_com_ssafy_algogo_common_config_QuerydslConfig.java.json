@@ -1,0 +1,82 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\QuerydslConfig.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Querydsl"
+    ],
+    "layer_guess": "Configuration",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Querydsl",
+      "JPA",
+      "EntityManager"
+    ],
+    "entities": [],
+    "modules": [
+      "config"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "JPAQueryFactory 생성",
+      "verb_object": "JPAQueryFactory 생성",
+      "inputs": [],
+      "outputs": [
+        "JPAQueryFactory 인스턴스"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Configuration"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Spring 기반의 설정",
+      "Querydsl 사용",
+      "JPA 통합"
+    ],
+    "risks": [
+      "EntityManager 의존성",
+      "설정 오류 가능성"
+    ],
+    "missing_standard_checks": [
+      "단위 테스트",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Configuration"
+    },
+    {
+      "type": "annotation",
+      "text": "@PersistenceContext"
+    },
+    {
+      "type": "call",
+      "text": "new JPAQueryFactory(JPQLTemplates.DEFAULT, em)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "config+spring"
+    ],
+    "related_files_guess": []
+  }
+}

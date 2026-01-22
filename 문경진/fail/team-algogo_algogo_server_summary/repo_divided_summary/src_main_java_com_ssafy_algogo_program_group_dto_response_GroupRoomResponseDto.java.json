@@ -1,0 +1,111 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GroupRoomResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "lombok",
+      "jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "GroupRoom",
+      "Response",
+      "DTO"
+    ],
+    "entities": [
+      "GroupRoomResponseDto",
+      "GroupRole"
+    ],
+    "modules": [
+      "group",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 방 정보 반환",
+      "verb_object": "그룹 방 정보 반환",
+      "inputs": [
+        "programId",
+        "title",
+        "description",
+        "createdAt",
+        "modifiedAt",
+        "capacity",
+        "memberCount",
+        "programProblemCount",
+        "isMember",
+        "groupRole"
+      ],
+      "outputs": [
+        "GroupRoomResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Null 처리 지원",
+      "Immutable 객체",
+      "간결한 코드",
+      "Jackson 라이브러리 사용"
+    ],
+    "risks": [
+      "DTO의 확장성 문제",
+      "변경 시 모든 관련 코드 수정 필요",
+      "직렬화/역직렬화 오류 가능성",
+      "의존성 관리 필요",
+      "테스트 어려움"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "API 문서화",
+      "Null 체크",
+      "변경 이력 관리",
+      "유닛 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.fasterxml.jackson.annotation.JsonInclude"
+    },
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Getter"
+    },
+    {
+      "type": "call",
+      "text": "record GroupRoomResponseDto(...)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "group+room",
+      "data+transfer"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\GroupRole.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\service\\GroupService.java"
+    ]
+  }
+}

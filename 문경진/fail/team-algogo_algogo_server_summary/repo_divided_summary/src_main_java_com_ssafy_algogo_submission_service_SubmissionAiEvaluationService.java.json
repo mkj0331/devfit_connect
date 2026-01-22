@@ -1,0 +1,74 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\SubmissionAiEvaluationService.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "submission",
+      "evaluation",
+      "AI"
+    ],
+    "entities": [
+      "Submission"
+    ],
+    "modules": [
+      "service"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 평가",
+      "verb_object": "evaluate submission",
+      "inputs": [
+        "submissionId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Service"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "단일 책임 원칙 준수"
+    ],
+    "risks": [
+      "구현 세부 사항 미제공",
+      "의존성 관리 필요"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "로깅",
+      "유효성 검사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "public interface"
+    },
+    {
+      "type": "call",
+      "text": "evaluateSubmission(Long submissionId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "submission+evaluation",
+      "ai+service"
+    ],
+    "related_files_guess": []
+  }
+}

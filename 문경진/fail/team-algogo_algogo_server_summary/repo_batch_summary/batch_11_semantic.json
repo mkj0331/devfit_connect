@@ -1,0 +1,169 @@
+{
+  "batch_id": 11,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Jackson",
+    "Spring",
+    "JPA",
+    "Lombok"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "그룹 이름 확인",
+      "domain_tags": [
+        "group",
+        "name",
+        "dto",
+        "response"
+      ],
+      "responsibilities": [
+        "이름 확인",
+        "응답 생성"
+      ],
+      "implementation_signals": [
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\CheckGroupNameResponseDto.java"
+      ],
+      "evidence": [
+        "@JsonInclude(JsonInclude.Include.NON_NULL)",
+        "CheckGroupNameResponseDto(Boolean isAvailable)"
+      ],
+      "confidence": 0.7,
+      "risks_or_unknowns": [
+        "유효성 검사 미비",
+        "확장성 부족"
+      ]
+    },
+    {
+      "cluster_name": "그룹 멤버 목록 조회",
+      "domain_tags": [
+        "group",
+        "member",
+        "dto",
+        "response"
+      ],
+      "responsibilities": [
+        "멤버 목록 조회",
+        "응답 생성"
+      ],
+      "implementation_signals": [
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetGroupMemberListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetGroupMemberResponseDto.java"
+      ],
+      "evidence": [
+        "public record",
+        "GetGroupMemberResponseDto"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "확장성 부족",
+        "문서화 부족"
+      ]
+    },
+    {
+      "cluster_name": "초대 목록 조회",
+      "domain_tags": [
+        "group",
+        "invite",
+        "dto",
+        "response"
+      ],
+      "responsibilities": [
+        "초대 목록 조회",
+        "응답 생성"
+      ],
+      "implementation_signals": [
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetReceivedGroupInviteListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetReceivedGroupInviteResponseDto.java"
+      ],
+      "evidence": [
+        "@JsonInclude(JsonInclude.Include.NON_NULL)",
+        "GetReceivedGroupInviteResponseDto"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "데이터 유효성 검사 부족",
+        "변경 시 영향도"
+      ]
+    },
+    {
+      "cluster_name": "그룹 참여 목록 조회",
+      "domain_tags": [
+        "group",
+        "join",
+        "dto",
+        "response"
+      ],
+      "responsibilities": [
+        "그룹 참여 목록 조회",
+        "응답 생성"
+      ],
+      "implementation_signals": [
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetSentGroupJoinListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetSentGroupJoinResponseDto.java"
+      ],
+      "evidence": [
+        "@JsonInclude(JsonInclude.Include.NON_NULL)",
+        "GetSentGroupJoinResponseDto"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "확장성 문제",
+        "데이터 검증 부족"
+      ]
+    },
+    {
+      "cluster_name": "그룹 방 정보 반환",
+      "domain_tags": [
+        "group",
+        "room",
+        "dto",
+        "response"
+      ],
+      "responsibilities": [
+        "그룹 방 정보 반환",
+        "응답 생성"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GroupRoomResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GroupRoomPageResponseDto.java"
+      ],
+      "evidence": [
+        "@JsonInclude(JsonInclude.Include.NON_NULL)",
+        "record GroupRoomResponseDto(...)"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "DTO의 확장성 문제",
+        "변경 시 모든 관련 코드 수정 필요"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "group",
+    "dto",
+    "response",
+    "invite",
+    "join",
+    "room",
+    "member"
+  ]
+}

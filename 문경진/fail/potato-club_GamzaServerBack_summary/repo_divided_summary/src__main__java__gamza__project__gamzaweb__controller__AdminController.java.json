@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\controller\\AdminController.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Boot\",\n    \"Spring MVC\",\n    \"Swagger\",\n    \"Lombok\"\n  ],\n  \"role\": \"관리자 관련 API 엔드포인트를 제공하여 유저 및 프로젝트 승인/삭제 기능을 처리하는 컨트롤러\",\n  \"key_features\": [\n    \"유저 권한 승인\",\n    \"프로젝트 수정 승인\",\n    \"프로젝트 수정 삭제\",\n    \"미승인 프로젝트 리스트 조회\"\n  ],\n  \"key_code\": [\n    \"@PostMapping(\\\"/user/approve/{id}\\\")\",\n    \"adminService.userSignUpApproveByAdmin(id);\",\n    \"@PostMapping(\\\"/project/fixed/{id}\\\")\",\n    \"adminService.approveFixedExecutionApplication(request, id);\",\n    \"@DeleteMapping(\\\"/project/fixed/remove/{id}\\\")\",\n    \"adminService.removeFixedExecutionApplication(id);\"\n  ],\n  \"project_hints\": [\n    \"유저 관리 및 프로젝트 관리 시스템\",\n    \"관리자 권한을 가진 유저가 프로젝트와 유저의 상태를 승인 또는 삭제하는 기능\"\n  ]\n}\n```"
+}

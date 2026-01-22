@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\ElasticsearchGuideSearchService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Elasticsearch\"\n  ],\n  \"role\": \"서비스 인터페이스 정의\",\n  \"key_features\": [\n    \"알고리즘 가이드를 검색하는 기능\",\n    \"SubmissionEvaluationContextDto를 기반으로 검색 수행\"\n  ],\n  \"key_code\": [\n    \"public interface ElasticsearchGuideSearchService\",\n    \"List<AlgorithmGuideDto> searchAlgorithmGuides(SubmissionEvaluationContextDto context)\"\n  ],\n  \"project_hints\": [\n    \"알고리즘 관련 자료를 검색하고 제공하는 서비스\",\n    \"Elasticsearch를 활용한 검색 기능\"\n  ]\n}\n```"
+}

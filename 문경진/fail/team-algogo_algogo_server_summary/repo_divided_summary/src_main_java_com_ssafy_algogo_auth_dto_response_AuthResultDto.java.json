@@ -1,0 +1,93 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\AuthResultDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Auth",
+      "Result",
+      "Dto",
+      "Token",
+      "Login"
+    ],
+    "entities": [
+      "AuthResultDto",
+      "LocalLoginResponseDto",
+      "TokenInfo"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "로그인 결과 반환",
+      "verb_object": "결과 반환",
+      "inputs": [
+        "localLoginResponseDto",
+        "tokenInfo"
+      ],
+      "outputs": [
+        "AuthResultDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Lombok 사용으로 코드 간결",
+      "명확한 데이터 구조",
+      "유연한 객체 생성"
+    ],
+    "risks": [
+      "Private 생성자로 인한 인스턴스화 제한",
+      "DTO의 확장성 문제"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "Serialization 설정"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NoArgsConstructor"
+    },
+    {
+      "type": "annotation",
+      "text": "@AllArgsConstructor"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+dto",
+      "auth+response"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\request\\AuthRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\AuthService.java"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupMemberRoleRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for updating a group member's role\",\n  \"key_features\": [\n    \"Validation of role field using annotations\",\n    \"Support for builder pattern for object creation\",\n    \"Encapsulation of role property with getter method\"\n  ],\n  \"key_code\": [\n    \"@NotNull(message = \\\"role은 필수 값입니다.\\\")\",\n    \"@Pattern(regexp = \\\"USER|MANAGER\\\", message = \\\"role 값은 'USER' 또는 'MANAGER'이어야 합니다.\\\")\",\n    \"String role;\"\n  ],\n  \"project_hints\": [\n    \"Group management system\",\n    \"Role-based access control\"\n  ]\n}\n```"
+}

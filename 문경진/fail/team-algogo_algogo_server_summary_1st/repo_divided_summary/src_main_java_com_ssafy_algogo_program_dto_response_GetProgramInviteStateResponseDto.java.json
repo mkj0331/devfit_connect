@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\GetProgramInviteStateResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Jackson\",\n    \"Java Records\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for program invite state response\",\n  \"key_features\": [\n    \"Encapsulates data related to program invite state\",\n    \"Uses Jackson annotations for JSON serialization\",\n    \"Provides a static method to create an instance from a ProgramInvite entity\"\n  ],\n  \"key_code\": [\n    \"public record GetProgramInviteStateResponseDto(...)\",\n    \"public static GetProgramInviteStateResponseDto from(ProgramInvite programInvite)\"\n  ],\n  \"project_hints\": [\n    \"Involves program invitations and user management\",\n    \"Utilizes invite status to track the state of program invites\"\n  ]\n}\n```"
+}

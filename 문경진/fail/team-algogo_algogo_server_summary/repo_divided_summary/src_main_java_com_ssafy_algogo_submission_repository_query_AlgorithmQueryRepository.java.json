@@ -1,0 +1,108 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\query\\AlgorithmQueryRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Algorithm",
+      "Submission"
+    ],
+    "entities": [
+      "Algorithm"
+    ],
+    "modules": [
+      "repository",
+      "query"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "키워드로 알고리즘 조회",
+      "verb_object": "알고리즘 조회",
+      "inputs": [
+        "keyword"
+      ],
+      "outputs": [
+        "List<Algorithm>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "제출 ID로 알고리즘 조회",
+      "verb_object": "알고리즘 조회",
+      "inputs": [
+        "submissionId"
+      ],
+      "outputs": [
+        "List<Algorithm>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "유연한 쿼리 지원",
+      "재사용 가능성",
+      "단위 테스트 용이",
+      "Spring 통합"
+    ],
+    "risks": [
+      "의존성 주입 실패 가능성",
+      "쿼리 성능 저하",
+      "잘못된 입력 처리",
+      "변경에 대한 높은 민감도",
+      "테스트 부족"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "입력 검증",
+      "로깅",
+      "트랜잭션 관리",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import java.util.List;"
+    },
+    {
+      "type": "call",
+      "text": "findByKeyword(String keyword)"
+    },
+    {
+      "type": "call",
+      "text": "findAllAlgorithmsBySubmissionId(Long submissionId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+query",
+      "algorithm+submission"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Algorithm.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\AlgorithmService.java"
+    ]
+  }
+}

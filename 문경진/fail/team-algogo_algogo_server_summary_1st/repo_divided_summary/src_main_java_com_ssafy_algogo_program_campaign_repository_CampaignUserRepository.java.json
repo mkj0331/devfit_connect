@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\repository\\CampaignUserRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data JPA\"\n  ],\n  \"role\": \"Repository interface for managing CampaignUser entities in the database.\",\n  \"key_features\": [\n    \"Extends JpaRepository for CRUD operations\",\n    \"Generic type for CampaignUser entity and Long as ID type\"\n  ],\n  \"key_code\": [\n    \"public interface CampaignUserRepository extends JpaRepository<CampaignUser, Long> {}\"\n  ],\n  \"project_hints\": [\n    \"Part of a campaign management system\",\n    \"Handles user-related data for campaigns\"\n  ]\n}\n```"
+}

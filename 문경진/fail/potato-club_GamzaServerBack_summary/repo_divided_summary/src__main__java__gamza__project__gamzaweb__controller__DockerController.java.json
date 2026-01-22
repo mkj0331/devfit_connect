@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\controller\\DockerController.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Boot\",\n    \"Swagger\",\n    \"Lombok\"\n  ],\n  \"role\": \"컨테이너 로그를 조회하는 REST API를 제공하는 컨트롤러\",\n  \"key_features\": [\n    \"컨테이너 ID를 기반으로 로그를 조회\",\n    \"로그의 라인 수를 파라미터로 설정 가능\",\n    \"CORS 설정을 통해 외부 요청 허용\"\n  ],\n  \"key_code\": [\n    \"@GetMapping(\\\"/logs/{containerId}\\\")\",\n    \"public List<String> getContainerLogs(@PathVariable(\\\"containerId\\\") String containerId, @RequestParam(value = \\\"lines\\\", defaultValue = \\\"100\\\") int lines) {\",\n    \"return provider.getContainerLogs(containerId, lines);\"\n  ],\n  \"project_hints\": [\n    \"Docker 컨테이너 관리 및 모니터링 시스템\"\n  ]\n}\n```"
+}

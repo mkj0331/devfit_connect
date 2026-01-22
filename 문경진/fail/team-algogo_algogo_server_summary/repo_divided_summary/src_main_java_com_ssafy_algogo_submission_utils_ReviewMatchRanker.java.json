@@ -1,0 +1,152 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\utils\\ReviewMatchRanker.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Review",
+      "Submission",
+      "Algorithm",
+      "Ranking"
+    ],
+    "entities": [
+      "Submission",
+      "Algorithm",
+      "ReviewCandidateQueryDto"
+    ],
+    "modules": [
+      "utils"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰어 후보 순위 매기기",
+      "verb_object": "후보 순위 매기기",
+      "inputs": [
+        "subjectSubmission",
+        "subjectAlgorithms",
+        "candidateList"
+      ],
+      "outputs": [
+        "List<Submission>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "정규화",
+      "verb_object": "값 정규화",
+      "inputs": [
+        "value",
+        "minValue",
+        "maxValue"
+      ],
+      "outputs": [
+        "double"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "성공 여부 차이 확인",
+      "verb_object": "성공 여부 확인",
+      "inputs": [
+        "subjectSubmission",
+        "candidateSubmission"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.75
+    },
+    {
+      "name": "알고리즘 유사도 계산",
+      "verb_object": "유사도 계산",
+      "inputs": [
+        "subjectAlgorithms"
+      ],
+      "outputs": [
+        "double"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Component"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "유연한 확장성",
+      "재사용 가능한 유틸리티",
+      "효율적인 데이터 처리",
+      "모듈화된 설계"
+    ],
+    "risks": [
+      "복잡한 로직",
+      "성능 저하 가능성",
+      "유지보수 어려움",
+      "테스트 부족",
+      "의존성 문제"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "로깅",
+      "유효성 검사",
+      "성능 모니터링",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Component;"
+    },
+    {
+      "type": "call",
+      "text": "rankReviewerCandidates"
+    },
+    {
+      "type": "call",
+      "text": "normalize"
+    },
+    {
+      "type": "call",
+      "text": "getIsSuccessDiff"
+    },
+    {
+      "type": "call",
+      "text": "getAlgoDiff"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "review+ranking",
+      "submission+algorithm",
+      "utils+service"
+    ],
+    "related_files_guess": [
+      "src/main/java/com/ssafy/algogo/submission/dto/ReviewCandidateQueryDto.java",
+      "src/main/java/com/ssafy/algogo/submission/entity/Submission.java",
+      "src/main/java/com/ssafy/algogo/submission/entity/Algorithm.java"
+    ]
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "batch_id": 4,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Spring Data JPA",
+    "Lombok"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "장바구니 관리",
+      "domain_tags": [
+        "cart",
+        "user",
+        "product",
+        "repository",
+        "service"
+      ],
+      "responsibilities": [
+        "장바구니 조회",
+        "장바구니 ID로 조회",
+        "장바구니 업데이트",
+        "장바구니 저장"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Service Layer"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\repository\\CartRepository.java",
+        "src\\main\\java\\com\\example\\colorfinder\\service\\CartService.java"
+      ],
+      "evidence": [
+        "findByUserId(userId)",
+        "findAllById(ids)",
+        "save(cartEntity)"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "동시성 문제 가능성",
+        "예외 발생 시 사용자 경험 저하"
+      ]
+    },
+    {
+      "cluster_name": "주문 관리",
+      "domain_tags": [
+        "order",
+        "cart",
+        "user",
+        "repository",
+        "service"
+      ],
+      "responsibilities": [
+        "주문 조회",
+        "주문 저장",
+        "최대 추가 ID 조회",
+        "장바구니 삭제"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Service Layer"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\repository\\OrderRepository.java",
+        "src\\main\\java\\com\\example\\colorfinder\\service\\OrderService.java"
+      ],
+      "evidence": [
+        "findByUserId(userId)",
+        "save(OrderEntity.toOrderEntity(orderDTO))",
+        "deleteById(cartId)"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "예외 처리 부족",
+        "입력 검증 부족"
+      ]
+    },
+    {
+      "cluster_name": "제품 관리",
+      "domain_tags": [
+        "product",
+        "category",
+        "repository",
+        "service"
+      ],
+      "responsibilities": [
+        "모든 제품 조회",
+        "ID로 제품 조회",
+        "카테고리 ID로 제품 조회"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Service Layer"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\repository\\ProductRepository.java",
+        "src\\main\\java\\com\\example\\colorfinder\\service\\ProductService.java"
+      ],
+      "evidence": [
+        "findAll()",
+        "findById(productId)",
+        "findByCateId(cateId)"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "예외 처리 부족",
+        "null 반환 가능성"
+      ]
+    },
+    {
+      "cluster_name": "주소 관리",
+      "domain_tags": [
+        "address",
+        "user",
+        "repository",
+        "service",
+        "validation"
+      ],
+      "responsibilities": [
+        "주소 조회",
+        "주소 저장",
+        "주소 유효성 검사",
+        "주소 ID로 조회"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Service Layer"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\repository\\AddressRepository.java",
+        "src\\main\\java\\com\\example\\colorfinder\\service\\AddressService.java"
+      ],
+      "evidence": [
+        "findMinAddIdByUserId(userId)",
+        "save(AddressEntity.toAddressEntity(addressDTO))",
+        "errors.getFieldErrors()"
+      ],
+      "confidence": 0.75,
+      "risks_or_unknowns": [
+        "NullPointerException 가능성",
+        "예외 처리 부족"
+      ]
+    },
+    {
+      "cluster_name": "사용자 관리",
+      "domain_tags": [
+        "user",
+        "repository",
+        "service",
+        "update"
+      ],
+      "responsibilities": [
+        "사용자 이메일로 조회",
+        "사용자 정보 업데이트"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Service Layer"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\repository\\UserRepository.java",
+        "src\\main\\java\\com\\example\\colorfinder\\service\\UserService.java"
+      ],
+      "evidence": [
+        "findByEmail(String email)",
+        "new UpdateUserRequest(nickname, colorId)"
+      ],
+      "confidence": 0.7,
+      "risks_or_unknowns": [
+        "입력값 검증 부족",
+        "null 값 처리 미비"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "cart",
+    "order",
+    "product",
+    "address",
+    "user",
+    "repository",
+    "service",
+    "validation"
+  ]
+}

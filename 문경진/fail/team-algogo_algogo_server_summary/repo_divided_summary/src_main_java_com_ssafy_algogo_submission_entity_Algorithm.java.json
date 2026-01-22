@@ -1,0 +1,109 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Algorithm.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "algorithm",
+      "entity"
+    ],
+    "entities": [
+      "Algorithm"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "알고리즘 생성",
+      "verb_object": "알고리즘 생성",
+      "inputs": [
+        "name"
+      ],
+      "outputs": [
+        "Algorithm object"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "알고리즘 조회",
+      "verb_object": "알고리즘 조회",
+      "inputs": [
+        "id"
+      ],
+      "outputs": [
+        "Algorithm object"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유일성 제약 조건",
+      "유효성 검사",
+      "불변 객체 생성"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "예외 처리 부족"
+    ],
+    "missing_standard_checks": [
+      "Audit fields",
+      "Soft delete",
+      "Indexing"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.persistence.*"
+    },
+    {
+      "type": "import",
+      "text": "lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+model"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\AlgorithmRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\AlgorithmService.java"
+    ]
+  }
+}

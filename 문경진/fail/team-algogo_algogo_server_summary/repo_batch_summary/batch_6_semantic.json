@@ -1,0 +1,96 @@
+{
+  "batch_id": 6,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "JPA",
+    "Spring",
+    "Jackson",
+    "Lombok"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "문제 응답 DTO 생성",
+      "domain_tags": [
+        "dto",
+        "response",
+        "problem"
+      ],
+      "responsibilities": [
+        "문제 상세 응답 생성",
+        "문제 목록 생성",
+        "문제 응답 생성",
+        "문제 페이지 응답 생성"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProblemDetailResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProblemListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProblemResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProgramProblemDetailResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProgramProblemPageResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProgramProblemResponseDto.java"
+      ],
+      "evidence": [
+        "new ProblemDetailResponseDto(...)",
+        "from(List<ProblemResponseDto> problems)",
+        "ProblemResponseDto.from(programProblem)",
+        "programProblemResponseDto.getContent()"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "입력 데이터 유효성 검사 부족",
+        "변경 시 모든 필드 점검 필요"
+      ]
+    },
+    {
+      "cluster_name": "문제 엔티티 정의",
+      "domain_tags": [
+        "entity",
+        "problem",
+        "difficulty",
+        "platform"
+      ],
+      "responsibilities": [
+        "문제 생성",
+        "문제 조회",
+        "난이도 조회",
+        "플랫폼 타입 정의"
+      ],
+      "implementation_signals": [
+        "Entity",
+        "Builder",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\DifficultyType.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\DifficultyViewType.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\PlatformType.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\Problem.java"
+      ],
+      "evidence": [
+        "@Entity",
+        "DifficultyType.values()",
+        "programProblem.getId()",
+        "DifficultyViewType.USER_DIFFICULTY"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "데이터 무결성 문제",
+        "Enum 값 변경 시 영향 범위"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "dto+response",
+    "problem+entity",
+    "api+response",
+    "pagination+sorting",
+    "difficulty+enum"
+  ]
+}

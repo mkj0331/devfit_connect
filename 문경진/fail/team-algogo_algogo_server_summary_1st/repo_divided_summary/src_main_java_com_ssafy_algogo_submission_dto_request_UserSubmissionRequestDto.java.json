@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\request\\UserSubmissionRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for user submission requests\",\n  \"key_features\": [\n    \"Encapsulates user submission data\",\n    \"Uses Lombok annotations for boilerplate code reduction\",\n    \"Provides a builder pattern for object creation\",\n    \"Includes access control for constructors\"\n  ],\n  \"key_code\": [\n    \"@Builder\",\n    \"@Getter\",\n    \"@NoArgsConstructor(access = AccessLevel.PROTECTED)\",\n    \"@AllArgsConstructor(access = AccessLevel.PRIVATE)\"\n  ],\n  \"project_hints\": [\n    \"Related to user submissions in a programming or algorithm context\",\n    \"May involve competitive programming or coding challenges\"\n  ]\n}\n```"
+}

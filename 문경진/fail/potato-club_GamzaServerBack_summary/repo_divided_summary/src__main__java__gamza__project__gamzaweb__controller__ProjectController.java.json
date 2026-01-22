@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\controller\\ProjectController.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Boot\",\n    \"Spring MVC\",\n    \"Swagger\",\n    \"Lombok\"\n  ],\n  \"role\": \"이 파일은 프로젝트 관련 API 엔드포인트를 정의하고, 프로젝트 생성자 및 어드민이 프로젝트와 관련된 작업을 수행할 수 있도록 하는 역할을 합니다.\",\n  \"key_features\": [\n    \"프로젝트 목록 조회\",\n    \"특정 프로젝트 삭제\",\n    \"프로젝트에 참여 인원 추가\",\n    \"프로젝트에 참여 인원 삭제\"\n  ],\n  \"key_code\": [\n    \"@GetMapping(\\\"/list\\\")\",\n    \"@DeleteMapping(\\\"/user/list/{projectId}\\\")\",\n    \"@PutMapping(\\\"/collaborator/{projectId}\\\")\",\n    \"@DeleteMapping(\\\"/collaborator/{projectId}\\\")\"\n  ],\n  \"project_hints\": [\n    \"프로젝트 관리 시스템\",\n    \"협업 플랫폼\",\n    \"프로젝트 참여자 관리\"\n  ]\n}\n```"
+}

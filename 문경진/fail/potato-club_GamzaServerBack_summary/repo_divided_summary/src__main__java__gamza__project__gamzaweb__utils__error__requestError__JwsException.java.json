@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\error\\requestError\\JwsException.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"예외 처리 클래스\",\n  \"key_features\": [\n    \"JWT 관련 오류를 처리하기 위한 사용자 정의 예외 클래스\",\n    \"오류 메시지와 오류 코드를 함께 전달\"\n  ],\n  \"key_code\": [\n    \"public JwsException(String message, ErrorJwtCode errorCode) {\",\n    \"    super(message);\",\n    \"    this.errorCode = errorCode;\",\n    \"}\"\n  ],\n  \"project_hints\": [\n    \"JWT 인증 및 권한 부여와 관련된 웹 애플리케이션\"\n  ]\n}\n```"
+}

@@ -1,0 +1,137 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\service\\ProductService.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Product",
+      "Category",
+      "DTO"
+    ],
+    "entities": [
+      "ProductEntity",
+      "ProductDTO"
+    ],
+    "modules": [
+      "ProductService"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "모든 제품 조회",
+      "verb_object": "제품 조회",
+      "inputs": [],
+      "outputs": [
+        "List<ProductDTO>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "ID로 제품 조회",
+      "verb_object": "제품 조회",
+      "inputs": [
+        "Long productId"
+      ],
+      "outputs": [
+        "ProductDTO"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "카테고리 ID로 제품 조회",
+      "verb_object": "카테고리 제품 조회",
+      "inputs": [
+        "String cateId"
+      ],
+      "outputs": [
+        "List<ProductDTO>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "DTO 사용으로 데이터 전송 최적화",
+      "Optional 사용으로 null 처리"
+    ],
+    "risks": [
+      "예외 처리 부족",
+      "null 반환 가능성",
+      "의존성 주입 실패 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "로깅",
+      "트랜잭션 관리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.example.colorfinder.dto.ProductDTO;"
+    },
+    {
+      "type": "import",
+      "text": "import com.example.colorfinder.entity.ProductEntity;"
+    },
+    {
+      "type": "import",
+      "text": "import com.example.colorfinder.repository.ProductRepository;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequiredArgsConstructor"
+    },
+    {
+      "type": "call",
+      "text": "productRepository.findAll()"
+    },
+    {
+      "type": "call",
+      "text": "productRepository.findById(productId)"
+    },
+    {
+      "type": "call",
+      "text": "productRepository.findByCateId(cateId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "api+service",
+      "product+service"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\ProductRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\ProductDTO.java",
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\ProductEntity.java"
+    ]
+  }
+}

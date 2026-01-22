@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\project\\request\\ImageBuildEventRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 이미지 빌드 이벤트 요청을 처리하기 위한 데이터 전송 객체(DTO) 역할을 합니다.\",\n  \"key_features\": [\n    \"사용자 정보를 포함한 이미지 빌드 이벤트 요청을 캡슐화\",\n    \"이미지 ID, 이름, 키와 같은 추가 정보를 포함\"\n  ],\n  \"key_code\": [\n    \"public ImageBuildEventRequestDto(UserEntity userPk, String imageId, String name, String key) {\",\n    \"    this.userPk = userPk;\",\n    \"    this.imageId = imageId;\",\n    \"    this.name = name;\",\n    \"    this.key = key;\",\n    \"}\"\n  ],\n  \"project_hints\": [\n    \"이미지 처리 또는 생성과 관련된 웹 애플리케이션 프로젝트일 가능성\",\n    \"사용자와 관련된 이미지 빌드 이벤트를 관리하는 시스템\"\n  ]\n}\n```"
+}

@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\CheckDuplicateEmailRequestDto.java",
+    "language": "java",
+    "frameworks": [
+      "jakarta.validation",
+      "lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "이메일",
+      "중복",
+      "요청"
+    ],
+    "entities": [
+      "CheckDuplicateEmailRequestDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "이메일 중복 확인",
+      "verb_object": "이메일 확인",
+      "inputs": [
+        "email"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사",
+      "명확한 오류 메시지",
+      "구조적 데이터 전송"
+    ],
+    "risks": [
+      "잘못된 이메일 형식 처리",
+      "유효성 검사 누락 가능성"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "길이 제한",
+      "이메일 도메인 검증"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotBlank"
+    },
+    {
+      "type": "annotation",
+      "text": "@Pattern"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotBlank"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.Pattern"
+    },
+    {
+      "type": "import",
+      "text": "lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto",
+      "validation+request"
+    ],
+    "related_files_guess": []
+  }
+}

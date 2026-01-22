@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\aop\\AuthCheckParam.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java Annotation\", \"Aspect-Oriented Programming (AOP)\"],\n  \"role\": \"이 파일은 메서드 파라미터에 대한 인증 체크를 위한 사용자 정의 애너테이션을 정의합니다.\",\n  \"key_features\": [\n    \"메서드 파라미터에 인증 체크를 적용할 수 있는 기능 제공\",\n    \"런타임 시 인증 체크를 위한 메타데이터를 추가\"\n  ],\n  \"key_code\": [\n    \"@Target(ElementType.PARAMETER)\",\n    \"@Retention(RetentionPolicy.RUNTIME)\",\n    \"public @interface AuthCheckParam {}\"\n  ],\n  \"project_hints\": [\n    \"인증 및 권한 관리를 포함하는 웹 애플리케이션\",\n    \"사용자 요청에 대한 인증 검증 기능을 제공하는 시스템\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\CustomExceptionHandler.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\",\n    \"SLF4J\"\n  ],\n  \"role\": \"Custom Exception Handler\",\n  \"key_features\": [\n    \"Handles custom exceptions\",\n    \"Handles validation errors\",\n    \"Handles resource not found exceptions\",\n    \"Handles method argument type mismatch exceptions\",\n    \"Logs unexpected errors\",\n    \"Returns standardized error responses\"\n  ],\n  \"key_code\": [\n    \"log.error(\\\"[UNEXPECTED ERROR]\\\", e);\",\n    \"ResponseEntity.status(errorCode.getHttpStatusCode())\",\n    \"new ErrorResponse(errorCode.getErrorCode(), e.getMessage(), e.getData())\"\n  ],\n  \"project_hints\": [\n    \"Error handling in a web application\",\n    \"RESTful API design\",\n    \"Validation of request parameters\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\config\\WebConfig.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Web MVC\",\n    \"Lombok\"\n  ],\n  \"role\": \"Web configuration for argument resolution in a Spring MVC application.\",\n  \"key_features\": [\n    \"Configures custom argument resolvers for handling method parameters in controllers.\",\n    \"Integrates AOP (Aspect-Oriented Programming) for admin parameter checks.\"\n  ],\n  \"key_code\": [\n    \"public class WebConfig implements WebMvcConfigurer {\",\n    \"private final AdminCheckParamAOP authUserArgumentResolver;\",\n    \"resolvers.add(authUserArgumentResolver);\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves user role management or access control, particularly for admin users.\"\n  ]\n}\n```"
+}

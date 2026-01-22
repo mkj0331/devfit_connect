@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\error\\ErrorCode.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Lombok\"],\n  \"role\": \"이 파일은 다양한 오류 코드와 관련된 정보를 정의하여, 애플리케이션에서 발생할 수 있는 오류를 관리하는 역할을 한다.\",\n  \"key_features\": [\n    \"HTTP 상태 코드와 오류 메시지를 매핑하여 클라이언트에게 적절한 오류 정보를 제공한다.\",\n    \"각 오류 코드에 대해 고유한 코드와 메시지를 정의하여, 오류 발생 시 쉽게 식별할 수 있도록 한다.\"\n  ],\n  \"key_code\": [\n    \"BAD_REQUEST_EXCEPTION(HttpStatus.BAD_REQUEST, \\\"400\\\", \\\"400 BAD REQUEST\\\")\",\n    \"INTERNAL_SERVER_EXCEPTION(HttpStatus.INTERNAL_SERVER_ERROR, \\\"500\\\", \\\"500 SERVER ERROR\\\")\",\n    \"EXPIRED_ACCESS_TOKEN(HttpStatus.UNAUTHORIZED, \\\"5001\\\", \\\"5001 EXPIRED ACCESS TOKEN\\\")\"\n  ],\n  \"project_hints\": [\n    \"API 서버 또는 웹 애플리케이션에서 오류 처리를 위한 구조를 갖춘 프로젝트일 가능성이 높다.\",\n    \"사용자 인증 및 권한 관리와 관련된 기능을 포함하고 있을 것으로 추측된다.\"\n  ]\n}\n```"
+}

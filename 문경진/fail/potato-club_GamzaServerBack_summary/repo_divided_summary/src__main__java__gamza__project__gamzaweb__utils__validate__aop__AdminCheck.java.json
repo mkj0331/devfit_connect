@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\aop\\AdminCheck.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring AOP\"],\n  \"role\": \"이 파일은 메소드에 대한 어노테이션을 정의하여 관리자의 권한을 체크하는 기능을 담당합니다.\",\n  \"key_features\": [\n    \"관리자 권한 체크를 위한 어노테이션 정의\",\n    \"AOP(Aspect-Oriented Programming)를 통한 권한 관리\"\n  ],\n  \"key_code\": [\n    \"@Target(ElementType.METHOD)\",\n    \"@Retention(RetentionPolicy.RUNTIME)\",\n    \"public @interface AdminCheck {}\"\n  ],\n  \"project_hints\": [\n    \"이 파일은 관리자 권한을 요구하는 기능이 있는 웹 애플리케이션 프로젝트의 일부로 추정됩니다.\"\n  ]\n}\n```"
+}

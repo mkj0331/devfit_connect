@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemDeleteRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for deleting program problems\",\n  \"key_features\": [\n    \"Contains a list of program problem IDs to be deleted\",\n    \"Uses validation to ensure the list is not null\",\n    \"Utilizes Lombok annotations for boilerplate code reduction\"\n  ],\n  \"key_code\": [\n    \"@NotNull List<Long> programProblemIds;\",\n    \"@Getter\",\n    \"@Builder\",\n    \"@NoArgsConstructor(access = AccessLevel.PROTECTED)\",\n    \"@AllArgsConstructor(access = AccessLevel.PRIVATE)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves managing programming problems or challenges, possibly in an educational or competitive programming context.\"\n  ]\n}\n```"
+}

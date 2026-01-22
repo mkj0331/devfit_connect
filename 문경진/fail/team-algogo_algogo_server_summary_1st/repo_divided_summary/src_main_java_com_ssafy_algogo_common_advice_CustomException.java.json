@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\CustomException.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Lombok\"\n  ],\n  \"role\": \"Custom exception handling\",\n  \"key_features\": [\n    \"Extends RuntimeException\",\n    \"Holds an error code and optional data\",\n    \"Constructors for creating exceptions with a message and error code\"\n  ],\n  \"key_code\": [\n    \"protected ErrorCode errorCode;\",\n    \"protected Object data;\",\n    \"public CustomException(String message, ErrorCode errorCode)\",\n    \"public CustomException(String message, ErrorCode errorCode, Object data)\"\n  ],\n  \"project_hints\": [\n    \"Error handling mechanism\",\n    \"Possibly part of a larger application dealing with exceptions and error codes\"\n  ]\n}\n```"
+}

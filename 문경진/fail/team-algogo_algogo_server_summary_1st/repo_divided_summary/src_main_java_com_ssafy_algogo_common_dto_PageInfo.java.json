@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\dto\\PageInfo.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Java Records\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for pagination information\",\n  \"key_features\": [\n    \"Encapsulates pagination details such as page number, size, total elements, and total pages\",\n    \"Provides a static factory method to create an instance from a Spring Data Page object\"\n  ],\n  \"key_code\": [\n    \"public record PageInfo(Integer number, Integer size, Long totalElements, Integer totalPages)\",\n    \"public static PageInfo of(Page<?> page)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves handling paginated data, possibly in a web application context using Spring.\"\n  ]\n}\n```"
+}

@@ -1,0 +1,159 @@
+{
+  "batch_id": 22,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "JPA",
+    "Lombok",
+    "Jackson",
+    "Reactor"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "제출 관리 및 통계 조회",
+      "domain_tags": [
+        "submission",
+        "user",
+        "stats",
+        "program"
+      ],
+      "responsibilities": [
+        "제출 생성",
+        "제출 조회",
+        "제출 삭제",
+        "제출 이력 조회",
+        "제출 통계 조회",
+        "사용자 제출 가능 여부 확인"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "트랜잭션"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\SubmissionService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\SubmissionServiceImpl.java"
+      ],
+      "evidence": [
+        "getSubmission(Long userId, Long submissionId)",
+        "createSubmission(Long userId, SubmissionRequestDto submissionRequestDto)",
+        "deleteSubmission(Long userId, Long submissionId)",
+        "submissionRepository.countSubmissionsByProgramProblemId(programProblemId)"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "의존성 주입 실패 가능성",
+        "예외 처리 미비",
+        "성능 저하 가능성"
+      ]
+    },
+    {
+      "cluster_name": "AI 평가 및 점수 생성",
+      "domain_tags": [
+        "evaluation",
+        "AI",
+        "score",
+        "reason"
+      ],
+      "responsibilities": [
+        "AI 평가 생성",
+        "점수 산정",
+        "이유 생성",
+        "평가 결과 저장"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Service"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\OpenAiEvaluationService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\OpenAiEvaluationServiceImpl.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\SubmissionAiEvaluationService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\SubmissionAiEvaluationServiceImpl.java"
+      ],
+      "evidence": [
+        "evaluateScoreWithLogprobs(String scorePrompt)",
+        "generateEvaluationReason(String reasonPrompt)",
+        "submission.updateAiEvaluation(score, reason)"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "API 호출 실패",
+        "JSON 파싱 오류",
+        "예외 처리 누락 가능성"
+      ]
+    },
+    {
+      "cluster_name": "리뷰어 매칭 및 알림 생성",
+      "domain_tags": [
+        "review",
+        "matching",
+        "notification",
+        "alarm"
+      ],
+      "responsibilities": [
+        "리뷰어 매칭",
+        "알림 생성",
+        "알림 전송"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "트랜잭션"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\ReviewMatchService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\ReviewMatchServiceImpl.java"
+      ],
+      "evidence": [
+        "matchReviewers(Submission subjectSubmission, List<Algorithm> subjectAlgorithmList, int assignCount)",
+        "alarmService.createAndSendAlarm()"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "트랜잭션 실패 시 데이터 불일치",
+        "알림 전송 실패 가능성"
+      ]
+    },
+    {
+      "cluster_name": "알고리즘 검색",
+      "domain_tags": [
+        "algorithm",
+        "search"
+      ],
+      "responsibilities": [
+        "알고리즘 검색"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Repository"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\AlgorithmServiceImpl.java"
+      ],
+      "evidence": [
+        "algorithmRepository.findByKeyword"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "키워드 처리 오류",
+        "대소문자 구분 문제"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "submission",
+    "evaluation",
+    "AI",
+    "review",
+    "algorithm",
+    "notification",
+    "stats",
+    "user"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\MyProblemSetPageResponseDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProblemSet",
+      "Page",
+      "Sort"
+    ],
+    "entities": [
+      "MyProblemSetPageResponseDto",
+      "PageInfo",
+      "SortInfo",
+      "ProblemSetResponseDto"
+    ],
+    "modules": [
+      "problemset",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "문제집 페이지 생성",
+      "verb_object": "페이지 생성",
+      "inputs": [
+        "Page<ProblemSetResponseDto> pageData"
+      ],
+      "outputs": [
+        "MyProblemSetPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "Spring 통합",
+      "페이지 정보 포함",
+      "정렬 정보 포함"
+    ],
+    "risks": [
+      "데이터 유효성 검증 부족",
+      "예외 처리 미비",
+      "의존성 관리 필요"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "Logging",
+      "API 문서화",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.dto.PageInfo"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.dto.SortInfo"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Page"
+    },
+    {
+      "type": "call",
+      "text": "PageInfo.of(pageData)"
+    },
+    {
+      "type": "call",
+      "text": "SortInfo.of(pageData)"
+    },
+    {
+      "type": "call",
+      "text": "pageData.getContent()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "problemset+page",
+      "api+response"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\MyProblemSetPageRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\service\\ProblemSetService.java"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\alarm\\dto\\response\\GetAlarmListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Data Transfer Object (DTO) for alarm list response\",\n  \"key_features\": [\n    \"Encapsulates a list of alarm response DTOs\",\n    \"Uses Java record for immutability and simplicity\"\n  ],\n  \"key_code\": [\n    \"public record GetAlarmListResponseDto(List<GetAlarmResponseDto> alarms) {}\"\n  ],\n  \"project_hints\": [\n    \"Part of an alarm management system\",\n    \"Facilitates communication between server and client by structuring response data\"\n  ]\n}\n```"
+}

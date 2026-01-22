@@ -1,0 +1,52 @@
+{
+  "batch_id": 2,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Jackson",
+    "Java Records",
+    "Jakarta Persistence",
+    "Lombok",
+    "Validation",
+    "Spring Framework",
+    "Spring Data JPA",
+    "Java Persistence API (JPA)",
+    "Spring Web",
+    "Concurrent Collections",
+    "SSE (Server-Sent Events)",
+    "Spring Security",
+    "JWT",
+    "Jakarta Servlet",
+    "Jakarta Validation"
+  ],
+  "batch_role": "알람 및 인증 관리 시스템",
+  "key_features": [
+    "알람 페이로드 정의 및 JSON 직렬화 지원",
+    "알람 유형 관리 및 데이터베이스 엔티티 정의",
+    "알람 CRUD 작업을 위한 리포지토리 인터페이스",
+    "사용자별 SseEmitter 객체 관리 및 실시간 이벤트 스트리밍 지원",
+    "사용자 알람 관리 및 실시간 업데이트 처리",
+    "JWT를 이용한 사용자 인증 및 세션 관리",
+    "로컬 로그인 요청 및 응답 DTO 정의"
+  ],
+  "related_files": [
+    "src\\main\\java\\com\\ssafy\\algogo\\alarm\\entity\\AlarmPayload.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\alarm\\entity\\AlarmType.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\alarm\\repository\\AlarmRepository.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\alarm\\repository\\AlarmTypeRepository.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\alarm\\repository\\SseEmitterRepository.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\alarm\\service\\AlarmService.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\auth\\controller\\AuthController.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\request\\LocalLoginRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\AuthResultDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\LocalLoginResponseDto.java"
+  ],
+  "project_hints": [
+    "알람 및 사용자 인증 관리 시스템",
+    "실시간 알림 기능 구현",
+    "사용자별 알람 관리 및 보안 기능 포함",
+    "JWT를 통한 인증 및 세션 관리",
+    "로컬 로그인 기능 및 입력 검증"
+  ]
+}

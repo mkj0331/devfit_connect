@@ -1,0 +1,32 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\autotransfer\\repository\\AutoTransferRepository.java",
+  "project_subject_signals": [
+    "autotransfer",
+    "account"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "JpaRepository",
+    "Repository"
+  ],
+  "core_features": [
+    {
+      "feature_name": "자동 이체 정보 조회 (계좌별)",
+      "feature_description": "특정 계좌에 연결된 자동 이체 정보를 조회한다.",
+      "implementation_method": "JpaRepository의 findByAccount 메서드를 사용하여 구현됨.",
+      "job_value": "데이터 조회 및 관리에 대한 JPA 기반 Repository 구현 역량을 보여준다."
+    },
+    {
+      "feature_name": "자동 이체 정보 조회 (날짜별)",
+      "feature_description": "특정 날짜에 실행되는 자동 이체 정보를 조회한다.",
+      "implementation_method": "JpaRepository의 findByDate 메서드를 사용하여 구현됨.",
+      "job_value": "데이터 필터링 및 검색 기능 구현 역량을 보여준다."
+    }
+  ],
+  "improvement_suggestions": [
+    "메서드 이름에 쿼리 의도를 더 명확히 반영하도록 네이밍 개선을 고려할 수 있습니다.",
+    "대량의 데이터 조회 시 성능 개선을 위해 페이징 또는 커스텀 쿼리 적용을 고려할 수 있습니다."
+  ]
+}

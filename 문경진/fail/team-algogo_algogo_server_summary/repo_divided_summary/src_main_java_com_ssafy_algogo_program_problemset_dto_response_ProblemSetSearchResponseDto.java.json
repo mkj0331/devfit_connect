@@ -1,0 +1,80 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetSearchResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProblemSet",
+      "ResponseDto"
+    ],
+    "entities": [
+      "ProblemSetResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제집 검색 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "List<ProblemSetResponseDto>"
+      ],
+      "outputs": [
+        "ProblemSetSearchResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Null 처리",
+      "불변 객체 사용"
+    ],
+    "risks": [
+      "타입 안전성 문제",
+      "데이터 유효성 검증 부족"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "call",
+      "text": "from(List<ProblemSetResponseDto> list)"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.List"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "problemset+api"
+    ],
+    "related_files_guess": []
+  }
+}

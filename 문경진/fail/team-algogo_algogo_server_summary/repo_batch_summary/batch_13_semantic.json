@@ -1,0 +1,136 @@
+{
+  "batch_id": 13,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "JPA",
+    "Lombok",
+    "jakarta.validation",
+    "Jackson"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "그룹 관리",
+      "domain_tags": [
+        "group",
+        "program",
+        "user",
+        "invite",
+        "join"
+      ],
+      "responsibilities": [
+        "그룹방 조회",
+        "그룹 초대 목록 조회",
+        "그룹 가입 요청 목록 조회",
+        "문제 삭제"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Service",
+        "Transactional"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\service\\impl\\GroupServiceImpl.java"
+      ],
+      "evidence": [
+        "groupRepository.findById(programId)",
+        "programProblemService.deleteProgramProblem(programId, programProblemDeleteRequestDto)",
+        "@Transactional(readOnly = true)"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "예외 처리 누락 가능성",
+        "성능 저하 가능성",
+        "데이터 무결성 문제"
+      ]
+    },
+    {
+      "cluster_name": "문제집 관리",
+      "domain_tags": [
+        "problemset",
+        "search",
+        "category",
+        "dto"
+      ],
+      "responsibilities": [
+        "카테고리 조회",
+        "문제집 제목 검색",
+        "문제 포함 문제집 검색",
+        "문제집 생성 요청",
+        "문제집 수정 요청",
+        "문제 삭제 요청"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Service"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\controller\\ProblemSetController.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\ProblemSetCreateRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\ProblemSetModifyRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\ProgramProblemsDeleteRequestDto.java"
+      ],
+      "evidence": [
+        "/categories",
+        "/search/by-title",
+        "/search/by-problems",
+        "@GetMapping"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "입력 검증 부족",
+        "보안 취약점",
+        "예외 처리 미비"
+      ]
+    },
+    {
+      "cluster_name": "응답 DTO 관리",
+      "domain_tags": [
+        "dto",
+        "response",
+        "page",
+        "sort"
+      ],
+      "responsibilities": [
+        "문제집 페이지 생성",
+        "문제집 목록 응답 생성",
+        "문제 세트 응답 생성",
+        "카테고리 목록 조회"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "PageInfo",
+        "SortInfo"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\MyProblemSetPageResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetProblemsPageResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\CategoryListResponseDto.java"
+      ],
+      "evidence": [
+        "new MyProblemSetPageResponseDto(...)",
+        "new ProblemSetListResponseDto(...)",
+        "new ProblemSetProblemsPageResponseDto(...)"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "데이터 유효성 검증 부족",
+        "예외 처리 미비",
+        "문서화 부족"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "group",
+    "problemset",
+    "dto",
+    "response",
+    "service"
+  ]
+}

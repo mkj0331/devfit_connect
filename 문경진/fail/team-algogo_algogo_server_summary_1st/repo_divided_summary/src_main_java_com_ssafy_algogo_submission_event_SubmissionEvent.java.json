@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\SubmissionEvent.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java Records\", \"Java Collections\"],\n  \"role\": \"Defines a data structure for submission events in the context of an algorithm submission system.\",\n  \"key_features\": [\n    \"Encapsulates a submission instance.\",\n    \"Holds a list of associated algorithms.\",\n    \"Tracks the count of assignments related to the submission.\"\n  ],\n  \"key_code\": [\n    \"public record SubmissionEvent(Submission subjectSubmission, List<Algorithm> subjectAlgorithmList, int assignCount) {}\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves algorithm submissions, possibly in a competitive programming or educational context.\",\n    \"The use of a record suggests a focus on immutability and simplicity in data handling.\"\n  ]\n}\n```"
+}

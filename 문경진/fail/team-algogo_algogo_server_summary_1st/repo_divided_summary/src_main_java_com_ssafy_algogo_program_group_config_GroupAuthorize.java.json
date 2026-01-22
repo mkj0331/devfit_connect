@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupAuthorize.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java Annotations\",\n    \"Spring Framework (추정)\"\n  ],\n  \"role\": \"사용자 권한을 관리하기 위한 커스텀 애너테이션 정의\",\n  \"key_features\": [\n    \"메서드에 적용 가능한 애너테이션\",\n    \"최소 권한 레벨을 설정할 수 있는 기능\"\n  ],\n  \"key_code\": [\n    \"package com.ssafy.algogo.program.group.config;\",\n    \"@Target(ElementType.METHOD)\",\n    \"@Retention(RetentionPolicy.RUNTIME)\",\n    \"GroupRole minRole() default GroupRole.USER;\"\n  ],\n  \"project_hints\": [\n    \"그룹 관련 기능을 가진 애플리케이션\",\n    \"사용자 권한 관리 시스템\"\n  ]\n}\n```"
+}

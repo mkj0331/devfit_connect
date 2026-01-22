@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\User\\request\\RequestUserSignUpDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Lombok\",\n    \"Spring Framework (추정)\"\n  ],\n  \"role\": \"사용자 회원가입 요청을 처리하는 데이터 전송 객체(DTO)\",\n  \"key_features\": [\n    \"사용자 정보를 담는 필드 (이름, 이메일, 비밀번호 등)\",\n    \"UserEntity 객체로 변환하는 메서드 제공\"\n  ],\n  \"key_code\": [\n    \"private String familyName;\",\n    \"private String givenName;\",\n    \"private String email;\",\n    \"private String password;\",\n    \"UserEntity.builder()\"\n  ],\n  \"project_hints\": [\n    \"사용자 관리 및 인증 시스템\",\n    \"대학 또는 교육 관련 플랫폼\"\n  ]\n}\n```"
+}

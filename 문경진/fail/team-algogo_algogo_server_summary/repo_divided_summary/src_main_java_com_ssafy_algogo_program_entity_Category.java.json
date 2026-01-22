@@ -1,0 +1,113 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Category.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "category",
+      "name"
+    ],
+    "entities": [
+      "Category"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "카테고리 생성",
+      "verb_object": "카테고리 생성",
+      "inputs": [
+        "name"
+      ],
+      "outputs": [
+        "Category"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "카테고리 조회",
+      "verb_object": "카테고리 조회",
+      "inputs": [
+        "id"
+      ],
+      "outputs": [
+        "Category"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유니크 제약조건 설정",
+      "명확한 데이터 모델",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "예외 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리 로직",
+      "DTO 사용"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.persistence.*"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotNull"
+    },
+    {
+      "type": "import",
+      "text": "lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+model"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\CategoryRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\service\\CategoryService.java"
+    ]
+  }
+}

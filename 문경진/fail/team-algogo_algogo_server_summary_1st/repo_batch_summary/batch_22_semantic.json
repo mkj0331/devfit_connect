@@ -1,0 +1,44 @@
+{
+  "batch_id": 22,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "Elasticsearch",
+    "JPA (Java Persistence API)",
+    "OpenAI API",
+    "Lombok",
+    "WebClient",
+    "Reactive Programming",
+    "DTO (Data Transfer Object)",
+    "RESTful API",
+    "Exception Handling"
+  ],
+  "batch_role": "Submission Management and Evaluation Services",
+  "key_features": [
+    "Algorithm guide search functionality using Elasticsearch",
+    "Integration with OpenAI for score evaluation and reasoning generation",
+    "Reviewer matching based on algorithms",
+    "Submission evaluation and management services",
+    "Statistical analysis and tracking of user submissions",
+    "Error handling and transaction management"
+  ],
+  "related_files": [
+    "ElasticsearchGuideSearchService.java",
+    "OpenAiEvaluationService.java",
+    "ReviewMatchService.java",
+    "SubmissionAiEvaluationService.java",
+    "SubmissionService.java",
+    "AlgorithmServiceImpl.java",
+    "OpenAiEvaluationServiceImpl.java",
+    "ReviewMatchServiceImpl.java",
+    "SubmissionAiEvaluationServiceImpl.java",
+    "SubmissionServiceImpl.java"
+  ],
+  "project_hints": [
+    "A system for managing and evaluating code submissions, likely in a competitive programming or educational context.",
+    "Utilizes AI for evaluation and feedback generation.",
+    "Incorporates user interaction for submission tracking and statistics."
+  ]
+}

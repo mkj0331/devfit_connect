@@ -1,0 +1,118 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramInvite.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok",
+      "Hibernate"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProgramInvite",
+      "InviteStatus",
+      "User",
+      "Program"
+    ],
+    "entities": [
+      "ProgramInvite",
+      "User",
+      "Program"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "초대 상태 업데이트",
+      "verb_object": "초대 상태 업데이트",
+      "inputs": [
+        "InviteStatus inviteStatus"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "프로그램 초대 생성",
+      "verb_object": "프로그램 초대 생성",
+      "inputs": [
+        "Program program",
+        "User user",
+        "InviteStatus inviteStatus"
+      ],
+      "outputs": [
+        "ProgramInvite"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 모델",
+      "유효성 검사 적용",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "Cascade 삭제로 인한 데이터 손실 가능성",
+      "Lazy loading으로 인한 N+1 문제"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "로깅",
+      "트랜잭션 관리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@ManyToOne"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "call",
+      "text": "updateInviteStatus(InviteStatus inviteStatus)"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+model"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java"
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "batch_id": 1,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Markdown",
+    "Java"
+  ],
+  "technologies": [
+    "Spring Boot",
+    "Gradle",
+    "JPA",
+    "Lombok",
+    "Hibernate"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "문서화 및 서버 시작",
+      "domain_tags": [
+        "documentation",
+        "server",
+        "spring",
+        "gradle"
+      ],
+      "responsibilities": [
+        "프로젝트 설명 제공",
+        "서버 시작",
+        "RESTful 웹 서비스 구축"
+      ],
+      "implementation_signals": [
+        "Markdown",
+        "Spring Boot",
+        "Gradle"
+      ],
+      "related_files": [
+        "HELP.md",
+        "README.md",
+        "src\\main\\java\\com\\ssafy\\algogo\\AlgogoApplication.java"
+      ],
+      "evidence": [
+        "Spring Boot Gradle Plugin Reference Guide",
+        "Building a RESTful Web Service",
+        "# algogo_server"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "문서의 최신성 부족",
+        "정보 부족",
+        "기능 설명 미비"
+      ]
+    },
+    {
+      "cluster_name": "알림 관리",
+      "domain_tags": [
+        "alarm",
+        "notification",
+        "api",
+        "dto"
+      ],
+      "responsibilities": [
+        "알림 구독",
+        "알림 조회",
+        "읽지 않은 알림 카운트 조회",
+        "알림 삭제"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Service"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\alarm\\controller\\AlarmController.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\alarm\\dto\\request\\DeleteAlarmRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\alarm\\dto\\response\\GetAlarmListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\alarm\\entity\\Alarm.java"
+      ],
+      "evidence": [
+        "@RestController",
+        "GET /api/v1/alarm/lists",
+        "GET /api/v1/alarm/counts"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "예외 처리 미비",
+        "보안 취약점 가능성",
+        "유효성 검사 부족"
+      ]
+    },
+    {
+      "cluster_name": "API 테스트 및 에러 처리",
+      "domain_tags": [
+        "api",
+        "test",
+        "error",
+        "auth"
+      ],
+      "responsibilities": [
+        "API 테스트",
+        "커스텀 에러 발생",
+        "일반 에러 발생",
+        "사용자 정보 조회"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "Spring Security",
+        "예외 처리"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\TestController.java"
+      ],
+      "evidence": [
+        "@RestController",
+        "/test/api",
+        "/test/error/1"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "예외 처리 부족",
+        "null 체크 미비",
+        "보안 취약점"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "documentation",
+    "server",
+    "alarm",
+    "api",
+    "test",
+    "auth",
+    "jpa",
+    "dto",
+    "spring",
+    "gradle"
+  ]
+}

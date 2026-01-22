@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\DeploymentStepQueue.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Lombok\"],\n  \"role\": \"이 파일은 배포 업데이트 요청을 관리하는 큐를 구현하여, 프로젝트의 배포 단계에 대한 업데이트를 처리하는 역할을 합니다.\",\n  \"key_features\": [\n    \"배포 업데이트 요청을 큐에 추가하는 기능\",\n    \"큐에서 모든 업데이트 요청을 가져오는 기능\"\n  ],\n  \"key_code\": [\n    \"public void addDeploymentUpdate(ProjectEntity project, DeploymentStep step) { updateQueue.add(new DeploymentUpdateRequest(project.getId(), step)); }\",\n    \"public List<DeploymentUpdateRequest> pollQueue() { List<DeploymentUpdateRequest> updates = new ArrayList<>(); while (!updateQueue.isEmpty()) { updates.add(updateQueue.poll()); } return updates; }\"\n  ],\n  \"project_hints\": [\n    \"이 파일은 배포 관리 시스템 또는 CI/CD(지속적 통합/지속적 배포) 관련 프로젝트의 일부일 가능성이 높습니다.\"\n  ]\n}\n```"
+}

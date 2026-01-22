@@ -1,0 +1,98 @@
+{
+  "portfolio": {
+    "name": "문경진",
+    "contact": {
+      "email": "mkj0331@naver.com",
+      "phone": "010-9483-9059"
+    },
+    "contents": [
+      "Skills",
+      "Experience & Project",
+      "Project 1",
+      "Project 2",
+      "Project 3"
+    ],
+    "skills": {
+      "data_analysis": [
+        "Pandas",
+        "NumPy",
+        "SQL",
+        "OpenAI",
+        "Feature Engineering",
+        "Text Embedding",
+        "Data Sampling",
+        "CTGAN",
+        "Tableau",
+        "OCR"
+      ],
+      "data_engineering": [
+        "Web Crawling",
+        "API",
+        "GitLab",
+        "Kafka",
+        "Flink",
+        "Elasticsearch",
+        "PostgreSQL",
+        "Spark",
+        "Airflow",
+        "HDFS"
+      ],
+      "communication": [
+        "Notion",
+        "Confluence",
+        "Jira"
+      ]
+    },
+    "experience": [
+      {
+        "project_name": "삼성 청년 SW-AI 아카데미",
+        "duration": "2025-07 to 2025-12",
+        "description": "Data 신곡 취향저격 음악 추천 서비스 Track 기반 데이터 분석 머신러닝 SQL 시각화전반학습 음원 가사차트 데이터 실시간 수집 및 처리 Flink 기반 데이터 엔지나 니어링 학습 Crawling Kafka Spark 기획부터 구현 검증까지의 엔드투엔드 서비스 프로젝트 수행."
+      },
+      {
+        "project_name": "Tableau Bootcamp",
+        "duration": "2025-10",
+        "description": "필터 계산 필드 차트 조합을 통한 분석 결과 시각화."
+      },
+      {
+        "project_name": "SRI 데이터 경진대회",
+        "duration": "2025-07 to 2025-08",
+        "description": "수원시 정책 아이디어 제안 수원시 내부 설문 데이터를 분석해 시민 선호와 도시 특성 도출."
+      },
+      {
+        "project_name": "NCSoft Vision AI Team",
+        "duration": "2024-08",
+        "description": "Data Construction Assistant 이미지 텍스트 데이터셋 수집 및 정제 OpenAI 기반 모델화."
+      },
+      {
+        "project_name": "FSI AI X Data Challenge 2024",
+        "duration": "2019-03 to 2025-02",
+        "description": "금융 사기 거래 분류 모델. 사용자 패턴 분석 및 Feature Engineering."
+      }
+    ],
+    "projects": [
+      {
+        "name": "금융 사기 거래 분류 모델",
+        "github": "https://github.com/mkj0331",
+        "duration": "2024-08-05 to 2024-08-30",
+        "team_size": 4,
+        "role": "Feature Engineering 및 변수설계",
+        "outcome": "Macro F1-score 0.73052, 141팀 중 18위 달성."
+      },
+      {
+        "name": "수원시 정책 아이디어 제안",
+        "duration": "2025-07-14 to 2025-08-29",
+        "team_size": 3,
+        "role": "수원시 설문 데이터 정제 및 분석",
+        "outcome": "우수상 수상."
+      },
+      {
+        "name": "신곡 취향저격 음악 추천 서비스",
+        "duration": "2025-12-05 to 2025-12-26",
+        "team_size": 3,
+        "role": "데이터 파이프라인 설계 및 구현",
+        "outcome": "감정기반 추천 로직 구현."
+      }
+    ]
+  }
+}

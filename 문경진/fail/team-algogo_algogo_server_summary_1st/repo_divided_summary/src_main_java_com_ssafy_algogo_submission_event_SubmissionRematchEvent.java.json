@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\SubmissionRematchEvent.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java Records\",\n    \"DTO (Data Transfer Object)\"\n  ],\n  \"role\": \"이 파일은 제출 리매치 이벤트를 나타내는 데이터 구조체를 정의합니다.\",\n  \"key_features\": [\n    \"리뷰 리매치 대상 쿼리 DTO 리스트를 포함\",\n    \"Java Record를 사용하여 불변 객체 생성\"\n  ],\n  \"key_code\": [\n    \"public record SubmissionRematchEvent(List<ReviewRematchTargetQueryDto> reviewRematchTargetQueryDtoList)\"\n  ],\n  \"project_hints\": [\n    \"제출 리매치와 관련된 이벤트 처리\",\n    \"리뷰 리매치 대상에 대한 정보를 관리\"\n  ]\n}\n```"
+}

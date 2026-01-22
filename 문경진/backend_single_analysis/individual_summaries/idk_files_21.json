@@ -1,0 +1,24 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\member\\repository\\SignatureRepository.java",
+  "project_subject_signals": [
+    "member management",
+    "signature data"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "Spring Data JPA"
+  ],
+  "core_features": [
+    {
+      "feature_name": "Signature Repository",
+      "feature_description": "회원과 연관된 서명 정보를 조회하는 기능을 제공합니다.",
+      "implementation_method": "Spring Data JPA의 JpaRepository를 상속받아 `findByMember` 메소드를 통해 구현되었습니다.",
+      "job_value": "Spring Data JPA를 활용한 데이터 접근 계층 설계 및 구현 역량을 보여줍니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "이 메서드에서 반환되는 List가 비어있을 경우에 대한 null safety 또는 예외 처리를 고려할 수 있습니다."
+  ]
+}

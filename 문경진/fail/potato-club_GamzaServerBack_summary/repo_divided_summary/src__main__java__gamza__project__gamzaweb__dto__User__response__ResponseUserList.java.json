@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\User\\response\\ResponseUserList.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 사용자 목록을 반환하는 응답 DTO(Data Transfer Object) 역할을 합니다.\",\n  \"key_features\": [\n    \"사용자 목록을 담는 리스트를 포함\",\n    \"Lombok을 사용하여 코드의 간결성을 높임\",\n    \"빌더 패턴을 통해 객체 생성의 유연성을 제공\"\n  ],\n  \"key_code\": [\n    \"private List<ResponseUser> userList;\",\n    \"@Builder\",\n    \"@Getter\",\n    \"@NoArgsConstructor\",\n    \"@AllArgsConstructor\"\n  ],\n  \"project_hints\": [\n    \"사용자 관리 또는 사용자 목록을 처리하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

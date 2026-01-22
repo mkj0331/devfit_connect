@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\service\\impl\\UserServiceImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Security\",\n    \"Lombok\",\n    \"Jakarta EE\"\n  ],\n  \"role\": \"사용자 관리 및 인증 서비스 구현\",\n  \"key_features\": [\n    \"사용자 로그인 및 회원가입 처리\",\n    \"JWT 토큰 생성 및 관리\",\n    \"사용자 목록 조회\"\n  ],\n  \"key_code\": [\n    \"userRepository.findByEmail(email)\",\n    \"jwtTokenProvider.createAccessToken(user.getId(), role)\",\n    \"userRepository.findAllByOrderByFamilyNameAsc()\"\n  ],\n  \"project_hints\": [\n    \"사용자 인증 및 권한 관리 시스템\",\n    \"웹 애플리케이션 사용자 관리\"\n  ]\n}\n```"
+}

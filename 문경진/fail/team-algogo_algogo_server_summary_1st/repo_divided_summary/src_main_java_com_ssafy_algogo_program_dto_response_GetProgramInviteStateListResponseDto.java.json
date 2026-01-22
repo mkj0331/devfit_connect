@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\GetProgramInviteStateListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java 17\", \"Record\", \"DTO (Data Transfer Object)\"],\n  \"role\": \"This file defines a response DTO for a program invite state list.\",\n  \"key_features\": [\n    \"Encapsulates a list of users' invite states\",\n    \"Uses Java Record for concise data representation\"\n  ],\n  \"key_code\": [\n    \"public record GetProgramInviteStateListResponseDto(List<GetProgramInviteStateResponseDto> users)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves managing program invitations and their states.\",\n    \"The presence of DTO suggests a layered architecture, possibly with a service and controller layer.\"\n  ]\n}\n```"
+}

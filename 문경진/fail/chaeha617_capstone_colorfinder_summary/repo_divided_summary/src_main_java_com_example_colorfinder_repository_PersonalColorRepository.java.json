@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\repository\\PersonalColorRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Data JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "PersonalColor",
+      "ColorId"
+    ],
+    "entities": [
+      "PERSONALCOLOR"
+    ],
+    "modules": [
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "색상 조회",
+      "verb_object": "색상 조회",
+      "inputs": [
+        "colorId: String"
+      ],
+      "outputs": [
+        "Optional<PERSONALCOLOR>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Spring Data JPA 사용",
+      "Optional 반환 타입",
+      "인터페이스 기반 설계"
+    ],
+    "risks": [
+      "NullPointerException 가능성",
+      "색상 ID 중복 가능성"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "예외 처리",
+      "트랜잭션 관리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository;"
+    },
+    {
+      "type": "call",
+      "text": "findByColorId(String colorId)"
+    },
+    {
+      "type": "query",
+      "text": "Optional<PERSONALCOLOR>"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+entity"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\PERSONALCOLOR.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\PersonalColorService.java"
+    ]
+  }
+}

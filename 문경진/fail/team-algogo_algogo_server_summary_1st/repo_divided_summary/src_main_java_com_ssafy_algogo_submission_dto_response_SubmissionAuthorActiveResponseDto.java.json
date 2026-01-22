@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionAuthorActiveResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Data Transfer Object (DTO) for submission author status\",\n  \"key_features\": [\n    \"Encapsulates the active status of a submission author\",\n    \"Uses Java record for concise data representation\"\n  ],\n  \"key_code\": [\n    \"public record SubmissionAuthorActiveResponseDto(Boolean isActive)\"\n  ],\n  \"project_hints\": [\n    \"Related to a submission system, possibly for tracking author activity\"\n  ]\n}\n```"
+}

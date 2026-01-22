@@ -1,0 +1,140 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\controller\\ProblemSetController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "문제집",
+      "카테고리",
+      "검색",
+      "유저권한"
+    ],
+    "entities": [
+      "ProblemSet",
+      "Category",
+      "User"
+    ],
+    "modules": [
+      "problemset",
+      "auth"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "카테고리 조회",
+      "verb_object": "카테고리 조회",
+      "inputs": [],
+      "outputs": [
+        "SuccessResponse"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "문제집 제목 검색",
+      "verb_object": "문제집 제목 검색",
+      "inputs": [
+        "keyword",
+        "page",
+        "size"
+      ],
+      "outputs": [
+        "ProblemSetSearchPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    },
+    {
+      "name": "문제 포함 문제집 검색",
+      "verb_object": "문제 포함 문제집 검색",
+      "inputs": [
+        "keyword",
+        "page",
+        "size"
+      ],
+      "outputs": [
+        "ProblemSetWithMatchPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Service"
+    ],
+    "cross_cutting": [
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 API 응답",
+      "유저 권한 확인 기능",
+      "검색 기능 다양성",
+      "DTO 사용으로 인한 데이터 전송 최적화",
+      "Spring 프레임워크 활용"
+    ],
+    "risks": [
+      "예외 처리 미비",
+      "입력 검증 부족",
+      "성능 저하 가능성",
+      "보안 취약점",
+      "의존성 관리 필요"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "유닛 테스트",
+      "입력 검증",
+      "로깅",
+      "보안 점검"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "endpoint",
+      "text": "/categories"
+    },
+    {
+      "type": "endpoint",
+      "text": "/search/by-title"
+    },
+    {
+      "type": "endpoint",
+      "text": "/search/by-problems"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.problem.service.impl.ProgramProblemServiceImpl;"
+    },
+    {
+      "type": "annotation",
+      "text": "@GetMapping"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "api+controller",
+      "problemset+service",
+      "search+feature"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\service\\ProblemSetService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetSearchPageResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\ProblemSetCreateRequestDto.java"
+    ]
+  }
+}

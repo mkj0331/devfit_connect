@@ -1,0 +1,125 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Data JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Program",
+      "ProgramType"
+    ],
+    "entities": [
+      "Program",
+      "ProgramType"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "제목 존재 여부 확인",
+      "verb_object": "제목 존재 여부 확인",
+      "inputs": [
+        "title"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "프로그램 타입으로 프로그램 조회",
+      "verb_object": "프로그램 타입으로 프로그램 조회",
+      "inputs": [
+        "ProgramType"
+      ],
+      "outputs": [
+        "List<Program>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "프로그램 ID로 프로그램 타입 조회",
+      "verb_object": "프로그램 ID로 프로그램 타입 조회",
+      "inputs": [
+        "programId"
+      ],
+      "outputs": [
+        "Optional<String>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "JPA를 통한 데이터 접근",
+      "Optional 사용으로 null 처리",
+      "Spring Data JPA의 편리함",
+      "유지보수 용이성"
+    ],
+    "risks": [
+      "JPA 쿼리 성능 문제",
+      "Optional 사용으로 인한 복잡성",
+      "타입 안전성 문제",
+      "의존성 주입 실패 가능성",
+      "예외 처리 부족"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "트랜잭션 관리",
+      "로깅",
+      "예외 처리",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.Query"
+    },
+    {
+      "type": "call",
+      "text": "existsByTitle(String title)"
+    },
+    {
+      "type": "call",
+      "text": "findByProgramType(ProgramType programType)"
+    },
+    {
+      "type": "query",
+      "text": "@Query(\"select pt.name from Program p join p.programType pt where p.id = :programId\")"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+program",
+      "api+repository"
+    ],
+    "related_files_guess": []
+  }
+}

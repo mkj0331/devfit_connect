@@ -1,0 +1,40 @@
+{
+  "batch_id": 16,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "Spring Security",
+    "Jakarta Validation",
+    "Lombok",
+    "Jackson",
+    "Java Records"
+  ],
+  "batch_role": "Code Review Management System",
+  "key_features": [
+    "Handles code review requests and responses",
+    "Supports user authentication and authorization",
+    "Provides pagination for code review lists",
+    "Validates input data for code review requests",
+    "Encapsulates code review data for API responses",
+    "Supports hierarchical structure of reviews"
+  ],
+  "related_files": [
+    "src\\main\\java\\com\\ssafy\\algogo\\review\\controller\\ReviewController.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\request\\CreateCodeReviewRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\request\\UpdateCodeReiewRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewListResponseDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewResponseDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewSubmissionInfoDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewTreeResponseDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\RequiredCodeReviewListResponseDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\RequiredCodeReviewResponseDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\UserCodeReviewListResponseDto.java"
+  ],
+  "project_hints": [
+    "The project is focused on managing code reviews.",
+    "It involves user interactions with code submissions.",
+    "The system supports various functionalities related to code quality and collaboration."
+  ]
+}

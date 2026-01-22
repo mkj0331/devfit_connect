@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\ReviewCandidateQueryDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Data Transfer Object (DTO) for review candidate queries\",\n  \"key_features\": [\n    \"Encapsulates data related to a review candidate\",\n    \"Holds a submission object\",\n    \"Contains a list of algorithm IDs\",\n    \"Tracks review counts\"\n  ],\n  \"key_code\": [\n    \"public record ReviewCandidateQueryDto(\",\n    \"Submission submission,\",\n    \"List<Long> algorithmIdList,\",\n    \"Long reviewCount,\",\n    \"Long requireReviewCount\",\n    \")\"\n  ],\n  \"project_hints\": [\n    \"Part of a submission review system\",\n    \"Likely related to algorithm submissions and reviews\"\n  ]\n}\n```"
+}

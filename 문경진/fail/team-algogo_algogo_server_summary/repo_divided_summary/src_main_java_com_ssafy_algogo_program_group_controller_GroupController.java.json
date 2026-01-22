@@ -1,0 +1,141 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\controller\\GroupController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Controller",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "그룹",
+      "초대",
+      "참여",
+      "조회"
+    ],
+    "entities": [
+      "Group",
+      "User",
+      "Invite"
+    ],
+    "modules": [
+      "GroupService",
+      "UserService"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "내 그룹 조회",
+      "verb_object": "그룹 조회",
+      "inputs": [
+        "userId",
+        "page",
+        "size",
+        "sortBy",
+        "sortDirection"
+      ],
+      "outputs": [
+        "MyGroupRoomPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "받은 그룹 초대 조회",
+      "verb_object": "초대 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "GetReceivedGroupInviteListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "보낸 그룹 참여 신청 조회",
+      "verb_object": "참여 신청 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "GetSentGroupJoinListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Service"
+    ],
+    "cross_cutting": [
+      "Security",
+      "Exception Handling"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 API 설계",
+      "재사용 가능한 DTO",
+      "유효성 검사 가능성",
+      "보안 고려",
+      "성공 응답 처리"
+    ],
+    "risks": [
+      "보안 취약점 가능성",
+      "예외 처리 미비",
+      "성능 저하 가능성",
+      "유효성 검사 누락",
+      "의존성 관리 문제"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "유효성 검사",
+      "로깅",
+      "테스트 케이스",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@GetMapping(\"/invites/received\")"
+    },
+    {
+      "type": "call",
+      "text": "groupService.getReceivedGroupInvites(customUserDetails.getUserId())"
+    },
+    {
+      "type": "endpoint",
+      "text": "/joins/sent"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.program.group.dto.response.GetReceivedGroupInviteListResponseDto;"
+    },
+    {
+      "type": "query",
+      "text": "PageRequest.of(page, size, Sort.by(Sort.Direction.fromString(sortDirection), sortBy))"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "group+controller",
+      "api+group",
+      "user+auth"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\service\\GroupService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetSentGroupJoinListResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\MyGroupRoomPageResponseDto.java"
+    ]
+  }
+}

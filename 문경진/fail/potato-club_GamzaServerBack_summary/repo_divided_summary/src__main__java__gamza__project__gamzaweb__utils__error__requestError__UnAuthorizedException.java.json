@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\error\\requestError\\UnAuthorizedException.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Java Exception Handling\"],\n  \"role\": \"이 파일은 인증되지 않은 사용자에 대한 예외 처리를 담당합니다.\",\n  \"key_features\": [\n    \"인증되지 않은 사용자 요청에 대한 예외 발생\",\n    \"비즈니스 로직에서 발생할 수 있는 오류를 처리\"\n  ],\n  \"key_code\": [\n    \"public UnAuthorizedException(String message, ErrorCode code) {\",\n    \"super(message, code);\"\n  ],\n  \"project_hints\": [\n    \"사용자 인증 및 권한 관리 시스템\",\n    \"웹 애플리케이션의 보안 관련 기능\"\n  ]\n}\n```"
+}

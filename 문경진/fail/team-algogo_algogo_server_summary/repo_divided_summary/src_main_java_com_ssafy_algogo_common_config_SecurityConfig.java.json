@@ -1,0 +1,117 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\SecurityConfig.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring Security"
+    ],
+    "libraries": [],
+    "layer_guess": "Configuration",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "CORS",
+      "Authentication",
+      "Authorization"
+    ],
+    "entities": [
+      "JwtTokenProvider",
+      "CustomUserDetailsService"
+    ],
+    "modules": [
+      "security",
+      "auth"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "CORS 설정",
+      "verb_object": "CORS 설정",
+      "inputs": [
+        "프론트엔드 도메인",
+        "허용할 메서드",
+        "허용할 헤더"
+      ],
+      "outputs": [
+        "CORS 정책 적용"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "인증 관리자 생성",
+      "verb_object": "인증 관리자 생성",
+      "inputs": [
+        "AuthenticationProvider",
+        "UserDetailsService",
+        "PasswordEncoder"
+      ],
+      "outputs": [
+        "AuthenticationManager"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "DB"
+    ],
+    "patterns": [
+      "Configuration",
+      "Bean"
+    ],
+    "cross_cutting": [
+      "Security"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "CORS 설정으로 보안 강화",
+      "DB 기반 인증 구현",
+      "유연한 메서드 허용"
+    ],
+    "risks": [
+      "CORS 설정 오류로 인한 보안 취약점",
+      "잘못된 인증 처리"
+    ],
+    "missing_standard_checks": [
+      "로그 기록",
+      "예외 처리",
+      "유효성 검사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "config",
+      "text": "configuration.setAllowedOrigins(...)"
+    },
+    {
+      "type": "config",
+      "text": "configuration.setAllowedMethods(...)"
+    },
+    {
+      "type": "call",
+      "text": "authenticationManager()"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Configuration"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+security",
+      "config+cors"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\JwtTokenProvider.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\CustomUserDetailsService.java"
+    ]
+  }
+}

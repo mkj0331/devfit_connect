@@ -1,0 +1,122 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\query\\ReviewQueryRepository.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Repository",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Review",
+      "Submission",
+      "User"
+    ],
+    "entities": [
+      "CodeReviewTreeResponseDto",
+      "UserCodeReviewResponseDto"
+    ],
+    "modules": [
+      "repository",
+      "query"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "제출물 리뷰 조회",
+      "verb_object": "리뷰 조회",
+      "inputs": [
+        "userId",
+        "submissionId"
+      ],
+      "outputs": [
+        "List<CodeReviewTreeResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "받은 리뷰 조회",
+      "verb_object": "받은 리뷰 조회",
+      "inputs": [
+        "userId",
+        "page",
+        "size"
+      ],
+      "outputs": [
+        "Page<UserCodeReviewResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "완료된 리뷰 조회",
+      "verb_object": "완료된 리뷰 조회",
+      "inputs": [
+        "userId",
+        "page",
+        "size"
+      ],
+      "outputs": [
+        "Page<UserCodeReviewResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository",
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "DTO 사용으로 데이터 전송 최적화",
+      "Spring Data JPA 활용"
+    ],
+    "risks": [
+      "의존성 주입 실패 가능성",
+      "페이지네이션 처리 오류",
+      "NullPointerException 발생 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 값 검증",
+      "예외 처리 로직",
+      "로깅 기능"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Page;"
+    },
+    {
+      "type": "call",
+      "text": "getReviewsBySubmissionId(Long userId, Long submissionId)"
+    },
+    {
+      "type": "call",
+      "text": "getReceiveReviews(Long userId, Integer page, Integer size)"
+    },
+    {
+      "type": "call",
+      "text": "getDoneReviews(Long userId, Integer page, Integer size)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "api+repository"
+    ],
+    "related_files_guess": []
+  }
+}

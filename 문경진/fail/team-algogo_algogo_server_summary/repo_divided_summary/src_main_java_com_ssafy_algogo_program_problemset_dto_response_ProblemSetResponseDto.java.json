@@ -1,0 +1,125 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProblemSet",
+      "Response",
+      "Dto",
+      "Program"
+    ],
+    "entities": [
+      "Program"
+    ],
+    "modules": [
+      "problemset",
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 세트 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "Program 객체"
+      ],
+      "outputs": [
+        "ProblemSetResponseDto 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "프로그램 정보 포함",
+      "verb_object": "정보 포함",
+      "inputs": [
+        "programId",
+        "title",
+        "description",
+        "thumbnail",
+        "createAt",
+        "modifiedAt",
+        "programType",
+        "categories",
+        "totalParticipants",
+        "problemCount"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불필요한 필드 제외",
+      "Immutable 객체 사용",
+      "Jackson을 통한 JSON 직렬화 지원",
+      "유연한 응답 생성"
+    ],
+    "risks": [
+      "데이터 누락 가능성",
+      "프로그램 객체 의존성",
+      "변경 시 DTO 수정 필요",
+      "NullPointerException 위험",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "Validation 체크",
+      "Null 체크",
+      "예외 처리",
+      "로깅",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.fasterxml.jackson.annotation.JsonInclude"
+    },
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "call",
+      "text": "ProblemSetResponseDto.from(Program program)"
+    },
+    {
+      "type": "call",
+      "text": "program.getId()"
+    },
+    {
+      "type": "call",
+      "text": "program.getTitle()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "program+entity",
+      "problemset+response"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\ProblemSetRequestDto.java"
+    ]
+  }
+}

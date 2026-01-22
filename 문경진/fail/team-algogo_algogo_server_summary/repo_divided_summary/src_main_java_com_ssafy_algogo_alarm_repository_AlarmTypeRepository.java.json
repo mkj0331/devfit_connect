@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\alarm\\repository\\AlarmTypeRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Data JPA"
+    ],
+    "layer_guess": "Repository Layer",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "알림",
+      "타입"
+    ],
+    "entities": [
+      "AlarmType"
+    ],
+    "modules": [
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "알림 타입 조회",
+      "verb_object": "findByName",
+      "inputs": [
+        "name: String"
+      ],
+      "outputs": [
+        "Optional<AlarmType>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "JPA를 통한 데이터 접근",
+      "Optional 사용으로 null 처리",
+      "인터페이스 기반 설계"
+    ],
+    "risks": [
+      "JPA 쿼리 성능 문제",
+      "Optional 사용으로 인한 복잡성 증가"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "트랜잭션 관리",
+      "유효성 검사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository"
+    },
+    {
+      "type": "call",
+      "text": "findByName(String name)"
+    },
+    {
+      "type": "annotation",
+      "text": "public interface AlarmTypeRepository"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "alarm+repository"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\alarm\\entity\\AlarmType.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\alarm\\service\\AlarmService.java"
+    ]
+  }
+}

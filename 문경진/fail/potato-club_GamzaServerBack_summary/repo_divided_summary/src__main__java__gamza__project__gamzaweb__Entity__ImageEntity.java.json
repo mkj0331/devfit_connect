@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\ImageEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Persistence\",\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"이 파일은 이미지 정보를 데이터베이스에 저장하고 관리하는 엔티티 클래스를 정의합니다.\",\n  \"key_features\": [\n    \"이미지 ID, 이름, 사용자, 프로젝트와의 관계를 정의\",\n    \"이미지 ID를 업데이트하는 메서드 제공\"\n  ],\n  \"key_code\": [\n    \"@Entity\",\n    \"@Id\",\n    \"@GeneratedValue(strategy = GenerationType.IDENTITY)\",\n    \"private String imageId;\",\n    \"private String name;\",\n    \"@ManyToOne @JoinColumn(name = \\\"user_id\\\", nullable = false) private UserEntity user;\",\n    \"public void updatedImageId(String imageId) { this.imageId = imageId; }\"\n  ],\n  \"project_hints\": [\n    \"이미지 업로드 및 관리와 관련된 웹 애플리케이션\",\n    \"사용자와 프로젝트 간의 이미지 연관성을 다루는 시스템\"\n  ]\n}\n```"
+}

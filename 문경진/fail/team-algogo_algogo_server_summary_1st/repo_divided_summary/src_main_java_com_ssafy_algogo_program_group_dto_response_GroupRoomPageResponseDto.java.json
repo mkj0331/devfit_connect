@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GroupRoomPageResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Java Records\",\n    \"Java Collections\",\n    \"Spring Data\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for paginated group room responses\",\n  \"key_features\": [\n    \"Encapsulates pagination and sorting information\",\n    \"Holds a list of group room response DTOs\",\n    \"Static method to create an instance from a Page object\"\n  ],\n  \"key_code\": [\n    \"public record GroupRoomPageResponseDto(...)\",\n    \"public static GroupRoomPageResponseDto from(Page<GroupRoomResponseDto> groupRoomResponseDto, boolean isUser)\"\n  ],\n  \"project_hints\": [\n    \"Related to group room management or functionalities in a collaborative application\",\n    \"Involves pagination and sorting of group room data\"\n  ]\n}\n```"
+}

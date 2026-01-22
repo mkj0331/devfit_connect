@@ -1,0 +1,124 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\entity\\OrderInfo.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Entity",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Order",
+      "Address"
+    ],
+    "entities": [
+      "OrderInfo",
+      "OrderDTO",
+      "AddressDTO"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "주문 정보 설정",
+      "verb_object": "주문 설정",
+      "inputs": [
+        "OrderDTO order"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "주소 정보 설정",
+      "verb_object": "주소 설정",
+      "inputs": [
+        "AddressDTO address"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "주문 정보 조회",
+      "verb_object": "주문 조회",
+      "inputs": [],
+      "outputs": [
+        "OrderDTO order"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "주소 정보 조회",
+      "verb_object": "주소 조회",
+      "inputs": [],
+      "outputs": [
+        "AddressDTO address"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "간단한 접근자 메서드",
+      "유지보수 용이성"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "변경 시 의존성 증가"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 로직",
+      "Immutable 객체 사용"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.example.colorfinder.dto.AddressDTO;"
+    },
+    {
+      "type": "import",
+      "text": "import com.example.colorfinder.dto.OrderDTO;"
+    },
+    {
+      "type": "call",
+      "text": "getOrder()"
+    },
+    {
+      "type": "call",
+      "text": "setOrder(OrderDTO order)"
+    },
+    {
+      "type": "call",
+      "text": "getAddress()"
+    },
+    {
+      "type": "call",
+      "text": "setAddress(AddressDTO address)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "entity",
+      "dto",
+      "order+address"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\OrderDTO.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\AddressDTO.java"
+    ]
+  }
+}

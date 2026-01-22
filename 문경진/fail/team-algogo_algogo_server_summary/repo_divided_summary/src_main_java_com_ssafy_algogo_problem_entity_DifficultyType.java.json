@@ -1,0 +1,90 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\DifficultyType.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Entity",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Difficulty",
+      "Type",
+      "Platform"
+    ],
+    "entities": [
+      "DifficultyType",
+      "PlatformType"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "난이도 조회",
+      "verb_object": "난이도 조회",
+      "inputs": [],
+      "outputs": [
+        "DifficultyType"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "플랫폼별 난이도 반환",
+      "verb_object": "플랫폼별 난이도 반환",
+      "inputs": [
+        "PlatformType"
+      ],
+      "outputs": [
+        "List<DifficultyType>"
+      ],
+      "side_effects": [],
+      "confidence": 0.6
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Enum"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 난이도 정의",
+      "유지보수 용이",
+      "확장성 있는 구조"
+    ],
+    "risks": [
+      "Enum 값 변경 시 영향 범위",
+      "다양한 플랫폼 지원에 따른 복잡성"
+    ],
+    "missing_standard_checks": [
+      "주석",
+      "문서화",
+      "유닛 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "package com.ssafy.algogo.problem.entity;"
+    },
+    {
+      "type": "call",
+      "text": "DifficultyType.values()"
+    },
+    {
+      "type": "config",
+      "text": "enum DifficultyType"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "difficulty+enum",
+      "platform+type"
+    ],
+    "related_files_guess": []
+  }
+}

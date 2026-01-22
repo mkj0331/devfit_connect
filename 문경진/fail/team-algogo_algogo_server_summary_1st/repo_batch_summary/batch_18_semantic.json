@@ -1,0 +1,42 @@
+{
+  "batch_id": 18,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "QueryDSL",
+    "JPA",
+    "Spring Boot",
+    "Lombok",
+    "SLF4J",
+    "Jakarta Validation",
+    "ElasticSearch"
+  ],
+  "batch_role": "Code Review and Submission Management System",
+  "key_features": [
+    "Handles code reviews including creation, retrieval, editing, and deletion.",
+    "Supports pagination for user-specific code reviews.",
+    "Manages user submissions and retrieves submission statistics.",
+    "Validates user input for submissions.",
+    "Encapsulates algorithm-related data and submission details."
+  ],
+  "related_files": [
+    "ReviewQueryRepositoryImpl.java",
+    "ReviewService.java",
+    "ReviewServiceImpl.java",
+    "AlgorithmController.java",
+    "SubmissionController.java",
+    "AlgorithmGuideDto.java",
+    "ReviewCandidateQueryDto.java",
+    "ReviewRematchTargetQueryDto.java",
+    "SubmissionEvaluationContextDto.java",
+    "SubmissionRequestDto.java"
+  ],
+  "project_hints": [
+    "The project involves a code review platform or tool.",
+    "Focus on user interactions with code reviews and submissions.",
+    "Handles user-generated content and algorithm-related functionalities.",
+    "Supports educational tools for coding and algorithm assessments."
+  ]
+}

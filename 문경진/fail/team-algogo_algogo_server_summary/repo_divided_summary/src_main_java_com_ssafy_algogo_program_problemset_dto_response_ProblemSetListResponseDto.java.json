@@ -1,0 +1,94 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetListResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProblemSet",
+      "Response",
+      "PageInfo",
+      "SortInfo"
+    ],
+    "entities": [
+      "ProblemSetResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제집 목록 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "PageInfo",
+        "SortInfo",
+        "List<ProblemSetResponseDto>"
+      ],
+      "outputs": [
+        "ProblemSetListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "타입 안전성",
+      "간결한 코드",
+      "재사용 가능성"
+    ],
+    "risks": [
+      "확장성 문제",
+      "유지보수 어려움",
+      "의존성 증가",
+      "테스트 어려움",
+      "문서화 부족"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Serialization",
+      "Deserialization",
+      "Null 체크",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.dto.PageInfo;"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.dto.SortInfo;"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.List;"
+    },
+    {
+      "type": "call",
+      "text": "new ProblemSetListResponseDto()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "problemset+list",
+      "api+response"
+    ],
+    "related_files_guess": []
+  }
+}

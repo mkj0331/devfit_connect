@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupRoomRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for updating group room information\",\n  \"key_features\": [\n    \"Validation constraints for capacity\",\n    \"Builder pattern for object creation\",\n    \"No-args constructor for protected access\",\n    \"All-args constructor for private access\"\n  ],\n  \"key_code\": [\n    \"@Min(value = 1, message = \\\"capacity must be at least 1\\\")\",\n    \"@Max(value = 1000, message = \\\"capacity must be at most 1000\\\")\"\n  ],\n  \"project_hints\": [\n    \"Group room management\",\n    \"Capacity management for group rooms\"\n  ]\n}\n```"
+}

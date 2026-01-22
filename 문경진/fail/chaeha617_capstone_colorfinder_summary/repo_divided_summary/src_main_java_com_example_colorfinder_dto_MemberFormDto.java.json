@@ -1,0 +1,122 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\dto\\MemberFormDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok",
+      "Hibernate Validator"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "회원",
+      "폼",
+      "DTO",
+      "유효성 검사"
+    ],
+    "entities": [
+      "MemberFormDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "이메일 유효성 검사",
+      "verb_object": "검증 이메일",
+      "inputs": [
+        "email"
+      ],
+      "outputs": [
+        "유효성 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "비밀번호 유효성 검사",
+      "verb_object": "검증 비밀번호",
+      "inputs": [
+        "password"
+      ],
+      "outputs": [
+        "유효성 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "닉네임 유효성 검사",
+      "verb_object": "검증 닉네임",
+      "inputs": [
+        "nickname"
+      ],
+      "outputs": [
+        "유효성 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사 어노테이션 사용",
+      "Lombok을 통한 코드 간결성",
+      "명확한 메시지 제공"
+    ],
+    "risks": [
+      "유효성 검사 미비 가능성",
+      "입력값에 대한 보안 취약점"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "형식 체크",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotEmpty"
+    },
+    {
+      "type": "annotation",
+      "text": "@Email"
+    },
+    {
+      "type": "annotation",
+      "text": "@Length"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Getter"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Setter"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "validation+dto",
+      "user+form",
+      "member+registration"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\controller\\MemberController.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\MemberService.java"
+    ]
+  }
+}

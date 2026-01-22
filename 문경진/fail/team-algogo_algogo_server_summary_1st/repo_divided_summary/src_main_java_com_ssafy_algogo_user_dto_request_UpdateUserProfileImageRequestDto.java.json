@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\UpdateUserProfileImageRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for updating user profile image\",\n  \"key_features\": [\n    \"Validation of profile image input\",\n    \"Use of Lombok annotations for boilerplate code reduction\",\n    \"Builder pattern for object creation\"\n  ],\n  \"key_code\": [\n    \"@NotBlank(message = \\\"profile image is required\\\")\",\n    \"private String profileImage;\"\n  ],\n  \"project_hints\": [\n    \"User profile management\",\n    \"Image upload functionality\",\n    \"Validation of user input\"\n  ]\n}\n```"
+}

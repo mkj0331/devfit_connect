@@ -1,0 +1,181 @@
+{
+  "batch_id": 5,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Spring Security",
+    "Lombok",
+    "Jakarta Persistence",
+    "AWS SDK"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "CORS 및 인증 설정",
+      "domain_tags": [
+        "cors",
+        "auth",
+        "security",
+        "configuration"
+      ],
+      "responsibilities": [
+        "CORS 정책 설정",
+        "인증 관리자 생성",
+        "Authorization 처리"
+      ],
+      "implementation_signals": [
+        "Spring Security",
+        "Configuration",
+        "AuthenticationProvider"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\SecurityConfig.java"
+      ],
+      "evidence": [
+        "configuration.setAllowedOrigins(...)",
+        "configuration.setAllowedMethods(...)",
+        "authenticationManager()"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "CORS 설정 오류로 인한 보안 취약점",
+        "잘못된 인증 처리"
+      ]
+    },
+    {
+      "cluster_name": "페이지 및 정렬 정보 DTO",
+      "domain_tags": [
+        "dto",
+        "pagination",
+        "sorting"
+      ],
+      "responsibilities": [
+        "페이지 정보 생성",
+        "정렬 정보 생성"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\dto\\PageInfo.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\dto\\SortInfo.java"
+      ],
+      "evidence": [
+        "page.getNumber()",
+        "page.getSize()",
+        "Sort.Order.desc(\"createdAt\")"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "타입 안전성 문제",
+        "페이지 정보의 유효성 검증 부족"
+      ]
+    },
+    {
+      "cluster_name": "시간 관리 유틸리티",
+      "domain_tags": [
+        "time",
+        "management",
+        "auditing"
+      ],
+      "responsibilities": [
+        "생성일 설정",
+        "수정일 설정"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "MappedSuperclass",
+        "Auditing"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\utils\\BaseTime.java"
+      ],
+      "evidence": [
+        "@MappedSuperclass",
+        "@CreatedDate",
+        "@LastModifiedDate"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "시간 관련 오류 가능성",
+        "타임존 문제"
+      ]
+    },
+    {
+      "cluster_name": "파일 업로드 및 다운로드 서비스",
+      "domain_tags": [
+        "file",
+        "upload",
+        "s3",
+        "cloud"
+      ],
+      "responsibilities": [
+        "파일 확장자 검증",
+        "코드 텍스트 다운로드",
+        "문제집 썸네일 업로드"
+      ],
+      "implementation_signals": [
+        "AWS SDK",
+        "Service",
+        "Exception Handling"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\utils\\S3Service.java"
+      ],
+      "evidence": [
+        "s3Client.getObject(getObjectRequest)",
+        "validateFile(file)"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "파일 크기 제한",
+        "예외 발생 가능성"
+      ]
+    },
+    {
+      "cluster_name": "문제 요청 및 응답 처리",
+      "domain_tags": [
+        "problem",
+        "request",
+        "api"
+      ],
+      "responsibilities": [
+        "문제 조회",
+        "문제 검색",
+        "문제 생성 요청",
+        "문제 삭제 요청"
+      ],
+      "implementation_signals": [
+        "RESTful API",
+        "DTO",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\controller\\ProblemController.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemCreateRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemDeleteRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemRequestDto.java"
+      ],
+      "evidence": [
+        "@RestController",
+        "/api/v1/problems/{programProblemId}",
+        "/api/v1/problems/search"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "예외 처리 미비",
+        "입력 검증 부족"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "auth+security",
+    "cors",
+    "dto",
+    "file+upload",
+    "problem+service"
+  ]
+}

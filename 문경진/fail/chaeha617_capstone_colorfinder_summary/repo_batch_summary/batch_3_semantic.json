@@ -1,0 +1,157 @@
+{
+  "batch_id": 3,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Jakarta EE",
+    "Lombok",
+    "Spring",
+    "Spring Data JPA",
+    "Apache HttpClient"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "장바구니 및 주문 처리",
+      "domain_tags": [
+        "cart",
+        "order",
+        "entity",
+        "jpa",
+        "dto"
+      ],
+      "responsibilities": [
+        "장바구니 생성 및 관리",
+        "주문 생성 및 상태 관리",
+        "장바구니와 주문 간의 관계 설정"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Entity"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\entity\\CartEntity.java",
+        "src\\main\\java\\com\\example\\colorfinder\\entity\\OrderEntity.java",
+        "src\\main\\java\\com\\example\\colorfinder\\entity\\OrderId.java",
+        "src\\main\\java\\com\\example\\colorfinder\\entity\\OrderInfo.java",
+        "src\\main\\java\\com\\example\\colorfinder\\entity\\ProductEntity.java"
+      ],
+      "evidence": [
+        "CartEntity 생성",
+        "주문 생성",
+        "주문 상태 설정",
+        "장바구니 ID 설정",
+        "주문 정보 설정"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "Lazy loading으로 인한 성능 문제",
+        "복합 키 사용으로 인한 복잡성"
+      ]
+    },
+    {
+      "cluster_name": "사용자 인증 및 정보 처리",
+      "domain_tags": [
+        "auth",
+        "user",
+        "entity",
+        "security"
+      ],
+      "responsibilities": [
+        "사용자 정보 조회",
+        "사용자 인증 처리",
+        "개인 색상 설정"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "Spring Security",
+        "Entity"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\entity\\USERS.java",
+        "src\\main\\java\\com\\example\\colorfinder\\interceptor\\CustomInterceptor.java"
+      ],
+      "evidence": [
+        "사용자 인증 처리",
+        "정보 조회",
+        "개인 색상 설정"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "비밀번호 보안 취약점",
+        "인증 로직 미구현"
+      ]
+    },
+    {
+      "cluster_name": "주소 관리",
+      "domain_tags": [
+        "address",
+        "repository",
+        "entity"
+      ],
+      "responsibilities": [
+        "주소 조회",
+        "주소 ID로 조회",
+        "주소 ID 목록으로 조회"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "Repository"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\repository\\AddressRepository.java"
+      ],
+      "evidence": [
+        "주소 조회",
+        "주소 ID로 조회",
+        "주소 ID 목록으로 조회"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "SQL 인젝션 가능성",
+        "예외 처리 부족"
+      ]
+    },
+    {
+      "cluster_name": "이미지 업로드 처리",
+      "domain_tags": [
+        "image",
+        "upload",
+        "http"
+      ],
+      "responsibilities": [
+        "이미지 업로드"
+      ],
+      "implementation_signals": [
+        "HTTP",
+        "Service"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\ImageUploader.java"
+      ],
+      "evidence": [
+        "이미지 업로드",
+        "HTTP 요청 전송"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "서버 응답 실패 시 처리 미비",
+        "파일 크기 제한 미제공"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "cart",
+    "order",
+    "user",
+    "address",
+    "image",
+    "upload",
+    "auth",
+    "repository",
+    "entity",
+    "jpa"
+  ]
+}

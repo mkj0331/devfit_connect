@@ -1,0 +1,94 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\CheckGroupNameRequestDto.java",
+    "language": "java",
+    "frameworks": [
+      "jakarta.validation",
+      "lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "group",
+      "name",
+      "request"
+    ],
+    "entities": [
+      "CheckGroupNameRequestDto"
+    ],
+    "modules": [
+      "group",
+      "dto",
+      "request"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 이름 확인",
+      "verb_object": "그룹 이름 검증",
+      "inputs": [
+        "groupTitle"
+      ],
+      "outputs": [
+        "validation result"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검증 포함",
+      "Lombok 사용으로 코드 간결",
+      "명확한 메시지 제공"
+    ],
+    "risks": [
+      "유효성 검증 실패 시 예외 처리 필요"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "길이 제한",
+      "형식 검증"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotBlank(message = \"groupTitle is required\")"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "annotation",
+      "text": "@NoArgsConstructor(access = AccessLevel.PROTECTED)"
+    },
+    {
+      "type": "annotation",
+      "text": "@AllArgsConstructor(access = AccessLevel.PRIVATE)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+validation",
+      "group+request"
+    ],
+    "related_files_guess": []
+  }
+}

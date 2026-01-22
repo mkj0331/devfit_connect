@@ -1,0 +1,129 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\service\\impl\\ReviewServiceImpl.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "JPA"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "리뷰",
+      "사용자",
+      "코드",
+      "알림"
+    ],
+    "entities": [
+      "Review",
+      "UserReviewReaction",
+      "ProgramUser"
+    ],
+    "modules": [
+      "review",
+      "program"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 수신 조회",
+      "verb_object": "리뷰 조회",
+      "inputs": [
+        "userId",
+        "page",
+        "size"
+      ],
+      "outputs": [
+        "UserCodeReviewListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "완료된 리뷰 조회",
+      "verb_object": "완료된 리뷰 조회",
+      "inputs": [
+        "userId",
+        "page",
+        "size"
+      ],
+      "outputs": [
+        "UserCodeReviewListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "트랜잭션 관리",
+      "페이징 처리",
+      "DTO 사용",
+      "유연한 입력 처리"
+    ],
+    "risks": [
+      "예외 처리 부족",
+      "성능 저하 가능성",
+      "입력 검증 부족",
+      "의존성 주입 문제",
+      "동시성 문제"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "유닛 테스트",
+      "API 문서화",
+      "입력 검증",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.review.service.ReviewService;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Transactional(readOnly = true)"
+    },
+    {
+      "type": "call",
+      "text": "reviewRepository.getReceiveReviews(userId, pageSafe, sizeSafe)"
+    },
+    {
+      "type": "call",
+      "text": "reviewRepository.getDoneReviews(userId, pageSafe, sizeSafe)"
+    },
+    {
+      "type": "query",
+      "text": "Page<UserCodeReviewResponseDto>"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "review+service",
+      "user+management",
+      "db+jpa"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\ReviewRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\UserCodeReviewListResponseDto.java"
+    ]
+  }
+}

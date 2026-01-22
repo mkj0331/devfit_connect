@@ -1,0 +1,45 @@
+{
+  "batch_id": 1,
+  "languages": [
+    "Java",
+    "Markdown"
+  ],
+  "technologies": [
+    "Gradle",
+    "Spring Boot",
+    "Spring Web",
+    "Spring Data JPA",
+    "Spring Security",
+    "Lombok",
+    "Hibernate",
+    "OCI image",
+    "Jakarta Persistence"
+  ],
+  "batch_role": "Documentation and application development for an alarm management system.",
+  "key_features": [
+    "Building RESTful services using Spring Boot",
+    "Alarm management with notifications",
+    "User authentication and authorization",
+    "Data Transfer Objects (DTOs) for structured data communication",
+    "Support for real-time updates using Server-Sent Events (SSE)",
+    "Integration with JPA for database interactions"
+  ],
+  "related_files": [
+    "HELP.md",
+    "README.md",
+    "src/main/java/com/ssafy/algogo/AlgogoApplication.java",
+    "src/main/java/com/ssafy/algogo/TestController.java",
+    "src/main/java/com/ssafy/algogo/alarm/controller/AlarmController.java",
+    "src/main/java/com/ssafy/algogo/alarm/dto/request/DeleteAlarmRequestDto.java",
+    "src/main/java/com/ssafy/algogo/alarm/dto/response/GetAlarmListResponseDto.java",
+    "src/main/java/com/ssafy/algogo/alarm/dto/response/GetAlarmResponseDto.java",
+    "src/main/java/com/ssafy/algogo/alarm/dto/response/GetUnreadAlarmCountResponseDto.java",
+    "src/main/java/com/ssafy/algogo/alarm/entity/Alarm.java"
+  ],
+  "project_hints": [
+    "Focus on building web services using Spring Boot",
+    "Utilization of JPA for data access",
+    "Packaging applications as OCI images",
+    "The project likely involves an alarm system or notification service."
+  ]
+}

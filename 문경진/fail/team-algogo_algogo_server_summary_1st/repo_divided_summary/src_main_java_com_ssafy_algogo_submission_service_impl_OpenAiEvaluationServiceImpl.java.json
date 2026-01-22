@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\OpenAiEvaluationServiceImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"WebClient\",\n    \"Jackson\",\n    \"Lombok\",\n    \"Reactive Programming\"\n  ],\n  \"role\": \"OpenAI 평가 서비스 구현체\",\n  \"key_features\": [\n    \"logprobs 기반 점수 계산\",\n    \"JSON 응답에서 reason 추출\",\n    \"예외 처리 및 로깅\",\n    \"API 호출을 통한 점수 산정 및 이유 생성\"\n  ],\n  \"key_code\": [\n    \"private String parseReasonFromJson(String responseText)\",\n    \"throw new CustomException(\\\"응답에 message가 없습니다.\\\", ErrorCode.INTERNAL_SERVER_ERROR)\",\n    \"JsonNode jsonNode = objectMapper.readTree(jsonStr)\"\n  ],\n  \"project_hints\": [\n    \"OpenAI API를 활용한 평가 시스템\",\n    \"점수 산정 및 이유 생성 기능\",\n    \"비즈니스 로직에서의 예외 처리\"\n  ]\n}\n```"
+}

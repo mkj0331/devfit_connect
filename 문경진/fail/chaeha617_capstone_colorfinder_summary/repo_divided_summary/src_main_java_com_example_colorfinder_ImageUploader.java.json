@@ -1,0 +1,95 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\ImageUploader.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Apache HttpClient"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "image",
+      "upload",
+      "http",
+      "multipart"
+    ],
+    "entities": [
+      "ImageUploader"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "이미지 업로드",
+      "verb_object": "이미지 업로드",
+      "inputs": [
+        "byte[] imageData",
+        "String fileName"
+      ],
+      "outputs": [
+        "String response"
+      ],
+      "side_effects": [
+        "HTTP 요청 전송"
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "HTTP"
+    ],
+    "patterns": [
+      "Service"
+    ],
+    "cross_cutting": [
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "간단한 이미지 업로드 기능",
+      "예외 처리 포함",
+      "HTTP 클라이언트 사용"
+    ],
+    "risks": [
+      "서버 응답 실패 시 처리 미비",
+      "파일 크기 제한 미제공",
+      "네트워크 오류 발생 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "파일 형식 검증",
+      "로그 기록"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.apache.http.client.methods.HttpPost"
+    },
+    {
+      "type": "call",
+      "text": "httpClient.execute(httpPost)"
+    },
+    {
+      "type": "endpoint",
+      "text": "http://localhost:5555/analyze"
+    },
+    {
+      "type": "call",
+      "text": "EntityUtils.toString(responseEntity)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "api+upload",
+      "http+client",
+      "image+processing"
+    ],
+    "related_files_guess": []
+  }
+}

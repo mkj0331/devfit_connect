@@ -1,0 +1,124 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\AuthService.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "auth",
+      "login",
+      "logout",
+      "user"
+    ],
+    "entities": [
+      "AuthResultDto",
+      "LocalLoginRequestDto",
+      "MeResponseDto"
+    ],
+    "modules": [
+      "auth",
+      "service"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 로그인",
+      "verb_object": "로그인",
+      "inputs": [
+        "LocalLoginRequestDto",
+        "HttpServletRequest",
+        "HttpServletResponse"
+      ],
+      "outputs": [
+        "AuthResultDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "사용자 로그아웃",
+      "verb_object": "로그아웃",
+      "inputs": [
+        "Long userId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "사용자 정보 조회",
+      "verb_object": "정보 조회",
+      "inputs": [
+        "Long userId"
+      ],
+      "outputs": [
+        "MeResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": [
+      "보안"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "DTO 사용으로 데이터 전송 최적화",
+      "보안 관련 기능 포함"
+    ],
+    "risks": [
+      "로그인 실패 시 처리 미비",
+      "사용자 정보 노출 가능성",
+      "세션 관리 미비"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.auth.dto.request.LocalLoginRequestDto;"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.auth.dto.response.AuthResultDto;"
+    },
+    {
+      "type": "call",
+      "text": "login(LocalLoginRequestDto dto, HttpServletRequest request, HttpServletResponse response)"
+    },
+    {
+      "type": "call",
+      "text": "logout(Long userId)"
+    },
+    {
+      "type": "call",
+      "text": "me(Long userId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+service",
+      "user+management",
+      "session+control"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\request\\LocalLoginRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\AuthResultDto.java"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\UserReviewReactionRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"JPA (Java Persistence API)\",\n    \"Hibernate\"\n  ],\n  \"role\": \"Repository interface for managing UserReviewReaction entities in the database.\",\n  \"key_features\": [\n    \"Extends JpaRepository for CRUD operations\",\n    \"Method to delete reactions by review ID\",\n    \"Method to find a reaction by user ID and review ID\"\n  ],\n  \"key_code\": [\n    \"void deleteByReview_Id(Long reviewId);\",\n    \"UserReviewReaction findByUser_IdAndReview_Id(Long userId, Long reviewId);\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves user reviews and reactions to those reviews.\",\n    \"It may be part of a larger application focused on user-generated content.\"\n  ]\n}\n```"
+}

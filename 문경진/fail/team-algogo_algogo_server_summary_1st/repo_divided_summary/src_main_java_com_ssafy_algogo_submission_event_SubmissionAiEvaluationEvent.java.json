@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\SubmissionAiEvaluationEvent.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"이벤트 객체를 정의하는 클래스\",\n  \"key_features\": [\n    \"레코드 타입 사용\",\n    \"submissionId를 속성으로 가짐\"\n  ],\n  \"key_code\": [\n    \"public record SubmissionAiEvaluationEvent(Long submissionId) {}\"\n  ],\n  \"project_hints\": [\n    \"AI 평가와 관련된 제출 이벤트 처리\",\n    \"submissionId를 통해 특정 제출을 식별\"\n  ]\n}\n```"
+}

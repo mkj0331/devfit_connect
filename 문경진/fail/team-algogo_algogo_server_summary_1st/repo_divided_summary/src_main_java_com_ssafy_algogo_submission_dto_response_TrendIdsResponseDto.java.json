@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\TrendIdsResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jackson\",\n    \"Java Records\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for API responses\",\n  \"key_features\": [\n    \"Encapsulates response data for trend IDs\",\n    \"Uses JSON serialization with Jackson\",\n    \"Supports null value exclusion in JSON output\"\n  ],\n  \"key_code\": [\n    \"package com.ssafy.algogo.submission.dto.response;\",\n    \"import com.fasterxml.jackson.annotation.JsonInclude;\",\n    \"public record TrendIdsResponseDto(List<Long> submissionIdList, List<Long> programProblemIdList) {}\"\n  ],\n  \"project_hints\": [\n    \"Part of a submission tracking system\",\n    \"Likely related to programming problems and submissions\"\n  ]\n}\n```"
+}

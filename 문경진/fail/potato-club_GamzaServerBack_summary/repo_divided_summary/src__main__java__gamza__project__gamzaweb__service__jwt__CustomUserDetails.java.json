@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\service\\jwt\\CustomUserDetails.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Security\",\n    \"Lombok\"\n  ],\n  \"role\": \"사용자 인증 및 권한 부여를 위한 사용자 세부 정보 제공\",\n  \"key_features\": [\n    \"사용자의 역할에 따라 권한을 부여\",\n    \"사용자 이름 및 비밀번호 제공\",\n    \"계정 상태 확인 기능 제공\"\n  ],\n  \"key_code\": [\n    \"switch (user.getUserRole()) {\",\n    \"case ADMIN : authorityList.add(getAuthorities(UserRole.ADMIN));\",\n    \"case USER : authorityList.add(getAuthorities(UserRole.USER));\"\n  ],\n  \"project_hints\": [\n    \"사용자 인증 및 권한 관리 시스템을 구현하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

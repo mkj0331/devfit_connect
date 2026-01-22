@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\User\\request\\RequestAddCollaboratorDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 협업자를 추가하기 위한 요청 데이터를 담는 DTO(Data Transfer Object) 역할을 합니다.\",\n  \"key_features\": [\n    \"협업자의 ID를 저장하는 필드\",\n    \"기본 생성자와 모든 필드를 초기화하는 생성자 제공\"\n  ],\n  \"key_code\": [\n    \"private Long collaboratorId;\",\n    \"@Data, @NoArgsConstructor, @AllArgsConstructor 어노테이션을 사용하여 자동으로 getter, setter, 생성자 생성\"\n  ],\n  \"project_hints\": [\n    \"협업 기능을 제공하는 웹 애플리케이션 또는 플랫폼\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\platform\\response\\PlatformResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 플랫폼 정보를 담고 있는 데이터 전송 객체(DTO)로, 플랫폼의 ID와 이름을 클라이언트와 서버 간에 전달하는 역할을 합니다.\",\n  \"key_features\": [\n    \"플랫폼 ID와 이름을 저장하는 필드\",\n    \"Lombok을 사용한 자동 생성된 Getter, Builder, NoArgsConstructor, AllArgsConstructor\"\n  ],\n  \"key_code\": [\n    \"@Getter\",\n    \"@NoArgsConstructor\",\n    \"@AllArgsConstructor\",\n    \"@Builder\",\n    \"private Long platformId;\",\n    \"private String platformName;\"\n  ],\n  \"project_hints\": [\n    \"이 파일은 플랫폼 관련 정보를 다루고 있어, 게임 플랫폼이나 소프트웨어 플랫폼과 관련된 프로젝트일 가능성이 있습니다.\"\n  ]\n}\n```"
+}

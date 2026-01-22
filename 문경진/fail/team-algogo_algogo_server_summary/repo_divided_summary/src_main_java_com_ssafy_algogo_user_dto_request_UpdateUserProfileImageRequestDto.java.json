@@ -1,0 +1,110 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\UpdateUserProfileImageRequestDto.java",
+    "language": "java",
+    "frameworks": [
+      "jakarta.validation"
+    ],
+    "libraries": [
+      "lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "profile image",
+      "user",
+      "update"
+    ],
+    "entities": [
+      "UpdateUserProfileImageRequestDto"
+    ],
+    "modules": [
+      "user",
+      "dto",
+      "request"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "프로필 이미지 업데이트",
+      "verb_object": "이미지 업데이트",
+      "inputs": [
+        "profileImage"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": [
+      "Validation"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 유효성 검사",
+      "간결한 코드",
+      "Lombok 사용으로 인한 코드 간소화"
+    ],
+    "risks": [
+      "유효성 검사 실패 시 예외 처리 필요",
+      "프로필 이미지 형식 검증 부족"
+    ],
+    "missing_standard_checks": [
+      "형식 검증",
+      "null 체크",
+      "로그 기록"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotBlank(message = \"profile image is required\")"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.validation.constraints.NotBlank;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.AllArgsConstructor;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Builder;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Getter;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.NoArgsConstructor;"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto",
+      "profile+image",
+      "request+update"
+    ],
+    "related_files_guess": []
+  }
+}

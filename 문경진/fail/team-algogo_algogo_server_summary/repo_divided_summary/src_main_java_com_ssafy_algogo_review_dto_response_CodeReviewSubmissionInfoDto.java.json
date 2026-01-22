@@ -1,0 +1,94 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewSubmissionInfoDto.java",
+    "language": "java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "CodeReview",
+      "Submission",
+      "Algorithm",
+      "Response"
+    ],
+    "entities": [
+      "CodeReviewSubmissionInfoDto",
+      "AlgorithmResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 정보 조회",
+      "verb_object": "제출 정보 조회",
+      "inputs": [
+        "targetSubmissionId"
+      ],
+      "outputs": [
+        "CodeReviewSubmissionInfoDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "알고리즘 리스트 반환",
+      "verb_object": "알고리즘 리스트 반환",
+      "inputs": [
+        "targetSubmissionId"
+      ],
+      "outputs": [
+        "Set<AlgorithmResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.6
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "시간 정보 포함"
+    ],
+    "risks": [
+      "데이터 유효성 검증 부족",
+      "확장성 문제"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import java.time.LocalDateTime;"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.Set;"
+    },
+    {
+      "type": "call",
+      "text": "new CodeReviewSubmissionInfoDto()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "review+submission",
+      "algorithm+response"
+    ],
+    "related_files_guess": []
+  }
+}

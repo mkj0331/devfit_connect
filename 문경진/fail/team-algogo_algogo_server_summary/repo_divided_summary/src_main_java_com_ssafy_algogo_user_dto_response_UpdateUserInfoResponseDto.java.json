@@ -1,0 +1,113 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UpdateUserInfoResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "User",
+      "Update",
+      "Response",
+      "DTO"
+    ],
+    "entities": [
+      "User"
+    ],
+    "modules": [
+      "user",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 정보 업데이트 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "User 객체"
+      ],
+      "outputs": [
+        "UpdateUserInfoResponseDto 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "간결한 코드",
+      "유지보수 용이",
+      "타입 안전성"
+    ],
+    "risks": [
+      "변경 불가능성으로 인한 유연성 부족",
+      "User 객체 의존성",
+      "예외 처리 부족",
+      "확장성 제한",
+      "테스트 어려움"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Null 체크",
+      "예외 처리",
+      "로깅",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.user.entity.User;"
+    },
+    {
+      "type": "call",
+      "text": "user.getId()"
+    },
+    {
+      "type": "call",
+      "text": "user.getEmail()"
+    },
+    {
+      "type": "call",
+      "text": "user.getDescription()"
+    },
+    {
+      "type": "call",
+      "text": "user.getNickname()"
+    },
+    {
+      "type": "call",
+      "text": "user.getProfileImage()"
+    },
+    {
+      "type": "call",
+      "text": "user.getCreatedAt()"
+    },
+    {
+      "type": "call",
+      "text": "user.getModifiedAt()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto",
+      "response+api"
+    ],
+    "related_files_guess": []
+  }
+}

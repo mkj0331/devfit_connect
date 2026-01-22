@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\AlgogoApplication.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Boot\",\n    \"Spring Data JPA\"\n  ],\n  \"role\": \"애플리케이션의 진입점(메인 클래스)으로, Spring Boot 애플리케이션을 실행하는 역할을 수행합니다.\",\n  \"key_features\": [\n    \"Spring Boot 애플리케이션 설정\",\n    \"JPA 감사 기능 활성화\"\n  ],\n  \"key_code\": [\n    \"@SpringBootApplication\",\n    \"@EnableJpaAuditing\",\n    \"SpringApplication.run(AlgogoApplication.class, args);\"\n  ],\n  \"project_hints\": [\n    \"JPA를 사용하여 데이터베이스와의 상호작용을 처리하는 애플리케이션\",\n    \"감사 기능을 통해 엔티티의 생성 및 수정 시간을 자동으로 기록할 수 있는 기능\"\n  ]\n}\n```"
+}

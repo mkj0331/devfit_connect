@@ -1,0 +1,86 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\entity\\AddressEntity.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "주소",
+      "사용자",
+      "엔티티"
+    ],
+    "entities": [
+      "AddressEntity"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "주소 변환",
+      "verb_object": "주소 DTO 변환",
+      "inputs": [
+        "AddressDTO"
+      ],
+      "outputs": [
+        "AddressEntity"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Entity"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "JPA 사용으로 인한 ORM 지원"
+    ],
+    "risks": [
+      "Nullable 필드에 대한 검증 부족"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table(name = \"address\")"
+    },
+    {
+      "type": "call",
+      "text": "toAddressEntity(AddressDTO addressDTO)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+dto"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\AddressDTO.java",
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\AddressRepository.java"
+    ]
+  }
+}

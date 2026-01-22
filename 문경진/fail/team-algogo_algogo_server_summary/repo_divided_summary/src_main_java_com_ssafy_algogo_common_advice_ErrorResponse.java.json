@@ -1,0 +1,102 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\ErrorResponse.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "error",
+      "response",
+      "code",
+      "message",
+      "data"
+    ],
+    "entities": [
+      "ErrorResponse"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "에러 응답 생성",
+      "verb_object": "에러 응답 생성",
+      "inputs": [
+        "errorCode",
+        "message",
+        "data"
+      ],
+      "outputs": [
+        "ErrorResponse"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": [
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 에러 코드 관리",
+      "유연한 메시지 처리",
+      "데이터 포함 가능",
+      "Lombok 사용으로 코드 간결",
+      "생성자 오버로딩으로 다양한 초기화 지원"
+    ],
+    "risks": [
+      "에러 코드의 일관성 부족",
+      "메시지의 국제화 미비",
+      "데이터 타입의 불명확성",
+      "예외 처리 미비",
+      "Lombok 의존성 문제"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "유효성 검사",
+      "로깅",
+      "에러 코드 문서화",
+      "국제화 지원"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import lombok.Getter;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "call",
+      "text": "new ErrorResponse(errorCode)"
+    },
+    {
+      "type": "call",
+      "text": "new ErrorResponse(errorCode, message)"
+    },
+    {
+      "type": "call",
+      "text": "new ErrorResponse(errorCode, message, data)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "error+response",
+      "dto+lombok"
+    ],
+    "related_files_guess": []
+  }
+}

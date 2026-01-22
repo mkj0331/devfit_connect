@@ -1,0 +1,37 @@
+{
+  "batch_id": 23,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "Spring Boot",
+    "Spring MVC",
+    "Jakarta Validation",
+    "Lombok"
+  ],
+  "batch_role": "User Management and Review Matching System",
+  "key_features": [
+    "User registration and authentication",
+    "Email and nickname uniqueness checks",
+    "Profile management including image updates",
+    "Reviewer candidate ranking based on submission metrics",
+    "Email verification process"
+  ],
+  "related_files": [
+    "src\\main\\java\\com\\ssafy\\algogo\\submission\\utils\\ReviewMatchRanker.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\controller\\UserController.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\CheckDuplicateEmailRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\CheckDuplicateNicknameRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\CheckEmailCodeRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\SendEmailCodeRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\SignupRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\UpdateUserInfoRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\UpdateUserProfileImageRequestDto.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\CheckDuplicateEmailResponseDto.java"
+  ],
+  "project_hints": [
+    "The project involves a user management system with features for registration, authentication, and profile management.",
+    "It also includes a ranking system for reviewers based on submission metrics."
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupJoinStateRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for updating group join state requests\",\n  \"key_features\": [\n    \"Validation of 'isAccepted' field using annotations\",\n    \"Supports two possible values for 'isAccepted': 'ACCEPTED' and 'DENIED'\",\n    \"Uses Lombok for boilerplate code reduction (getters, constructors, builder pattern)\"\n  ],\n  \"key_code\": [\n    \"@NotNull(message = \\\"isAccepted는 필수 값입니다.\\\")\",\n    \"@Pattern(regexp = \\\"ACCEPTED|DENIED\\\", message = \\\"isAccepted 값은 'ACCEPTED' 또는 'DENIED'이어야 합니다.\\\")\",\n    \"String isAccepted;\"\n  ],\n  \"project_hints\": [\n    \"Part of a group management system\",\n    \"Handles user responses to group join requests\"\n  ]\n}\n```"
+}

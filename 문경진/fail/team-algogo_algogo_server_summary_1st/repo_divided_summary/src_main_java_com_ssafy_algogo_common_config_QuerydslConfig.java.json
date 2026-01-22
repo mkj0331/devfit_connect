@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\QuerydslConfig.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"JPA\",\n    \"Querydsl\",\n    \"Jakarta Persistence\"\n  ],\n  \"role\": \"Configuration class for setting up Querydsl with JPA in a Spring application.\",\n  \"key_features\": [\n    \"Defines a bean for JPAQueryFactory\",\n    \"Uses EntityManager for database operations\",\n    \"Configures JPQLTemplates for Querydsl\"\n  ],\n  \"key_code\": [\n    \"@Configuration\",\n    \"@PersistenceContext\",\n    \"public JPAQueryFactory jpaQueryFactory()\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves data querying and manipulation using JPA and Querydsl.\",\n    \"It may be part of a larger Spring application that requires dynamic query capabilities.\"\n  ]\n}\n```"
+}

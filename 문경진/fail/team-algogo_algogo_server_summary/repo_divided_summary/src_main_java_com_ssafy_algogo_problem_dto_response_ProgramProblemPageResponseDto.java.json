@@ -1,0 +1,104 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProgramProblemPageResponseDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Program",
+      "Problem",
+      "Response",
+      "Page",
+      "DTO"
+    ],
+    "entities": [
+      "ProgramProblemPageResponseDto",
+      "PageInfo",
+      "SortInfo",
+      "ProgramProblemResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 페이지 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "Page<ProgramProblemResponseDto> programProblemResponseDto"
+      ],
+      "outputs": [
+        "ProgramProblemPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "Spring Data 통합",
+      "페이지 정보 포함",
+      "정렬 정보 포함"
+    ],
+    "risks": [
+      "데이터 유효성 검증 부족",
+      "예외 처리 미비",
+      "의존성 증가",
+      "확장성 문제",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "API 문서화",
+      "로깅",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.dto.PageInfo"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.dto.SortInfo"
+    },
+    {
+      "type": "call",
+      "text": "PageInfo.of(programProblemResponseDto)"
+    },
+    {
+      "type": "call",
+      "text": "SortInfo.of(programProblemResponseDto)"
+    },
+    {
+      "type": "query",
+      "text": "programProblemResponseDto.getContent()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "pagination+sorting",
+      "api+response"
+    ],
+    "related_files_guess": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\entity\\ProductEntity.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta Persistence",
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Product",
+      "Entity",
+      "DTO"
+    ],
+    "entities": [
+      "ProductEntity"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "상품 변환",
+      "verb_object": "DTO를 엔티티로 변환",
+      "inputs": [
+        "ProductDTO"
+      ],
+      "outputs": [
+        "ProductEntity"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 모델",
+      "JPA를 통한 데이터 접근",
+      "Lombok을 통한 코드 간결성"
+    ],
+    "risks": [
+      "DTO와의 의존성",
+      "변환 로직의 복잡성"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Null 체크",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table(name = \"PRODUCTS\")"
+    },
+    {
+      "type": "call",
+      "text": "ProductEntity.toProductEntity(ProductDTO)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+dto"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\ProductDTO.java",
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\ProductRepository.java"
+    ]
+  }
+}

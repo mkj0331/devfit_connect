@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\GroupRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data JPA\"\n  ],\n  \"role\": \"Repository interface for managing GroupRoom entities in a database.\",\n  \"key_features\": [\n    \"Extends JpaRepository for CRUD operations\",\n    \"Integrates with custom query repository (GroupQueryRepository)\"\n  ],\n  \"key_code\": [\n    \"public interface GroupRepository extends JpaRepository<GroupRoom, Long>, GroupQueryRepository {}\"\n  ],\n  \"project_hints\": [\n    \"Part of a group management system\",\n    \"Handles database interactions for group-related functionalities\"\n  ]\n}\n```"
+}

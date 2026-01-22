@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\service\\ProblemService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Java Persistence API (JPA)\",\n    \"DTO (Data Transfer Object)\"\n  ],\n  \"role\": \"Interface for Problem Service\",\n  \"key_features\": [\n    \"Retrieves detailed information about a specific problem\",\n    \"Searches for problems based on a keyword\"\n  ],\n  \"key_code\": [\n    \"ProblemDetailResponseDto getProblem(Long programProblemId);\",\n    \"ProblemListResponseDto searchProblems(String keyword);\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves a problem-solving platform or educational tool.\",\n    \"Focus on managing and retrieving problem data.\"\n  ]\n}\n```"
+}

@@ -1,0 +1,105 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\alarm\\entity\\AlarmPayload.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Alarm",
+      "Payload",
+      "Submission",
+      "Review",
+      "User"
+    ],
+    "entities": [
+      "AlarmPayload"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "알림 생성",
+      "verb_object": "생성 알림",
+      "inputs": [
+        "submissionId",
+        "reviewId",
+        "programProblemId",
+        "programId",
+        "userId"
+      ],
+      "outputs": [
+        "AlarmPayload"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "알림 조회",
+      "verb_object": "조회 알림",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "List<AlarmPayload>"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불필요한 필드 제외",
+      "Jackson 라이브러리 사용"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "확장성 부족"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Null 체크",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "import",
+      "text": "import com.fasterxml.jackson.annotation.JsonInclude;"
+    },
+    {
+      "type": "call",
+      "text": "AlarmPayload 생성자 호출"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "alarm+entity",
+      "data+transfer",
+      "notification+payload"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\alarm\\service\\AlarmService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\alarm\\controller\\AlarmController.java"
+    ]
+  }
+}

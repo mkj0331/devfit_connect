@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupId.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java Annotations\"\n  ],\n  \"role\": \"Custom Annotation Definition\",\n  \"key_features\": [\n    \"Defines a custom annotation named 'GroupId'\",\n    \"Targets method parameters\",\n    \"Retention policy set to runtime\"\n  ],\n  \"key_code\": [\n    \"@Target(ElementType.PARAMETER)\",\n    \"@Retention(RetentionPolicy.RUNTIME)\"\n  ],\n  \"project_hints\": [\n    \"May be used in a context where group identification is necessary, possibly in a web application or API\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "chatgptFastapi\\app\\main.py",
+  "summary": "```json\n{\n  \"language\": \"Python\",\n  \"technologies\": [\n    \"FastAPI\",\n    \"Pydantic\"\n  ],\n  \"role\": \"이 파일은 FastAPI를 사용하여 웹 API를 구현하고, PDF 및 Word 파일에서 텍스트를 추출하고 요약 및 설명을 생성하는 기능을 제공합니다.\",\n  \"key_features\": [\n    \"PDF 및 Word 파일에서 텍스트 추출\",\n    \"추출된 텍스트의 전처리\",\n    \"요약 생성\",\n    \"제목과 요약을 기반으로 설명 생성\",\n    \"다양한 추천 기능 제공\"\n  ],\n  \"key_code\": [\n    \"result = extractTextFromPdf(input.pdf_path)\",\n    \"preprocessedText = preprocessPdfText(result)\",\n    \"generatedSummary = returnSummary(preprocessedText, tokenizer, model, device)\",\n    \"description = generateGo(f'제목: {input.title}, 내용: {generatedSummary}')\"\n  ],\n  \"project_hints\": [\n    \"문서 요약 및 설명 생성 서비스\",\n    \"사용자가 업로드한 문서의 내용을 분석하고 요약하여 제공하는 기능\"\n  ]\n}\n```"
+}

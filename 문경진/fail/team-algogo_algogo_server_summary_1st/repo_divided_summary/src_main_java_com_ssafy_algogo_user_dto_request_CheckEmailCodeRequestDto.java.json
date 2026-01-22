@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\CheckEmailCodeRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Lombok\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for checking email verification codes\",\n  \"key_features\": [\n    \"Encapsulates email and verification code\",\n    \"Uses Lombok annotations for boilerplate code reduction\",\n    \"Provides a builder pattern for object creation\"\n  ],\n  \"key_code\": [\n    \"@Getter\",\n    \"@NoArgsConstructor(access = AccessLevel.PROTECTED)\",\n    \"@AllArgsConstructor\",\n    \"@Builder\"\n  ],\n  \"project_hints\": [\n    \"Email verification process\",\n    \"User authentication or registration flow\"\n  ]\n}\n```"
+}

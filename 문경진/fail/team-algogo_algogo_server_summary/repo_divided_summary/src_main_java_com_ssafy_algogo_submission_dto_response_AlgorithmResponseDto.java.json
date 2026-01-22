@@ -1,0 +1,82 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\AlgorithmResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Algorithm",
+      "Response",
+      "DTO"
+    ],
+    "entities": [
+      "Algorithm"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "알고리즘 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "Algorithm algorithm"
+      ],
+      "outputs": [
+        "AlgorithmResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간결한 코드",
+      "명확한 데이터 구조",
+      "불변 객체 사용"
+    ],
+    "risks": [
+      "타입 안전성 문제",
+      "변경 불가능성으로 인한 유연성 부족"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 로직",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.entity.Algorithm;"
+    },
+    {
+      "type": "call",
+      "text": "algorithm.getId()"
+    },
+    {
+      "type": "call",
+      "text": "algorithm.getName()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "algorithm+entity"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Algorithm.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\request\\AlgorithmRequestDto.java"
+    ]
+  }
+}

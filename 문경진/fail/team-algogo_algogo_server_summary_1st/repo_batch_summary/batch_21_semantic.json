@@ -1,0 +1,40 @@
+{
+  "batch_id": 21,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "Lombok",
+    "Asynchronous Programming",
+    "Transactional Events",
+    "Spring Data JPA",
+    "Java Persistence API (JPA)",
+    "Hibernate",
+    "QueryDSL"
+  ],
+  "batch_role": "Submission Management System",
+  "key_features": [
+    "Event-driven architecture for handling submission evaluations and review matching.",
+    "Repository interfaces for managing Algorithm and Submission entities.",
+    "Custom query methods for retrieving submissions and algorithms based on various criteria.",
+    "Dynamic query construction for filtering submissions.",
+    "Support for pagination and statistics retrieval."
+  ],
+  "related_files": [
+    "SubmissionAiEvaluationEventListener.java",
+    "SubmissionEventListener.java",
+    "AlgorithmRepository.java",
+    "SubmissionAlgorithmRepository.java",
+    "SubmissionRepository.java",
+    "AlgorithmQueryRepository.java",
+    "SubmissionQueryRepository.java",
+    "AlgorithmQueryRepositoryImpl.java",
+    "SubmissionQueryRepositoryImpl.java",
+    "AlgorithmService.java"
+  ],
+  "project_hints": [
+    "The project involves a submission and review matching system, likely for educational or competitive programming contexts.",
+    "Focuses on tracking submissions, user interactions, and algorithm-related functionalities."
+  ]
+}

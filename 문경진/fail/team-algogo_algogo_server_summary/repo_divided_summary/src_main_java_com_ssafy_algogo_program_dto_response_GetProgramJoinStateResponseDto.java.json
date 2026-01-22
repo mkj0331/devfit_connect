@@ -1,0 +1,109 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\GetProgramJoinStateResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Program",
+      "Join",
+      "State",
+      "Response",
+      "User"
+    ],
+    "entities": [
+      "GetProgramJoinStateResponseDto",
+      "ProgramJoin",
+      "User",
+      "JoinStatus"
+    ],
+    "modules": [
+      "program",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 참여 상태 조회",
+      "verb_object": "상태 조회",
+      "inputs": [
+        "ProgramJoin 객체"
+      ],
+      "outputs": [
+        "GetProgramJoinStateResponseDto 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Null 처리",
+      "유연한 JSON 직렬화"
+    ],
+    "risks": [
+      "DTO의 불변성",
+      "데이터 유효성 검증 부족"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "call",
+      "text": "programJoin.getUser()"
+    },
+    {
+      "type": "call",
+      "text": "programJoin.getId()"
+    },
+    {
+      "type": "call",
+      "text": "user.getEmail()"
+    },
+    {
+      "type": "call",
+      "text": "user.getProfileImage()"
+    },
+    {
+      "type": "call",
+      "text": "user.getNickname()"
+    },
+    {
+      "type": "call",
+      "text": "programJoin.getJoinStatus()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "program+join",
+      "user+entity"
+    ],
+    "related_files_guess": []
+  }
+}

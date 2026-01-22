@@ -1,0 +1,122 @@
+{
+  "batch_id": 9,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Jakarta EE",
+    "Lombok",
+    "Hibernate",
+    "Spring",
+    "JPA"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "프로그램 관리",
+      "domain_tags": [
+        "program",
+        "management",
+        "entity",
+        "category",
+        "invite",
+        "join"
+      ],
+      "responsibilities": [
+        "프로그램 생성",
+        "프로그램 업데이트",
+        "프로그램 카테고리 생성",
+        "프로그램 초대 생성",
+        "프로그램 참여 조회"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "Entity",
+        "Builder",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramCategory.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramInvite.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramJoin.java"
+      ],
+      "evidence": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramCategory.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramInvite.java"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "NullPointerException 가능성",
+        "Lazy Loading으로 인한 성능 이슈",
+        "Cascade 삭제로 인한 데이터 손실 가능성"
+      ]
+    },
+    {
+      "cluster_name": "초대 상태 관리",
+      "domain_tags": [
+        "invite",
+        "status",
+        "management"
+      ],
+      "responsibilities": [
+        "초대 상태 관리",
+        "초대 상태 확인",
+        "상태 업데이트"
+      ],
+      "implementation_signals": [
+        "Enum",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\InviteStatus.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\JoinStatus.java"
+      ],
+      "evidence": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\InviteStatus.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\JoinStatus.java"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "상태 추가 시 코드 수정 필요",
+        "상태 관리 복잡성 증가 가능성"
+      ]
+    },
+    {
+      "cluster_name": "카테고리 관리",
+      "domain_tags": [
+        "category",
+        "management"
+      ],
+      "responsibilities": [
+        "카테고리 생성",
+        "카테고리 조회"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "Entity",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Category.java"
+      ],
+      "evidence": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Category.java"
+      ],
+      "confidence": 0.75,
+      "risks_or_unknowns": [
+        "데이터 무결성 문제",
+        "예외 처리 미비"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "program",
+    "category",
+    "invite",
+    "join",
+    "status",
+    "management"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\service\\UpdateUserRequest.java",
+    "language": "Java",
+    "frameworks": [
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Update",
+      "User",
+      "Request"
+    ],
+    "entities": [
+      "User"
+    ],
+    "modules": [
+      "service"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 정보 업데이트",
+      "verb_object": "사용자 정보 업데이트",
+      "inputs": [
+        "nickname",
+        "colorId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간결한 코드",
+      "Lombok 사용으로 인한 보일러플레이트 감소"
+    ],
+    "risks": [
+      "입력값 검증 부족",
+      "null 값 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import lombok.Getter;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Setter;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Setter"
+    },
+    {
+      "type": "call",
+      "text": "new UpdateUserRequest(nickname, colorId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+update",
+      "service+dto"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\service\\UserService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\controller\\UserController.java"
+    ]
+  }
+}

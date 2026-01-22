@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\config\\RedisConfig.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data Redis\",\n    \"Lettuce\"\n  ],\n  \"role\": \"Redis 데이터베이스와의 연결 및 데이터 처리를 위한 설정을 담당\",\n  \"key_features\": [\n    \"RedisConnectionFactory를 통해 Redis 서버와의 연결을 설정\",\n    \"RedisTemplate을 사용하여 Redis에 데이터를 저장하고 조회하는 기능 제공\",\n    \"JSON 형식으로 데이터를 직렬화하여 Redis에 저장\"\n  ],\n  \"key_code\": [\n    \"return new LettuceConnectionFactory(host, port);\",\n    \"redisTemplate.setKeySerializer(new StringRedisSerializer());\",\n    \"redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());\"\n  ],\n  \"project_hints\": [\n    \"Redis를 활용한 데이터 캐싱 또는 세션 관리 기능을 포함하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

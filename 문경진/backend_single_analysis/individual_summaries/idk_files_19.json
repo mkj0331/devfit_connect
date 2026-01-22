@@ -1,0 +1,38 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\member\\controller\\MemberController.java",
+  "project_subject_signals": [
+    "member",
+    "account",
+    "bank",
+    "mydata",
+    "push notification"
+  ],
+  "frameworks": [
+    "Spring Boot"
+  ],
+  "libraries": [
+    "Spring Web",
+    "Spring Data JPA",
+    "Lombok"
+  ],
+  "core_features": [
+    {
+      "feature_name": "회원 알림 설정 변경",
+      "feature_description": "회원의 자동 이체 및 입출금 알림 설정 변경 기능을 제공합니다.",
+      "implementation_method": "HTTP PUT 요청을 통해 MemberService의 해당 메서드를 호출하여 설정을 변경하고, 성공 시 ResultCode와 함께 응답합니다.",
+      "job_value": "사용자별 설정을 관리하는 API 개발 역량을 보여줍니다."
+    },
+    {
+      "feature_name": "회원 정보 조회",
+      "feature_description": "현재 로그인된 회원의 정보를 조회하는 기능을 제공합니다.",
+      "implementation_method": "HTTP GET 요청을 통해 MemberService의 getMemberInfo 메서드를 호출하여 회원 정보를 가져오고, ResultCode와 함께 응답합니다.",
+      "job_value": "인증된 사용자의 데이터를 안전하게 조회하는 API 개발 역량을 보여줍니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "RESTful API 설계 원칙 준수 강화 (HTTP 메서드, URL 구조 등)",
+    "에러 처리의 일관성 및 상세 정보 제공 강화",
+    "로깅을 통한 디버깅 및 모니터링 용이성 확보",
+    "DTO(Data Transfer Object) 사용의 일관성 및 검증 로직 강화"
+  ]
+}

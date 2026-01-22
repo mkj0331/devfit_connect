@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\SendEmailCodeRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for sending email verification codes\",\n  \"key_features\": [\n    \"Validation of email input using @NotBlank annotation\",\n    \"Lombok annotations for boilerplate code reduction\",\n    \"Builder pattern for object creation\"\n  ],\n  \"key_code\": [\n    \"@NotBlank(message = \\\"이메일을 입력해주세요.\\\")\",\n    \"private String email;\",\n    \"@Getter\",\n    \"@NoArgsConstructor(access = AccessLevel.PROTECTED)\",\n    \"@AllArgsConstructor\",\n    \"@Builder\"\n  ],\n  \"project_hints\": [\n    \"Email verification functionality\",\n    \"User authentication or registration process\"\n  ]\n}\n```"
+}

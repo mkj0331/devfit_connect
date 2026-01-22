@@ -1,0 +1,47 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\autodebit\\service\\AutoDebitService.java",
+  "project_subject_signals": [
+    "자동 이체",
+    "계좌 관리",
+    "결제 처리"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "java.time.LocalDateTime",
+    "com.ssafy.idk.domain.account.entity.Account",
+    "com.ssafy.idk.domain.account.entity.Category",
+    "com.ssafy.idk.domain.account.entity.Transaction",
+    "com.ssafy.idk.domain.account.exception.AccountException",
+    "com.ssafy.idk.domain.account.repository.AccountRepository",
+    "com.ssafy.idk.domain.account.repository.TransactionRepository",
+    "com.ssafy.idk.domain.account.service.AccountService",
+    "com.ssafy.idk.domain.account.service.RSAKeyService",
+    "com.ssafy.idk.domain.autodebit.dto.request.AutoDebitCreateRequestDto",
+    "com.ssafy.idk.domain.autodebit.dto.request.AutoDebitPaymentRequestDto",
+    "com.ssafy.idk.domain.autodebit.dto.response.AutoDebitCreateResponseDto",
+    "com.ssafy.idk.domain.member.entity.Member",
+    "com.ssafy.idk.domain.organization.entity.Organization",
+    "com.ssafy.idk.domain.organization.exception.OrganizationException"
+  ],
+  "core_features": [
+    {
+      "feature_name": "자동 이체 결제 처리",
+      "feature_description": "설정된 자동 이체 정보를 기반으로 실제 계좌에서 금액을 출금하고 거래 내역을 생성한다.",
+      "implementation_method": "AccountService를 통해 계좌 출금을 수행하고, Transaction 엔티티를 생성하여 TransactionRepository에 저장한다. 조직명과 금액 정보를 활용하여 거래 내용을 구성한다.",
+      "job_value": "계좌 관리 및 거래 처리 로직 구현 역량을 보여준다."
+    },
+    {
+      "feature_name": "계좌 잔액 조회 및 검증",
+      "feature_description": "자동 이체 결제 시, 대상 계좌의 잔액을 확인하여 출금 가능 여부를 판단한다.",
+      "implementation_method": "Account 객체의 getBalance() 메소드를 사용하여 계좌 잔액을 조회한다. 잔액 부족 시 예외 처리를 수행하는 것으로 추정된다 (제공된 코드에서는 생략됨).",
+      "job_value": "데이터 무결성 및 예외 처리 기반의 견고한 시스템 설계 역량을 보여준다."
+    }
+  ],
+  "improvement_suggestions": [
+    "결제 성공/실패 시의 명확한 응답 로직 및 예외 처리를 강화할 필요가 있습니다.",
+    "대량의 자동 이체 처리를 위한 비동기 처리 또는 배치 처리 방안을 고려해볼 수 있습니다.",
+    "보안 강화를 위해 개인 정보(예: 계좌 정보) 처리 시 민감도에 따른 접근 제어 및 암호화 방안을 검토해야 합니다."
+  ]
+}

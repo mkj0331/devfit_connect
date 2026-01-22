@@ -1,0 +1,85 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\entity\\ProblemSet.java",
+    "language": "Java",
+    "frameworks": [
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "Entity",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProblemSet",
+      "Program"
+    ],
+    "entities": [
+      "ProblemSet"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 집합 생성",
+      "verb_object": "문제 집합 생성",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "문제 집합 조회",
+      "verb_object": "문제 집합 조회",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.6
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Lombok 사용으로 코드 간결함",
+      "상속을 통한 코드 재사용성"
+    ],
+    "risks": [
+      "상속으로 인한 의존성 증가",
+      "PROTECTED 생성자로 인한 인스턴스 생성 제한"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Null 체크",
+      "Javadoc 주석"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@NoArgsConstructor"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.*;"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "entity+problemset",
+      "program+entity"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "batch_id": 14,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "Jackson",
+    "Java Records",
+    "Java Time API",
+    "Lombok",
+    "JPA (Java Persistence API)",
+    "Transactional Management",
+    "Spring Data",
+    "Multipart File Upload"
+  ],
+  "batch_role": "Data Transfer Objects and Service Implementation for managing problem sets in a programming-related application.",
+  "key_features": [
+    "Encapsulation of problem set data and pagination information.",
+    "Support for JSON serialization using Jackson.",
+    "Static factory methods for creating DTO instances.",
+    "Service methods for retrieving, creating, modifying, and deleting problem sets.",
+    "Integration with Spring Data for database operations.",
+    "Handling of user authentication status and search functionalities."
+  ],
+  "related_files": [
+    "ProblemSetResponseDto.java",
+    "ProblemSetSearchPageResponseDto.java",
+    "ProblemSetSearchResponseDto.java",
+    "ProblemSetWithMatchPageResponseDto.java",
+    "ProblemSetWithMatchResponseDto.java",
+    "ProgramProblemListResponseDto.java",
+    "ProblemSet.java",
+    "ProblemSetService.java",
+    "ProblemSetServiceImpl.java",
+    "CategoryRepository.java"
+  ],
+  "project_hints": [
+    "The project involves managing and presenting problem sets, likely for programming challenges or competitions.",
+    "Focus on efficient data handling with pagination and search functionalities.",
+    "User authentication and category management are integral to the application."
+  ]
+}

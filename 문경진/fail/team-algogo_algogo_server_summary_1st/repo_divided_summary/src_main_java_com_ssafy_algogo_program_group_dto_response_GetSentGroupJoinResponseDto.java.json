@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetSentGroupJoinResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jackson\",\n    \"Java Records\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for sending group join response data.\",\n  \"key_features\": [\n    \"Immutable data structure using Java records.\",\n    \"Serialization control with Jackson's @JsonInclude annotation.\",\n    \"Encapsulates group join information including join ID, status, and group room details.\"\n  ],\n  \"key_code\": [\n    \"public record GetSentGroupJoinResponseDto(Long joinId, JoinStatus joinStatus, GroupRoomResponseDto groupRoom)\"\n  ],\n  \"project_hints\": [\n    \"Related to group management or collaboration features.\",\n    \"Involves user participation in groups, likely in a social or educational context.\"\n  ]\n}\n```"
+}

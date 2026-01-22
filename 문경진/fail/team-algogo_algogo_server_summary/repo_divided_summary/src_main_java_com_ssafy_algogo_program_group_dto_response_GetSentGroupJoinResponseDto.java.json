@@ -1,0 +1,102 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetSentGroupJoinResponseDto.java",
+    "language": "java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Group",
+      "Join",
+      "Response"
+    ],
+    "entities": [
+      "GetSentGroupJoinResponseDto",
+      "JoinStatus",
+      "GroupRoomResponseDto"
+    ],
+    "modules": [
+      "group",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 참여 상태 조회",
+      "verb_object": "상태 조회",
+      "inputs": [
+        "joinId"
+      ],
+      "outputs": [
+        "joinStatus",
+        "groupRoom"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "그룹 방 정보 포함",
+      "verb_object": "방 정보 포함",
+      "inputs": [
+        "groupRoom"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Null 처리 지원",
+      "간결한 코드"
+    ],
+    "risks": [
+      "확장성 부족",
+      "타입 안전성 문제"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Null 체크",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "import",
+      "text": "import com.fasterxml.jackson.annotation.JsonInclude"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.program.entity.JoinStatus"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "group+join",
+      "api+response"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\JoinGroupRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\service\\GroupService.java"
+    ]
+  }
+}

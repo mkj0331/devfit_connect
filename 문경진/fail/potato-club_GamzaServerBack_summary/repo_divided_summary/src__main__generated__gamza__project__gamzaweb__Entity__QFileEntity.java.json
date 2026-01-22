@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\generated\\gamza\\project\\gamzaweb\\Entity\\QFileEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"QueryDSL\",\n    \"Java Persistence API (JPA)\"\n  ],\n  \"role\": \"이 파일은 FileEntity에 대한 QueryDSL 쿼리 타입을 정의하여 데이터베이스 쿼리를 쉽게 작성할 수 있도록 돕습니다.\",\n  \"key_features\": [\n    \"FileEntity의 속성을 쿼리할 수 있는 DSL (Domain Specific Language) 제공\",\n    \"application 속성을 포함하여 연관된 엔티티와의 관계를 정의\"\n  ],\n  \"key_code\": [\n    \"public final StringPath fileName = createString(\\\"fileName\\\");\",\n    \"public final StringPath fileUrl = createString(\\\"fileUrl\\\");\",\n    \"public final NumberPath<Long> id = createNumber(\\\"id\\\", Long.class);\"\n  ],\n  \"project_hints\": [\n    \"파일 업로드 및 관리 시스템\",\n    \"웹 애플리케이션에서 파일 관련 기능을 제공하는 프로젝트\"\n  ]\n}\n```"
+}

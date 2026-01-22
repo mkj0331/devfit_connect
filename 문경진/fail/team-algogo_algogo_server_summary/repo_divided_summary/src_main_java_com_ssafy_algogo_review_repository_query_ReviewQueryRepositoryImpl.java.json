@@ -1,0 +1,133 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\query\\ReviewQueryRepositoryImpl.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "QueryDSL"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Review",
+      "Submission",
+      "User",
+      "Problem",
+      "Program"
+    ],
+    "entities": [
+      "Review",
+      "Submission",
+      "User",
+      "Problem",
+      "Program"
+    ],
+    "modules": [
+      "review",
+      "submission",
+      "user",
+      "problem",
+      "program"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 조회",
+      "verb_object": "리뷰 조회",
+      "inputs": [
+        "userId",
+        "submissionId"
+      ],
+      "outputs": [
+        "List<CodeReviewTreeResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "리뷰 카운트 조회",
+      "verb_object": "리뷰 카운트 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "Long"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository",
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "QueryDSL 사용으로 가독성 향상",
+      "DTO를 통한 데이터 전송 최적화"
+    ],
+    "risks": [
+      "복잡한 쿼리로 인한 성능 저하 가능성",
+      "예외 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리",
+      "로깅",
+      "트랜잭션 관리",
+      "보안 검증"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.querydsl.core.types.Projections;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Repository;"
+    },
+    {
+      "type": "call",
+      "text": "query.select(review.count())"
+    },
+    {
+      "type": "query",
+      "text": "from(review)"
+    },
+    {
+      "type": "annotation",
+      "text": "@Repository"
+    },
+    {
+      "type": "call",
+      "text": "fetch()"
+    },
+    {
+      "type": "call",
+      "text": "new PageImpl<>()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "api+repository",
+      "review+query"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\query\\ReviewQueryRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewTreeResponseDto.java"
+    ]
+  }
+}

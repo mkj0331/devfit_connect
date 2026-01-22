@@ -1,0 +1,103 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\SearchUserResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "User",
+      "Response",
+      "DTO"
+    ],
+    "entities": [
+      "User"
+    ],
+    "modules": [
+      "user",
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 정보 변환",
+      "verb_object": "정보 변환",
+      "inputs": [
+        "User user"
+      ],
+      "outputs": [
+        "SearchUserResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "간결한 코드"
+    ],
+    "risks": [
+      "변환 로직의 오류 가능성",
+      "User 엔티티 변경 시 DTO 수정 필요"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Null 체크",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.user.entity.User;"
+    },
+    {
+      "type": "call",
+      "text": "user.getId()"
+    },
+    {
+      "type": "call",
+      "text": "user.getEmail()"
+    },
+    {
+      "type": "call",
+      "text": "user.getDescription()"
+    },
+    {
+      "type": "call",
+      "text": "user.getNickname()"
+    },
+    {
+      "type": "call",
+      "text": "user.getProfileImage()"
+    },
+    {
+      "type": "call",
+      "text": "user.getCreatedAt()"
+    },
+    {
+      "type": "call",
+      "text": "user.getModifiedAt()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto"
+    ],
+    "related_files_guess": []
+  }
+}

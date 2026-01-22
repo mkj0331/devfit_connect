@@ -1,0 +1,85 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionStatsInfosResponseDto.java",
+    "language": "java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "submission",
+      "stats",
+      "response"
+    ],
+    "entities": [
+      "SubmissionStatsInfosResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 통계 생성",
+      "verb_object": "제출 통계 생성",
+      "inputs": [
+        "submissionCount",
+        "successCount",
+        "failureCount",
+        "successRate"
+      ],
+      "outputs": [
+        "SubmissionStatsInfosResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간결한 데이터 구조",
+      "명확한 생성자 메서드",
+      "불변 객체 사용"
+    ],
+    "risks": [
+      "유효성 검사 부족",
+      "확장성 문제",
+      "null 값 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "null 체크",
+      "문서화",
+      "단위 테스트",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "call",
+      "text": "SubmissionStatsInfosResponseDto.from()"
+    },
+    {
+      "type": "import",
+      "text": "package com.ssafy.algogo.submission.dto.response;"
+    },
+    {
+      "type": "annotation",
+      "text": "public record SubmissionStatsInfosResponseDto"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "submission+stats"
+    ],
+    "related_files_guess": []
+  }
+}

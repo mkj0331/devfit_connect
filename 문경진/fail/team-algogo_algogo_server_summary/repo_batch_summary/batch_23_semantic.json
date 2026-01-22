@@ -1,0 +1,133 @@
+{
+  "batch_id": 23,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Lombok",
+    "Jakarta EE",
+    "jakarta.validation"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "회원가입 및 인증 처리",
+      "domain_tags": [
+        "signup",
+        "auth",
+        "email",
+        "validation",
+        "user"
+      ],
+      "responsibilities": [
+        "회원가입 요청 처리",
+        "이메일 중복 확인",
+        "이메일 인증 요청",
+        "비밀번호 찾기",
+        "유저 검색"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Service",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\controller\\UserController.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\SignupRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\CheckDuplicateEmailRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\SendEmailCodeRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\CheckDuplicateEmailResponseDto.java"
+      ],
+      "evidence": [
+        "@RestController",
+        "userService.signup(signupRequestDto)",
+        "CheckDuplicateEmailRequestDto",
+        "SendEmailCodeRequestDto",
+        "CheckDuplicateEmailResponseDto"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "보안 취약점 가능성",
+        "예외 처리 부족",
+        "의존성 주입 실패 가능성"
+      ]
+    },
+    {
+      "cluster_name": "사용자 정보 업데이트 처리",
+      "domain_tags": [
+        "user",
+        "update",
+        "profile",
+        "dto"
+      ],
+      "responsibilities": [
+        "사용자 정보 업데이트",
+        "프로필 이미지 업데이트"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "Validation",
+        "Builder"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\UpdateUserInfoRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\UpdateUserProfileImageRequestDto.java"
+      ],
+      "evidence": [
+        "@NotBlank(message = \"description is required\")",
+        "@NotBlank(message = \"profile image is required\")"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "유효성 검사 미비 시 오류 발생 가능",
+        "프로필 이미지 형식 검증 부족"
+      ]
+    },
+    {
+      "cluster_name": "리뷰 및 알고리즘 처리",
+      "domain_tags": [
+        "review",
+        "submission",
+        "algorithm",
+        "ranking"
+      ],
+      "responsibilities": [
+        "리뷰어 후보 순위 매기기",
+        "정규화",
+        "성공 여부 차이 확인",
+        "알고리즘 유사도 계산"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Component"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\utils\\ReviewMatchRanker.java"
+      ],
+      "evidence": [
+        "rankReviewerCandidates",
+        "normalize",
+        "getIsSuccessDiff",
+        "getAlgoDiff"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "복잡한 로직",
+        "성능 저하 가능성"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "signup",
+    "auth",
+    "user",
+    "validation",
+    "update",
+    "profile",
+    "review",
+    "algorithm"
+  ]
+}

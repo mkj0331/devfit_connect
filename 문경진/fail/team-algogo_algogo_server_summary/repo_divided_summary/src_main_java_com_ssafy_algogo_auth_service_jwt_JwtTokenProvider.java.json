@@ -1,0 +1,131 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\JwtTokenProvider.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "jjwt"
+    ],
+    "layer_guess": "Service",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "JWT",
+      "Token",
+      "Authentication",
+      "User"
+    ],
+    "entities": [
+      "UserRepository",
+      "Authentication"
+    ],
+    "modules": [
+      "auth",
+      "service",
+      "jwt"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "토큰 생성",
+      "verb_object": "토큰 생성",
+      "inputs": [
+        "Authentication authentication",
+        "String ip"
+      ],
+      "outputs": [
+        "String accessToken"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "IP 주소 추출",
+      "verb_object": "IP 주소 추출",
+      "inputs": [
+        "HttpServletRequest request"
+      ],
+      "outputs": [
+        "String ipAddress"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    },
+    {
+      "name": "사용자 ID 조회",
+      "verb_object": "사용자 ID 조회",
+      "inputs": [],
+      "outputs": [
+        "Long userId"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Component",
+      "Service"
+    ],
+    "cross_cutting": [
+      "Security",
+      "Exception Handling"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "JWT 기반 인증",
+      "IP 주소 검증",
+      "사용자 정보 조회"
+    ],
+    "risks": [
+      "토큰 만료 처리 미비",
+      "예외 처리 부족",
+      "보안 취약점"
+    ],
+    "missing_standard_checks": [
+      "CustomException 사용",
+      "로깅",
+      "유효성 검사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import io.jsonwebtoken.*;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Component;"
+    },
+    {
+      "type": "call",
+      "text": "getClaims(token)"
+    },
+    {
+      "type": "call",
+      "text": "SecurityContextHolder.getContext().getAuthentication()"
+    },
+    {
+      "type": "config",
+      "text": "@Value(\"${jwt.secret-key}\")"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+jwt",
+      "security+token",
+      "user+repository"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\CustomUserDetails.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\repository\\UserRepository.java"
+    ]
+  }
+}

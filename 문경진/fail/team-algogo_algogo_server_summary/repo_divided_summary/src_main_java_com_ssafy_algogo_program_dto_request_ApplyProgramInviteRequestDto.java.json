@@ -1,0 +1,92 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\request\\ApplyProgramInviteRequestDto.java",
+    "language": "java",
+    "frameworks": [
+      "jakarta.validation",
+      "lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Apply",
+      "Program",
+      "Invite",
+      "Request",
+      "Dto"
+    ],
+    "entities": [
+      "ApplyProgramInviteRequestDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 초대 요청",
+      "verb_object": "초대 요청 생성",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사 포함",
+      "불변 객체 생성",
+      "명확한 책임 분리"
+    ],
+    "risks": [
+      "유효성 검사 실패 시 예외 발생 가능"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "형식 검증",
+      "로그 기록"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "annotation",
+      "text": "@NoArgsConstructor"
+    },
+    {
+      "type": "annotation",
+      "text": "@AllArgsConstructor"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+request",
+      "validation+jakarta",
+      "builder+lombok"
+    ],
+    "related_files_guess": []
+  }
+}

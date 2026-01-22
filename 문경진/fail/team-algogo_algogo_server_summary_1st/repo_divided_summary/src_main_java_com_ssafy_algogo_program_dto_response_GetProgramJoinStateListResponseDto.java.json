@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\GetProgramJoinStateListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java 11+\",\n    \"Record Type (Java 14+)\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for response data\",\n  \"key_features\": [\n    \"Encapsulates a list of users' program join states\",\n    \"Uses Java's record feature for concise data representation\"\n  ],\n  \"key_code\": [\n    \"public record GetProgramJoinStateListResponseDto(List<GetProgramJoinStateResponseDto> users)\"\n  ],\n  \"project_hints\": [\n    \"Part of a program management system\",\n    \"Handles user participation states in programs\"\n  ]\n}\n```"
+}

@@ -1,0 +1,131 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\ReviewMatchServiceImpl.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Review",
+      "Submission",
+      "Algorithm",
+      "Alarm"
+    ],
+    "entities": [
+      "Submission",
+      "RequireReview",
+      "AlarmPayload"
+    ],
+    "modules": [
+      "submission",
+      "alarm",
+      "review"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰어 매칭",
+      "verb_object": "리뷰어 매칭",
+      "inputs": [
+        "Submission subjectSubmission",
+        "List<Algorithm> subjectAlgorithmList",
+        "int assignCount"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "알림 생성 및 전송"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "알림 생성",
+      "verb_object": "알림 생성",
+      "inputs": [
+        "Long userId",
+        "String type",
+        "AlarmPayload payload"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "알림 전송"
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "트랜잭션 관리",
+      "알림 기능 통합",
+      "유지보수 용이",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "트랜잭션 실패 시 데이터 불일치",
+      "알림 전송 실패 가능성",
+      "의존성 주입 실패",
+      "성능 저하 가능성",
+      "예외 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "유효성 검사",
+      "예외 처리",
+      "단위 테스트",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.alarm.service.AlarmService;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "call",
+      "text": "alarmService.createAndSendAlarm()"
+    },
+    {
+      "type": "query",
+      "text": "requireReviewRepository.saveAll(requireReviewList)"
+    },
+    {
+      "type": "annotation",
+      "text": "@Transactional(propagation = Propagation.REQUIRES_NEW)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "review+submission",
+      "alarm+notification",
+      "db+jpa",
+      "service+impl"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\RequireReviewRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\alarm\\service\\AlarmService.java"
+    ]
+  }
+}

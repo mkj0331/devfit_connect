@@ -1,0 +1,71 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\ColorfinderApplication.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring Boot"
+    ],
+    "libraries": [],
+    "layer_guess": "Application Layer",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "color",
+      "finder"
+    ],
+    "entities": [],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "애플리케이션 시작",
+      "verb_object": "애플리케이션 실행",
+      "inputs": [
+        "args"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "Spring Boot 애플리케이션 컨텍스트 초기화"
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Spring Boot Application"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Spring Boot 사용",
+      "간결한 코드 구조"
+    ],
+    "risks": [
+      "초기화 실패 시 애플리케이션 종료"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@SpringBootApplication()"
+    },
+    {
+      "type": "call",
+      "text": "SpringApplication.run(ColorfinderApplication.class, args)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "app+startup",
+      "spring+boot"
+    ],
+    "related_files_guess": []
+  }
+}

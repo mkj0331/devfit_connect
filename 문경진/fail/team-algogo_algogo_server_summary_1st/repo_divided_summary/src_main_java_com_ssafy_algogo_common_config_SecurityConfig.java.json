@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\SecurityConfig.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Security\",\n    \"JWT (JSON Web Token)\",\n    \"BCrypt\",\n    \"CORS\",\n    \"Spring Framework\"\n  ],\n  \"role\": \"Security Configuration\",\n  \"key_features\": [\n    \"CORS 설정\",\n    \"JWT 인증 필터\",\n    \"사용자 인증 관리\",\n    \"비밀번호 암호화\",\n    \"HTTP 요청 메서드 및 헤더 설정\"\n  ],\n  \"key_code\": [\n    \"configuration.setAllowedOrigins(...)\",\n    \"authenticationProvider.setUserDetailsService(customUserDetailsService)\",\n    \"authenticationProvider.setPasswordEncoder(passwordEncoder())\"\n  ],\n  \"project_hints\": [\n    \"웹 애플리케이션 보안\",\n    \"프론트엔드와의 CORS 통신\",\n    \"사용자 인증 및 권한 관리\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\config\\SwaggerConfig.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"SpringDoc\",\n    \"OpenAPI\"\n  ],\n  \"role\": \"Swagger API 문서화 및 설정\",\n  \"key_features\": [\n    \"API 키 보안 설정\",\n    \"OpenAPI 정보 설정\",\n    \"서버 정보 추가\",\n    \"모든 API를 그룹화하여 문서화\"\n  ],\n  \"key_code\": [\n    \"private SecurityScheme createAPIKeyScheme() { ... }\",\n    \"private OpenApiCustomizer createOpenApiCustomizer(String title, String version) { ... }\",\n    \"@Bean public GroupedOpenApi allApi() { ... }\"\n  ],\n  \"project_hints\": [\n    \"API 문서화 및 관리 시스템\",\n    \"JWT 인증을 사용하는 웹 서비스\"\n  ]\n}\n```"
+}

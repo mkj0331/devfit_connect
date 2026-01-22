@@ -1,0 +1,127 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Lombok"
+    ],
+    "libraries": [
+      "Hibernate"
+    ],
+    "layer_guess": "Domain Model",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "program",
+      "title",
+      "description",
+      "thumbnail",
+      "programType"
+    ],
+    "entities": [
+      "Program",
+      "ProgramType"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 생성",
+      "verb_object": "프로그램 생성",
+      "inputs": [
+        "title",
+        "description",
+        "thumbnail",
+        "programType"
+      ],
+      "outputs": [
+        "Program"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "프로그램 업데이트",
+      "verb_object": "프로그램 업데이트",
+      "inputs": [
+        "title",
+        "description",
+        "thumbnail"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Inheritance"
+    ],
+    "cross_cutting": [
+      "Validation"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "유일한 제목 제약 조건",
+      "Lazy Loading 사용",
+      "상속 구조",
+      "Lombok 사용으로 코드 간결",
+      "프로그램 업데이트 메서드 오버로딩"
+    ],
+    "risks": [
+      "NullPointerException 가능성",
+      "제목 중복 체크 미비",
+      "Lazy Loading으로 인한 성능 이슈",
+      "변경 불가능한 필드 접근",
+      "예외 처리 부족"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리",
+      "로깅",
+      "트랜잭션 관리",
+      "DTO 사용"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "call",
+      "text": "updateProgram"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+model",
+      "program+management"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramType.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\service\\ProgramService.java"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\service\\impl\\AdminServiceImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"JPA\",\n    \"Docker\"\n  ],\n  \"role\": \"이 파일은 관리자 서비스 구현체로, 프로젝트 승인 및 실행 관련 기능을 담당합니다.\",\n  \"key_features\": [\n    \"프로젝트 승인 처리\",\n    \"고정 실행 애플리케이션 삭제\",\n    \"Docker 컨테이너 관리\",\n    \"프로젝트 상태 업데이트\"\n  ],\n  \"key_code\": [\n    \"public void removeFixedExecutionApplication(Long id) { ... }\",\n    \"public void approveFixedExecutionApplication(HttpServletRequest request, Long id) { ... }\",\n    \"public void approveExecutionApplication(HttpServletRequest request, Long id) { ... }\"\n  ],\n  \"project_hints\": [\n    \"이 프로젝트는 애플리케이션의 실행 및 승인 관리와 관련된 시스템으로, Docker를 활용하여 컨테이너 기반의 서비스 배포를 지원합니다.\"\n  ]\n}\n```"
+}

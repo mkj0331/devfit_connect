@@ -1,0 +1,166 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\SubmissionService.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "submission",
+      "user",
+      "trend",
+      "stats",
+      "author"
+    ],
+    "entities": [
+      "SubmissionRequestDto",
+      "UserSubmissionRequestDto",
+      "SubmissionResponseDto",
+      "SubmissionListResponseDto",
+      "SubmissionStatsInfosResponseDto"
+    ],
+    "modules": [
+      "submission"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 조회",
+      "verb_object": "제출 조회",
+      "inputs": [
+        "userId",
+        "submissionId"
+      ],
+      "outputs": [
+        "SubmissionResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "제출 생성",
+      "verb_object": "제출 생성",
+      "inputs": [
+        "userId",
+        "SubmissionRequestDto"
+      ],
+      "outputs": [
+        "SubmissionResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "제출 삭제",
+      "verb_object": "제출 삭제",
+      "inputs": [
+        "userId",
+        "submissionId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "제출 이력 조회",
+      "verb_object": "제출 이력 조회",
+      "inputs": [
+        "userId",
+        "submissionId"
+      ],
+      "outputs": [
+        "SubmissionListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "트렌드 ID 조회",
+      "verb_object": "트렌드 ID 조회",
+      "inputs": [
+        "trendType"
+      ],
+      "outputs": [
+        "TrendIdsResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "DTO 사용으로 데이터 전송 최적화",
+      "유지보수 용이성",
+      "확장성",
+      "재사용성"
+    ],
+    "risks": [
+      "의존성 주입 실패 가능성",
+      "예외 처리 미비",
+      "성능 저하 가능성",
+      "동시성 문제",
+      "유효성 검사 부족"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "입력 유효성 검사",
+      "API 문서화",
+      "보안 검토",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.dto.request.SubmissionRequestDto;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Pageable;"
+    },
+    {
+      "type": "call",
+      "text": "getSubmission(Long userId, Long submissionId)"
+    },
+    {
+      "type": "call",
+      "text": "createSubmission(Long userId, SubmissionRequestDto submissionRequestDto)"
+    },
+    {
+      "type": "call",
+      "text": "deleteSubmission(Long userId, Long submissionId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "submission+service",
+      "submission+dto",
+      "user+submission",
+      "trend+analysis",
+      "stats+report"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\request\\SubmissionRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\SubmissionRepository.java"
+    ]
+  }
+}

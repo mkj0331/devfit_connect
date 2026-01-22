@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\project\\response\\ApplicationDetailResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Lombok\"],\n  \"role\": \"이 파일은 애플리케이션의 상세 정보를 담고 있는 DTO(Data Transfer Object) 역할을 수행합니다.\",\n  \"key_features\": [\n    \"애플리케이션 ID, 파일 URL, 포트, 태그, 변수 키를 포함한 상세 정보를 제공\",\n    \"ApplicationEntity 객체를 기반으로 DTO를 생성하는 생성자 제공\"\n  ],\n  \"key_code\": [\n    \"this.id = application.getId();\",\n    \"this.file = fileUrl;\",\n    \"this.port = application.getOuterPort();\",\n    \"this.tag = application.getTag();\",\n    \"this.variableKey = application.getVariableKey();\"\n  ],\n  \"project_hints\": [\n    \"애플리케이션의 세부 정보를 관리하고 표시하는 웹 애플리케이션 관련 프로젝트일 가능성\"\n  ]\n}\n```"
+}

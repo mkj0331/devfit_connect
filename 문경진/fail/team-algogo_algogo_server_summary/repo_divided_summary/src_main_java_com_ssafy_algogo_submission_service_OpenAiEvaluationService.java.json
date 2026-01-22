@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\OpenAiEvaluationService.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "evaluation",
+      "score",
+      "reason"
+    ],
+    "entities": [],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "점수 평가",
+      "verb_object": "점수 평가",
+      "inputs": [
+        "scorePrompt"
+      ],
+      "outputs": [
+        "BigDecimal"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "이유 생성",
+      "verb_object": "이유 생성",
+      "inputs": [
+        "reasonPrompt"
+      ],
+      "outputs": [
+        "String"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "단일 책임 원칙 준수"
+    ],
+    "risks": [
+      "구현 세부사항 미제공",
+      "의존성 관리 필요"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "입력 검증"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import java.math.BigDecimal;"
+    },
+    {
+      "type": "annotation",
+      "text": "public interface OpenAiEvaluationService"
+    },
+    {
+      "type": "call",
+      "text": "evaluateScoreWithLogprobs(String scorePrompt)"
+    },
+    {
+      "type": "call",
+      "text": "generateEvaluationReason(String reasonPrompt)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "evaluation+service",
+      "api+service"
+    ],
+    "related_files_guess": []
+  }
+}

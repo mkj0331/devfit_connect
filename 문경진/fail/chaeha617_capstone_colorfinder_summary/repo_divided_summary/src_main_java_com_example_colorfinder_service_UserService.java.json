@@ -1,0 +1,164 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\service\\UserService.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "User",
+      "PersonalColor",
+      "AddUserRequest"
+    ],
+    "entities": [
+      "USERS",
+      "PERSONALCOLOR"
+    ],
+    "modules": [
+      "UserService",
+      "UserRepository",
+      "PersonalColorRepository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 저장",
+      "verb_object": "사용자 저장",
+      "inputs": [
+        "AddUserRequest dto"
+      ],
+      "outputs": [
+        "Long (userId)"
+      ],
+      "side_effects": [
+        "PERSONALCOLOR 저장"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "name": "사용자 정보 업데이트",
+      "verb_object": "사용자 정보 업데이트",
+      "inputs": [
+        "Long userId",
+        "UpdateUserRequest request"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "닉네임 변경",
+        "퍼스널 컬러 변경"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "name": "퍼스널 컬러 업데이트",
+      "verb_object": "퍼스널 컬러 업데이트",
+      "inputs": [
+        "Long userId",
+        "String colorId"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "퍼스널 컬러 변경"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "name": "사용자 조회",
+      "verb_object": "사용자 조회",
+      "inputs": [
+        "Long userId"
+      ],
+      "outputs": [
+        "USERS user"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 사용자 관리 기능",
+      "트랜잭션 관리",
+      "유효성 검사",
+      "Lombok 사용으로 코드 간결",
+      "예외 처리"
+    ],
+    "risks": [
+      "사용자 입력 검증 부족",
+      "퍼스널 컬러 존재 여부 확인 미비",
+      "예외 메시지 노출 가능성",
+      "동시성 문제",
+      "비즈니스 로직의 복잡성"
+    ],
+    "missing_standard_checks": [
+      "입력 유효성 검사",
+      "로그 기록",
+      "API 문서화",
+      "단위 테스트",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.example.colorfinder.dto.AddUserRequest;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Service;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "call",
+      "text": "userRepository.save(user);"
+    },
+    {
+      "type": "query",
+      "text": "personalColorRepository.findByColorId(dto.getColorId())"
+    },
+    {
+      "type": "call",
+      "text": "bCryptPasswordEncoder.encode(dto.getPassword())"
+    },
+    {
+      "type": "call",
+      "text": "userRepository.findById(userId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+service",
+      "color+management",
+      "db+jpa",
+      "api+service"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\UserRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\PersonalColorRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\AddUserRequest.java"
+    ]
+  }
+}

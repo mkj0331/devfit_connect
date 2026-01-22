@@ -1,0 +1,48 @@
+{
+  "batch_id": 25,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "Spring Data JPA",
+    "Spring Web",
+    "Java Persistence API (JPA)",
+    "DTO (Data Transfer Object)",
+    "MultipartFile",
+    "Spring Boot",
+    "Spring Security",
+    "JavaMailSender",
+    "Redis",
+    "JUnit"
+  ],
+  "batch_role": "User management system implementation",
+  "key_features": [
+    "CRUD operations for User entity",
+    "User signup functionality",
+    "Email and nickname availability checks",
+    "User information retrieval and update",
+    "Profile image update",
+    "User search functionality",
+    "Email sending for verification and temporary password",
+    "Error handling with custom exceptions",
+    "Transactional support for user operations",
+    "Unit testing for application context"
+  ],
+  "related_files": [
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\repository\\UserRepository.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\UserService.java",
+    "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\impl\\UserServiceImpl.java",
+    "src\\test\\java\\com\\ssafy\\algogo\\AlgogoApplicationTests.java"
+  ],
+  "project_hints": [
+    "User management system",
+    "Email and nickname uniqueness validation",
+    "Account creation and verification",
+    "Profile management features",
+    "Email-based authentication",
+    "Password recovery functionality",
+    "Spring Boot application",
+    "Unit testing for application context"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "path": "chatgptFastapi\\app\\dmission_recommand.py",
+  "summary": "```json\n{\n  \"language\": \"Python\",\n  \"technologies\": [\n    \"FastAPI\",\n    \"NumPy\",\n    \"Pandas\",\n    \"Matplotlib\",\n    \"Scikit-learn\",\n    \"Regular Expressions\"\n  ],\n  \"role\": \"미션 페이지 추천 기능을 제공하는 모듈\",\n  \"key_features\": [\n    \"사용자가 입력한 내용을 기반으로 유사한 교육 과정을 추천\",\n    \"TF-IDF 및 코사인 유사도를 사용하여 콘텐츠 유사성 계산\",\n    \"추천된 과정의 제목, 내용, 태그, 저자 정보를 반환\"\n  ],\n  \"key_code\": [\n    \"contents = [re.sub(r'[^\\w\\s]', ' ', content).split() for content in contents]\",\n    \"content_mat = count_vect.fit_transform(course['Content'])\",\n    \"similar_course = find_sim_course(course, content_sim_sorted_ind, contents, 5)\"\n  ],\n  \"project_hints\": [\n    \"온라인 교육 플랫폼 또는 학습 추천 시스템\",\n    \"사용자의 관심사에 맞춘 맞춤형 교육 콘텐츠 제공\"\n  ]\n}\n```"
+}

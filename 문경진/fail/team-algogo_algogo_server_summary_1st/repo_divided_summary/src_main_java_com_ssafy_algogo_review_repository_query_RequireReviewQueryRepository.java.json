@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\query\\RequireReviewQueryRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Java Persistence API (JPA)\"\n  ],\n  \"role\": \"Repository Interface\",\n  \"key_features\": [\n    \"Retrieves required code reviews for a specific user\",\n    \"Finds all review rematch targets based on submission ID\",\n    \"Deletes required reviews associated with a user and program\"\n  ],\n  \"key_code\": [\n    \"List<RequiredCodeReviewResponseDto> getRequiredReviews(Long userId);\",\n    \"List<ReviewRematchTargetQueryDto> findAllReviewRematchTargets(Long submissionId);\",\n    \"void deleteRequiredReviewsByUserAndProgram(Long userId, Long programId);\"\n  ],\n  \"project_hints\": [\n    \"Code review management system\",\n    \"User-specific review tracking\",\n    \"Submission-based review matching\"\n  ]\n}\n```"
+}

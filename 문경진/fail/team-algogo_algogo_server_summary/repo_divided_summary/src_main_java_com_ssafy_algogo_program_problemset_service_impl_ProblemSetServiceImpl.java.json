@@ -1,0 +1,128 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\service\\impl\\ProblemSetServiceImpl.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "JPA"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "문제집",
+      "카테고리",
+      "검색",
+      "프로그램"
+    ],
+    "entities": [
+      "Category",
+      "ProblemSet",
+      "Program"
+    ],
+    "modules": [
+      "problemset",
+      "service"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "카테고리 목록 조회",
+      "verb_object": "카테고리 조회",
+      "inputs": [],
+      "outputs": [
+        "CategoryListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "문제집 제목 검색",
+      "verb_object": "문제집 검색",
+      "inputs": [
+        "keyword",
+        "pageable"
+      ],
+      "outputs": [
+        "ProblemSetSearchPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "문제집 문제 검색",
+      "verb_object": "문제 검색",
+      "inputs": [
+        "keyword",
+        "pageable"
+      ],
+      "outputs": [
+        "ProblemSetWithMatchPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "트랜잭션 관리",
+      "DTO 사용으로 데이터 전송 최적화"
+    ],
+    "risks": [
+      "입력 검증 부족",
+      "예외 처리 미비",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "입력 유효성 검사",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.problem.repository.ProblemRepository;"
+    },
+    {
+      "type": "call",
+      "text": "categoryRepository.findAll()"
+    },
+    {
+      "type": "call",
+      "text": "programQueryRepository.searchProblemSetByTitleOrDescription()"
+    },
+    {
+      "type": "annotation",
+      "text": "@Transactional(readOnly = true)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "service+problemset",
+      "db+jpa",
+      "api+controller"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\repository\\ProblemRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetResponseDto.java"
+    ]
+  }
+}

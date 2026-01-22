@@ -1,0 +1,98 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionStatsPageResponseDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Submission",
+      "Stats",
+      "Page",
+      "Response"
+    ],
+    "entities": [
+      "SubmissionStatsResponseDto",
+      "PageInfo",
+      "SortInfo"
+    ],
+    "modules": [
+      "submission",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 통계 페이지 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "Page<SubmissionStatsResponseDto> submissionStatsResponses"
+      ],
+      "outputs": [
+        "SubmissionStatsPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Spring 프레임워크 활용",
+      "불변 객체 사용"
+    ],
+    "risks": [
+      "의존성 증가",
+      "유연성 부족"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Error handling",
+      "Logging"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Page;"
+    },
+    {
+      "type": "call",
+      "text": "PageInfo.of(submissionStatsResponses)"
+    },
+    {
+      "type": "call",
+      "text": "SortInfo.of(submissionStatsResponses)"
+    },
+    {
+      "type": "call",
+      "text": "submissionStatsResponses.getContent()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "submission+stats"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\SubmissionStatsResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\common\\dto\\PageInfo.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\common\\dto\\SortInfo.java"
+    ]
+  }
+}

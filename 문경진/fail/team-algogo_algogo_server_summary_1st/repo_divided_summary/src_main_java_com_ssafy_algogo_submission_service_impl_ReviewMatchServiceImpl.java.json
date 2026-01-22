@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\ReviewMatchServiceImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\",\n    \"JPA (Java Persistence API)\",\n    \"Transactional Management\"\n  ],\n  \"role\": \"서비스 구현 클래스\",\n  \"key_features\": [\n    \"리뷰어 매칭 기능\",\n    \"알림 서비스 통합\",\n    \"트랜잭션 관리\",\n    \"리뷰 요구 사항 저장\"\n  ],\n  \"key_code\": [\n    \"matchReviewers 메서드\",\n    \"requireReviewRepository.saveAll(requireReviewList)\",\n    \"alarmService.createAndSendAlarm(...)\"\n  ],\n  \"project_hints\": [\n    \"코드 리뷰 시스템\",\n    \"사용자 간의 리뷰 매칭\",\n    \"알림 기능을 통한 사용자 피드백\"\n  ]\n}\n```"
+}

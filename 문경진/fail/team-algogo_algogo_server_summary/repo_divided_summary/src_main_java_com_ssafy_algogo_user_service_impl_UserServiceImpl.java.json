@@ -1,0 +1,150 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\impl\\UserServiceImpl.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok",
+      "JavaMail"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "User",
+      "Email",
+      "Password",
+      "Authentication"
+    ],
+    "entities": [
+      "User",
+      "UserRole"
+    ],
+    "modules": [
+      "UserService",
+      "UserRepository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "회원가입 이메일 인증",
+      "verb_object": "이메일 인증",
+      "inputs": [
+        "toEmail",
+        "code"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "이메일 발송"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "임시 비밀번호 발급",
+      "verb_object": "비밀번호 발급",
+      "inputs": [
+        "toEmail",
+        "tempPassword"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "이메일 발송"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "비밀번호 변경",
+      "verb_object": "비밀번호 업데이트",
+      "inputs": [
+        "encodedPassword"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "비밀번호 변경"
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Service",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "이메일 발송 기능",
+      "비밀번호 보안 처리",
+      "트랜잭션 관리",
+      "예외 처리",
+      "Lombok 사용"
+    ],
+    "risks": [
+      "이메일 발송 실패 시 예외 처리",
+      "비밀번호 보안 취약점",
+      "의존성 주입 실패 가능성",
+      "동시성 문제",
+      "입력 검증 부족"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "로깅",
+      "테스트 케이스",
+      "API 문서화",
+      "보안 감사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.mail.javamail.JavaMailSender;"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.mail.MessagingException;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "call",
+      "text": "javaMailSender.send(message);"
+    },
+    {
+      "type": "call",
+      "text": "passwordEncoder.encode(tempPassword);"
+    },
+    {
+      "type": "call",
+      "text": "user.updatePassword(encodedPassword);"
+    },
+    {
+      "type": "annotation",
+      "text": "@Transactional"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+service",
+      "email+notification",
+      "password+management"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\repository\\UserRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\UserRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UserResponseDto.java"
+    ]
+  }
+}

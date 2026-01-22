@@ -1,0 +1,102 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\AlgorithmGuideDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Algorithm",
+      "Guide",
+      "Scenario",
+      "Tags"
+    ],
+    "entities": [
+      "AlgorithmGuideDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "알고리즘 정보 생성",
+      "verb_object": "정보 생성",
+      "inputs": [
+        "algorithmId",
+        "algorithmName",
+        "scenarioId",
+        "scenarioTitle",
+        "situationTags",
+        "guideText",
+        "pitfalls",
+        "scoringRubricHint"
+      ],
+      "outputs": [
+        "AlgorithmGuideDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "알고리즘 정보 조회",
+      "verb_object": "정보 조회",
+      "inputs": [
+        "algorithmId"
+      ],
+      "outputs": [
+        "AlgorithmGuideDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Lombok 사용으로 코드 간결",
+      "유지보수 용이"
+    ],
+    "risks": [
+      "DTO의 확장성 문제",
+      "데이터 유효성 검증 부족"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "import",
+      "text": "java.util.List"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto",
+      "algorithm+guide",
+      "data+transfer"
+    ],
+    "related_files_guess": []
+  }
+}

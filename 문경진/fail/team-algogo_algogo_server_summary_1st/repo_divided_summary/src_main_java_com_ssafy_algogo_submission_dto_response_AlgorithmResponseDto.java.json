@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\AlgorithmResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java Records\",\n    \"Java Persistence API (JPA)\",\n    \"DTO (Data Transfer Object)\"\n  ],\n  \"role\": \"This file defines a Data Transfer Object (DTO) for representing algorithm response data in a structured format.\",\n  \"key_features\": [\n    \"Immutable data structure using Java Records\",\n    \"Static method to convert an Algorithm entity to AlgorithmResponseDto\"\n  ],\n  \"key_code\": [\n    \"public record AlgorithmResponseDto(Long id, String name) {\",\n    \"public static AlgorithmResponseDto from(Algorithm algorithm) {\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves algorithms or algorithm-related submissions.\",\n    \"The presence of a DTO suggests a layered architecture, possibly with a service and controller layer.\"\n  ]\n}\n```"
+}

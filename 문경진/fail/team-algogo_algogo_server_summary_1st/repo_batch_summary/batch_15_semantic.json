@@ -1,0 +1,36 @@
+{
+  "batch_id": 15,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "Spring Data JPA",
+    "Hibernate",
+    "Java Persistence API (JPA)",
+    "QueryDSL"
+  ],
+  "batch_role": "Repository and service layer for managing programs, invitations, and user participation.",
+  "key_features": [
+    "CRUD operations for Program, ProgramCategory, ProgramInvite, ProgramJoin, ProgramType, and ProgramUser entities.",
+    "Custom queries for managing program invitations and user participation.",
+    "Support for filtering and sorting problem sets based on various criteria.",
+    "Implementation of complex queries using QueryDSL."
+  ],
+  "related_files": [
+    "ProgramCategoryRepository.java",
+    "ProgramInviteRepository.java",
+    "ProgramJoinRepository.java",
+    "ProgramRepository.java",
+    "ProgramTypeRepository.java",
+    "ProgramUserRepository.java",
+    "ProgramQueryRepository.java",
+    "ProgramQueryRepositoryImpl.java",
+    "ProgramService.java",
+    "ProgramServiceImpl.java"
+  ],
+  "project_hints": [
+    "The project likely involves managing programs, user participation, and invitations, possibly for an educational or training platform.",
+    "Focus on querying and managing problem sets suggests a programming-related application."
+  ]
+}

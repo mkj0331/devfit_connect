@@ -1,0 +1,181 @@
+{
+  "batch_id": 4,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Lombok",
+    "AWS SDK for Java",
+    "Querydsl"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "사용자 인증 처리",
+      "domain_tags": [
+        "auth",
+        "user",
+        "security",
+        "spring",
+        "jpa"
+      ],
+      "responsibilities": [
+        "유저 조회",
+        "사용자 데이터 로드",
+        "권한 부여"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "Service",
+        "Repository",
+        "Spring Security"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\CustomUserDetailsService.java"
+      ],
+      "evidence": [
+        "userRepository.findByEmail(username)",
+        "new UsernameNotFoundException()",
+        "@Service"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "사용자 데이터 노출 가능성",
+        "의존성 주입 실패 시 문제 발생"
+      ]
+    },
+    {
+      "cluster_name": "예외 처리 관리",
+      "domain_tags": [
+        "exception",
+        "error",
+        "http",
+        "response"
+      ],
+      "responsibilities": [
+        "커스텀 예외 처리",
+        "HTTP 상태 코드 관리",
+        "에러 응답 생성"
+      ],
+      "implementation_signals": [
+        "ControllerAdvice",
+        "ExceptionHandler",
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\CustomException.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\CustomExceptionHandler.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\ErrorResponse.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\ErrorCode.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\SuccessResponse.java"
+      ],
+      "evidence": [
+        "@RestControllerAdvice",
+        "@ExceptionHandler",
+        "ResponseEntity.status()"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "예외 처리 누락 가능성",
+        "성능 저하 우려"
+      ]
+    },
+    {
+      "cluster_name": "AWS S3 클라이언트 설정",
+      "domain_tags": [
+        "aws",
+        "s3",
+        "cloud",
+        "configuration"
+      ],
+      "responsibilities": [
+        "S3 클라이언트 생성",
+        "S3 프리사이너 생성"
+      ],
+      "implementation_signals": [
+        "Configuration",
+        "AWS SDK for Java"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\AwsS3Config.java"
+      ],
+      "evidence": [
+        "S3Client.builder()",
+        "@Configuration",
+        "@Value(\"${spring.cloud.aws.credentials.access-key}\")"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "비밀 키 노출 위험",
+        "잘못된 구성으로 인한 서비스 중단"
+      ]
+    },
+    {
+      "cluster_name": "비동기 처리 설정",
+      "domain_tags": [
+        "async",
+        "configuration",
+        "executor"
+      ],
+      "responsibilities": [
+        "AI 평가 실행",
+        "스레드 풀 관리"
+      ],
+      "implementation_signals": [
+        "Configuration",
+        "Bean"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\AsyncConfig.java"
+      ],
+      "evidence": [
+        "@EnableAsync",
+        "executor.setCorePoolSize(5)",
+        "executor.setMaxPoolSize(10)"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "스레드 수 초과 시 성능 저하",
+        "대기열 과부하 가능성"
+      ]
+    },
+    {
+      "cluster_name": "OpenAI API 설정",
+      "domain_tags": [
+        "api",
+        "openai",
+        "configuration",
+        "webclient"
+      ],
+      "responsibilities": [
+        "웹 클라이언트 생성",
+        "API 키 설정"
+      ],
+      "implementation_signals": [
+        "Configuration",
+        "WebClient"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\OpenAIConfig.java"
+      ],
+      "evidence": [
+        "WebClient.builder()",
+        "@Configuration",
+        "@Value"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "API 키 노출 위험",
+        "잘못된 API URL 설정 가능성"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "auth",
+    "exception",
+    "aws",
+    "async",
+    "openai"
+  ]
+}

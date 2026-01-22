@@ -1,0 +1,4 @@
+{
+  "path": "README.md",
+  "summary": "```json\n{\n  \"language\": \"Markdown\",\n  \"technologies\": [],\n  \"role\": \"프로젝트 설명 및 문서화\",\n  \"key_features\": [],\n  \"key_code\": [],\n  \"project_hints\": [\n    \"algogo_server라는 이름으로 보아 서버 관련 프로젝트일 가능성이 있음\"\n  ]\n}\n```"
+}

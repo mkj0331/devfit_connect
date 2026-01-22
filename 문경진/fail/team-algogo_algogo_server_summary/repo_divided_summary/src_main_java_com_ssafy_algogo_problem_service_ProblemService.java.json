@@ -1,0 +1,103 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\service\\ProblemService.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Problem",
+      "Service",
+      "ResponseDto"
+    ],
+    "entities": [
+      "ProblemDetailResponseDto",
+      "ProblemListResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 상세 조회",
+      "verb_object": "문제 조회",
+      "inputs": [
+        "Long programProblemId"
+      ],
+      "outputs": [
+        "ProblemDetailResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "문제 검색",
+      "verb_object": "문제 검색",
+      "inputs": [
+        "String keyword"
+      ],
+      "outputs": [
+        "ProblemListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "DTO 사용으로 데이터 전송 최적화",
+      "유지보수 용이성",
+      "확장성",
+      "재사용성"
+    ],
+    "risks": [
+      "인터페이스 변경 시 영향 범위",
+      "입력 검증 부족 가능성",
+      "의존성 관리 필요",
+      "성능 저하 가능성",
+      "테스트 부족 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리",
+      "로깅",
+      "보안 검토",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.problem.dto.response.ProblemDetailResponseDto;"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.problem.dto.response.ProblemListResponseDto;"
+    },
+    {
+      "type": "call",
+      "text": "getProblem(Long programProblemId)"
+    },
+    {
+      "type": "call",
+      "text": "searchProblems(String keyword)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "problem+service",
+      "api+service"
+    ],
+    "related_files_guess": []
+  }
+}

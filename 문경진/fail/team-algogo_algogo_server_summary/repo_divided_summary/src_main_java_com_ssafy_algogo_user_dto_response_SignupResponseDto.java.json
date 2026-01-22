@@ -1,0 +1,104 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\SignupResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Signup",
+      "Response",
+      "User"
+    ],
+    "entities": [
+      "User"
+    ],
+    "modules": [
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "회원가입 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "User 객체"
+      ],
+      "outputs": [
+        "SignupResponseDto 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "간결한 코드"
+    ],
+    "risks": [
+      "유효성 검사 부족",
+      "null 값 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "null 체크",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.user.entity.User;"
+    },
+    {
+      "type": "call",
+      "text": "user.getId()"
+    },
+    {
+      "type": "call",
+      "text": "user.getEmail()"
+    },
+    {
+      "type": "call",
+      "text": "user.getDescription()"
+    },
+    {
+      "type": "call",
+      "text": "user.getNickname()"
+    },
+    {
+      "type": "call",
+      "text": "user.getProfileImage()"
+    },
+    {
+      "type": "call",
+      "text": "user.getCreatedAt()"
+    },
+    {
+      "type": "call",
+      "text": "user.getModifiedAt()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto",
+      "response+api"
+    ],
+    "related_files_guess": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\ProblemSetCreateRequestDto.java",
+    "language": "java",
+    "frameworks": [
+      "jakarta.validation",
+      "lombok",
+      "spring"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProblemSet",
+      "Request",
+      "DTO"
+    ],
+    "entities": [
+      "ProblemSetCreateRequestDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제집 생성 요청",
+      "verb_object": "문제집 생성",
+      "inputs": [
+        "title",
+        "description",
+        "categories"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사 포함",
+      "Lombok 사용으로 코드 간결",
+      "명확한 데이터 구조"
+    ],
+    "risks": [
+      "null 가능성 있는 필드",
+      "제한된 유효성 검사",
+      "확장성 문제"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "예외 처리",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotBlank"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotBlank"
+    },
+    {
+      "type": "import",
+      "text": "java.util.List"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+request",
+      "validation+spring",
+      "problemset+create"
+    ],
+    "related_files_guess": []
+  }
+}

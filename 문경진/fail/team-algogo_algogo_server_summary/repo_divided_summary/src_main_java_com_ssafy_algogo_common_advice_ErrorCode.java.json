@@ -1,0 +1,101 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\ErrorCode.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Common/Error Handling",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "error",
+      "code",
+      "http",
+      "status"
+    ],
+    "entities": [
+      "ErrorCode"
+    ],
+    "modules": [
+      "common",
+      "advice"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "오류 코드 정의",
+      "verb_object": "오류 코드 정의",
+      "inputs": [],
+      "outputs": [
+        "ErrorCode"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "HTTP 상태 코드 반환",
+      "verb_object": "HTTP 상태 코드 반환",
+      "inputs": [
+        "ErrorCode"
+      ],
+      "outputs": [
+        "HttpStatus"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Enum",
+      "DTO"
+    ],
+    "cross_cutting": [
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 오류 코드 정의",
+      "HTTP 상태 코드와의 연계",
+      "Lombok 사용으로 코드 간결성"
+    ],
+    "risks": [
+      "오류 코드의 중복 가능성",
+      "확장성 부족"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "에러 메시지 국제화",
+      "유닛 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@AllArgsConstructor"
+    },
+    {
+      "type": "import",
+      "text": "org.springframework.http.HttpStatus"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "error+handling",
+      "http+status",
+      "common+advice"
+    ],
+    "related_files_guess": []
+  }
+}

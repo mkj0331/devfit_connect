@@ -1,0 +1,130 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\dto\\OrderDTO.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "주문",
+      "제품",
+      "장바구니",
+      "가격",
+      "사용자"
+    ],
+    "entities": [
+      "OrderEntity",
+      "ProductEntity",
+      "CartEntity"
+    ],
+    "modules": [
+      "DTO"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "주문 DTO 변환",
+      "verb_object": "DTO 변환",
+      "inputs": [
+        "OrderEntity"
+      ],
+      "outputs": [
+        "OrderDTO"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "가격 포맷팅",
+      "verb_object": "가격 포맷팅",
+      "inputs": [
+        "Integer totalPrice",
+        "Integer productPrice"
+      ],
+      "outputs": [
+        "String priceFormat",
+        "String totalFormat"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "이미지 URL 생성",
+      "verb_object": "이미지 URL 생성",
+      "inputs": [
+        "Long productId",
+        "Long cateId"
+      ],
+      "outputs": [
+        "String imageUrl"
+      ],
+      "side_effects": [],
+      "confidence": 0.75
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Lombok 사용으로 코드 간결성",
+      "명확한 DTO 구조",
+      "가격 포맷팅 기능"
+    ],
+    "risks": [
+      "DTO와 Entity 간의 강한 결합",
+      "변환 로직의 복잡성 증가"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.Column"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Getter"
+    },
+    {
+      "type": "call",
+      "text": "OrderDTO.toOrderDTO(orderEntity)"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Setter"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto",
+      "order+product",
+      "jpa+entity"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\OrderEntity.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\ProductDTO.java"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\MyGroupRoomResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jackson\",\n    \"Java Time API\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for group room response in a program management system.\",\n  \"key_features\": [\n    \"Encapsulates data related to a group room response.\",\n    \"Uses Java record for immutability and simplicity.\",\n    \"Includes fields for program details such as ID, title, description, timestamps, capacity, member count, and role.\"\n  ],\n  \"key_code\": [\n    \"public record MyGroupRoomResponseDto(...) { }\",\n    \"@JsonInclude(JsonInclude.Include.NON_NULL)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves managing group programs or activities.\",\n    \"The presence of GroupRole suggests role-based access or functionality within the group.\"\n  ]\n}\n```"
+}

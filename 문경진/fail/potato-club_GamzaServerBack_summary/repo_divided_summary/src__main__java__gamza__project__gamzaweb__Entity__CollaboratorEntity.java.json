@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\CollaboratorEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Jakarta Persistence\", \"Lombok\"],\n  \"role\": \"이 파일은 프로젝트의 협업자(Entity) 정보를 관리하는 역할을 담당합니다.\",\n  \"key_features\": [\n    \"협업자 ID 관리\",\n    \"프로젝트와 사용자 간의 관계 설정\"\n  ],\n  \"key_code\": [\n    \"@Id\",\n    \"@GeneratedValue(strategy = GenerationType.IDENTITY)\",\n    \"@ManyToOne\",\n    \"@JoinColumn(name = \\\"project_id\\\", nullable = false)\",\n    \"@JoinColumn(name = \\\"user_id\\\")\"\n  ],\n  \"project_hints\": [\n    \"프로젝트 관리 또는 협업 플랫폼과 관련된 주제\"\n  ]\n}\n```"
+}

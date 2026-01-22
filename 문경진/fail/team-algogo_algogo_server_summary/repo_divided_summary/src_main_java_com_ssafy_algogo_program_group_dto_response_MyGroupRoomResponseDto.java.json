@@ -1,0 +1,109 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\MyGroupRoomResponseDto.java",
+    "language": "java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "GroupRoom",
+      "Response",
+      "DTO"
+    ],
+    "entities": [
+      "MyGroupRoomResponseDto",
+      "GroupRole"
+    ],
+    "modules": [
+      "group",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 방 정보 조회",
+      "verb_object": "그룹 방 정보 조회",
+      "inputs": [
+        "programId"
+      ],
+      "outputs": [
+        "MyGroupRoomResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "그룹 방 생성",
+      "verb_object": "그룹 방 생성",
+      "inputs": [
+        "title",
+        "description",
+        "capacity"
+      ],
+      "outputs": [
+        "MyGroupRoomResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Null 처리 지원",
+      "타입 안전성"
+    ],
+    "risks": [
+      "데이터 유효성 검증 부족",
+      "변경 시 호환성 문제"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "API 문서화",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "import",
+      "text": "import com.fasterxml.jackson.annotation.JsonInclude"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.program.group.entity.GroupRole"
+    },
+    {
+      "type": "import",
+      "text": "import java.time.LocalDateTime"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "group+management"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\GroupRole.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\service\\GroupService.java"
+    ]
+  }
+}

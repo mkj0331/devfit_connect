@@ -1,0 +1,139 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\repository\\UserRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Data JPA"
+    ],
+    "layer_guess": "Repository Layer",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "User",
+      "Email",
+      "Nickname"
+    ],
+    "entities": [
+      "User"
+    ],
+    "modules": [
+      "User Repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "이메일 조회",
+      "verb_object": "find user by email",
+      "inputs": [
+        "userEmail"
+      ],
+      "outputs": [
+        "Optional<User>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "이메일 존재 여부 확인",
+      "verb_object": "check if email exists",
+      "inputs": [
+        "email"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "닉네임 존재 여부 확인",
+      "verb_object": "check if nickname exists",
+      "inputs": [
+        "nickname"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "이메일 검색",
+      "verb_object": "search users by email",
+      "inputs": [
+        "content"
+      ],
+      "outputs": [
+        "List<User>"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "사용자 정의 쿼리 지원",
+      "JPA를 통한 데이터 접근",
+      "유연한 검색 기능"
+    ],
+    "risks": [
+      "이메일 중복 처리 미비",
+      "예외 처리 부족",
+      "성능 문제 가능성"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Transaction Management",
+      "Logging"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.Optional"
+    },
+    {
+      "type": "call",
+      "text": "findByEmail(String userEmail)"
+    },
+    {
+      "type": "call",
+      "text": "existsByEmail(String email)"
+    },
+    {
+      "type": "call",
+      "text": "existsByNickname(String nickname)"
+    },
+    {
+      "type": "call",
+      "text": "findByEmailContainingIgnoreCase(String content)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "user+repository"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\UserService.java"
+    ]
+  }
+}

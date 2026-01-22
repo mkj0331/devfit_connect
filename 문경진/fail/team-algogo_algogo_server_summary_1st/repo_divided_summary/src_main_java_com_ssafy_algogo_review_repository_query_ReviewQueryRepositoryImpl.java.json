@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\query\\ReviewQueryRepositoryImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"QueryDSL\",\n    \"JPA\"\n  ],\n  \"role\": \"Repository Implementation for Review Queries\",\n  \"key_features\": [\n    \"Fetches code reviews based on submission ID and user ID\",\n    \"Uses QueryDSL for dynamic query construction\",\n    \"Supports pagination of results\",\n    \"Projects results into DTOs for structured response\"\n  ],\n  \"key_code\": [\n    \"BooleanExpression\",\n    \"Projections.constructor\",\n    \"JPAQueryFactory\",\n    \"PageImpl\"\n  ],\n  \"project_hints\": [\n    \"Code review system\",\n    \"User interactions with submissions\",\n    \"Handling of user-generated content\"\n  ]\n}\n```"
+}

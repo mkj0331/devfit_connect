@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\error\\requestError\\DuplicateException.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Java Exception Handling\"],\n  \"role\": \"이 파일은 비즈니스 로직에서 발생할 수 있는 중복 예외를 처리하는 역할을 합니다.\",\n  \"key_features\": [\n    \"중복된 데이터 입력 시 예외를 발생시킴\",\n    \"비즈니스 로직에서의 오류 처리를 위한 사용자 정의 예외 클래스\"\n  ],\n  \"key_code\": [\n    \"public DuplicateException(String message, ErrorCode errorCode) {\",\n    \"    super(message, errorCode);\"\n  ],\n  \"project_hints\": [\n    \"데이터베이스 또는 비즈니스 로직에서 중복 데이터 처리를 다루는 웹 애플리케이션\"\n  ]\n}\n```"
+}

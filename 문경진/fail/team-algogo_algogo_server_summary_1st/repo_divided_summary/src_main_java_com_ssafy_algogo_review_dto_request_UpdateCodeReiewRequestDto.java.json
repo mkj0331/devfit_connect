@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\request\\UpdateCodeReiewRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for updating code review requests\",\n  \"key_features\": [\n    \"Validation of content field using @NotBlank annotation\",\n    \"Builder pattern for object creation\",\n    \"Access control for constructors\"\n  ],\n  \"key_code\": [\n    \"@NotBlank(message = \\\"content is required\\\")\",\n    \"private String content;\",\n    \"@Builder\",\n    \"@NoArgsConstructor(access = AccessLevel.PROTECTED)\",\n    \"@AllArgsConstructor(access = AccessLevel.PRIVATE)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves code review functionalities\",\n    \"Focus on managing code review content and associated metadata\"\n  ]\n}\n```"
+}

@@ -1,0 +1,110 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\entity\\OrderEntity.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "주문",
+      "제품",
+      "사용자",
+      "장바구니",
+      "상태"
+    ],
+    "entities": [
+      "OrderEntity",
+      "ProductEntity",
+      "OrderDTO",
+      "CartDTO"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "주문 생성",
+      "verb_object": "주문 생성",
+      "inputs": [
+        "OrderDTO"
+      ],
+      "outputs": [
+        "OrderEntity"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "주문 상태 설정",
+      "verb_object": "주문 상태 설정",
+      "inputs": [
+        "String orderStatus"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 엔티티 구조",
+      "JPA를 통한 데이터 접근",
+      "Lombok을 통한 코드 간결성"
+    ],
+    "risks": [
+      "복합 키 사용으로 인한 복잡성",
+      "Lazy Loading으로 인한 N+1 문제 가능성"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Error Handling",
+      "Logging"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table(name = \"ORDERS\")"
+    },
+    {
+      "type": "call",
+      "text": "OrderEntity.toOrderEntity(OrderDTO orderDTO)"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.*"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+dto"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\OrderDTO.java",
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\ProductEntity.java"
+    ]
+  }
+}

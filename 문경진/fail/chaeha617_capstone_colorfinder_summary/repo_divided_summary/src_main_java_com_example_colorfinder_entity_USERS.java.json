@@ -1,0 +1,132 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\entity\\USERS.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Jakarta Persistence",
+      "Lombok"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "user",
+      "email",
+      "password",
+      "nickname",
+      "gender",
+      "personalColor"
+    ],
+    "entities": [
+      "USERS",
+      "PERSONALCOLOR"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 정보 조회",
+      "verb_object": "정보 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "email",
+        "nickname",
+        "gender"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "사용자 인증",
+      "verb_object": "인증",
+      "inputs": [
+        "email",
+        "password"
+      ],
+      "outputs": [
+        "인증 토큰"
+      ],
+      "side_effects": [],
+      "confidence": 0.75
+    },
+    {
+      "name": "개인 색상 설정",
+      "verb_object": "색상 설정",
+      "inputs": [
+        "userId",
+        "personalColor"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder"
+    ],
+    "cross_cutting": [
+      "Security"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 모델",
+      "JPA 사용으로 인한 데이터 접근 용이",
+      "Lombok을 통한 코드 간결성"
+    ],
+    "risks": [
+      "비밀번호 보안 취약점",
+      "null 값 처리 미비",
+      "인증 로직 미구현"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "비밀번호 암호화",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table(name = \"USERS\")"
+    },
+    {
+      "type": "annotation",
+      "text": "@Id"
+    },
+    {
+      "type": "annotation",
+      "text": "@GeneratedValue(strategy = GenerationType.IDENTITY)"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.security.core.userdetails.UserDetails"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "auth+user",
+      "entity+model"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\USERSRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\UserService.java"
+    ]
+  }
+}

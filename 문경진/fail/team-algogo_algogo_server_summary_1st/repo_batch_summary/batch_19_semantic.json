@@ -1,0 +1,40 @@
+{
+  "batch_id": 19,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Lombok",
+    "Java 11+",
+    "Java 14+",
+    "Java Persistence API (JPA)",
+    "Spring Framework",
+    "Java Collections",
+    "Spring Data"
+  ],
+  "batch_role": "Data Transfer Objects (DTOs) for handling user submissions and algorithm responses in a coding platform.",
+  "key_features": [
+    "Encapsulates user submission data and algorithm responses",
+    "Uses Java Records and Lombok for concise and immutable data representation",
+    "Provides static factory methods for DTO instantiation",
+    "Includes pagination and sorting information for submissions",
+    "Tracks submission statistics including counts and success rates"
+  ],
+  "related_files": [
+    "UserSubmissionRequestDto.java",
+    "AlgorithmListResponseDto.java",
+    "AlgorithmResponseDto.java",
+    "SubmissionAuthorActiveResponseDto.java",
+    "SubmissionAuthorStatusResponseDto.java",
+    "SubmissionListResponseDto.java",
+    "SubmissionMePageResponseDto.java",
+    "SubmissionMeResponseDto.java",
+    "SubmissionResponseDto.java",
+    "SubmissionStatsInfosResponseDto.java"
+  ],
+  "project_hints": [
+    "Part of a submission management system for a coding platform or educational tool",
+    "Handles user submissions, algorithm responses, and related statistics",
+    "Involves competitive programming or coding challenges"
+  ]
+}

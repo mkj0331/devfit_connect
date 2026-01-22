@@ -1,0 +1,4 @@
+{
+  "path": "src\\test\\java\\com\\ssafy\\algogo\\AlgogoApplicationTests.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"JUnit\",\n    \"Spring Boot\"\n  ],\n  \"role\": \"Unit Test\",\n  \"key_features\": [\n    \"Tests the application context loading\"\n  ],\n  \"key_code\": [\n    \"@SpringBootTest\",\n    \"void contextLoads()\"\n  ],\n  \"project_hints\": [\n    \"Spring Boot application\",\n    \"Unit testing for application context\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\project\\response\\DeployStepResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 배포 단계에 대한 정보를 담고 있는 데이터 전송 객체(DTO) 역할을 합니다.\",\n  \"key_features\": [\n    \"배포 단계 정보를 저장하는 필드\",\n    \"Lombok을 사용하여 생성자와 getter 메서드를 자동으로 생성\"\n  ],\n  \"key_code\": [\n    \"private String deploymentStep;\",\n    \"@AllArgsConstructor\"\n  ],\n  \"project_hints\": [\n    \"이 파일은 배포 프로세스와 관련된 정보를 다루고 있어, 소프트웨어 배포 또는 DevOps 관련 프로젝트일 가능성이 높습니다.\"\n  ]\n}\n```"
+}

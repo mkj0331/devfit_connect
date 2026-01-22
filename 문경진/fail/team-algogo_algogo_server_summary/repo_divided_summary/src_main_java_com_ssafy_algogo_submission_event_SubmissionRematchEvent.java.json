@@ -1,0 +1,80 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\SubmissionRematchEvent.java",
+    "language": "java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "domain",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Submission",
+      "Rematch",
+      "Event"
+    ],
+    "entities": [
+      "SubmissionRematchEvent",
+      "ReviewRematchTargetQueryDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 재매칭 이벤트 생성",
+      "verb_object": "이벤트 생성",
+      "inputs": [
+        "reviewRematchTargetQueryDtoList"
+      ],
+      "outputs": [
+        "SubmissionRematchEvent"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간결한 코드 구조",
+      "불변 객체 사용",
+      "명확한 데이터 전달"
+    ],
+    "risks": [
+      "데이터 유효성 검증 부족",
+      "확장성 문제"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import java.util.List;"
+    },
+    {
+      "type": "annotation",
+      "text": "public record SubmissionRematchEvent"
+    },
+    {
+      "type": "call",
+      "text": "new SubmissionRematchEvent()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "event+submission",
+      "dto+data"
+    ],
+    "related_files_guess": []
+  }
+}

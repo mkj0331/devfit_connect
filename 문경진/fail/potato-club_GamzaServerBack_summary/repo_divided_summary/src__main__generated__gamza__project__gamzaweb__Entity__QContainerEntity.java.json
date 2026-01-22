@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\generated\\gamza\\project\\gamzaweb\\Entity\\QContainerEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"QueryDSL\"],\n  \"role\": \"이 파일은 ContainerEntity에 대한 Querydsl 쿼리 타입을 정의합니다.\",\n  \"key_features\": [\n    \"ContainerEntity의 속성에 대한 쿼리 DSL을 생성\",\n    \"application 및 user와 같은 연관된 엔티티를 초기화\",\n    \"ID, containerId, imageId와 같은 기본 속성을 정의\"\n  ],\n  \"key_code\": [\n    \"public final StringPath containerId = createString(\\\"containerId\\\");\",\n    \"public final NumberPath<Long> id = createNumber(\\\"id\\\", Long.class);\",\n    \"this.application = inits.isInitialized(\\\"application\\\") ? new QApplicationEntity(forProperty(\\\"application\\\"), inits.get(\\\"application\\\")) : null;\"\n  ],\n  \"project_hints\": [\n    \"컨테이너 관리 또는 배포와 관련된 웹 애플리케이션일 가능성이 있음\",\n    \"사용자 및 애플리케이션 간의 관계를 관리하는 시스템일 수 있음\"\n  ]\n}\n```"
+}

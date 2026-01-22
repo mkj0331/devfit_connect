@@ -1,0 +1,103 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\entity\\PERSONALCOLOR.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta Persistence"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "color",
+      "personal",
+      "entity"
+    ],
+    "entities": [
+      "PERSONALCOLOR"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "색상 생성",
+      "verb_object": "색상 생성",
+      "inputs": [
+        "colorId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "색상 조회",
+      "verb_object": "색상 조회",
+      "inputs": [
+        "colorId"
+      ],
+      "outputs": [
+        "colorName"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Lombok 사용으로 코드 간결함",
+      "JPA를 통한 데이터 접근 용이",
+      "명확한 엔티티 정의"
+    ],
+    "risks": [
+      "JPA 설정 오류 가능성",
+      "컬럼 매핑 오류 가능성"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table(name = \"PERSONALCOLOR\")"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.*;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.*;"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+model"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\PERSONALCOLORRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\PERSONALCOLORService.java"
+    ]
+  }
+}

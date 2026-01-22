@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\ListSearchUserResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java 17\", \"Record\", \"DTO (Data Transfer Object)\"],\n  \"role\": \"This file defines a data transfer object for returning a list of users in response to a search query.\",\n  \"key_features\": [\n    \"Uses Java Record for concise data representation\",\n    \"Contains a single field 'users' which is a list of SearchUserResponseDto objects\"\n  ],\n  \"key_code\": [\n    \"public record ListSearchUserResponseDto(List<SearchUserResponseDto> users) { }\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves user management or search functionality\",\n    \"The naming convention suggests a focus on user-related operations\"\n  ]\n}\n```"
+}

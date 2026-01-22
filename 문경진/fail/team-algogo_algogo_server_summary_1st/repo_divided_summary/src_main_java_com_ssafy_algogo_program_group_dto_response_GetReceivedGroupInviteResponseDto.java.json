@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetReceivedGroupInviteResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jackson\",\n    \"Java Records\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for group invite responses\",\n  \"key_features\": [\n    \"Encapsulates data related to received group invites\",\n    \"Uses JSON serialization with Jackson\",\n    \"Supports null value exclusion in JSON output\"\n  ],\n  \"key_code\": [\n    \"public record GetReceivedGroupInviteResponseDto(Long inviteId, InviteStatus inviteStatus, GroupRoomResponseDto groupRoom)\"\n  ],\n  \"project_hints\": [\n    \"Involves group invitations and their statuses\",\n    \"Part of a larger application likely related to group management or collaboration\"\n  ]\n}\n```"
+}

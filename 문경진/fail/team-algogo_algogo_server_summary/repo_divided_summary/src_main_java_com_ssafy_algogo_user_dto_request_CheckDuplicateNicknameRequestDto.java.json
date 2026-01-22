@@ -1,0 +1,103 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\CheckDuplicateNicknameRequestDto.java",
+    "language": "java",
+    "frameworks": [
+      "jakarta.validation",
+      "lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "닉네임",
+      "중복",
+      "요청"
+    ],
+    "entities": [
+      "CheckDuplicateNicknameRequestDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "닉네임 중복 확인",
+      "verb_object": "닉네임 확인",
+      "inputs": [
+        "nickname"
+      ],
+      "outputs": [
+        "중복 여부"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검증",
+      "명확한 메시지",
+      "간결한 코드",
+      "유연한 객체 생성",
+      "명확한 책임"
+    ],
+    "risks": [
+      "유효성 검증 누락 가능성",
+      "입력 형식 오류",
+      "확장성 부족",
+      "의존성 문제",
+      "테스트 부족"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리",
+      "로깅",
+      "API 문서화",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotBlank"
+    },
+    {
+      "type": "annotation",
+      "text": "@Pattern"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotBlank"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.Pattern"
+    },
+    {
+      "type": "import",
+      "text": "lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto",
+      "validation+request",
+      "nickname+check"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\NicknameService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\controller\\UserController.java"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\query\\RequireReviewQueryRepositoryImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring\",\n    \"QueryDSL\",\n    \"JPA\"\n  ],\n  \"role\": \"Repository Implementation for Review Queries\",\n  \"key_features\": [\n    \"Fetches review rematch targets based on submission ID\",\n    \"Deletes required reviews by user and program ID\"\n  ],\n  \"key_code\": [\n    \"findAllReviewRematchTargets(Long submissionId)\",\n    \"deleteRequiredReviewsByUserAndProgram(Long userId, Long programId)\"\n  ],\n  \"project_hints\": [\n    \"Focuses on code review processes\",\n    \"Involves submissions and algorithms related to programming problems\"\n  ]\n}\n```"
+}

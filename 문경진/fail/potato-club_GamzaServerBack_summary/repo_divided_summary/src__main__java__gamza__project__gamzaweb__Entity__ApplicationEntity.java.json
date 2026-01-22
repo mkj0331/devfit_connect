@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\ApplicationEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Persistence\",\n    \"Lombok\"\n  ],\n  \"role\": \"이 파일은 애플리케이션의 데이터 모델을 정의하며, 데이터베이스와의 상호작용을 위한 엔티티 클래스를 구현합니다.\",\n  \"key_features\": [\n    \"애플리케이션의 속성(이미지 ID, 포트, 태그 등)을 정의\",\n    \"프로젝트 및 컨테이너와의 관계를 설정\",\n    \"파일 목록을 관리하는 기능\",\n    \"애플리케이션 업데이트 메서드 제공\"\n  ],\n  \"key_code\": [\n    \"public void updateApplication(String newFilePath, int outerPort, String tag, String variableKey) { ... }\",\n    \"@OneToMany(mappedBy = \\\"application\\\", cascade = CascadeType.ALL, orphanRemoval = true) private List<FileEntity> fileEntities = new ArrayList<>();\"\n  ],\n  \"project_hints\": [\n    \"애플리케이션 배포 또는 관리 시스템\",\n    \"컨테이너 기반의 서비스 또는 마이크로서비스 아키텍처\"\n  ]\n}\n```"
+}

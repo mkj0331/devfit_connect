@@ -1,0 +1,109 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramType.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta Persistence",
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "program",
+      "type"
+    ],
+    "entities": [
+      "ProgramType"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 타입 생성",
+      "verb_object": "타입 생성",
+      "inputs": [
+        "name"
+      ],
+      "outputs": [
+        "ProgramType"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "프로그램 타입 조회",
+      "verb_object": "타입 조회",
+      "inputs": [
+        "id"
+      ],
+      "outputs": [
+        "ProgramType"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유일성 제약 조건",
+      "불변 객체 생성",
+      "명확한 데이터 모델"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "예외 처리 부족"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "로깅",
+      "트랜잭션 관리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.persistence.*"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotNull"
+    },
+    {
+      "type": "import",
+      "text": "lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+model"
+    ],
+    "related_files_guess": []
+  }
+}

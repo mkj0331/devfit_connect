@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\CheckDuplicateNicknameRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for checking duplicate nicknames\",\n  \"key_features\": [\n    \"Validation of nickname input\",\n    \"Nickname must be between 2 to 10 characters\",\n    \"Nickname can include Korean characters, English letters, and numbers\",\n    \"Custom error messages for validation failures\"\n  ],\n  \"key_code\": [\n    \"@NotBlank(message = \\\"닉네임을 입력해주세요.\\\")\",\n    \"@Pattern(regexp = \\\"^[가-힣a-zA-Z0-9]{2,10}$\\\", message = \\\"올바른  닉네임 형식이 아닙니다.\\\")\"\n  ],\n  \"project_hints\": [\n    \"User management system\",\n    \"Nickname uniqueness check\",\n    \"Input validation for user profiles\"\n  ]\n}\n```"
+}

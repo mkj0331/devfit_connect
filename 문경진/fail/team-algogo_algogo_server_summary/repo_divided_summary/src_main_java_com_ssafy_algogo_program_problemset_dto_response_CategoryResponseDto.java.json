@@ -1,0 +1,72 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\CategoryResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Category",
+      "Response",
+      "DTO"
+    ],
+    "entities": [
+      "Category"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "카테고리 변환",
+      "verb_object": "카테고리 변환",
+      "inputs": [
+        "Category category"
+      ],
+      "outputs": [
+        "CategoryResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간결한 코드",
+      "명확한 데이터 구조"
+    ],
+    "risks": [
+      "타입 안전성 문제"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.program.entity.Category;"
+    },
+    {
+      "type": "call",
+      "text": "new CategoryResponseDto(category.getId(), category.getName())"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "category+management"
+    ],
+    "related_files_guess": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\analyst\\service\\AnalystService.java",
+  "project_subject_signals": [
+    "analyst",
+    "amount",
+    "month",
+    "year"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "lombok",
+    "slf4j"
+  ],
+  "core_features": [
+    {
+      "feature_name": "월별 지출 조회",
+      "feature_description": "특정 연월의 지출 정보를 조회하는 기능을 제공한다.",
+      "implementation_method": "AnalystRepository를 통해 Member와 연도, 월에 해당하는 Analyst 엔티티를 조회하여 AnalystMonthAmountResponse 형태로 반환한다.",
+      "job_value": "데이터 기반 분석 및 리포팅 기능 구현 역량을 보여준다."
+    },
+    {
+      "feature_name": "이번 달 지출 조회 (미완)",
+      "feature_description": "현재 달의 지출 정보를 조회하는 기능을 제공한다. (구현 미완)",
+      "implementation_method": "AuthenticationService를 통해 현재 회원 정보를 가져오지만, 실제 지출 정보 조회 로직은 구현되지 않았다.",
+      "job_value": "기능 설계 및 향후 개발 계획을 반영하는 역량을 보여준다."
+    },
+    {
+      "feature_name": "이전 달 지출 정보 저장 (미완)",
+      "feature_description": "매달 1일 자정에 이전 달의 지출 정보를 저장하는 기능을 제공한다. (구현 미완)",
+      "implementation_method": "AuthenticationService를 통해 현재 회원 정보를 가져오지만, 지출 정보 저장 로직은 구현되지 않았다.",
+      "job_value": "주기적인 데이터 처리 및 자동화 기능 구현 역량을 보여준다."
+    }
+  ],
+  "improvement_suggestions": [
+    "이번 달 지출 조회 및 이전 달 지출 정보 저장 기능의 실제 구현 로직이 필요하다.",
+    "AnalystRepository에서 데이터를 조회할 때, Member와 연월 정보 외에 다른 조건이 필요하다면 추가적인 필터링 로직을 고려할 수 있다.",
+    "AnalystException의 ErrorCode.ANALYST_NOT_FOUND 처리 외에, 예상치 못한 데이터 조회 실패 시의 예외 처리 방안을 강화할 수 있다."
+  ]
+}

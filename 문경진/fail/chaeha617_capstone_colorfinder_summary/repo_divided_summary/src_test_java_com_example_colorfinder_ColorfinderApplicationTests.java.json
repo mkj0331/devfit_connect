@@ -1,0 +1,63 @@
+{
+  "file": {
+    "path": "src\\test\\java\\com\\example\\colorfinder\\ColorfinderApplicationTests.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring Boot",
+      "JUnit"
+    ],
+    "libraries": [],
+    "layer_guess": "Test",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "test",
+      "context"
+    ],
+    "entities": [],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "컨텍스트 로드",
+      "verb_object": "컨텍스트 로드",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Test"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "JUnit 사용",
+      "Spring Boot 통합 테스트"
+    ],
+    "risks": [],
+    "missing_standard_checks": []
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@SpringBootTest"
+    },
+    {
+      "type": "call",
+      "text": "contextLoads()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "test+spring",
+      "application+context"
+    ],
+    "related_files_guess": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\UserCodeReviewListResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "User",
+      "Code",
+      "Review",
+      "List",
+      "Response"
+    ],
+    "entities": [
+      "UserCodeReviewListResponseDto",
+      "PageInfo",
+      "UserCodeReviewResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "코드 리뷰 목록 생성",
+      "verb_object": "리스트 생성",
+      "inputs": [
+        "PageInfo",
+        "List<UserCodeReviewResponseDto>"
+      ],
+      "outputs": [
+        "UserCodeReviewListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Null 처리 지원",
+      "불변 객체 사용"
+    ],
+    "risks": [
+      "데이터 유효성 검증 부족",
+      "의존성 증가"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Error handling",
+      "Logging"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "call",
+      "text": "UserCodeReviewListResponseDto.from()"
+    },
+    {
+      "type": "import",
+      "text": "import com.fasterxml.jackson.annotation.JsonInclude"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.dto.PageInfo"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.List"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "review+code",
+      "api+response"
+    ],
+    "related_files_guess": []
+  }
+}

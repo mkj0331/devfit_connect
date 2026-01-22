@@ -1,0 +1,91 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemCreateRequestDto.java",
+    "language": "Java",
+    "frameworks": [
+      "jakarta.validation",
+      "lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProgramProblem",
+      "RequestDto"
+    ],
+    "entities": [
+      "ProgramProblemCreateRequestDto",
+      "ProgramProblemRequestDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 생성 요청",
+      "verb_object": "문제 생성",
+      "inputs": [
+        "List<ProgramProblemRequestDto> problems"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사",
+      "불변성 보장",
+      "명확한 데이터 구조"
+    ],
+    "risks": [
+      "유효성 검사 실패 시 예외 발생 가능",
+      "리스트 크기 제한 없음"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "데이터 형식 검증",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "annotation",
+      "text": "@Valid"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.Valid"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotNull"
+    },
+    {
+      "type": "import",
+      "text": "lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+request",
+      "validation+jakarta",
+      "builder+lombok"
+    ],
+    "related_files_guess": []
+  }
+}

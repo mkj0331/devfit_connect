@@ -1,0 +1,126 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\dto\\ProductDTO.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "product",
+      "color",
+      "category",
+      "price"
+    ],
+    "entities": [
+      "ProductDTO",
+      "ProductEntity"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "상품 변환",
+      "verb_object": "DTO 변환",
+      "inputs": [
+        "ProductEntity"
+      ],
+      "outputs": [
+        "ProductDTO"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "가격 포맷팅",
+      "verb_object": "가격 포맷",
+      "inputs": [
+        "Integer productPrice"
+      ],
+      "outputs": [
+        "String priceFormat"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "이미지 URL 생성",
+      "verb_object": "URL 생성",
+      "inputs": [
+        "String cateId",
+        "Long productId"
+      ],
+      "outputs": [
+        "String imageUrl"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Lombok 사용으로 코드 간결성",
+      "명확한 데이터 구조",
+      "가격 포맷팅 기능"
+    ],
+    "risks": [
+      "DTO와 Entity 간의 의존성",
+      "변환 로직의 복잡성"
+    ],
+    "missing_standard_checks": [
+      "Validation 체크",
+      "Null 체크",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import lombok.Getter;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Setter;"
+    },
+    {
+      "type": "call",
+      "text": "productDTO.setProductId(productEntity.getProductId());"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Setter"
+    },
+    {
+      "type": "call",
+      "text": "DecimalFormat commaFormat = new DecimalFormat(\"#,###,##0\");"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+entity",
+      "product+color",
+      "data+formatting"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\ProductEntity.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\ProductService.java"
+    ]
+  }
+}

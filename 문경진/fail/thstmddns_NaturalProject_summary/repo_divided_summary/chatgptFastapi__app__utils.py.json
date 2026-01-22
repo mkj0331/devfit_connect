@@ -1,0 +1,4 @@
+{
+  "path": "chatgptFastapi\\app\\utils.py",
+  "summary": "```json\n{\n  \"language\": \"Python\",\n  \"technologies\": [\n    \"FastAPI\",\n    \"transformers\",\n    \"konlpy\",\n    \"pdf2image\",\n    \"timm\",\n    \"easyocr\",\n    \"torch\",\n    \"openai\",\n    \"PIL\",\n    \"docx\"\n  ],\n  \"role\": \"텍스트 분석 및 업무 프로세스 생성 기능을 제공하는 유틸리티 모듈\",\n  \"key_features\": [\n    \"모델과 토크나이저 초기화\",\n    \"OpenAI API를 통한 텍스트 분석\",\n    \"업무 프로세스 생성 및 세부 업무 추출\"\n  ],\n  \"key_code\": [\n    \"tokenizer = PreTrainedTokenizerFast.from_pretrained('hyunwoongko/kobart')\",\n    \"model = BartForConditionalGeneration.from_pretrained(modelName).to(device)\",\n    \"completion = openai.ChatCompletion.create(...)\"\n  ],\n  \"project_hints\": [\n    \"업무 프로세스 자동 생성 및 텍스트 분석을 통한 효율적인 작업 관리 시스템\"\n  ]\n}\n```"
+}

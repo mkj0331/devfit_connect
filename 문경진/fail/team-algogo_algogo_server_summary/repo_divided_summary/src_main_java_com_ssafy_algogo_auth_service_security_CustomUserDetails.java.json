@@ -1,0 +1,125 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\CustomUserDetails.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring Security"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "UserDetails",
+      "GrantedAuthority",
+      "CustomUserDetails"
+    ],
+    "entities": [
+      "User",
+      "Authority"
+    ],
+    "modules": [
+      "auth",
+      "security"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 인증 정보 제공",
+      "verb_object": "인증 정보 제공",
+      "inputs": [
+        "userId",
+        "username",
+        "password",
+        "authorities"
+      ],
+      "outputs": [
+        "UserDetails"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "권한 조회",
+      "verb_object": "권한 조회",
+      "inputs": [],
+      "outputs": [
+        "Collection<GrantedAuthority>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "계정 상태 확인",
+      "verb_object": "계정 상태 확인",
+      "inputs": [],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.75
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Service"
+    ],
+    "cross_cutting": [
+      "보안"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "Lombok 사용으로 코드 간결함",
+      "Spring Security 통합",
+      "명확한 책임 분리"
+    ],
+    "risks": [
+      "비밀번호 노출 위험",
+      "권한 관리 미비 가능성"
+    ],
+    "missing_standard_checks": [
+      "비밀번호 암호화",
+      "입력 검증",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.security.core.userdetails.UserDetails;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Getter;"
+    },
+    {
+      "type": "call",
+      "text": "getAuthorities()"
+    },
+    {
+      "type": "call",
+      "text": "getPassword()"
+    },
+    {
+      "type": "call",
+      "text": "getUsername()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+security",
+      "user+details",
+      "service+layer"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\UserDetailsService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\SecurityConfig.java"
+    ]
+  }
+}

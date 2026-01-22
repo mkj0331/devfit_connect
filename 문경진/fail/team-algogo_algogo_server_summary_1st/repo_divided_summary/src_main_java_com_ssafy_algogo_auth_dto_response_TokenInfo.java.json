@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\TokenInfo.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Lombok\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for authentication tokens\",\n  \"key_features\": [\n    \"Holds access and refresh tokens\",\n    \"Uses Lombok annotations for boilerplate code reduction\"\n  ],\n  \"key_code\": [\n    \"private String accessToken;\",\n    \"private String refreshToken;\"\n  ],\n  \"project_hints\": [\n    \"Part of an authentication system\",\n    \"Handles token management for user sessions\"\n  ]\n}\n```"
+}

@@ -1,0 +1,39 @@
+{
+  "batch_id": 6,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Java Records",
+    "Java Collections",
+    "Jackson",
+    "Java Persistence API (JPA)",
+    "Spring Framework",
+    "JPA/Hibernate",
+    "Jakarta Validation",
+    "Lombok"
+  ],
+  "batch_role": "DTOs and entities for managing programming problems in a coding platform.",
+  "key_features": [
+    "Encapsulates problem details, including ID, platform type, problem number, title, difficulty type, and links.",
+    "Supports pagination and sorting for problem listings.",
+    "Defines difficulty levels and types for problems.",
+    "Maps data from entities to structured response formats."
+  ],
+  "related_files": [
+    "ProblemDetailResponseDto.java",
+    "ProblemListResponseDto.java",
+    "ProblemResponseDto.java",
+    "ProgramProblemDetailResponseDto.java",
+    "ProgramProblemPageResponseDto.java",
+    "ProgramProblemResponseDto.java",
+    "DifficultyType.java",
+    "DifficultyViewType.java",
+    "PlatformType.java",
+    "Problem.java"
+  ],
+  "project_hints": [
+    "The project involves a platform for managing and categorizing programming problems, likely for educational or competitive purposes.",
+    "Entities and DTOs suggest a focus on user interactions, submissions, and difficulty ratings."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "batch_id": 15,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Spring Data JPA",
+    "Lombok",
+    "QueryDSL"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "프로그램 관리",
+      "domain_tags": [
+        "program",
+        "repository",
+        "service",
+        "invite",
+        "join"
+      ],
+      "responsibilities": [
+        "프로그램 조회",
+        "프로그램 초대 관리",
+        "프로그램 참여 상태 관리",
+        "프로그램 타입 조회",
+        "프로그램 삭제"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Service Layer",
+        "Transactional"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramInviteRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramJoinRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\service\\ProgramService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\service\\impl\\ProgramServiceImpl.java"
+      ],
+      "evidence": [
+        "deleteByProgramId(Long programId)",
+        "findByProgramIdAndUserIdAndInviteStatus",
+        "applyProgramJoin",
+        "getProgramJoinState",
+        "findByProgramIdWithUser"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "성능 저하 가능성",
+        "예외 처리 부족",
+        "데이터 무결성 문제"
+      ]
+    },
+    {
+      "cluster_name": "문제집 조회",
+      "domain_tags": [
+        "problemset",
+        "query",
+        "repository"
+      ],
+      "responsibilities": [
+        "문제집 리스트 조회",
+        "문제집 상세 조회",
+        "문제집 수 카운트",
+        "내가 참여한 문제집 조회"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "QueryDSL",
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\query\\ProgramQueryRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\query\\ProgramQueryRepositoryImpl.java"
+      ],
+      "evidence": [
+        "findProblemSetWithCategoriesAndPopularity",
+        "countProblemSetWithFilter",
+        "findProblemSetDetail",
+        "searchProblemSetByTitleOrDescription"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "복잡한 쿼리로 인한 성능 저하 가능성",
+        "입력 값 검증 부족"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "program",
+    "invite",
+    "join",
+    "problemset",
+    "repository",
+    "service",
+    "query",
+    "JPA",
+    "DTO",
+    "Spring"
+  ]
+}

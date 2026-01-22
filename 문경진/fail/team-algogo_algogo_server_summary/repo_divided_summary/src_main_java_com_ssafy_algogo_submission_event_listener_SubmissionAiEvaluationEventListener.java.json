@@ -1,0 +1,99 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\listener\\SubmissionAiEvaluationEventListener.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Listener",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Submission",
+      "AI",
+      "Evaluation",
+      "Event"
+    ],
+    "entities": [
+      "SubmissionAiEvaluationEvent",
+      "SubmissionAiEvaluationService"
+    ],
+    "modules": [
+      "event",
+      "listener",
+      "service"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 평가 처리",
+      "verb_object": "제출 평가",
+      "inputs": [
+        "submissionId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Event Listener",
+      "Transactional Event"
+    ],
+    "cross_cutting": [
+      "Asynchronous Processing",
+      "Transaction Management"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "비동기 처리",
+      "트랜잭션 관리",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "비동기 처리로 인한 오류 추적 어려움",
+      "트랜잭션 실패 시 상태 불일치 가능성"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "예외 처리",
+      "입력 검증"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Component"
+    },
+    {
+      "type": "annotation",
+      "text": "@Async"
+    },
+    {
+      "type": "annotation",
+      "text": "@TransactionalEventListener"
+    },
+    {
+      "type": "call",
+      "text": "submissionAiEvaluationService.evaluateSubmission"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "event+listener",
+      "submission+ai",
+      "async+transaction"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\SubmissionAiEvaluationEvent.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\SubmissionAiEvaluationService.java"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\project\\request\\ApplicationUpdateRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 애플리케이션 업데이트 요청을 위한 데이터 전송 객체(DTO) 역할을 수행합니다.\",\n  \"key_features\": [\n    \"애플리케이션 업데이트에 필요한 정보를 담고 있는 DTO\",\n    \"outerPort, tag, variableKey 필드를 통해 업데이트 요청의 세부 정보를 전달\"\n  ],\n  \"key_code\": [\n    \"private int outerPort;\",\n    \"private String tag;\",\n    \"private String variableKey;\"\n  ],\n  \"project_hints\": [\n    \"애플리케이션의 설정이나 구성 요소를 업데이트하는 기능을 포함하는 프로젝트일 가능성\"\n  ]\n}\n```"
+}

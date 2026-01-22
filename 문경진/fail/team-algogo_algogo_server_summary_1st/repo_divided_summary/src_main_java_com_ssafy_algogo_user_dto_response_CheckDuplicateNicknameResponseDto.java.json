@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\CheckDuplicateNicknameResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Data Transfer Object (DTO) for checking nickname availability\",\n  \"key_features\": [\n    \"Encapsulates the response for checking duplicate nicknames\",\n    \"Uses Java record for concise data representation\"\n  ],\n  \"key_code\": [\n    \"public record CheckDuplicateNicknameResponseDto(boolean isAvailable) {}\"\n  ],\n  \"project_hints\": [\n    \"Related to user management functionality, specifically nickname validation\",\n    \"Indicates a feature for ensuring unique user identifiers in a system\"\n  ]\n}\n```"
+}

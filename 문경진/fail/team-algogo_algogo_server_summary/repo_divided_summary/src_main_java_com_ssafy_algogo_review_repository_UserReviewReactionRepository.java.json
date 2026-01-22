@@ -1,0 +1,101 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\repository\\UserReviewReactionRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "User",
+      "Review",
+      "Reaction"
+    ],
+    "entities": [
+      "UserReviewReaction"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 반응 삭제",
+      "verb_object": "delete review reaction",
+      "inputs": [
+        "reviewId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "사용자 리뷰 조회",
+      "verb_object": "find user review",
+      "inputs": [
+        "userId",
+        "reviewId"
+      ],
+      "outputs": [
+        "UserReviewReaction"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스",
+      "JPA를 통한 데이터 접근",
+      "Spring의 의존성 주입 활용"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "동시성 이슈",
+      "예외 처리 부족"
+    ],
+    "missing_standard_checks": [
+      "트랜잭션 관리",
+      "입력 검증",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Repository;"
+    },
+    {
+      "type": "call",
+      "text": "deleteByReview_Id(Long reviewId)"
+    },
+    {
+      "type": "call",
+      "text": "findByUser_IdAndReview_Id(Long userId, Long reviewId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+data_access"
+    ],
+    "related_files_guess": []
+  }
+}

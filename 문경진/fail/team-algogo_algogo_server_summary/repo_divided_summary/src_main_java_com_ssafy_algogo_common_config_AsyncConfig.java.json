@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\AsyncConfig.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Configuration",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Async",
+      "Executor",
+      "ThreadPoolTaskExecutor"
+    ],
+    "entities": [],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "AI 평가 실행",
+      "verb_object": "AI 평가 실행",
+      "inputs": [],
+      "outputs": [
+        "Executor"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Configuration",
+      "Bean"
+    ],
+    "cross_cutting": [
+      "Concurrency"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "비동기 처리 지원",
+      "스레드 풀 관리",
+      "유연한 설정 가능"
+    ],
+    "risks": [
+      "스레드 수 초과 시 성능 저하",
+      "대기열 과부하 가능성"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "로깅",
+      "모니터링"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Configuration"
+    },
+    {
+      "type": "annotation",
+      "text": "@EnableAsync"
+    },
+    {
+      "type": "call",
+      "text": "aiExecutor()"
+    },
+    {
+      "type": "config",
+      "text": "executor.setCorePoolSize(5)"
+    },
+    {
+      "type": "config",
+      "text": "executor.setMaxPoolSize(10)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "async+executor",
+      "config+spring",
+      "threadpool+management"
+    ],
+    "related_files_guess": []
+  }
+}

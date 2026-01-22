@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\repository\\ApplicationRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Spring Data JPA\"],\n  \"role\": \"데이터베이스와의 상호작용을 담당하는 리포지토리 인터페이스\",\n  \"key_features\": [\n    \"ApplicationEntity 객체에 대한 CRUD(Create, Read, Update, Delete) 작업 지원\",\n    \"JPA를 통한 데이터베이스 접근\"\n  ],\n  \"key_code\": [\n    \"public interface ApplicationRepository extends JpaRepository<ApplicationEntity, Long>\"\n  ],\n  \"project_hints\": [\n    \"애플리케이션의 데이터 관리 및 저장 기능을 제공하는 웹 프로젝트\"\n  ]\n}\n```"
+}

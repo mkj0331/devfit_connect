@@ -1,0 +1,39 @@
+{
+  "batch_id": 8,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Jakarta Persistence (JPA)",
+    "Lombok",
+    "Java Validation",
+    "Spring Framework",
+    "Spring Data JPA",
+    "Jackson",
+    "Java Records"
+  ],
+  "batch_role": "Campaign and Program Management System",
+  "key_features": [
+    "Entity classes for Campaign and CampaignUser",
+    "Repository interfaces for CRUD operations on Campaign and CampaignUser entities",
+    "Data Transfer Objects (DTOs) for handling program invitations and user participation states",
+    "Validation and serialization features for data integrity and communication"
+  ],
+  "related_files": [
+    "Campaign.java",
+    "CampaignUser.java",
+    "CampaignRepository.java",
+    "CampaignUserRepository.java",
+    "ApplyProgramInviteRequestDto.java",
+    "GetProgramInviteStateListResponseDto.java",
+    "GetProgramInviteStateResponseDto.java",
+    "GetProgramJoinStateListResponseDto.java",
+    "GetProgramJoinStateResponseDto.java",
+    "ProgramResponseDto.java"
+  ],
+  "project_hints": [
+    "The project involves managing campaigns and user participation in programs.",
+    "It includes features for tracking user states related to program invitations and joins.",
+    "The use of DTOs indicates a layered architecture, likely with service and controller layers."
+  ]
+}

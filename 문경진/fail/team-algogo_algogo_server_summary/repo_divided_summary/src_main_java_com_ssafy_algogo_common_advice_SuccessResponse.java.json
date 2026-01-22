@@ -1,0 +1,99 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\SuccessResponse.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "success",
+      "response",
+      "message",
+      "data"
+    ],
+    "entities": [
+      "SuccessResponse"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "성공 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "String message",
+        "Object data"
+      ],
+      "outputs": [
+        "SuccessResponse"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 응답 구조",
+      "Lombok 사용으로 코드 간결",
+      "정적 메서드로 편리한 사용"
+    ],
+    "risks": [
+      "데이터 타입에 대한 유연성 부족",
+      "예외 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "null 체크",
+      "유효성 검사",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import lombok.AllArgsConstructor;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Getter;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Setter;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Setter"
+    },
+    {
+      "type": "annotation",
+      "text": "@AllArgsConstructor"
+    },
+    {
+      "type": "call",
+      "text": "new SuccessResponse(message, data)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "response+dto",
+      "api+response"
+    ],
+    "related_files_guess": []
+  }
+}

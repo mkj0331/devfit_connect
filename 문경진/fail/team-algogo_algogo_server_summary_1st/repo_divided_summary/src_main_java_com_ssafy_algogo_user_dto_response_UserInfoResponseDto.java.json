@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UserInfoResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java Record\",\n    \"LocalDateTime\",\n    \"DTO (Data Transfer Object)\"\n  ],\n  \"role\": \"User information response data transfer object\",\n  \"key_features\": [\n    \"Encapsulates user information for API responses\",\n    \"Static method to create an instance from a User entity\"\n  ],\n  \"key_code\": [\n    \"public record UserInfoResponseDto(...)\",\n    \"public static UserInfoResponseDto from(User user) {...}\"\n  ],\n  \"project_hints\": [\n    \"User management system\",\n    \"API response structure for user data\"\n  ]\n}\n```"
+}

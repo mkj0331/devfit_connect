@@ -1,0 +1,4 @@
+{
+  "path": "README.md",
+  "summary": "```json\n{\n  \"language\": \"Markdown\",\n  \"technologies\": [],\n  \"role\": \"프로젝트에 대한 개요 및 서버 아키텍처 설명\",\n  \"key_features\": [\n    \"서버 아키텍처에 대한 시각적 설명 제공\"\n  ],\n  \"key_code\": [],\n  \"project_hints\": [\n    \"자연 관련 프로젝트 또는 서비스\"\n  ]\n}\n```"
+}

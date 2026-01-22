@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\InviteStatus.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Domain",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Invite",
+      "Status"
+    ],
+    "entities": [
+      "InviteStatus"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "초대 상태 관리",
+      "verb_object": "상태 설정",
+      "inputs": [
+        "상태 값"
+      ],
+      "outputs": [
+        "상태 변경 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "초대 상태 확인",
+      "verb_object": "상태 조회",
+      "inputs": [
+        "초대 ID"
+      ],
+      "outputs": [
+        "현재 상태"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Enum"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 상태 정의",
+      "유지보수 용이",
+      "타입 안전성 제공"
+    ],
+    "risks": [
+      "상태 추가 시 코드 수정 필요",
+      "상태 관리 복잡성 증가 가능성"
+    ],
+    "missing_standard_checks": [
+      "상태 변경 시 유효성 검증",
+      "상태 변경 로그 기록"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": ""
+    },
+    {
+      "type": "annotation",
+      "text": ""
+    },
+    {
+      "type": "call",
+      "text": "InviteStatus.values()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "invite+status",
+      "entity+enum"
+    ],
+    "related_files_guess": []
+  }
+}

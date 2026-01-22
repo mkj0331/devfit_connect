@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\CheckGroupNameResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jackson\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for checking group name availability\",\n  \"key_features\": [\n    \"Uses Java record for immutable data structure\",\n    \"Includes Jackson annotation for JSON serialization\",\n    \"Only includes non-null fields in JSON response\"\n  ],\n  \"key_code\": [\n    \"public record CheckGroupNameResponseDto(Boolean isAvailable)\"\n  ],\n  \"project_hints\": [\n    \"Related to group management or validation in a program\",\n    \"Focuses on checking the availability of a group name\"\n  ]\n}\n```"
+}

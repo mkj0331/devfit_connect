@@ -1,0 +1,90 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\ReviewCandidateQueryDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Review",
+      "Candidate",
+      "Query"
+    ],
+    "entities": [
+      "Submission"
+    ],
+    "modules": [
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 후보 조회",
+      "verb_object": "후보 조회",
+      "inputs": [
+        "Submission",
+        "algorithmIdList",
+        "reviewCount",
+        "requireReviewCount"
+      ],
+      "outputs": [
+        "리뷰 후보 리스트"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "간결한 코드",
+      "유지보수 용이"
+    ],
+    "risks": [
+      "데이터 유효성 검사 부족",
+      "확장성 문제"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.entity.Submission;"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.List;"
+    },
+    {
+      "type": "annotation",
+      "text": "public record ReviewCandidateQueryDto(...)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto",
+      "submission",
+      "review"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Submission.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\ReviewService.java"
+    ]
+  }
+}

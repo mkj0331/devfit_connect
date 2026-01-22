@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\AlgorithmRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data JPA\"\n  ],\n  \"role\": \"Repository interface for managing Algorithm entities in the database.\",\n  \"key_features\": [\n    \"Extends JpaRepository for CRUD operations\",\n    \"Integrates with AlgorithmQueryRepository for custom query methods\"\n  ],\n  \"key_code\": [\n    \"public interface AlgorithmRepository extends JpaRepository<Algorithm, Long>, AlgorithmQueryRepository\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves algorithms or algorithm-related submissions, as indicated by the naming conventions.\"\n  ]\n}\n```"
+}

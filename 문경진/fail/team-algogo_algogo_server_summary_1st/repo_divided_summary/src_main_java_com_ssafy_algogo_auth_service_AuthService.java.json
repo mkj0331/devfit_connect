@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\AuthService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Jakarta EE\",\n    \"HTTP Servlet\"\n  ],\n  \"role\": \"인터페이스 정의\",\n  \"key_features\": [\n    \"사용자 로그인 기능\",\n    \"로그아웃 기능\",\n    \"사용자 정보 조회 기능\"\n  ],\n  \"key_code\": [\n    \"AuthResultDto login(LocalLoginRequestDto dto, HttpServletRequest request, HttpServletResponse response)\",\n    \"void logout(Long userId)\",\n    \"MeResponseDto me(Long userId)\"\n  ],\n  \"project_hints\": [\n    \"인증 및 권한 관리 시스템\",\n    \"사용자 로그인 및 세션 관리\",\n    \"RESTful API 설계\"\n  ]\n}\n```"
+}

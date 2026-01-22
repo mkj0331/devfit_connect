@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\query\\impl\\AlgorithmQueryRepositoryImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"QueryDSL\",\n    \"JPA\"\n  ],\n  \"role\": \"Repository implementation for querying Algorithm entities.\",\n  \"key_features\": [\n    \"Find algorithms by keyword\",\n    \"Retrieve all algorithms associated with a specific submission ID\"\n  ],\n  \"key_code\": [\n    \"public List<Algorithm> findByKeyword(String keyword)\",\n    \"public List<Algorithm> findAllAlgorithmsBySubmissionId(Long submissionId)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves a system for managing algorithms and their submissions.\",\n    \"Keywords are used to filter algorithms, indicating a search functionality.\"\n  ]\n}\n```"
+}

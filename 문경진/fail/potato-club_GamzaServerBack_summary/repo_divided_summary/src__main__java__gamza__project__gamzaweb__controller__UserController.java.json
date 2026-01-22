@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\controller\\UserController.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Boot\",\n    \"Spring Web\",\n    \"Swagger (OpenAPI)\",\n    \"Lombok\"\n  ],\n  \"role\": \"사용자 관련 API 엔드포인트를 제공하는 컨트롤러\",\n  \"key_features\": [\n    \"회원 가입 기능\",\n    \"로그인 기능\",\n    \"로그아웃 기능\",\n    \"토큰 재발급 기능\",\n    \"유저 리스트 출력 기능\"\n  ],\n  \"key_code\": [\n    \"@PostMapping(\\\"/signup\\\")\",\n    \"@PostMapping(\\\"/login\\\")\",\n    \"@GetMapping(\\\"/logout\\\")\",\n    \"@GetMapping(\\\"/reissue\\\")\",\n    \"@GetMapping(\\\"/list\\\")\"\n  ],\n  \"project_hints\": [\n    \"사용자 인증 및 관리 시스템\",\n    \"회원 가입 및 로그인 기능을 제공하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

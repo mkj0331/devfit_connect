@@ -1,0 +1,38 @@
+{
+  "batch_id": 9,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Java 17",
+    "Spring Framework",
+    "Jakarta Persistence (JPA)",
+    "Jakarta Validation",
+    "Lombok",
+    "Hibernate"
+  ],
+  "batch_role": "This batch contains entity classes and DTOs for managing programs, categories, and user interactions within a program management system.",
+  "key_features": [
+    "Defines entities for programs, categories, and user interactions.",
+    "Utilizes DTOs for data transfer and encapsulation.",
+    "Implements unique constraints for data integrity.",
+    "Supports cascading deletes for related entities.",
+    "Includes enums for managing statuses of invitations and join requests."
+  ],
+  "related_files": [
+    "ProgramTypeResponseDto.java",
+    "Category.java",
+    "InviteStatus.java",
+    "JoinStatus.java",
+    "Program.java",
+    "ProgramCategory.java",
+    "ProgramInvite.java",
+    "ProgramJoin.java",
+    "ProgramType.java",
+    "ProgramUser.java"
+  ],
+  "project_hints": [
+    "The project likely involves a system for managing educational programs, user invitations, and participation.",
+    "The use of DTOs and JPA suggests a layered architecture with a focus on data integrity and user management."
+  ]
+}

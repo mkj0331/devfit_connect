@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\SubmissionAlgorithmRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data JPA\",\n    \"Java Persistence API (JPA)\"\n  ],\n  \"role\": \"Repository interface for managing SubmissionAlgorithm entities in the database.\",\n  \"key_features\": [\n    \"Extends JpaRepository for CRUD operations\",\n    \"Generic type for SubmissionAlgorithm entity and Long as ID type\"\n  ],\n  \"key_code\": [\n    \"public interface SubmissionAlgorithmRepository extends JpaRepository<SubmissionAlgorithm, Long> { }\"\n  ],\n  \"project_hints\": [\n    \"Part of a submission management system\",\n    \"Handles database interactions for algorithm submissions\"\n  ]\n}\n```"
+}

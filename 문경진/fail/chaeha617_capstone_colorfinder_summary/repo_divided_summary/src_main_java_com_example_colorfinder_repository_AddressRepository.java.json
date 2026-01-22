@@ -1,0 +1,144 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\repository\\AddressRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Data JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Address",
+      "User",
+      "Entity"
+    ],
+    "entities": [
+      "AddressEntity",
+      "OrderEntity",
+      "AddressDTO"
+    ],
+    "modules": [
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "주소 조회",
+      "verb_object": "주소 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "List<AddressEntity>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "주소 ID로 조회",
+      "verb_object": "주소 ID로 조회",
+      "inputs": [
+        "addId"
+      ],
+      "outputs": [
+        "AddressEntity"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "주소 ID 목록으로 조회",
+      "verb_object": "주소 ID 목록으로 조회",
+      "inputs": [
+        "Set<Long> addIds"
+      ],
+      "outputs": [
+        "List<AddressEntity>"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "최소 주소 ID 조회",
+      "verb_object": "최소 주소 ID 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "Long"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "Spring Data JPA 사용",
+      "유연한 쿼리 지원",
+      "간결한 코드 구조",
+      "재사용성 높은 메서드"
+    ],
+    "risks": [
+      "SQL 인젝션 가능성",
+      "잘못된 데이터 반환 가능성",
+      "트랜잭션 관리 필요",
+      "동시성 문제 발생 가능성",
+      "예외 처리 부족"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리 로직",
+      "트랜잭션 관리",
+      "로깅",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Repository"
+    },
+    {
+      "type": "call",
+      "text": "findByUserId(Long userId)"
+    },
+    {
+      "type": "call",
+      "text": "findByAddId(Long addId)"
+    },
+    {
+      "type": "call",
+      "text": "findByAddIdIn(Set<Long> addIds)"
+    },
+    {
+      "type": "query",
+      "text": "SELECT MIN(a.addId) FROM AddressEntity a WHERE a.userId = :userId"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+address",
+      "entity+address"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\AddressEntity.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\AddressDTO.java"
+    ]
+  }
+}

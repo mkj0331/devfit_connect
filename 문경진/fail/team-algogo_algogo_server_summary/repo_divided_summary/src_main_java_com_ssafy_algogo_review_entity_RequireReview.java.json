@@ -1,0 +1,128 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\entity\\RequireReview.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Lombok"
+    ],
+    "libraries": [
+      "Hibernate"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "리뷰",
+      "제출",
+      "사용자"
+    ],
+    "entities": [
+      "RequireReview",
+      "User",
+      "Submission"
+    ],
+    "modules": [
+      "review",
+      "submission",
+      "user"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 요청 생성",
+      "verb_object": "리뷰 요청 생성",
+      "inputs": [
+        "subjectUser",
+        "subjectSubmission",
+        "targetSubmission"
+      ],
+      "outputs": [
+        "RequireReview 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "리뷰 상태 업데이트",
+      "verb_object": "리뷰 상태 업데이트",
+      "inputs": [
+        "isDone"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": [
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 모델",
+      "유니크 제약 조건",
+      "지연 로딩 사용",
+      "Lombok을 통한 코드 간결성",
+      "Cascade 삭제 지원"
+    ],
+    "risks": [
+      "LazyInitializationException 발생 가능성",
+      "데이터 무결성 문제",
+      "리뷰 상태 관리 복잡성",
+      "의존성 주입 오류 가능성",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리",
+      "로깅",
+      "트랜잭션 관리",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table"
+    },
+    {
+      "type": "annotation",
+      "text": "@ManyToOne"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.*"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+model",
+      "review+submission"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\review\\service\\ReviewService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Submission.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java"
+    ]
+  }
+}

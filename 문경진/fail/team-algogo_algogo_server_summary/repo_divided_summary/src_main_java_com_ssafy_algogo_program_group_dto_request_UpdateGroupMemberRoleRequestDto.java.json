@@ -1,0 +1,97 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupMemberRoleRequestDto.java",
+    "language": "java",
+    "frameworks": [
+      "jakarta.validation",
+      "lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "role",
+      "group",
+      "member"
+    ],
+    "entities": [
+      "UpdateGroupMemberRoleRequestDto"
+    ],
+    "modules": [
+      "request",
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "역할 업데이트",
+      "verb_object": "역할 업데이트",
+      "inputs": [
+        "role"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사 포함",
+      "명확한 메시지 제공",
+      "불변 객체 생성"
+    ],
+    "risks": [
+      "역할 값 제한",
+      "유효성 검사 실패 시 예외 발생 가능"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리 로직",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "annotation",
+      "text": "@Pattern"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotNull"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.Pattern"
+    },
+    {
+      "type": "import",
+      "text": "lombok.Builder"
+    },
+    {
+      "type": "import",
+      "text": "lombok.Getter"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+validation",
+      "group+member",
+      "request+update"
+    ],
+    "related_files_guess": []
+  }
+}

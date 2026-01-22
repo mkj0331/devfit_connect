@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\service\\impl\\ProjectStatusServiceImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Lombok\"],\n  \"role\": \"이 파일은 프로젝트의 배포 상태를 관리하고, 해당 상태를 SSE(Server-Sent Events)를 통해 클라이언트에 전송하는 역할을 담당합니다.\",\n  \"key_features\": [\n    \"배포 상태를 SSE로 전송\",\n    \"프로젝트의 배포 단계 업데이트\"\n  ],\n  \"key_code\": [\n    \"deploymentSseController.sendUpdate(project.getId(), step.getDescription());\",\n    \"System.out.println(\\\"Deployment Step Updated (SSE Only): \\\" + step.getDescription());\"\n  ],\n  \"project_hints\": [\n    \"이 프로젝트는 소프트웨어 배포 프로세스를 관리하고, 클라이언트에게 실시간으로 배포 상태를 알리는 기능을 포함하고 있을 가능성이 높습니다.\"\n  ]\n}\n```"
+}

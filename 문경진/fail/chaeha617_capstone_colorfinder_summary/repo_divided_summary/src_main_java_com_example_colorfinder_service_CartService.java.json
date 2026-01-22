@@ -1,0 +1,156 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\service\\CartService.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Cart",
+      "Product",
+      "User"
+    ],
+    "entities": [
+      "CartEntity",
+      "ProductEntity",
+      "CartDTO"
+    ],
+    "modules": [
+      "CartService",
+      "ProductService"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "장바구니 조회",
+      "verb_object": "조회 장바구니",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "List<CartDTO>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "장바구니 ID로 조회",
+      "verb_object": "조회 장바구니 ID",
+      "inputs": [
+        "List<Long> ids"
+      ],
+      "outputs": [
+        "List<CartDTO>"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    },
+    {
+      "name": "장바구니 업데이트",
+      "verb_object": "업데이트 장바구니",
+      "inputs": [
+        "cartId",
+        "productCnt"
+      ],
+      "outputs": [
+        "Long"
+      ],
+      "side_effects": [
+        "예외 발생 가능"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "장바구니 저장",
+      "verb_object": "저장 장바구니",
+      "inputs": [
+        "CartDTO cartDTO"
+      ],
+      "outputs": [
+        "Long"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "예외 처리",
+      "트랜잭션 관리",
+      "DTO 사용",
+      "Lombok 사용"
+    ],
+    "risks": [
+      "예외 발생 시 사용자 경험 저하",
+      "동시성 문제 가능성",
+      "데이터 무결성 문제",
+      "의존성 주입 실패",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "로깅",
+      "보안 검토",
+      "단위 테스트",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.example.colorfinder.dto.CartDTO;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Service;"
+    },
+    {
+      "type": "call",
+      "text": "cartRepository.findByUserId(userId)"
+    },
+    {
+      "type": "call",
+      "text": "cartRepository.findAllById(ids)"
+    },
+    {
+      "type": "call",
+      "text": "cartRepository.findById(cartId)"
+    },
+    {
+      "type": "call",
+      "text": "cartRepository.save(cartEntity)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "service+cart",
+      "api+service"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\CartRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\CartDTO.java",
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\CartEntity.java"
+    ]
+  }
+}

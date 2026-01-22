@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\CustomUserDetailsService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Security\",\n    \"Lombok\",\n    \"JPA\"\n  ],\n  \"role\": \"UserDetailsService implementation for Spring Security\",\n  \"key_features\": [\n    \"Loads user details by username (email)\",\n    \"Handles user authentication\",\n    \"Maps user roles to GrantedAuthority\"\n  ],\n  \"key_code\": [\n    \"userRepository.findByEmail(username)\",\n    \"orElseThrow(() -> new UsernameNotFoundException(...))\",\n    \"new SimpleGrantedAuthority(\\\"ROLE_\\\" + user.getUserRole().name())\"\n  ],\n  \"project_hints\": [\n    \"User authentication and authorization\",\n    \"Role-based access control\",\n    \"Email-based user identification\"\n  ]\n}\n```"
+}

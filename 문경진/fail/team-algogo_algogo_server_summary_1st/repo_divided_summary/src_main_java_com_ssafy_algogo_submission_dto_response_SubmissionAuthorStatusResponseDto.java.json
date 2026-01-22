@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionAuthorStatusResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Data Transfer Object (DTO)\",\n  \"key_features\": [\n    \"Immutable data structure\",\n    \"Encapsulates submission author status information\"\n  ],\n  \"key_code\": [\n    \"public record SubmissionAuthorStatusResponseDto (Boolean canMoreSubmission)\"\n  ],\n  \"project_hints\": [\n    \"Related to submission management\",\n    \"Indicates whether the author can make more submissions\"\n  ]\n}\n```"
+}

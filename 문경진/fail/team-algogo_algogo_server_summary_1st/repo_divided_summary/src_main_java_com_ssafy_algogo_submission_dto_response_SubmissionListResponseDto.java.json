@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java 17+\",\n    \"Record (Java 14+)\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for submission response\",\n  \"key_features\": [\n    \"Encapsulates a list of SubmissionResponseDto objects\",\n    \"Provides a constructor for creating instances from a list\"\n  ],\n  \"key_code\": [\n    \"public record SubmissionListResponseDto(List<SubmissionResponseDto> submissions)\",\n    \"public SubmissionListResponseDto from(List<SubmissionResponseDto> submissions)\"\n  ],\n  \"project_hints\": [\n    \"Part of a submission handling system, likely for a coding platform or educational tool\"\n  ]\n}\n```"
+}

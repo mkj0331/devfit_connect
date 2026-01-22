@@ -1,0 +1,61 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupId.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Configuration",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "GroupId"
+    ],
+    "entities": [],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 ID 정의",
+      "verb_object": "그룹 ID 정의",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Annotation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 역할 정의"
+    ],
+    "risks": [],
+    "missing_standard_checks": []
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@interface GroupId"
+    },
+    {
+      "type": "annotation",
+      "text": "@Target(ElementType.PARAMETER)"
+    },
+    {
+      "type": "annotation",
+      "text": "@Retention(RetentionPolicy.RUNTIME)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "config+annotation"
+    ],
+    "related_files_guess": []
+  }
+}

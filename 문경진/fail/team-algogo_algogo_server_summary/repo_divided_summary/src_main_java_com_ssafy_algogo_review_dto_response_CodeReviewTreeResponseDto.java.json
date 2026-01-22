@@ -1,0 +1,96 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewTreeResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Code Review",
+      "Response",
+      "DTO"
+    ],
+    "entities": [
+      "CodeReviewTreeResponseDto",
+      "Review"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "코드 리뷰 트리 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "reviewId",
+        "parentReviewId",
+        "userId",
+        "submissionId",
+        "likeCount",
+        "codeLine",
+        "content",
+        "createdAt",
+        "modifiedAt",
+        "isLike"
+      ],
+      "outputs": [
+        "CodeReviewTreeResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Immutable object",
+      "Clear structure",
+      "Use of annotations"
+    ],
+    "risks": [
+      "Potential for null values in list",
+      "Limited validation"
+    ],
+    "missing_standard_checks": [
+      "Validation annotations",
+      "Error handling",
+      "Logging"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "import",
+      "text": "import com.fasterxml.jackson.annotation.JsonInclude"
+    },
+    {
+      "type": "import",
+      "text": "import java.time.LocalDateTime"
+    },
+    {
+      "type": "call",
+      "text": "new ArrayList<>()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "review+code",
+      "api+response"
+    ],
+    "related_files_guess": []
+  }
+}

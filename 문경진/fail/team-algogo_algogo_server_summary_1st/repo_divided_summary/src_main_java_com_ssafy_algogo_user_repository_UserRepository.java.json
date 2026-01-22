@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\repository\\UserRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data JPA\"\n  ],\n  \"role\": \"Repository interface for User entity\",\n  \"key_features\": [\n    \"CRUD operations for User entity\",\n    \"Find user by email\",\n    \"Check existence of user by email and nickname\",\n    \"Search users by email containing a specific string (case insensitive)\"\n  ],\n  \"key_code\": [\n    \"Optional<User> findByEmail(String userEmail)\",\n    \"boolean existsByEmail(String email)\",\n    \"boolean existsByNickname(String nickname)\",\n    \"List<User> findByEmailContainingIgnoreCase(String content)\"\n  ],\n  \"project_hints\": [\n    \"User management system\",\n    \"Email and nickname uniqueness validation\",\n    \"Search functionality for users\"\n  ]\n}\n```"
+}

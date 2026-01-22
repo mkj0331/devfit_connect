@@ -1,0 +1,100 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\controller\\AlgorithmController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "algorithm",
+      "search",
+      "response"
+    ],
+    "entities": [
+      "AlgorithmListResponseDto",
+      "SuccessResponse"
+    ],
+    "modules": [
+      "AlgorithmService"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "알고리즘 검색",
+      "verb_object": "검색 알고리즘",
+      "inputs": [
+        "keyword"
+      ],
+      "outputs": [
+        "SuccessResponse"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "Service"
+    ],
+    "patterns": [
+      "DTO",
+      "RestController"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 API 경로",
+      "성공 응답 처리",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "입력 검증 부족",
+      "예외 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "입력 유효성 검사",
+      "API 문서화",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@RestController"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequestMapping(\"/api/v1/algorithms\")"
+    },
+    {
+      "type": "call",
+      "text": "algorithmService.searchAlgorithmWithKeyword(keyword)"
+    },
+    {
+      "type": "endpoint",
+      "text": "/search"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.advice.SuccessResponse"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "api+controller",
+      "algorithm+service"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\AlgorithmService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\AlgorithmListResponseDto.java"
+    ]
+  }
+}

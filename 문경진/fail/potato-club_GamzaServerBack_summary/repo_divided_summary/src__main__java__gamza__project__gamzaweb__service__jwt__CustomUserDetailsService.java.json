@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\service\\jwt\\CustomUserDetailsService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Security\",\n    \"Lombok\"\n  ],\n  \"role\": \"사용자 인증 및 권한 부여를 위한 사용자 세부 정보 로드 서비스\",\n  \"key_features\": [\n    \"사용자의 이메일을 기반으로 사용자 정보를 로드\",\n    \"사용자가 존재하지 않을 경우 예외 처리\"\n  ],\n  \"key_code\": [\n    \"return new CustomUserDetails(userRepository.findByEmail(username).orElseThrow(() ->\",\n    \"new UsernameNotFoundException(\\\"<\\\" +username + \\\"> 의 이메일의 사용자는 존재하지 않습니다.\\\"));\"\n  ],\n  \"project_hints\": [\n    \"사용자 인증 및 권한 관리 시스템\",\n    \"이메일 기반 로그인 기능\"\n  ]\n}\n```"
+}

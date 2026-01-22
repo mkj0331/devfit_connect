@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\dto\\SortInfo.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for sorting information in paginated data\",\n  \"key_features\": [\n    \"Encapsulates sorting information with properties 'by' and 'direction'\",\n    \"Provides a static method to create an instance from a Page object\",\n    \"Defaults to sorting by 'createdAt' if no sort order is specified\"\n  ],\n  \"key_code\": [\n    \"public record SortInfo(String by, String direction) {}\",\n    \"public static SortInfo of(Page<?> page) { ... }\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves handling paginated data, possibly in a web application context.\",\n    \"Sorting functionality is essential for displaying data in a user-friendly manner.\"\n  ]\n}\n```"
+}

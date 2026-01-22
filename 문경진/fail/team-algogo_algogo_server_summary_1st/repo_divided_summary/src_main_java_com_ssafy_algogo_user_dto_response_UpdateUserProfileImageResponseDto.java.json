@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UpdateUserProfileImageResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java 17\", \"Spring Framework\", \"DTO (Data Transfer Object)\"],\n  \"role\": \"This file defines a Data Transfer Object (DTO) for updating user profile images.\",\n  \"key_features\": [\n    \"Defines a record class for user profile image response.\",\n    \"Includes a static method to create an instance from a profile image string.\"\n  ],\n  \"key_code\": [\n    \"public record UpdateUserProfileImageResponseDto(String profileImage)\",\n    \"public static UpdateUserProfileImageResponseDto from(String profileImage)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves user management or social features.\",\n    \"The use of DTO suggests a layered architecture, possibly with a service layer handling business logic.\"\n  ]\n}\n```"
+}

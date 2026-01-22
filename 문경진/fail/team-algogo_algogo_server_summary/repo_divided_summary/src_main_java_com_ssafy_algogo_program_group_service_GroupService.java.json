@@ -1,0 +1,156 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\service\\GroupService.java",
+    "language": "java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "service",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "group",
+      "program",
+      "invite",
+      "member",
+      "problem"
+    ],
+    "entities": [
+      "Group",
+      "Program",
+      "User"
+    ],
+    "modules": [
+      "group",
+      "program"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 초대 상태 조회",
+      "verb_object": "초대 상태 조회",
+      "inputs": [
+        "Long programId"
+      ],
+      "outputs": [
+        "GetProgramInviteStateListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "그룹 문제 추가",
+      "verb_object": "문제 추가",
+      "inputs": [
+        "Long programId",
+        "ProgramProblemCreateRequestDto programProblemCreateRequestDto"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "그룹 멤버 역할 업데이트",
+      "verb_object": "멤버 역할 업데이트",
+      "inputs": [
+        "Long programId",
+        "Long programUserId",
+        "UpdateGroupMemberRoleRequestDto updateGroupMemberRoleRequestDto"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "그룹 초대 삭제",
+      "verb_object": "초대 삭제",
+      "inputs": [
+        "Long programId",
+        "Long inviteId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "그룹 멤버 삭제",
+      "verb_object": "멤버 삭제",
+      "inputs": [
+        "Long userId",
+        "Long programId",
+        "Long programUserId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "DTO 사용으로 데이터 전송 최적화",
+      "다양한 기능 제공",
+      "유지보수 용이",
+      "확장 가능성"
+    ],
+    "risks": [
+      "복잡한 비즈니스 로직",
+      "예외 처리 누락 가능성",
+      "성능 저하 우려",
+      "동시성 문제",
+      "의존성 관리"
+    ],
+    "missing_standard_checks": [
+      "입력 유효성 검사",
+      "로깅",
+      "보안 검토",
+      "API 문서화",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.program.dto.request.ApplyProgramInviteRequestDto;"
+    },
+    {
+      "type": "call",
+      "text": "getGroupInviteState(Long programId)"
+    },
+    {
+      "type": "call",
+      "text": "addGroupProblem(Long programId, ProgramProblemCreateRequestDto programProblemCreateRequestDto)"
+    },
+    {
+      "type": "call",
+      "text": "updateGroupMemberRole(Long programId, Long programUserId, UpdateGroupMemberRoleRequestDto updateGroupMemberRoleRequestDto)"
+    },
+    {
+      "type": "call",
+      "text": "deleteGroupMember(Long userId, Long programId, Long programUserId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "group+service",
+      "program+management",
+      "invite+handling"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\controller\\GroupController.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\GroupRepository.java"
+    ]
+  }
+}

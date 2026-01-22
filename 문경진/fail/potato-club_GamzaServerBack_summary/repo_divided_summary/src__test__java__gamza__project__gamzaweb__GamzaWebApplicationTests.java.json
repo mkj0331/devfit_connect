@@ -1,0 +1,4 @@
+{
+  "path": "src\\test\\java\\gamza\\project\\gamzaweb\\GamzaWebApplicationTests.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Boot\", \"JUnit\"],\n  \"role\": \"이 파일은 Spring Boot 애플리케이션의 컨텍스트가 정상적으로 로드되는지를 테스트하는 역할을 합니다.\",\n  \"key_features\": [\n    \"Spring Boot 애플리케이션의 컨텍스트 로드 테스트\",\n    \"JUnit을 사용한 단위 테스트\"\n  ],\n  \"key_code\": [\n    \"@SpringBootTest\",\n    \"void contextLoads()\"\n  ],\n  \"project_hints\": [\n    \"웹 애플리케이션 개발\",\n    \"Spring Boot 기반의 프로젝트\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramTypeRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"JPA (Java Persistence API)\"\n  ],\n  \"role\": \"Repository interface for managing ProgramType entities in the database.\",\n  \"key_features\": [\n    \"Extends JpaRepository for CRUD operations\",\n    \"Provides a method to find ProgramType by its name\"\n  ],\n  \"key_code\": [\n    \"public interface ProgramTypeRepository extends JpaRepository<ProgramType, Long>\",\n    \"Optional<ProgramType> findByName(String name)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves managing different types of programs, possibly for an educational or training platform.\"\n  ]\n}\n```"
+}

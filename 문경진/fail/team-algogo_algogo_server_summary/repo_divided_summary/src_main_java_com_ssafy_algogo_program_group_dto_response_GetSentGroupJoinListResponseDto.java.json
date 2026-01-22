@@ -1,0 +1,81 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetSentGroupJoinListResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Group",
+      "Join",
+      "Response"
+    ],
+    "entities": [
+      "GetSentGroupJoinResponseDto"
+    ],
+    "modules": [
+      "group",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 참여 목록 조회",
+      "verb_object": "그룹 참여 목록 조회",
+      "inputs": [],
+      "outputs": [
+        "List<GetSentGroupJoinResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "간결한 코드",
+      "유지보수 용이"
+    ],
+    "risks": [
+      "데이터 검증 부족",
+      "확장성 문제"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import java.util.List;"
+    },
+    {
+      "type": "annotation",
+      "text": "public record"
+    },
+    {
+      "type": "call",
+      "text": "GetSentGroupJoinResponseDto"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "group+join"
+    ],
+    "related_files_guess": []
+  }
+}

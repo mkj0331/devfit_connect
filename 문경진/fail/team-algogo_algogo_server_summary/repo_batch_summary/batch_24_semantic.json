@@ -1,0 +1,124 @@
+{
+  "batch_id": 24,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "JPA",
+    "Lombok",
+    "Jakarta EE"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "사용자 정보 변환",
+      "domain_tags": [
+        "user",
+        "dto",
+        "response",
+        "transformation"
+      ],
+      "responsibilities": [
+        "사용자 정보 변환",
+        "사용자 목록 조회",
+        "회원가입 응답 생성",
+        "사용자 정보 업데이트 응답 생성",
+        "프로필 이미지 업데이트 응답 생성"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\CheckDuplicateNicknameResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\ListSearchUserResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\SearchUserResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\SignupResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UpdateUserInfoResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UpdateUserProfileImageResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UserInfoResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UserSimpleResponseDto.java"
+      ],
+      "evidence": [
+        "CheckDuplicateNicknameResponseDto.java",
+        "ListSearchUserResponseDto.java",
+        "SearchUserResponseDto.java",
+        "SignupResponseDto.java",
+        "UpdateUserInfoResponseDto.java",
+        "UpdateUserProfileImageResponseDto.java",
+        "UserInfoResponseDto.java",
+        "UserSimpleResponseDto.java"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "유효성 검사 미비",
+        "확장성 부족",
+        "변환 로직의 오류 가능성"
+      ]
+    },
+    {
+      "cluster_name": "사용자 역할 관리",
+      "domain_tags": [
+        "user",
+        "role",
+        "management"
+      ],
+      "responsibilities": [
+        "사용자 역할 정의",
+        "역할 관리"
+      ],
+      "implementation_signals": [
+        "Enum"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\UserRole.java"
+      ],
+      "evidence": [
+        "UserRole.java"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "역할 추가 시 코드 수정 필요",
+        "확장성 제한"
+      ]
+    },
+    {
+      "cluster_name": "사용자 정보 업데이트",
+      "domain_tags": [
+        "user",
+        "update",
+        "profile"
+      ],
+      "responsibilities": [
+        "사용자 정보 업데이트",
+        "프로필 이미지 업데이트",
+        "비밀번호 업데이트"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "Entity"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java"
+      ],
+      "evidence": [
+        "User.java"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "비밀번호 노출 가능성",
+        "데이터 무결성 문제"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "user",
+    "dto",
+    "response",
+    "transformation",
+    "role",
+    "management",
+    "update",
+    "profile"
+  ]
+}

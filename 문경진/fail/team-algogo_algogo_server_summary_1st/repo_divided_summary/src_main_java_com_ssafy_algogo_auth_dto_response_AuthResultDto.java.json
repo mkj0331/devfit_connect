@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\AuthResultDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Lombok\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for authentication results\",\n  \"key_features\": [\n    \"Encapsulates local login response and token information\",\n    \"Uses Lombok annotations for boilerplate code reduction\",\n    \"Provides a builder pattern for object creation\"\n  ],\n  \"key_code\": [\n    \"@NoArgsConstructor\",\n    \"@AllArgsConstructor(access = AccessLevel.PRIVATE)\",\n    \"@Builder\",\n    \"@Getter\"\n  ],\n  \"project_hints\": [\n    \"Part of an authentication module\",\n    \"Handles responses related to user authentication\",\n    \"May be used in conjunction with local login mechanisms and token management\"\n  ]\n}\n```"
+}

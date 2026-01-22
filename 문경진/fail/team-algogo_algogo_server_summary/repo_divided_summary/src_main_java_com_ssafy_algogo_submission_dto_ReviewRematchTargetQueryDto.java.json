@@ -1,0 +1,91 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\ReviewRematchTargetQueryDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Review",
+      "Rematch",
+      "Target",
+      "Query",
+      "Dto"
+    ],
+    "entities": [
+      "Submission",
+      "Algorithm"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 재매칭 대상 쿼리 생성",
+      "verb_object": "쿼리 생성",
+      "inputs": [
+        "Submission",
+        "List<Algorithm>"
+      ],
+      "outputs": [
+        "ReviewRematchTargetQueryDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "타입 안전성",
+      "간결한 코드",
+      "모듈화"
+    ],
+    "risks": [
+      "추가 필드 변경 시 호환성 문제",
+      "데이터 검증 부족",
+      "의존성 증가",
+      "확장성 제한",
+      "테스트 어려움"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "문서화",
+      "예외 처리",
+      "Immutable 체크"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.entity.Algorithm;"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.entity.Submission;"
+    },
+    {
+      "type": "call",
+      "text": "new ReviewRematchTargetQueryDto(submission, algorithmList)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto",
+      "submission",
+      "algorithm"
+    ],
+    "related_files_guess": []
+  }
+}

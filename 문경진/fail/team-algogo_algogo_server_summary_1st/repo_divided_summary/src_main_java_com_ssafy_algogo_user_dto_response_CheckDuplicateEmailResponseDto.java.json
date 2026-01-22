@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\CheckDuplicateEmailResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java Records\", \"DTO (Data Transfer Object)\"],\n  \"role\": \"This file defines a data transfer object for checking the availability of an email address.\",\n  \"key_features\": [\n    \"Encapsulates the response for checking duplicate email availability\",\n    \"Uses a record to provide a concise and immutable data structure\"\n  ],\n  \"key_code\": [\n    \"public record CheckDuplicateEmailResponseDto(boolean isAvailable) {}\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves user management or authentication features, specifically related to email registration.\"\n  ]\n}\n```"
+}

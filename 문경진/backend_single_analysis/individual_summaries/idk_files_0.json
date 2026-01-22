@@ -1,0 +1,29 @@
+{
+  "path": "README.md",
+  "project_subject_signals": [
+    "고정 지출 자동 관리 서비스",
+    "개인 금융 관리",
+    "핀테크"
+  ],
+  "frameworks": [],
+  "libraries": [],
+  "core_features": [
+    {
+      "feature_name": "프로젝트 소개 및 개요 제공",
+      "feature_description": "프로젝트의 서비스명, 한줄 소개, 배포 정보, 개발 기간, 수상 내역 등을 포함한 프로젝트 전반의 개요를 제공합니다.",
+      "implementation_method": "Markdown을 활용한 텍스트 및 이미지 정보 기술",
+      "job_value": "프로젝트의 목표와 결과물을 명확하게 전달하는 능력을 보여줍니다."
+    },
+    {
+      "feature_name": "팀 협업 및 개발 프로세스 안내",
+      "feature_description": "브랜치 전략, Jira 및 Notion 활용 방식, 스크럼 운영 방식을 설명하여 프로젝트 진행 및 협업 방식을 공유합니다.",
+      "implementation_method": "텍스트 설명 및 이미지 (Jira, Notion) 활용",
+      "job_value": "애자일 방법론을 이해하고 팀원과 효과적으로 협업하는 능력을 보여줍니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "프로젝트의 주요 기술 스택 및 아키텍처에 대한 상세 정보 추가",
+    "각 핵심 기능에 대한 더 구체적인 설명과 시연 영상 또는 스크린샷 제공",
+    "개발 환경 설정 및 실행 방법에 대한 명확한 안내 추가"
+  ]
+}

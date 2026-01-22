@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\generated\\gamza\\project\\gamzaweb\\Entity\\QPlatformEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Querydsl\"\n  ],\n  \"role\": \"이 파일은 PlatformEntity에 대한 Querydsl 쿼리 타입을 정의하여 데이터베이스에서 PlatformEntity 객체를 쿼리할 수 있도록 지원합니다.\",\n  \"key_features\": [\n    \"PlatformEntity의 ID, 플랫폼 이름 및 관련 프로젝트 목록을 쿼리할 수 있는 기능\",\n    \"Querydsl을 사용하여 타입 안전한 쿼리 생성\"\n  ],\n  \"key_code\": [\n    \"public final NumberPath<Long> id = createNumber(\\\"id\\\", Long.class);\",\n    \"public final StringPath platformName = createString(\\\"platformName\\\");\",\n    \"public final ListPath<ProjectEntity, QProjectEntity> projects = this.<ProjectEntity, QProjectEntity>createList(\\\"projects\\\", ProjectEntity.class, QProjectEntity.class, PathInits.DIRECT2);\"\n  ],\n  \"project_hints\": [\n    \"플랫폼 관련 프로젝트 관리 시스템 또는 웹 애플리케이션\"\n  ]\n}\n```"
+}

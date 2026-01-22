@@ -1,0 +1,109 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\entity\\Campaign.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta Persistence",
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "campaign",
+      "program",
+      "capacity",
+      "start_date",
+      "end_date"
+    ],
+    "entities": [
+      "Campaign"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "캠페인 생성",
+      "verb_object": "캠페인 생성",
+      "inputs": [
+        "capacity",
+        "startDate",
+        "endDate"
+      ],
+      "outputs": [
+        "Campaign object"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "캠페인 조회",
+      "verb_object": "캠페인 조회",
+      "inputs": [
+        "campaignId"
+      ],
+      "outputs": [
+        "Campaign object"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 모델",
+      "유효성 검사 적용",
+      "불변 시간 사용"
+    ],
+    "risks": [
+      "시간 관련 오류 가능성",
+      "데이터 무결성 문제"
+    ],
+    "missing_standard_checks": [
+      "UUID 사용",
+      "Audit 필드 추가",
+      "에러 처리 로직"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.Column"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.Table"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+campaign",
+      "validation+constraints"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\service\\CampaignService.java"
+    ]
+  }
+}

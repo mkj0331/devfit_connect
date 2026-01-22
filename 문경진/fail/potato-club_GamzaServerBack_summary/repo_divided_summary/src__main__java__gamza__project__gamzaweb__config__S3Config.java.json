@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\config\\S3Config.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"AWS SDK for Java\"\n  ],\n  \"role\": \"AWS S3 클라이언트를 설정하여 파일 업로드 및 다운로드 기능을 제공하는 역할\",\n  \"key_features\": [\n    \"AWS S3에 접근하기 위한 자격 증명 설정\",\n    \"S3 클라이언트 인스턴스 생성\"\n  ],\n  \"key_code\": [\n    \"@Value(\\\"${cloud.aws.credentials.access-key}\\\")\",\n    \"BasicAWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);\",\n    \"return (AmazonS3Client) AmazonS3ClientBuilder.standard()\"\n  ],\n  \"project_hints\": [\n    \"파일 저장 및 관리 기능을 제공하는 웹 애플리케이션\",\n    \"AWS S3를 활용한 클라우드 스토리지 서비스\"\n  ]\n}\n```"
+}

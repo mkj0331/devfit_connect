@@ -1,0 +1,115 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramUser.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Lombok"
+    ],
+    "libraries": [
+      "Hibernate"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Program",
+      "User",
+      "Status"
+    ],
+    "entities": [
+      "ProgramUser",
+      "Program",
+      "User",
+      "ProgramUserStatus"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 사용자 상태 업데이트",
+      "verb_object": "상태 업데이트",
+      "inputs": [
+        "ProgramUserStatus"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "프로그램 사용자 조회",
+      "verb_object": "사용자 조회",
+      "inputs": [
+        "Long id"
+      ],
+      "outputs": [
+        "ProgramUser"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Inheritance"
+    ],
+    "cross_cutting": [
+      "Validation"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 모델",
+      "유일성 제약 조건",
+      "상태 관리 메소드 제공"
+    ],
+    "risks": [
+      "Lazy Loading으로 인한 N+1 문제",
+      "Cascade Delete로 인한 데이터 손실 가능성"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table"
+    },
+    {
+      "type": "annotation",
+      "text": "@ManyToOne"
+    },
+    {
+      "type": "call",
+      "text": "updateProgramUserStatus"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.persistence.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+model",
+      "user+program"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\Program.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java"
+    ]
+  }
+}

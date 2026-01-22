@@ -1,0 +1,122 @@
+{
+  "batch_id": 16,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Jakarta EE",
+    "Lombok",
+    "Jackson"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "리뷰 목록 조회",
+      "domain_tags": [
+        "review",
+        "list",
+        "user",
+        "response"
+      ],
+      "responsibilities": [
+        "내가 해야할 리뷰 리스트 조회",
+        "내가 받은 리뷰 리스트 조회",
+        "내가 한 리뷰 리스트 조회",
+        "코드 리뷰 목록 생성"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Service"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\controller\\ReviewController.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\UserCodeReviewListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\RequiredCodeReviewListResponseDto.java"
+      ],
+      "evidence": [
+        "@GetMapping(\"/lists/receive\")",
+        "reviewService.getRequiredReviews(customUserDetails.getUserId())",
+        "UserCodeReviewListResponseDto.from()"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "페이지네이션 로직 미비",
+        "보안 취약점 가능성",
+        "예외 처리 부족"
+      ]
+    },
+    {
+      "cluster_name": "코드 리뷰 요청 생성 및 업데이트",
+      "domain_tags": [
+        "review",
+        "request",
+        "update",
+        "dto"
+      ],
+      "responsibilities": [
+        "코드 리뷰 요청 생성",
+        "코드 리뷰 업데이트"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "Builder",
+        "Validation"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\request\\CreateCodeReviewRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\request\\UpdateCodeReiewRequestDto.java"
+      ],
+      "evidence": [
+        "@NotNull(message = \"submissionId is required\")",
+        "@NotBlank(message = \"content is required\")"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "부모 리뷰 ID의 유효성 검증 부족",
+        "null 값 처리 미비"
+      ]
+    },
+    {
+      "cluster_name": "코드 리뷰 응답 생성",
+      "domain_tags": [
+        "review",
+        "response",
+        "dto"
+      ],
+      "responsibilities": [
+        "리뷰 목록 생성",
+        "리뷰 생성",
+        "코드 리뷰 트리 응답 생성"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "Jackson"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewTreeResponseDto.java"
+      ],
+      "evidence": [
+        "@JsonInclude(JsonInclude.Include.NON_NULL)",
+        "new CodeReviewResponseDto()"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "타입 안전성 문제",
+        "부모 리뷰가 없을 경우 처리 미비"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "review",
+    "dto",
+    "response",
+    "request",
+    "update",
+    "list",
+    "user"
+  ]
+}

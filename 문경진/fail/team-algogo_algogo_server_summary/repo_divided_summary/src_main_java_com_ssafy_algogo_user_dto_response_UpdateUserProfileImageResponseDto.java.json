@@ -1,0 +1,85 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UpdateUserProfileImageResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "User",
+      "Profile",
+      "Image"
+    ],
+    "entities": [
+      "UpdateUserProfileImageResponseDto"
+    ],
+    "modules": [
+      "user",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "프로필 이미지 업데이트",
+      "verb_object": "프로필 이미지 업데이트",
+      "inputs": [
+        "profileImage"
+      ],
+      "outputs": [
+        "UpdateUserProfileImageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간결한 코드",
+      "명확한 데이터 구조"
+    ],
+    "risks": [
+      "유효성 검사 부족",
+      "null 값 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "null 체크",
+      "문서화",
+      "단위 테스트",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "call",
+      "text": "new UpdateUserProfileImageResponseDto(profileImage)"
+    },
+    {
+      "type": "call",
+      "text": "from(String profileImage)"
+    },
+    {
+      "type": "import",
+      "text": "package com.ssafy.algogo.user.dto.response;"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto",
+      "profile+image",
+      "response+dto"
+    ],
+    "related_files_guess": []
+  }
+}

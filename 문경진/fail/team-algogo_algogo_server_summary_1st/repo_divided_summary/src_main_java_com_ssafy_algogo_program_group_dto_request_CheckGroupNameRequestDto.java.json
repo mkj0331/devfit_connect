@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\CheckGroupNameRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for checking group name requests\",\n  \"key_features\": [\n    \"Validation of group title using @NotBlank annotation\",\n    \"Builder pattern for object creation\",\n    \"No-args constructor with protected access\",\n    \"All-args constructor with private access\"\n  ],\n  \"key_code\": [\n    \"@NotBlank(message = \\\"groupTitle is required\\\")\",\n    \"@Getter\",\n    \"@Builder\",\n    \"@NoArgsConstructor(access = AccessLevel.PROTECTED)\",\n    \"@AllArgsConstructor(access = AccessLevel.PRIVATE)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves group management or social features where users can create or manage groups.\"\n  ]\n}\n```"
+}

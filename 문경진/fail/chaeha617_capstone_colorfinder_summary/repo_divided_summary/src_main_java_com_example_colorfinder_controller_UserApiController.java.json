@@ -1,0 +1,119 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\controller\\UserApiController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "user",
+      "signup",
+      "logout"
+    ],
+    "entities": [
+      "User",
+      "AddUserRequest"
+    ],
+    "modules": [
+      "UserApiController"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "회원 가입",
+      "verb_object": "회원 가입",
+      "inputs": [
+        "AddUserRequest request"
+      ],
+      "outputs": [
+        "String"
+      ],
+      "side_effects": [
+        "회원 정보 저장"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "로그아웃",
+      "verb_object": "로그아웃",
+      "inputs": [
+        "HttpServletRequest request",
+        "HttpServletResponse response"
+      ],
+      "outputs": [
+        "String"
+      ],
+      "side_effects": [
+        "세션 종료"
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": [
+      "보안"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "Lombok 사용으로 코드 간결",
+      "Spring Security 통합"
+    ],
+    "risks": [
+      "세션 관리 취약점",
+      "입력 검증 부족 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 유효성 검사",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Controller"
+    },
+    {
+      "type": "annotation",
+      "text": "@PostMapping(\"/user\")"
+    },
+    {
+      "type": "annotation",
+      "text": "@GetMapping(\"/logout\")"
+    },
+    {
+      "type": "call",
+      "text": "userService.save(request)"
+    },
+    {
+      "type": "call",
+      "text": "SecurityContextLogoutHandler().logout(request, response, ...)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+user",
+      "api+controller",
+      "session+management"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\service\\UserService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\AddUserRequest.java"
+    ]
+  }
+}

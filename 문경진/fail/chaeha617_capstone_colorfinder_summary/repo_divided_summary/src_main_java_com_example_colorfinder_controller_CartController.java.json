@@ -1,0 +1,151 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\controller\\CartController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "cart",
+      "product",
+      "order",
+      "address"
+    ],
+    "entities": [
+      "CartDTO",
+      "ProductDTO",
+      "AddressDTO"
+    ],
+    "modules": [
+      "CartService",
+      "OrderService",
+      "AddressService"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "장바구니 목록 조회",
+      "verb_object": "장바구니 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "cartList"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "결제 처리",
+      "verb_object": "결제",
+      "inputs": [
+        "selectedProductIds",
+        "userId"
+      ],
+      "outputs": [
+        "orderList",
+        "address"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "장바구니 아이템 삭제",
+      "verb_object": "아이템 삭제",
+      "inputs": [
+        "productIds"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "상품 삭제"
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "보안",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "DTO 사용",
+      "예외 처리",
+      "Spring Security 통합",
+      "RESTful API 설계"
+    ],
+    "risks": [
+      "예외 처리 미흡 가능성",
+      "보안 취약점",
+      "의존성 주입 실패 가능성",
+      "성능 저하",
+      "유효성 검사 부족"
+    ],
+    "missing_standard_checks": [
+      "입력 유효성 검사",
+      "로깅",
+      "API 문서화",
+      "단위 테스트",
+      "보안 감사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.web.bind.annotation.*;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Controller"
+    },
+    {
+      "type": "call",
+      "text": "cartService.findByUserId(userId)"
+    },
+    {
+      "type": "call",
+      "text": "addressService.findMinAddIdByUserId(userId)"
+    },
+    {
+      "type": "endpoint",
+      "text": "@GetMapping(\"/cart\")"
+    },
+    {
+      "type": "endpoint",
+      "text": "@PostMapping(\"/cart/pay\")"
+    },
+    {
+      "type": "endpoint",
+      "text": "@PostMapping(\"/cart/delete\")"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "cart+controller",
+      "payment+service",
+      "user+authentication"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\service\\CartService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\OrderService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\AddressService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\CartRepository.java"
+    ]
+  }
+}

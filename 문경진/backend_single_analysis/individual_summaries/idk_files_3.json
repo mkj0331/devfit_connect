@@ -1,0 +1,42 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\account\\repository\\AccountRepository.java",
+  "project_subject_signals": [
+    "Account",
+    "Member",
+    "Salary",
+    "TargetSaving"
+  ],
+  "frameworks": [
+    "Spring",
+    "Spring Data JPA",
+    "Jakarta Persistence"
+  ],
+  "libraries": [
+    "io.lettuce.core",
+    "java.util"
+  ],
+  "core_features": [
+    {
+      "feature_name": "계좌 정보 조회",
+      "feature_description": "회원 정보 또는 계좌 번호를 기반으로 특정 계좌 정보를 조회하는 기능.",
+      "implementation_method": "JpaRepository 인터페이스 상속 및 메소드 선언 (findByMember, findByNumber)",
+      "job_value": "데이터 엔티티에 대한 기본적인 CRUD 및 조회 역량을 보여줍니다."
+    },
+    {
+      "feature_name": "계좌 정보 동시성 제어 조회",
+      "feature_description": "PESSIMISTIC_WRITE 락을 사용하여 회원의 계좌 정보를 조회하여 동시성 문제를 방지하는 기능.",
+      "implementation_method": "@Lock, @Query, @Param 어노테이션을 활용한 JPA Query 작성",
+      "job_value": "데이터 일관성 및 무결성 보장을 위한 동시성 제어 구현 경험을 보여줍니다."
+    },
+    {
+      "feature_name": "급여 정보 기반 계좌 조회",
+      "feature_description": "급여 정보를 기반으로 해당 계좌를 조회하는 기능.",
+      "implementation_method": "JpaRepository 인터페이스 상속 및 메소드 선언 (findBySalary)",
+      "job_value": "엔티티 간의 관계를 활용한 데이터 조회 기능을 구현하는 역량을 보여줍니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "쿼리 메소드 네이밍 컨벤션을 일관되게 유지하는 것을 고려할 수 있습니다.",
+    "특정 쿼리의 성능 최적화를 위해 인덱스 사용 여부를 검토할 수 있습니다."
+  ]
+}

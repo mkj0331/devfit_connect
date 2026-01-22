@@ -1,0 +1,106 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetGroupMemberResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "GroupMember",
+      "Response",
+      "DTO"
+    ],
+    "entities": [
+      "GetGroupMemberResponseDto",
+      "GroupsUser",
+      "User",
+      "GroupRole"
+    ],
+    "modules": [
+      "group",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 멤버 정보 변환",
+      "verb_object": "정보 변환",
+      "inputs": [
+        "GroupsUser"
+      ],
+      "outputs": [
+        "GetGroupMemberResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Null 처리",
+      "간결한 코드"
+    ],
+    "risks": [
+      "의존성 증가",
+      "변경에 대한 취약성"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Error handling"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "call",
+      "text": "groupsUser.getUser()"
+    },
+    {
+      "type": "call",
+      "text": "groupsUser.getId()"
+    },
+    {
+      "type": "call",
+      "text": "user.getEmail()"
+    },
+    {
+      "type": "call",
+      "text": "user.getProfileImage()"
+    },
+    {
+      "type": "call",
+      "text": "user.getNickname()"
+    },
+    {
+      "type": "call",
+      "text": "groupsUser.getGroupRole()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "group+member",
+      "user+entity"
+    ],
+    "related_files_guess": []
+  }
+}

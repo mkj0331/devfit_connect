@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\repository\\AuthRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data JPA\"\n  ],\n  \"role\": \"Repository interface for user authentication data management\",\n  \"key_features\": [\n    \"Extends JpaRepository for CRUD operations\",\n    \"Handles User entity persistence\"\n  ],\n  \"key_code\": [\n    \"public interface AuthRepository extends JpaRepository<User, Long> { }\"\n  ],\n  \"project_hints\": [\n    \"Focus on user authentication and management\",\n    \"Integration with Spring Data JPA for database interactions\"\n  ]\n}\n```"
+}

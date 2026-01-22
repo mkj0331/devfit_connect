@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\controller\\AlgorithmController.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Boot\",\n    \"Lombok\",\n    \"SLF4J\"\n  ],\n  \"role\": \"Controller for handling algorithm-related API requests.\",\n  \"key_features\": [\n    \"Handles GET requests to search for algorithms by keyword.\",\n    \"Uses a service layer to fetch algorithm data.\",\n    \"Returns a standardized success response.\"\n  ],\n  \"key_code\": [\n    \"@RestController\",\n    \"@GetMapping(\\\"/search\\\")\",\n    \"algorithmService.searchAlgorithmWithKeyword(keyword)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves algorithm-related functionalities.\",\n    \"It may include features for searching and retrieving algorithm data.\"\n  ]\n}\n```"
+}

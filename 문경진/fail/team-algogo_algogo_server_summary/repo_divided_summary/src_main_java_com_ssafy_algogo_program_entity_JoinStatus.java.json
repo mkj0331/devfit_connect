@@ -1,0 +1,106 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\JoinStatus.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Domain",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Join",
+      "Status"
+    ],
+    "entities": [
+      "JoinStatus"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "상태 확인",
+      "verb_object": "상태 확인",
+      "inputs": [
+        "JoinStatus"
+      ],
+      "outputs": [
+        "상태 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "상태 변경",
+      "verb_object": "상태 변경",
+      "inputs": [
+        "JoinStatus"
+      ],
+      "outputs": [
+        "변경 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Enum"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 상태 표현",
+      "간결한 코드",
+      "유지보수 용이",
+      "타입 안전성",
+      "확장 가능성"
+    ],
+    "risks": [
+      "상태 추가 시 코드 수정 필요",
+      "상태 관리 복잡성 증가 가능성"
+    ],
+    "missing_standard_checks": [
+      "주석 추가",
+      "테스트 케이스",
+      "문서화",
+      "상태 설명",
+      "유효성 검사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": ""
+    },
+    {
+      "type": "annotation",
+      "text": ""
+    },
+    {
+      "type": "call",
+      "text": ""
+    },
+    {
+      "type": "query",
+      "text": ""
+    },
+    {
+      "type": "endpoint",
+      "text": ""
+    },
+    {
+      "type": "config",
+      "text": ""
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "status+enum",
+      "entity+domain"
+    ],
+    "related_files_guess": []
+  }
+}

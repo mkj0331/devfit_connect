@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewTreeResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Jackson\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for code review responses\",\n  \"key_features\": [\n    \"Encapsulates data related to code reviews\",\n    \"Supports nested structure with children reviews\",\n    \"Uses Jackson annotations for JSON serialization\",\n    \"Provides a constructor for initializing with default empty children list\"\n  ],\n  \"key_code\": [\n    \"public record CodeReviewTreeResponseDto(...)\",\n    \"JsonInclude(JsonInclude.Include.NON_NULL)\",\n    \"new ArrayList<>();\"\n  ],\n  \"project_hints\": [\n    \"Code review system\",\n    \"Hierarchical structure of reviews\",\n    \"User interaction with code submissions\"\n  ]\n}\n```"
+}

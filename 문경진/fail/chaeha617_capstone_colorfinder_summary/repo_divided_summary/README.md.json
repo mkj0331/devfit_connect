@@ -1,0 +1,130 @@
+{
+  "file": {
+    "path": "README.md",
+    "language": "Markdown",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Java",
+      "Python"
+    ],
+    "layer_guess": "Presentation",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "퍼스널 컬러",
+      "의류 추천",
+      "쇼핑몰",
+      "색상 데이터"
+    ],
+    "entities": [
+      "사용자",
+      "의류",
+      "장바구니",
+      "추천"
+    ],
+    "modules": [
+      "추천 시스템",
+      "장바구니 관리",
+      "의류 필터링"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "의류 추천",
+      "verb_object": "추천 기능",
+      "inputs": [
+        "퍼스널 컬러",
+        "기온"
+      ],
+      "outputs": [
+        "추천 의류 목록"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "장바구니 추가",
+      "verb_object": "장바구니에 추가",
+      "inputs": [
+        "제품 이름",
+        "수량",
+        "사이즈"
+      ],
+      "outputs": [
+        "장바구니 내용"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    },
+    {
+      "name": "의류 필터링",
+      "verb_object": "의류 필터링",
+      "inputs": [
+        "퍼스널 컬러",
+        "카테고리"
+      ],
+      "outputs": [
+        "필터링된 의류 목록"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "사용자 맞춤형 추천",
+      "직관적인 UI",
+      "다양한 필터링 옵션"
+    ],
+    "risks": [
+      "데이터 정확성 문제",
+      "사용자 경험 저하",
+      "서버 부하"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "보안 검토",
+      "성능 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "text",
+      "text": "퍼스널 컬러 정보 기반 의류 추천 기능"
+    },
+    {
+      "type": "text",
+      "text": "장바구니 버튼 클릭 시 정보 추가"
+    },
+    {
+      "type": "text",
+      "text": "의류 필터링 및 정렬 기능 설명"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "recommendation+system",
+      "shopping+cart",
+      "filtering+module"
+    ],
+    "related_files_guess": [
+      "src/main/java/com/example/RecommendationService.java",
+      "src/main/java/com/example/CartService.java"
+    ]
+  }
+}

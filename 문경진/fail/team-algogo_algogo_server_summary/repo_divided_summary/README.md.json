@@ -1,0 +1,63 @@
+{
+  "file": {
+    "path": "README.md",
+    "language": "Markdown",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Documentation",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "algogo",
+      "server"
+    ],
+    "entities": [],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "서버 시작",
+      "verb_object": "서버 시작",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 프로젝트 설명",
+      "사용자 친화적인 문서"
+    ],
+    "risks": [
+      "정보 부족",
+      "기능 설명 미비"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "예제 코드 제공"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "# algogo_server"
+    },
+    {
+      "type": "config",
+      "text": "algogo_server"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "server+documentation"
+    ],
+    "related_files_guess": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\autotransfer\\service\\AutoTransferService.java",
+  "project_subject_signals": [
+    "자동 이체 서비스",
+    "계좌 관리",
+    "이체 로직 처리"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "com.ssafy.idk.domain.account.dto.request.AutoTransferRequestDto",
+    "com.ssafy.idk.domain.account.dto.request.ReadyTransferRequestDto",
+    "com.ssafy.idk.domain.account.entity.Account",
+    "com.ssafy.idk.domain.account.exception.AccountException",
+    "com.ssafy.idk.domain.account.repository.AccountRepository",
+    "com.ssafy.idk.domain.account.service.AccountService",
+    "com.ssafy.idk.domain.autotransfer.dto.request.AutoTransferCreateRequestDto",
+    "com.ssafy.idk.domain.autotransfer.dto.response.AutoTransferCreateResponseDto",
+    "com.ssafy.idk.domain.autotransfer.dto.response.AutoTransferGetResponseDto",
+    "com.ssafy.idk.domain.autotransfer.dto.response.AutoTransferListResponseDto"
+  ],
+  "core_features": [
+    {
+      "feature_name": "자동 이체 수행",
+      "feature_description": "설정된 자동 이체 규칙에 따라 실제 계좌 이체를 실행합니다.",
+      "implementation_method": "AccountService의 autoTransfer 메서드를 호출하여 계좌 이체 로직을 위임하고, 이체 대상 및 금액 정보를 제공합니다.",
+      "job_value": "비동기적인 금융 거래 처리를 위한 핵심 백엔드 로직 구현 역량을 보여줍니다."
+    },
+    {
+      "feature_name": "이체 종류 판별",
+      "feature_description": "일반 이체와 자동 이체 간의 조건을 판별하여 적절한 이체 로직을 선택합니다.",
+      "implementation_method": "isAutoTransfer 메서드를 통해 이체 타입(일반/자동)을 구분하고, 이에 따라 다른 계좌 이체 로직을 분기합니다.",
+      "job_value": "다양한 시나리오에 따른 조건부 로직 처리 및 비즈니스 규칙 적용 능력을 보여줍니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "코드 내의 하드코딩된 문자열(예: 계좌 정보)을 상수로 분리하거나 설정값으로 관리하는 것을 고려할 수 있습니다.",
+    "주석으로 처리된 로직(`// 계좌이체`)과 실제 실행되는 로직 간의 일관성을 검토하고, 불필요한 부분은 정리하는 것이 좋습니다."
+  ]
+}

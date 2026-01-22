@@ -1,0 +1,121 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\repository\\CampaignRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Data JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Campaign"
+    ],
+    "entities": [
+      "Campaign"
+    ],
+    "modules": [
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "캠페인 저장",
+      "verb_object": "캠페인 저장",
+      "inputs": [
+        "Campaign 객체"
+      ],
+      "outputs": [
+        "저장된 Campaign 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "캠페인 조회",
+      "verb_object": "캠페인 조회",
+      "inputs": [
+        "Long id"
+      ],
+      "outputs": [
+        "Campaign 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "캠페인 삭제",
+      "verb_object": "캠페인 삭제",
+      "inputs": [
+        "Long id"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Spring Data JPA 사용",
+      "인터페이스 기반 설계",
+      "간결한 코드",
+      "유지보수 용이",
+      "확장성"
+    ],
+    "risks": [
+      "JPA 설정 오류 가능성",
+      "트랜잭션 관리 필요",
+      "동시성 문제 발생 가능성",
+      "예외 처리 미비",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "예외 처리",
+      "트랜잭션 관리",
+      "로그 기록",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Repository"
+    },
+    {
+      "type": "annotation",
+      "text": "@Repository"
+    },
+    {
+      "type": "call",
+      "text": "extends JpaRepository<Campaign, Long>"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+campaign"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\entity\\Campaign.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\service\\CampaignService.java"
+    ]
+  }
+}

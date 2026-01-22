@@ -1,0 +1,118 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\SubmissionEvaluationContextDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Submission",
+      "Evaluation",
+      "Context",
+      "Dto",
+      "Algorithm",
+      "Problem"
+    ],
+    "entities": [
+      "SubmissionEvaluationContextDto"
+    ],
+    "modules": [
+      "submission",
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 정보 생성",
+      "verb_object": "제출 정보 생성",
+      "inputs": [
+        "submissionId",
+        "code",
+        "language",
+        "execTime",
+        "memory",
+        "strategy",
+        "isSuccess",
+        "algorithmIds",
+        "problemId",
+        "problemTitle",
+        "difficultyType",
+        "problemLink"
+      ],
+      "outputs": [
+        "SubmissionEvaluationContextDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "알고리즘 ID 목록 조회",
+      "verb_object": "알고리즘 ID 목록 조회",
+      "inputs": [
+        "SubmissionEvaluationContextDto"
+      ],
+      "outputs": [
+        "algorithmIds"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Lombok 사용으로 코드 간결",
+      "유연한 알고리즘 ID 관리"
+    ],
+    "risks": [
+      "DTO의 확장성 문제",
+      "변경 시 모든 관련 코드 수정 필요"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Null 체크",
+      "Serialization 체크"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Builder"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Getter"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "submission+dto",
+      "evaluation+context",
+      "algorithm+management"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\SubmissionService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\controller\\SubmissionController.java"
+    ]
+  }
+}

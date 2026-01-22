@@ -1,0 +1,85 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\TrendIdsResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Trend",
+      "Submission",
+      "Program",
+      "Problem"
+    ],
+    "entities": [
+      "TrendIdsResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "트렌드 ID 응답 생성",
+      "verb_object": "트렌드 ID 응답 생성",
+      "inputs": [
+        "submissionIdList",
+        "programProblemIdList"
+      ],
+      "outputs": [
+        "TrendIdsResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간결한 데이터 구조",
+      "Jackson 라이브러리 사용",
+      "Null 값 제외"
+    ],
+    "risks": [
+      "유효성 검사 부족",
+      "확장성 문제",
+      "타입 안전성 문제"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "문서화",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.List;"
+    },
+    {
+      "type": "call",
+      "text": "new TrendIdsResponseDto()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "submission+trend",
+      "api+response"
+    ],
+    "related_files_guess": []
+  }
+}

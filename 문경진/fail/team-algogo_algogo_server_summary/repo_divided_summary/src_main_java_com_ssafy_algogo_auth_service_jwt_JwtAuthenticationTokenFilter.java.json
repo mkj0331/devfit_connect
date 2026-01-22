@@ -1,0 +1,136 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\JwtAuthenticationTokenFilter.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "lombok",
+      "jjwt"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "JWT",
+      "Token",
+      "Authentication",
+      "Authorization"
+    ],
+    "entities": [
+      "JwtAuthenticationTokenFilter",
+      "CustomUserDetails",
+      "JwtTokenProvider",
+      "RedisJwtService"
+    ],
+    "modules": [
+      "auth",
+      "security"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "토큰 검증",
+      "verb_object": "검증 토큰",
+      "inputs": [
+        "HttpServletRequest",
+        "HttpServletResponse"
+      ],
+      "outputs": [
+        "새로운 Access Token",
+        "새로운 Refresh Token"
+      ],
+      "side_effects": [
+        "SecurityContext에 인증 정보 설정",
+        "Redis에 Refresh Token 저장"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "로그아웃 검증",
+      "verb_object": "검증 로그아웃",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "CustomException"
+      ],
+      "side_effects": [
+        "로그 기록"
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "Redis"
+    ],
+    "patterns": [
+      "Filter",
+      "OncePerRequestFilter"
+    ],
+    "cross_cutting": [
+      "보안",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "예외 처리",
+      "로그 기록",
+      "토큰 재발급 기능",
+      "Redis 활용"
+    ],
+    "risks": [
+      "토큰 유효성 검증 실패 시 보안 취약점",
+      "Redis 의존성",
+      "예외 처리 누락 가능성",
+      "성능 저하 가능성",
+      "로그인 상태 관리 복잡성"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "단위 테스트",
+      "문서화",
+      "로깅 표준",
+      "보안 감사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import jakarta.servlet.FilterChain;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.web.filter.OncePerRequestFilter;"
+    },
+    {
+      "type": "call",
+      "text": "redisJwtService.exists(userId)"
+    },
+    {
+      "type": "call",
+      "text": "jwtTokenProvider.createAccessToken(authentication, currentIp)"
+    },
+    {
+      "type": "call",
+      "text": "CookieUtils.addTokenCookie(response, \"refreshToken\", newRefreshToken, jwtTokenProvider.getRefreshTokenValidTime())"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+jwt",
+      "security+filter",
+      "token+management"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\JwtTokenProvider.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\RedisJwtService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\CustomUserDetails.java"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\CodeReviewListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jackson\",\n    \"Java Records\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for Code Review List\",\n  \"key_features\": [\n    \"Encapsulates a list of CodeReviewTreeResponseDto objects\",\n    \"Uses Jackson annotations for JSON serialization\",\n    \"Provides a static factory method for object creation\"\n  ],\n  \"key_code\": [\n    \"public record CodeReviewListResponseDto(List<CodeReviewTreeResponseDto> reviews)\",\n    \"public static CodeReviewListResponseDto from(List<CodeReviewTreeResponseDto> reviews)\"\n  ],\n  \"project_hints\": [\n    \"Related to code review functionality\",\n    \"Part of a larger system likely focused on software development or code quality\"\n  ]\n}\n```"
+}

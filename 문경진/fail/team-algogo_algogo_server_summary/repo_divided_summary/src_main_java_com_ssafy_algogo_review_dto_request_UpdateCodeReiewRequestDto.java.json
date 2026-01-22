@@ -1,0 +1,97 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\request\\UpdateCodeReiewRequestDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Update",
+      "Code Review",
+      "Request"
+    ],
+    "entities": [
+      "UpdateCodeReiewRequestDto"
+    ],
+    "modules": [
+      "review",
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "코드 리뷰 업데이트",
+      "verb_object": "코드 리뷰 업데이트",
+      "inputs": [
+        "codeLine",
+        "content"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": [
+      "Validation"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사 포함",
+      "Lombok 사용으로 코드 간결성",
+      "명확한 DTO 구조"
+    ],
+    "risks": [
+      "잘못된 필드명(오타) 가능성",
+      "유효성 검사 미비 시 오류 발생"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotBlank(message = \"content is required\")"
+    },
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "annotation",
+      "text": "@NoArgsConstructor(access = AccessLevel.PROTECTED)"
+    },
+    {
+      "type": "annotation",
+      "text": "@AllArgsConstructor(access = AccessLevel.PRIVATE)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+request",
+      "review+update"
+    ],
+    "related_files_guess": []
+  }
+}

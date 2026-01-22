@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\service\\jwt\\RedisJwtService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Redis\",\n    \"Lombok\"\n  ],\n  \"role\": \"이 파일은 JWT 토큰과 관련된 정보를 Redis에 저장하고 관리하는 서비스 역할을 담당합니다.\",\n  \"key_features\": [\n    \"JWT 토큰과 이메일을 Redis에 저장하는 기능\",\n    \"저장된 JWT 토큰으로부터 이메일 정보를 조회하는 기능\",\n    \"JWT 토큰을 Redis에서 삭제하는 기능\",\n    \"리프레시 토큰을 블랙리스트에 추가하는 기능\",\n    \"JWT 토큰의 유효성을 검사하는 기능\"\n  ],\n  \"key_code\": [\n    \"operations.set(token, map, Duration.ofDays(7));\",\n    \"return (Map<String, String>) object;\",\n    \"redisTemplate.delete(token);\",\n    \"valueOperations.set(token, true, expiration, TimeUnit.NANOSECONDS);\",\n    \"return values == null;\"\n  ],\n  \"project_hints\": [\n    \"이 프로젝트는 JWT 인증 및 권한 부여와 관련된 기능을 구현하고 있으며, Redis를 사용하여 토큰 정보를 관리하고 있습니다.\"\n  ]\n}\n```"
+}

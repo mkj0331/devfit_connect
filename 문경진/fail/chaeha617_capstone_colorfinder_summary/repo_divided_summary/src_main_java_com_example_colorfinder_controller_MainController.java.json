@@ -1,0 +1,112 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\controller\\MainController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Controller",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "user",
+      "authentication",
+      "information",
+      "model"
+    ],
+    "entities": [
+      "USERS"
+    ],
+    "modules": [
+      "controller",
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 ID 조회",
+      "verb_object": "ID 조회",
+      "inputs": [],
+      "outputs": [
+        "userId"
+      ],
+      "side_effects": [
+        "모델에 userId 추가"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "name": "정보 업데이트 페이지 반환",
+      "verb_object": "정보 업데이트 페이지 반환",
+      "inputs": [],
+      "outputs": [
+        "InformationUpdate"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Controller",
+      "DTO"
+    ],
+    "cross_cutting": [
+      "Security"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "Spring Security 사용",
+      "명확한 책임 분리",
+      "모델에 데이터 추가"
+    ],
+    "risks": [
+      "사용자 인증 실패 시 예외 처리 미비",
+      "정보 업데이트 기능 미구현"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "입력 검증",
+      "로그 기록"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Controller"
+    },
+    {
+      "type": "annotation",
+      "text": "@GetMapping(\"/main\")"
+    },
+    {
+      "type": "call",
+      "text": "SecurityContextHolder.getContext().getAuthentication()"
+    },
+    {
+      "type": "call",
+      "text": "model.addAttribute(\"userId\", userId)"
+    },
+    {
+      "type": "endpoint",
+      "text": "/InformationUpdate"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+controller",
+      "user+management",
+      "security+spring"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\UserRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\AddUserRequest.java"
+    ]
+  }
+}

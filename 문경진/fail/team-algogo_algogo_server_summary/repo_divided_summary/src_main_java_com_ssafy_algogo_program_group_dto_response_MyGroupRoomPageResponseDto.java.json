@@ -1,0 +1,129 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\MyGroupRoomPageResponseDto.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Group",
+      "Room",
+      "Page",
+      "Response"
+    ],
+    "entities": [
+      "MyGroupRoomPageResponseDto",
+      "PageInfo",
+      "SortInfo",
+      "MyGroupRoomResponseDto"
+    ],
+    "modules": [
+      "group",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "페이지 정보 생성",
+      "verb_object": "페이지 정보 생성",
+      "inputs": [
+        "Page<MyGroupRoomResponseDto> pageData"
+      ],
+      "outputs": [
+        "MyGroupRoomPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "정렬 정보 생성",
+      "verb_object": "정렬 정보 생성",
+      "inputs": [
+        "Page<MyGroupRoomResponseDto> pageData"
+      ],
+      "outputs": [
+        "SortInfo"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "그룹 리스트 반환",
+      "verb_object": "그룹 리스트 반환",
+      "inputs": [
+        "Page<MyGroupRoomResponseDto> pageData"
+      ],
+      "outputs": [
+        "List<MyGroupRoomResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.75
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Spring 프레임워크 사용",
+      "불변 객체 사용",
+      "페이지네이션 지원",
+      "정렬 정보 포함"
+    ],
+    "risks": [
+      "DTO의 확장성 문제",
+      "데이터 유효성 검사 부족",
+      "의존성 증가"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "API 문서화",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.dto.PageInfo;"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.dto.SortInfo;"
+    },
+    {
+      "type": "call",
+      "text": "PageInfo.of(pageData)"
+    },
+    {
+      "type": "call",
+      "text": "SortInfo.of(pageData)"
+    },
+    {
+      "type": "call",
+      "text": "pageData.getContent()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "group+page",
+      "api+response"
+    ],
+    "related_files_guess": []
+  }
+}

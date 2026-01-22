@@ -1,0 +1,92 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\MeResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "user",
+      "response",
+      "dto",
+      "role"
+    ],
+    "entities": [
+      "User",
+      "UserRole"
+    ],
+    "modules": [
+      "auth",
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 정보 변환",
+      "verb_object": "정보 변환",
+      "inputs": [
+        "User 객체"
+      ],
+      "outputs": [
+        "MeResponseDto 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "간결한 코드"
+    ],
+    "risks": [
+      "유효성 검사 부족",
+      "변경 불가능성으로 인한 유연성 저하"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "null 체크",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.user.entity.User"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.user.entity.UserRole"
+    },
+    {
+      "type": "call",
+      "text": "user.getId()"
+    },
+    {
+      "type": "call",
+      "text": "user.getEmail()"
+    },
+    {
+      "type": "call",
+      "text": "user.getUserRole()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+dto",
+      "user+entity"
+    ],
+    "related_files_guess": []
+  }
+}

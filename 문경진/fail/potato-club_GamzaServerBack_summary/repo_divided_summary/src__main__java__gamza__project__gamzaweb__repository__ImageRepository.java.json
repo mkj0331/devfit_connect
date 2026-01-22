@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\repository\\ImageRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Spring Data JPA\"],\n  \"role\": \"이 파일은 이미지 관련 데이터베이스 작업을 처리하는 리포지토리 인터페이스입니다.\",\n  \"key_features\": [\n    \"사용자에 따라 이미지 ID로 이미지를 찾는 기능\",\n    \"사용자에 따라 이미지 이름으로 이미지를 찾는 기능\",\n    \"사용자에 따라 프로젝트와 관련된 이미지를 찾는 기능\",\n    \"특정 프로젝트 ID에 따라 이미지 목록을 조회하는 기능\"\n  ],\n  \"key_code\": [\n    \"Optional<ImageEntity> findByImageIdAndUser(String imageId, UserEntity user);\",\n    \"Optional<ImageEntity> findByNameAndUser(String name, UserEntity user);\",\n    \"Optional<ImageEntity> findByProjectAndUser(ProjectEntity project, UserEntity user);\",\n    \"List<ImageEntity> findImageEntitiesByProjectId(Long id);\"\n  ],\n  \"project_hints\": [\n    \"이미지 관리 시스템 또는 프로젝트 관련 이미지 저장 및 조회 기능을 제공하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\FileEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Jakarta Persistence\", \"Lombok\"],\n  \"role\": \"파일 정보를 데이터베이스에 저장하고 관리하는 엔티티 클래스\",\n  \"key_features\": [\n    \"파일 이름과 URL을 저장\",\n    \"파일과 관련된 애플리케이션 정보를 연결\",\n    \"JPA를 사용하여 데이터베이스와의 상호작용\"\n  ],\n  \"key_code\": [\n    \"@Entity\",\n    \"@Id\",\n    \"@GeneratedValue(strategy = GenerationType.IDENTITY)\",\n    \"@Column(nullable = false)\",\n    \"@ManyToOne(fetch = FetchType.LAZY)\",\n    \"@JoinColumn(name = \\\"application_id\\\", nullable = false)\"\n  ],\n  \"project_hints\": [\n    \"파일 업로드 및 관리 시스템\",\n    \"애플리케이션과 관련된 파일 저장 기능\"\n  ]\n}\n```"
+}

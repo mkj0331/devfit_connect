@@ -1,0 +1,161 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\SubmissionRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Submission",
+      "User",
+      "ProgramProblem"
+    ],
+    "entities": [
+      "Submission",
+      "User",
+      "ProgramProblem"
+    ],
+    "modules": [
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 목록 조회",
+      "verb_object": "제출 조회",
+      "inputs": [
+        "User user",
+        "ProgramProblem programProblem"
+      ],
+      "outputs": [
+        "List<Submission>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "제출 상세 조회",
+      "verb_object": "제출 상세 조회",
+      "inputs": [
+        "Long submissionId"
+      ],
+      "outputs": [
+        "Optional<Submission>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "제출 존재 여부 확인",
+      "verb_object": "제출 존재 여부 확인",
+      "inputs": [
+        "Long userId",
+        "Long programProblemId"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "제출 수 카운트",
+      "verb_object": "제출 수 카운트",
+      "inputs": [
+        "Long programProblemId"
+      ],
+      "outputs": [
+        "Long"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "성공 제출 수 카운트",
+      "verb_object": "성공 제출 수 카운트",
+      "inputs": [
+        "Long programProblemId",
+        "Boolean isSuccess"
+      ],
+      "outputs": [
+        "Long"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 메서드 이름",
+      "JPA를 통한 데이터 접근",
+      "Optional 사용으로 null 처리"
+    ],
+    "risks": [
+      "JPA 쿼리 성능 문제",
+      "Optional 사용으로 인한 복잡성 증가"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "트랜잭션 관리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.Query"
+    },
+    {
+      "type": "call",
+      "text": "findAllByUserAndProgramProblemOrderByCreatedAtAsc"
+    },
+    {
+      "type": "query",
+      "text": "@Query(...)"
+    },
+    {
+      "type": "call",
+      "text": "existsByUserIdAndProgramProblemId"
+    },
+    {
+      "type": "call",
+      "text": "countSubmissionsByProgramProblemId"
+    },
+    {
+      "type": "call",
+      "text": "countSubmissionsByProgramProblemIdAndIsSuccess"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+submission",
+      "user+submission"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Submission.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\ProgramProblem.java"
+    ]
+  }
+}

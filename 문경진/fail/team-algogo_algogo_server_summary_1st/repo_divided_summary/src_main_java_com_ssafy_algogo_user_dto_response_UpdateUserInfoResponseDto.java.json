@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\UpdateUserInfoResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java 11+\",\n    \"Spring Framework\",\n    \"JPA (Java Persistence API)\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for updating user information response\",\n  \"key_features\": [\n    \"Encapsulates user information to be sent in response\",\n    \"Uses Java record for immutability and simplicity\",\n    \"Static method to create DTO from User entity\"\n  ],\n  \"key_code\": [\n    \"public record UpdateUserInfoResponseDto(...)\",\n    \"public static UpdateUserInfoResponseDto from(User user) {...}\"\n  ],\n  \"project_hints\": [\n    \"User management system\",\n    \"Profile update functionality\",\n    \"RESTful API design\"\n  ]\n}\n```"
+}

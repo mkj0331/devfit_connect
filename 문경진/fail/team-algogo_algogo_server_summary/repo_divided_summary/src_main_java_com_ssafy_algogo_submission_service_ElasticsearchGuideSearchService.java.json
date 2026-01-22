@@ -1,0 +1,83 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\ElasticsearchGuideSearchService.java",
+    "language": "java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Elasticsearch",
+      "Algorithm",
+      "Guide",
+      "Search",
+      "Submission"
+    ],
+    "entities": [
+      "AlgorithmGuideDto",
+      "SubmissionEvaluationContextDto"
+    ],
+    "modules": [
+      "submission",
+      "service"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "알고리즘 가이드 검색",
+      "verb_object": "검색 알고리즘 가이드",
+      "inputs": [
+        "SubmissionEvaluationContextDto context"
+      ],
+      "outputs": [
+        "List<AlgorithmGuideDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "DTO 사용으로 데이터 전송 최적화"
+    ],
+    "risks": [
+      "기능 미구현 가능성",
+      "의존성 문제"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "유효성 검사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.dto.AlgorithmGuideDto;"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.dto.SubmissionEvaluationContextDto;"
+    },
+    {
+      "type": "call",
+      "text": "searchAlgorithmGuides(SubmissionEvaluationContextDto context)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "search+service",
+      "submission+dto"
+    ],
+    "related_files_guess": []
+  }
+}

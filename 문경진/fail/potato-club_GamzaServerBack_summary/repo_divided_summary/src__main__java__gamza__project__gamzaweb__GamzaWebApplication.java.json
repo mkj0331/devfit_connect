@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\GamzaWebApplication.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Boot\",\n    \"Spring Data JPA\",\n    \"Spring Scheduling\",\n    \"Swagger (OpenAPI)\"\n  ],\n  \"role\": \"애플리케이션의 진입점으로, Spring Boot 애플리케이션을 초기화하고 설정하는 역할을 담당합니다.\",\n  \"key_features\": [\n    \"Spring Boot 애플리케이션 실행\",\n    \"스케줄링 기능 활성화\",\n    \"JPA 감사 기능 활성화\",\n    \"OpenAPI 정의 설정\"\n  ],\n  \"key_code\": [\n    \"@SpringBootApplication\",\n    \"@EnableScheduling\",\n    \"@EnableJpaAuditing\",\n    \"@OpenAPIDefinition(servers = {@Server(url = \\\"/\\\", description = \\\"Default Server URL\\\")})\"\n  ],\n  \"project_hints\": [\n    \"웹 애플리케이션 개발\",\n    \"API 문서화 및 관리\",\n    \"데이터베이스와의 상호작용\"\n  ]\n}\n```"
+}

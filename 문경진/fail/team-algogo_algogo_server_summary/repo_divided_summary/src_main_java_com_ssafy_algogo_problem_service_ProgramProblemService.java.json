@@ -1,0 +1,123 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\service\\ProgramProblemService.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Program",
+      "Problem",
+      "Service"
+    ],
+    "entities": [
+      "ProgramProblemCreateRequestDto",
+      "ProgramProblemDeleteRequestDto",
+      "ProgramProblemPageResponseDto",
+      "ProgramProblemRequestDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 문제 조회",
+      "verb_object": "문제 조회",
+      "inputs": [
+        "Long programId",
+        "Pageable pageable"
+      ],
+      "outputs": [
+        "ProgramProblemPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "프로그램 문제 생성",
+      "verb_object": "문제 생성",
+      "inputs": [
+        "Long programId",
+        "ProgramProblemCreateRequestDto programProblemCreateRequestDto"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "프로그램 문제 삭제",
+      "verb_object": "문제 삭제",
+      "inputs": [
+        "Long programId",
+        "ProgramProblemDeleteRequestDto programProblemDeleteRequestDto"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "Spring 프레임워크 사용",
+      "DTO를 통한 데이터 전송",
+      "서비스 레이어의 책임 분리",
+      "유지보수 용이성"
+    ],
+    "risks": [
+      "의존성 주입 실패 가능성",
+      "예외 처리 미비",
+      "입력 검증 부족",
+      "동시성 문제 발생 가능성",
+      "서비스 간 의존성 증가"
+    ],
+    "missing_standard_checks": [
+      "입력 값 검증",
+      "예외 처리 로직",
+      "로깅",
+      "트랜잭션 관리",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Pageable;"
+    },
+    {
+      "type": "call",
+      "text": "getAllProgramProblems(Long programId, Pageable pageable)"
+    },
+    {
+      "type": "call",
+      "text": "createProgramProblem(Long programId, ProgramProblemCreateRequestDto programProblemCreateRequestDto)"
+    },
+    {
+      "type": "call",
+      "text": "deleteProgramProblem(Long programId, ProgramProblemDeleteRequestDto programProblemDeleteRequestDto)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "service+dto",
+      "program+problem",
+      "api+service"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemCreateRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemDeleteRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProgramProblemPageResponseDto.java"
+    ]
+  }
+}

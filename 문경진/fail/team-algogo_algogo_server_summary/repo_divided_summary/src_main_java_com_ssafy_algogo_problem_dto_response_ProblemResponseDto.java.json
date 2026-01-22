@@ -1,0 +1,111 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProblemResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Problem",
+      "Response",
+      "Dto",
+      "DifficultyType",
+      "PlatformType"
+    ],
+    "entities": [
+      "Problem",
+      "DifficultyType",
+      "PlatformType"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 응답 생성",
+      "verb_object": "문제 응답 생성",
+      "inputs": [
+        "Problem 객체"
+      ],
+      "outputs": [
+        "ProblemResponseDto 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "간결한 코드",
+      "유지보수 용이",
+      "타입 안전성"
+    ],
+    "risks": [
+      "변경 불가능성으로 인한 유연성 부족",
+      "의존성 증가"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Null 체크",
+      "API 문서화",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.problem.entity.DifficultyType;"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.problem.entity.PlatformType;"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.problem.entity.Problem;"
+    },
+    {
+      "type": "call",
+      "text": "problem.getId()"
+    },
+    {
+      "type": "call",
+      "text": "problem.getPlatformType()"
+    },
+    {
+      "type": "call",
+      "text": "problem.getProblemNo()"
+    },
+    {
+      "type": "call",
+      "text": "problem.getTitle()"
+    },
+    {
+      "type": "call",
+      "text": "problem.getDifficultyType()"
+    },
+    {
+      "type": "call",
+      "text": "problem.getProblemLink()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "problem+entity"
+    ],
+    "related_files_guess": []
+  }
+}

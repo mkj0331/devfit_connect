@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\project\\response\\ProjectListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 프로젝트의 응답 DTO(Data Transfer Object)로, 프로젝트 목록을 클라이언트에 전달하는 역할을 담당합니다.\",\n  \"key_features\": [\n    \"프로젝트 목록을 담고 있는 리스트를 포함\",\n    \"Lombok을 사용하여 코드의 간결성을 높임\"\n  ],\n  \"key_code\": [\n    \"private List<ProjectResponseDto> contents;\"\n  ],\n  \"project_hints\": [\n    \"프로젝트 관리 또는 협업 플랫폼과 관련된 웹 애플리케이션일 가능성이 있음\"\n  ]\n}\n```"
+}

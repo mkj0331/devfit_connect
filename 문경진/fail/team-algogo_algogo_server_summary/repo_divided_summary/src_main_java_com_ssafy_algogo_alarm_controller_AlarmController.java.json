@@ -1,0 +1,156 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\alarm\\controller\\AlarmController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "알림",
+      "구독",
+      "삭제",
+      "조회"
+    ],
+    "entities": [
+      "AlarmPayload",
+      "CustomUserDetails",
+      "DeleteAlarmRequestDto",
+      "GetAlarmListResponseDto",
+      "GetUnreadAlarmCountResponseDto"
+    ],
+    "modules": [
+      "alarm"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "알림 구독",
+      "verb_object": "구독 시작",
+      "inputs": [],
+      "outputs": [
+        "SseEmitter"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "알림 조회",
+      "verb_object": "알림 리스트 조회",
+      "inputs": [
+        "CustomUserDetails"
+      ],
+      "outputs": [
+        "GetAlarmListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "읽지 않은 알림 카운트 조회",
+      "verb_object": "알림 카운트 조회",
+      "inputs": [
+        "CustomUserDetails"
+      ],
+      "outputs": [
+        "GetUnreadAlarmCountResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "알림 삭제",
+      "verb_object": "알림 삭제",
+      "inputs": [
+        "CustomUserDetails",
+        "DeleteAlarmRequestDto"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.85
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Service"
+    ],
+    "cross_cutting": [
+      "Security"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "RESTful API 구조",
+      "명확한 응답 형식",
+      "DTO 사용으로 인한 데이터 전송 최적화",
+      "Spring Security 통합",
+      "Lombok을 통한 코드 간결성"
+    ],
+    "risks": [
+      "예외 처리 미비",
+      "보안 취약점 가능성",
+      "의존성 주입 실패 가능성",
+      "성능 저하 가능성",
+      "유효성 검사 부족"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "유효성 검사",
+      "예외 처리 로직",
+      "로깅",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@RestController"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequestMapping(\"/api/v1/alarm\")"
+    },
+    {
+      "type": "call",
+      "text": "alarmService.getMyAlarms()"
+    },
+    {
+      "type": "call",
+      "text": "alarmService.getUnreadAlarmCount()"
+    },
+    {
+      "type": "call",
+      "text": "alarmService.deleteAlarms()"
+    },
+    {
+      "type": "endpoint",
+      "text": "GET /api/v1/alarm/lists"
+    },
+    {
+      "type": "endpoint",
+      "text": "GET /api/v1/alarm/counts"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "alarm+controller",
+      "api+rest",
+      "security+auth"
+    ],
+    "related_files_guess": [
+      "src/main/java/com/ssafy/algogo/alarm/service/AlarmService.java",
+      "src/main/java/com/ssafy/algogo/alarm/dto/request/DeleteAlarmRequestDto.java",
+      "src/main/java/com/ssafy/algogo/alarm/dto/response/GetAlarmListResponseDto.java"
+    ]
+  }
+}

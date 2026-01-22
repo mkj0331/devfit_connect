@@ -1,0 +1,145 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\controller\\ProductController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Product",
+      "Cart",
+      "Address",
+      "User"
+    ],
+    "entities": [
+      "ProductDTO",
+      "CartDTO",
+      "AddressDTO",
+      "USERS"
+    ],
+    "modules": [
+      "ProductService",
+      "CartService",
+      "AddressService",
+      "UserService"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "메인 페이지 요청 처리",
+      "verb_object": "메인 페이지 조회",
+      "inputs": [],
+      "outputs": [
+        "HTML 페이지"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "상품 정보 조회",
+      "verb_object": "상품 정보 반환",
+      "inputs": [
+        "상품 ID"
+      ],
+      "outputs": [
+        "ProductDTO"
+      ],
+      "side_effects": [],
+      "confidence": 0.75
+    },
+    {
+      "name": "장바구니 추가",
+      "verb_object": "장바구니에 상품 추가",
+      "inputs": [
+        "CartDTO"
+      ],
+      "outputs": [
+        "장바구니 상태"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Service"
+    ],
+    "cross_cutting": [
+      "Security"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "Spring 프레임워크 활용",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "예외 처리 부족",
+      "보안 취약점 가능성",
+      "의존성 주입 실패 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "로깅",
+      "API 문서화",
+      "유닛 테스트",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Controller;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.web.bind.annotation.*;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Controller"
+    },
+    {
+      "type": "call",
+      "text": "productService"
+    },
+    {
+      "type": "call",
+      "text": "addressService"
+    },
+    {
+      "type": "call",
+      "text": "userService"
+    },
+    {
+      "type": "call",
+      "text": "cartService"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "product+controller",
+      "cart+service",
+      "user+service",
+      "address+service"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\service\\ProductService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\CartService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\AddressService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\UserService.java"
+    ]
+  }
+}

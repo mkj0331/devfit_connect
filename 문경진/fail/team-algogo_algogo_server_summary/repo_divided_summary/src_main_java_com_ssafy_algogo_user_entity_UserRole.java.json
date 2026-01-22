@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\UserRole.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Domain",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "User",
+      "Role"
+    ],
+    "entities": [
+      "UserRole"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 역할 관리",
+      "verb_object": "역할 정의",
+      "inputs": [],
+      "outputs": [
+        "ADMIN",
+        "USER"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Enum"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 역할 정의",
+      "간결한 코드",
+      "유지보수 용이"
+    ],
+    "risks": [
+      "역할 추가 시 코드 수정 필요",
+      "확장성 제한"
+    ],
+    "missing_standard_checks": [
+      "주석",
+      "문서화",
+      "유닛 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": ""
+    },
+    {
+      "type": "annotation",
+      "text": ""
+    },
+    {
+      "type": "call",
+      "text": ""
+    },
+    {
+      "type": "query",
+      "text": ""
+    },
+    {
+      "type": "endpoint",
+      "text": ""
+    },
+    {
+      "type": "config",
+      "text": ""
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+role",
+      "auth+permission"
+    ],
+    "related_files_guess": []
+  }
+}

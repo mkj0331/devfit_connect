@@ -1,0 +1,134 @@
+{
+  "batch_id": 10,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Lombok",
+    "Jakarta EE",
+    "jakarta.validation"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "그룹 권한 관리",
+      "domain_tags": [
+        "authorization",
+        "group",
+        "role",
+        "security"
+      ],
+      "responsibilities": [
+        "그룹 권한 체크",
+        "역할 검증",
+        "그룹 ID 정의"
+      ],
+      "implementation_signals": [
+        "Aspect",
+        "Annotation",
+        "JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupAuthorizationAspect.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupAuthorize.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\config\\GroupId.java"
+      ],
+      "evidence": [
+        "@Aspect",
+        "@interface GroupAuthorize",
+        "SecurityContextHolder.getContext().getAuthentication()"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "권한 체크 누락 가능성",
+        "잘못된 예외 처리",
+        "성능 저하 가능성"
+      ]
+    },
+    {
+      "cluster_name": "그룹 관련 API 처리",
+      "domain_tags": [
+        "group",
+        "api",
+        "user",
+        "invite"
+      ],
+      "responsibilities": [
+        "내 그룹 조회",
+        "받은 그룹 초대 조회",
+        "보낸 그룹 참여 신청 조회"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "DTO",
+        "Service"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\controller\\GroupController.java"
+      ],
+      "evidence": [
+        "@GetMapping(\"/invites/received\")",
+        "groupService.getReceivedGroupInvites(customUserDetails.getUserId())",
+        "/joins/sent"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "보안 취약점 가능성",
+        "예외 처리 미비",
+        "유효성 검사 누락"
+      ]
+    },
+    {
+      "cluster_name": "그룹 요청 DTO 처리",
+      "domain_tags": [
+        "dto",
+        "validation",
+        "request",
+        "group"
+      ],
+      "responsibilities": [
+        "그룹 이름 확인",
+        "그룹 방 생성 요청",
+        "초대 상태 업데이트",
+        "그룹 가입 상태 업데이트",
+        "역할 업데이트",
+        "그룹 방 업데이트"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "Validation",
+        "Builder"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\CheckGroupNameRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\CreateGroupRoomRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupInviteStateRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupJoinStateRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupMemberRoleRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupRoomRequestDto.java"
+      ],
+      "evidence": [
+        "@NotBlank(message = \"groupTitle is required\")",
+        "@NotNull",
+        "@Min",
+        "@Max"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "유효성 검증 실패 시 예외 처리 필요",
+        "잘못된 입력 처리 부족"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "authorization",
+    "group",
+    "role",
+    "security",
+    "api",
+    "dto",
+    "validation",
+    "request"
+  ]
+}

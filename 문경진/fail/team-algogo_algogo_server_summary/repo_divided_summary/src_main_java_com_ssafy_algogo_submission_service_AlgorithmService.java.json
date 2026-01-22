@@ -1,0 +1,82 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\AlgorithmService.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Algorithm",
+      "Service",
+      "Keyword"
+    ],
+    "entities": [
+      "AlgorithmListResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "알고리즘 검색",
+      "verb_object": "검색 알고리즘",
+      "inputs": [
+        "keyword"
+      ],
+      "outputs": [
+        "AlgorithmListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "유연한 검색 기능",
+      "DTO 사용으로 데이터 전송 최적화"
+    ],
+    "risks": [
+      "입력 값 검증 부족",
+      "예외 처리 미비",
+      "의존성 주입 미비"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리",
+      "로깅",
+      "주석",
+      "테스트 케이스"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.submission.dto.response.AlgorithmListResponseDto;"
+    },
+    {
+      "type": "annotation",
+      "text": "public interface AlgorithmService"
+    },
+    {
+      "type": "call",
+      "text": "searchAlgorithmWithKeyword(String keyword)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "algorithm+service",
+      "api+service"
+    ],
+    "related_files_guess": []
+  }
+}

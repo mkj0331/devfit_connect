@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\ReviewMatchService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Interface for matching reviewers to submissions based on algorithms.\",\n  \"key_features\": [\n    \"Defines a method for matching reviewers\",\n    \"Takes a submission and a list of algorithms as input\",\n    \"Allows specifying the number of reviewers to assign\"\n  ],\n  \"key_code\": [\n    \"void matchReviewers(Submission subjectSubmission, List<Algorithm> subjectAlgorithmList, int assignCount);\"\n  ],\n  \"project_hints\": [\n    \"Involves a review process for submissions\",\n    \"Utilizes algorithms for matching reviewers\",\n    \"Focuses on assigning a specific number of reviewers\"\n  ]\n}\n```"
+}

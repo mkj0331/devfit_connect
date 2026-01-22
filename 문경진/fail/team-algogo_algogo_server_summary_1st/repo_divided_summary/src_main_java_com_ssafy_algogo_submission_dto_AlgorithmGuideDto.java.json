@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\AlgorithmGuideDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Lombok\",\n    \"ElasticSearch\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for algorithm guide information\",\n  \"key_features\": [\n    \"Encapsulates algorithm-related data\",\n    \"Uses Lombok annotations for boilerplate code reduction\",\n    \"Supports multiple fields related to algorithms and scenarios\"\n  ],\n  \"key_code\": [\n    \"private Long algorithmId;\",\n    \"private String algorithmName;\",\n    \"private List<String> situationTags;\",\n    \"@Getter\",\n    \"@Builder\"\n  ],\n  \"project_hints\": [\n    \"Focuses on algorithm guidance\",\n    \"Interacts with ElasticSearch for data retrieval\",\n    \"Potentially part of a larger system for algorithm education or assessment\"\n  ]\n}\n```"
+}

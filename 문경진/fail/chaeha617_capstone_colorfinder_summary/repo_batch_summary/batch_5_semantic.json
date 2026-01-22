@@ -1,0 +1,118 @@
+{
+  "batch_id": 5,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Lombok",
+    "Spring Security",
+    "JUnit"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "사용자 관리 및 인증",
+      "domain_tags": [
+        "user",
+        "auth",
+        "service",
+        "repository",
+        "security"
+      ],
+      "responsibilities": [
+        "사용자 정보 로드",
+        "사용자 저장",
+        "사용자 정보 업데이트",
+        "사용자 조회",
+        "인증 관리"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "Service Layer",
+        "Spring Security filter",
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\service\\UserDetailService.java",
+        "src\\main\\java\\com\\example\\colorfinder\\service\\UserService.java",
+        "src\\main\\java\\com\\example\\colorfinder\\WebSecurityConfig.java"
+      ],
+      "evidence": [
+        "userRepository.findByEmail(email)",
+        "userRepository.save(user)",
+        "http.authorizeRequests()",
+        "@Service"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "사용자 이메일 유효성 검증 부족",
+        "CSRF 비활성화로 인한 보안 취약점",
+        "예외 메시지 노출 가능성"
+      ]
+    },
+    {
+      "cluster_name": "웹 구성 및 인터셉터 설정",
+      "domain_tags": [
+        "web",
+        "mvc",
+        "interceptor",
+        "configuration"
+      ],
+      "responsibilities": [
+        "인터셉터 추가",
+        "정적 리소스 핸들링",
+        "웹 보안 구성"
+      ],
+      "implementation_signals": [
+        "Configuration",
+        "Bean",
+        "Interceptor"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\WebMvcConfig.java",
+        "src\\main\\java\\com\\example\\colorfinder\\WebSecurityConfig.java"
+      ],
+      "evidence": [
+        "@Configuration",
+        "registry.addInterceptor(customInterceptor())",
+        "addResourceHandlers"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "인터셉터의 성능 저하 가능성",
+        "정적 리소스 경로 변경 시 오류 발생 가능성"
+      ]
+    },
+    {
+      "cluster_name": "테스트 컨텍스트 로드",
+      "domain_tags": [
+        "test",
+        "spring",
+        "context"
+      ],
+      "responsibilities": [
+        "컨텍스트 로드"
+      ],
+      "implementation_signals": [
+        "Spring Boot Test"
+      ],
+      "related_files": [
+        "src\\test\\java\\com\\example\\colorfinder\\ColorfinderApplicationTests.java"
+      ],
+      "evidence": [
+        "@SpringBootTest",
+        "contextLoads()"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": []
+    }
+  ],
+  "suggested_cluster_keys": [
+    "user+management",
+    "auth+security",
+    "web+mvc",
+    "test+spring",
+    "interceptor+security"
+  ]
+}

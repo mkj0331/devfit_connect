@@ -1,0 +1,4 @@
+{
+  "path": "apache-tomcat-9.0.46\\CONTRIBUTING.md",
+  "summary": "```json\n{\n  \"language\": \"Markdown\",\n  \"technologies\": [],\n  \"role\": \"이 파일은 Apache Tomcat 프로젝트에 기여하는 방법에 대한 가이드를 제공한다.\",\n  \"key_features\": [\n    \"기여 방법 안내\",\n    \"버그 리포트 제출 방법\",\n    \"코드 기여 및 문서 기여 방법 설명\",\n    \"스타일 가이드 제공\"\n  ],\n  \"key_code\": [],\n  \"project_hints\": [\n    \"Apache Tomcat은 웹 서버 및 서블릿 컨테이너로, Java 기반의 웹 애플리케이션을 지원하는 프로젝트이다.\"\n  ]\n}\n```"
+}

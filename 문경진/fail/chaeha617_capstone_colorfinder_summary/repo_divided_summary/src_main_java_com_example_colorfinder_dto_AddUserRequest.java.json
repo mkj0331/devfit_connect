@@ -1,0 +1,111 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\dto\\AddUserRequest.java",
+    "language": "Java",
+    "frameworks": [
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "user",
+      "request",
+      "color",
+      "email",
+      "password",
+      "nickname",
+      "gender"
+    ],
+    "entities": [
+      "User",
+      "AddUserRequest"
+    ],
+    "modules": [
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 추가",
+      "verb_object": "사용자 추가",
+      "inputs": [
+        "userId",
+        "email",
+        "password",
+        "nickname",
+        "colorId",
+        "gender"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Lombok 사용으로 코드 간결성",
+      "명확한 데이터 구조",
+      "유효성 검사 용이"
+    ],
+    "risks": [
+      "입력 데이터 유효성 검사 미비",
+      "비밀번호 보안 취약성",
+      "null 값 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "비밀번호 암호화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Setter"
+    },
+    {
+      "type": "field",
+      "text": "private Long userId;"
+    },
+    {
+      "type": "field",
+      "text": "private String email;"
+    },
+    {
+      "type": "field",
+      "text": "private String password;"
+    },
+    {
+      "type": "field",
+      "text": "private String nickname;"
+    },
+    {
+      "type": "field",
+      "text": "private String colorId;"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto",
+      "registration+request"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\service\\UserService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\controller\\UserController.java"
+    ]
+  }
+}

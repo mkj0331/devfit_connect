@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetGroupMemberListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java 17+\",\n    \"Record (Java 14+ feature)\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for group member list response\",\n  \"key_features\": [\n    \"Encapsulates a list of group members\",\n    \"Uses Java's record feature for concise data representation\"\n  ],\n  \"key_code\": [\n    \"public record GetGroupMemberListResponseDto(List<GetGroupMemberResponseDto> members)\"\n  ],\n  \"project_hints\": [\n    \"Part of a group management system\",\n    \"Handles responses related to group members\"\n  ]\n}\n```"
+}

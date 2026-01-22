@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\generated\\gamza\\project\\gamzaweb\\Entity\\QCollaboratorEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Querydsl\"],\n  \"role\": \"이 파일은 CollaboratorEntity에 대한 Querydsl 쿼리 타입을 정의하여 데이터베이스 쿼리를 쉽게 작성할 수 있도록 돕습니다.\",\n  \"key_features\": [\n    \"CollaboratorEntity의 ID, 프로젝트, 사용자 정보를 쿼리할 수 있는 기능 제공\",\n    \"Querydsl을 사용하여 타입 안전한 쿼리 생성 지원\"\n  ],\n  \"key_code\": [\n    \"public final NumberPath<Long> id = createNumber(\\\"id\\\", Long.class);\",\n    \"public final QProjectEntity project;\",\n    \"public final QUserEntity user;\"\n  ],\n  \"project_hints\": [\n    \"프로젝트는 협업자와 관련된 데이터 모델을 다루고 있으며, 프로젝트와 사용자 간의 관계를 관리하는 시스템일 가능성이 높습니다.\"\n  ]\n}\n```"
+}

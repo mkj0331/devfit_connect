@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\SubmissionAiEvaluationService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Interface for evaluating submissions in an AI evaluation service.\",\n  \"key_features\": [\n    \"Defines a method to evaluate submissions based on their ID.\"\n  ],\n  \"key_code\": [\n    \"void evaluateSubmission(Long submissionId);\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves an AI or automated system for evaluating code submissions, possibly in a competitive programming or educational context.\"\n  ]\n}\n```"
+}

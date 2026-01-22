@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\config\\QuerydslConfig.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Querydsl\", \"JPA\"],\n  \"role\": \"Querydsl 설정 및 JPAQueryFactory 빈 생성\",\n  \"key_features\": [\n    \"JPAQueryFactory를 사용하여 Querydsl 쿼리 생성\",\n    \"EntityManager를 주입받아 데이터베이스와의 상호작용 지원\"\n  ],\n  \"key_code\": [\n    \"return new JPAQueryFactory(entityManager);\"\n  ],\n  \"project_hints\": [\n    \"데이터베이스 쿼리 최적화 및 동적 쿼리 생성을 위한 웹 애플리케이션\"\n  ]\n}\n```"
+}

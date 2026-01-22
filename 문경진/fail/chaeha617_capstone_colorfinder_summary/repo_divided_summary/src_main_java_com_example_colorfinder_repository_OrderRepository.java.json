@@ -1,0 +1,114 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\repository\\OrderRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Order",
+      "User",
+      "Cart"
+    ],
+    "entities": [
+      "OrderEntity",
+      "CartEntity"
+    ],
+    "modules": [
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "주문 조회",
+      "verb_object": "주문 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "List<OrderEntity>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "최대 주문 ID 조회",
+      "verb_object": "최대 주문 ID 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "Long"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "Spring Data JPA 사용",
+      "간결한 인터페이스",
+      "유지보수 용이",
+      "쿼리 메서드 지원",
+      "명확한 책임 분리"
+    ],
+    "risks": [
+      "SQL 인젝션 가능성",
+      "잘못된 쿼리로 인한 성능 저하",
+      "동시성 문제",
+      "예외 처리 부족",
+      "테스트 부족"
+    ],
+    "missing_standard_checks": [
+      "트랜잭션 관리",
+      "예외 처리",
+      "로깅",
+      "입력 검증",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Repository"
+    },
+    {
+      "type": "call",
+      "text": "findByUserId(Long userId)"
+    },
+    {
+      "type": "call",
+      "text": "findMaxAddIdByUserId(Long userId)"
+    },
+    {
+      "type": "query",
+      "text": "SELECT MAX(a.orderId) FROM OrderEntity a WHERE a.userId = :userId"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "order+repository"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\OrderEntity.java",
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\CartEntity.java"
+    ]
+  }
+}

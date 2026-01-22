@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\Enums\\DeploymentStep.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 배포 단계(enum)를 정의하여 배포 프로세스의 각 단계를 관리하는 역할을 한다.\",\n  \"key_features\": [\n    \"배포 단계에 대한 명확한 정의 제공\",\n    \"각 단계에 대한 설명을 포함\"\n  ],\n  \"key_code\": [\n    \"public enum DeploymentStep { ... }\",\n    \"private final String description;\",\n    \"DeploymentStep(String description) { this.description = description; }\"\n  ],\n  \"project_hints\": [\n    \"프로젝트는 소프트웨어 배포와 관련된 기능을 다루고 있으며, 각 배포 단계의 상태를 관리하는 시스템으로 추측된다.\"\n  ]\n}\n```"
+}

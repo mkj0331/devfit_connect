@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\UserRole.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java Enum\"],\n  \"role\": \"Defines user roles in the application\",\n  \"key_features\": [\"Enumeration of user roles\", \"Simplifies role management\"],\n  \"key_code\": [\"public enum UserRole {\", \"ADMIN,\", \"USER\"],\n  \"project_hints\": [\"User management system\", \"Role-based access control\"]\n}\n```"
+}

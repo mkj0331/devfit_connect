@@ -1,0 +1,141 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\entity\\Review.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Lombok"
+    ],
+    "libraries": [
+      "Hibernate"
+    ],
+    "layer_guess": "Domain",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Review",
+      "Submission",
+      "User"
+    ],
+    "entities": [
+      "Review",
+      "Submission",
+      "User"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "리뷰 업데이트",
+      "verb_object": "리뷰 업데이트",
+      "inputs": [
+        "codeLine",
+        "content"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "modifiedAt 갱신"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "리뷰 좋아요 증가",
+      "verb_object": "리뷰 좋아요 증가",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [
+        "likeCount 증가"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "리뷰 좋아요 감소",
+      "verb_object": "리뷰 좋아요 감소",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [
+        "likeCount 감소"
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "유효성 검사 적용",
+      "Lazy Loading 사용",
+      "코드 가독성 높음",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "NullPointerException 가능성",
+      "likeCount 음수 가능성",
+      "부모 리뷰 참조 무결성 문제",
+      "데이터베이스 성능 저하 가능성",
+      "동시성 문제"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리",
+      "로깅",
+      "트랜잭션 관리",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "call",
+      "text": "updateReview(Long codeLine, String content)"
+    },
+    {
+      "type": "call",
+      "text": "addReviewLikeCount()"
+    },
+    {
+      "type": "call",
+      "text": "deleteReviewLikeCount()"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.*"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+review",
+      "user+submission"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Submission.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java"
+    ]
+  }
+}

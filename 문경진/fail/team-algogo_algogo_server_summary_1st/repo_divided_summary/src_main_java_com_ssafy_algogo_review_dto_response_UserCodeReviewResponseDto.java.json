@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\review\\dto\\response\\UserCodeReviewResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jackson\",\n    \"Java 11+\",\n    \"Record Types\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for user code review responses\",\n  \"key_features\": [\n    \"Immutable data structure using record\",\n    \"Serialization control with @JsonInclude\",\n    \"Encapsulation of user code review details\"\n  ],\n  \"key_code\": [\n    \"public record UserCodeReviewResponseDto(...) { }\",\n    \"@JsonInclude(JsonInclude.Include.NON_NULL)\"\n  ],\n  \"project_hints\": [\n    \"Code review functionality\",\n    \"User submissions related to programming problems\",\n    \"Potential integration with a web service for JSON responses\"\n  ]\n}\n```"
+}

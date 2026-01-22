@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\repository\\PlatformRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Spring Data JPA\"],\n  \"role\": \"데이터베이스와의 상호작용을 담당하는 리포지토리\",\n  \"key_features\": [\n    \"PlatformEntity 객체에 대한 CRUD 기능 제공\",\n    \"platformName으로 PlatformEntity 검색 기능\"\n  ],\n  \"key_code\": [\n    \"public interface PlatformRepository extends JpaRepository<PlatformEntity, Long>\",\n    \"PlatformEntity findByPlatformName(String platformName)\"\n  ],\n  \"project_hints\": [\n    \"플랫폼 관련 데이터 관리 시스템\",\n    \"게임 또는 소프트웨어 플랫폼 관련 서비스\"\n  ]\n}\n```"
+}

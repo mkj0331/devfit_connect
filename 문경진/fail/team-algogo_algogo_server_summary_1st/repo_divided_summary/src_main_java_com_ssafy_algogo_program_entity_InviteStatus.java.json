@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\InviteStatus.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Enum definition for invite status\",\n  \"key_features\": [\n    \"Defines different statuses for an invitation process\",\n    \"Provides a clear representation of the state of an invitation\"\n  ],\n  \"key_code\": [\n    \"public enum InviteStatus {\",\n    \"    PENDING,\",\n    \"    DENIED,\",\n    \"    ACCEPTED\",\n    \"}\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves a system for managing invitations, possibly for events or user interactions.\",\n    \"The use of an enum suggests that the project may require handling different states of an invitation process.\"\n  ]\n}\n```"
+}

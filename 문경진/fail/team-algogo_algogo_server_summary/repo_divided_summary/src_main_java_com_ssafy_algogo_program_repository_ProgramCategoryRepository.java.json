@@ -1,0 +1,96 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramCategoryRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Data JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Program",
+      "Category"
+    ],
+    "entities": [
+      "ProgramCategory"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 삭제",
+      "verb_object": "프로그램 삭제",
+      "inputs": [
+        "programId: Long"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "JPA를 통한 데이터 접근",
+      "명확한 메서드 이름",
+      "트랜잭션 관리"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "예외 처리 부족"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "로그 기록",
+      "트랜잭션 롤백"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.Modifying;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.Query;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Repository"
+    },
+    {
+      "type": "call",
+      "text": "deleteByProgramId(Long programId)"
+    },
+    {
+      "type": "query",
+      "text": "DELETE FROM ProgramCategory pc WHERE pc.program.id = :programId"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+data_access"
+    ],
+    "related_files_guess": []
+  }
+}

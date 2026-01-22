@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\JwtTokenProvider.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Security\",\n    \"JWT (JSON Web Token)\",\n    \"Lombok\",\n    \"JPA\",\n    \"Jakarta Servlet\"\n  ],\n  \"role\": \"JWT Token Provider\",\n  \"key_features\": [\n    \"Generate access and refresh tokens\",\n    \"Extract user ID from authentication context\",\n    \"Retrieve client IP address from HTTP request\",\n    \"Handle token expiration and claims extraction\"\n  ],\n  \"key_code\": [\n    \"createAccessToken(Authentication authentication, String ip)\",\n    \"getUserIdFromAuthentication()\",\n    \"getIpFromRequest(HttpServletRequest request)\",\n    \"getSigningKey()\"\n  ],\n  \"project_hints\": [\n    \"Authentication and authorization mechanism\",\n    \"User management system\",\n    \"Security features for web applications\"\n  ]\n}\n```"
+}

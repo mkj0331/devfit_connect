@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\project\\response\\ProjectDetailResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 프로젝트의 세부 정보를 담고 있는 DTO(Data Transfer Object)로, 프로젝트의 상세 정보를 클라이언트에 전달하는 역할을 한다.\",\n  \"key_features\": [\n    \"프로젝트 ID, 이름, 설명, 상태, 시작 및 종료 날짜, 협업자 목록, 프로젝트 유형, 플랫폼 ID 및 이름을 포함한 프로젝트 세부 정보 제공\",\n    \"협업자 정보를 ResponseCollaboratorDto 형태로 변환하여 포함\"\n  ],\n  \"key_code\": [\n    \"this.id = project.getId();\",\n    \"this.collaborators = project.getCollaborators().stream()...\",\n    \"this.platformId = project.getPlatformEntity().getId();\"\n  ],\n  \"project_hints\": [\n    \"프로젝트 관리 또는 협업 플랫폼과 관련된 주제일 가능성이 높음\",\n    \"사용자와 협업자 간의 관계를 관리하는 시스템일 것으로 추정됨\"\n  ]\n}\n```"
+}

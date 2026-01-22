@@ -1,0 +1,40 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\autotransfer\\controller\\AutoTransferController.java",
+  "project_subject_signals": [
+    "자동이체",
+    "PiggyBank (돼지 저금통)"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "Lombok",
+    "Swagger",
+    "Slf4j"
+  ],
+  "core_features": [
+    {
+      "feature_name": "자동이체 생성",
+      "feature_description": "새로운 자동이체를 생성하는 기능을 제공합니다.",
+      "implementation_method": "POST /api/auto-transfer 엔드포인트를 통해 AutoTransferCreateRequestDto를 받아 처리합니다.",
+      "job_value": "API 요청을 처리하고 데이터 생성을 위한 비즈니스 로직을 호출하는 기본적인 RESTful API 개발 역량을 보여줍니다."
+    },
+    {
+      "feature_name": "자동이체 삭제",
+      "feature_description": "기존 자동이체를 삭제하는 기능을 제공합니다.",
+      "implementation_method": "DELETE /api/auto-transfer/{autoTransferId} 엔드포인트를 통해 자동이체 ID를 받아 처리합니다.",
+      "job_value": "RESTful API 디자인 원칙에 따라 리소스 삭제 기능을 구현하는 역량을 보여줍니다."
+    },
+    {
+      "feature_name": "자동이체 조회 (단건 및 목록)",
+      "feature_description": "특정 자동이체의 상세 정보 또는 특정 계좌에 연결된 자동이체 목록을 조회하는 기능을 제공합니다.",
+      "implementation_method": "GET /api/auto-transfer/{autoTransferId} 및 GET /api/auto-transfer/list/{accountId} 엔드포인트를 통해 처리합니다.",
+      "job_value": "경로 변수(Path Variable)를 활용하여 특정 리소스를 조회하고, 컬렉션 리소스를 조회하는 RESTful API 개발 역량을 보여줍니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "Request Body 검증 로직 추가 (예: @Valid 어노테이션 활용)",
+    "성능 향상을 위한 비동기 처리 검토 (필요시)",
+    "에러 처리 로직의 세분화 및 표준화"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\utils\\S3Service.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"AWS SDK for Java\",\n    \"Lombok\"\n  ],\n  \"role\": \"S3Service 클래스는 AWS S3와 CloudFront를 사용하여 파일 업로드 및 다운로드 기능을 제공하는 서비스입니다.\",\n  \"key_features\": [\n    \"파일 업로드 기능 (문제집 썸네일)\",\n    \"파일 다운로드 기능 (CloudFront URL에서 코드 텍스트 다운로드)\",\n    \"파일 확장자 검증\",\n    \"파일 크기 검증\"\n  ],\n  \"key_code\": [\n    \"public String uploadProblemsetThumbnail(MultipartFile file)\",\n    \"public String downloadText(String cloudFrontUrl)\",\n    \"private boolean hasValidExtension(String filename)\"\n  ],\n  \"project_hints\": [\n    \"파일 업로드 및 다운로드 기능을 제공하는 웹 애플리케이션\",\n    \"AWS S3와 CloudFront를 활용한 파일 관리\",\n    \"파일 형식 및 크기 검증을 통한 안정성 확보\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionMePageResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Java Records\",\n    \"Java Collections\",\n    \"Spring Data\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for paginated submission responses\",\n  \"key_features\": [\n    \"Encapsulates pagination information (PageInfo)\",\n    \"Encapsulates sorting information (SortInfo)\",\n    \"Holds a list of submission response DTOs\"\n  ],\n  \"key_code\": [\n    \"public record SubmissionMePageResponseDto(...)\",\n    \"public static SubmissionMePageResponseDto from(...)\"\n  ],\n  \"project_hints\": [\n    \"Submission management system\",\n    \"User-specific submissions\",\n    \"Pagination and sorting of submissions\"\n  ]\n}\n```"
+}

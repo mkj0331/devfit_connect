@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\repository\\querydslRepository\\ProjectCustomRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"QueryDSL\"],\n  \"role\": \"이 파일은 프로젝트의 데이터베이스에서 특정 조건에 맞는 프로젝트 엔티티를 조회하는 사용자 정의 리포지토리 인터페이스입니다.\",\n  \"key_features\": [\n    \"프로젝트 엔티티에서 승인된 프로젝트를 조회하는 기능\",\n    \"이미지를 포함한 프로젝트를 조회하는 기능\"\n  ],\n  \"key_code\": [\n    \"List<ProjectEntity> findProjectsWithImages();\"\n  ],\n  \"project_hints\": [\n    \"프로젝트 관리 또는 프로젝트 공유 플랫폼과 관련된 주제일 가능성이 높음\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\AlgorithmListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java 11+\", \"Record (Java 14+)\"],\n  \"role\": \"Data Transfer Object (DTO) for algorithm list responses\",\n  \"key_features\": [\n    \"Encapsulates a list of AlgorithmResponseDto objects\",\n    \"Provides a static factory method for instantiation\"\n  ],\n  \"key_code\": [\n    \"public record AlgorithmListResponseDto(List<AlgorithmResponseDto> algorithmList)\",\n    \"public static AlgorithmListResponseDto from(List<AlgorithmResponseDto> algorithmList)\"\n  ],\n  \"project_hints\": [\n    \"Part of a submission module in an algorithm-related project\",\n    \"Handles responses related to algorithms, possibly for a coding platform or educational tool\"\n  ]\n}\n```"
+}

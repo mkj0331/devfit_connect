@@ -1,0 +1,78 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\ListSearchUserResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "user",
+      "response",
+      "dto"
+    ],
+    "entities": [
+      "ListSearchUserResponseDto",
+      "SearchUserResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 목록 조회",
+      "verb_object": "사용자 목록 반환",
+      "inputs": [],
+      "outputs": [
+        "List<SearchUserResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "간결한 코드"
+    ],
+    "risks": [
+      "확장성 부족",
+      "유효성 검사 미비"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import java.util.List;"
+    },
+    {
+      "type": "annotation",
+      "text": "public record ListSearchUserResponseDto"
+    },
+    {
+      "type": "call",
+      "text": "List<SearchUserResponseDto> users"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto",
+      "response+api"
+    ],
+    "related_files_guess": []
+  }
+}

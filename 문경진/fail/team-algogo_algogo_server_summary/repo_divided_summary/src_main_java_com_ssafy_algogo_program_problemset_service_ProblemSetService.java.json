@@ -1,0 +1,165 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\service\\ProblemSetService.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "문제집",
+      "조회",
+      "생성",
+      "수정",
+      "삭제"
+    ],
+    "entities": [
+      "ProblemSet",
+      "ProgramProblem",
+      "Category"
+    ],
+    "modules": [
+      "problemset"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "문제집 리스트 조회",
+      "verb_object": "문제집 조회",
+      "inputs": [
+        "keyWord",
+        "category",
+        "sortBy",
+        "sortDirection",
+        "size",
+        "page"
+      ],
+      "outputs": [
+        "ProblemSetListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "자율 문제집 생성",
+      "verb_object": "문제집 생성",
+      "inputs": [
+        "ProblemSetCreateRequestDto",
+        "thumbnail"
+      ],
+      "outputs": [
+        "ProblemSetResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "자율 문제집 수정",
+      "verb_object": "문제집 수정",
+      "inputs": [
+        "programId",
+        "ProblemSetModifyRequestDto"
+      ],
+      "outputs": [
+        "ProblemSetResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    },
+    {
+      "name": "자율 문제집 삭제",
+      "verb_object": "문제집 삭제",
+      "inputs": [
+        "programId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "문제집 카테고리 조회",
+      "verb_object": "카테고리 조회",
+      "inputs": [],
+      "outputs": [
+        "CategoryListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.75
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": [
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "유지보수 용이",
+      "모듈화된 구조",
+      "재사용 가능성",
+      "Spring 프레임워크 활용"
+    ],
+    "risks": [
+      "의존성 주입 문제",
+      "예외 처리 미비",
+      "성능 저하 가능성",
+      "동시성 문제",
+      "보안 취약점"
+    ],
+    "missing_standard_checks": [
+      "입력 유효성 검사",
+      "로깅",
+      "API 문서화",
+      "단위 테스트",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.web.multipart.MultipartFile;"
+    },
+    {
+      "type": "call",
+      "text": "getProblemSetList"
+    },
+    {
+      "type": "call",
+      "text": "createProblemSet"
+    },
+    {
+      "type": "call",
+      "text": "modifyProblemSet"
+    },
+    {
+      "type": "call",
+      "text": "deleteProblemSet"
+    },
+    {
+      "type": "call",
+      "text": "getCategoryList"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "problemset+service",
+      "api+service",
+      "dto+response"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\ProblemSetCreateRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetResponseDto.java"
+    ]
+  }
+}

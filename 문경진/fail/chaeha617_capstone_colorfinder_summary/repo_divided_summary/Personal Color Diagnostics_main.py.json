@@ -1,0 +1,175 @@
+{
+  "file": {
+    "path": "Personal Color Diagnostics\\main.py",
+    "language": "Python",
+    "frameworks": [
+      "Flask"
+    ],
+    "libraries": [
+      "cv2",
+      "numpy",
+      "json",
+      "requests"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "퍼스널 컬러",
+      "이미지 분석",
+      "API",
+      "세션",
+      "데이터베이스"
+    ],
+    "entities": [
+      "사용자",
+      "이미지",
+      "컬러"
+    ],
+    "modules": [
+      "분석",
+      "로그인",
+      "데이터 로드"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "퍼스널 컬러 예측",
+      "verb_object": "컬러 예측",
+      "inputs": [
+        "image_path",
+        "dataset"
+      ],
+      "outputs": [
+        "personal_color",
+        "avg_b_value"
+      ],
+      "side_effects": [
+        "API 호출"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "이미지 업로드",
+      "verb_object": "이미지 업로드",
+      "inputs": [
+        "uploaded_file"
+      ],
+      "outputs": [
+        "response"
+      ],
+      "side_effects": [
+        "파일 저장"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "name": "데이터셋 로드",
+      "verb_object": "데이터셋 로드",
+      "inputs": [],
+      "outputs": [
+        "loaded_dataset"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "사용자 로그인",
+      "verb_object": "로그인",
+      "inputs": [
+        "user_id"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "세션 저장"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "name": "컬러 정보 저장",
+      "verb_object": "정보 저장",
+      "inputs": [
+        "user_id",
+        "personal_color_name"
+      ],
+      "outputs": [
+        "response"
+      ],
+      "side_effects": [
+        "API 호출"
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JSON 파일"
+    ],
+    "patterns": [
+      "MVC"
+    ],
+    "cross_cutting": [
+      "예외 처리",
+      "세션 관리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "모듈화된 구조",
+      "예외 처리",
+      "RESTful API 사용",
+      "세션 관리",
+      "이미지 처리 기능"
+    ],
+    "risks": [
+      "파일 업로드 보안",
+      "API 호출 실패",
+      "데이터셋 로드 실패",
+      "세션 탈취",
+      "이미지 처리 오류"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "로그 기록",
+      "보안 강화",
+      "유효성 검사",
+      "에러 핸들링 강화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "from flask import Flask, request, jsonify, redirect, url_for, render_template, session"
+    },
+    {
+      "type": "call",
+      "text": "cv2.cvtColor(image, cv2.COLOR_BGR2LAB)"
+    },
+    {
+      "type": "endpoint",
+      "text": "@app.route('/analyze', methods=['POST'])"
+    },
+    {
+      "type": "call",
+      "text": "requests.post(SPRINGBOOT_API_URL, json={...})"
+    },
+    {
+      "type": "config",
+      "text": "UPLOAD_FOLDER = './serverimage/'"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "image+analysis",
+      "api+controller",
+      "user+session",
+      "color+prediction"
+    ],
+    "related_files_guess": [
+      "Personal Color Diagnostics\\dataset.py",
+      "Personal Color Diagnostics\\utils.py",
+      "Personal Color Diagnostics\\routes.py"
+    ]
+  }
+}

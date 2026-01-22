@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for handling program problem requests\",\n  \"key_features\": [\n    \"Validation annotations for input fields\",\n    \"Builder pattern for object creation\",\n    \"Encapsulation of problem request data\"\n  ],\n  \"key_code\": [\n    \"@NotNull(message = \\\"problemId는 필수 값입니다.\\\")\",\n    \"@FutureOrPresent(message = \\\"endDate는 현재 시간 이후여야 합니다.\\\")\",\n    \"@Valid\"\n  ],\n  \"project_hints\": [\n    \"Handles user difficulty and problem difficulty types\",\n    \"Involves date validation for scheduling problems\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\repository\\query\\ProgramProblemRepositoryCustom.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data JPA\"\n  ],\n  \"role\": \"Custom repository interface for querying program problems.\",\n  \"key_features\": [\n    \"Defines a method to find all program problems by program ID with sorting and pagination.\"\n  ],\n  \"key_code\": [\n    \"Page<ProgramProblemResponseDto> findAllByProgramIdWithSort(Long programId, String sortBy, String sortDirection, Pageable pageable)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves managing programming problems associated with specific programs, possibly for an educational or competitive programming platform.\"\n  ]\n}\n```"
+}

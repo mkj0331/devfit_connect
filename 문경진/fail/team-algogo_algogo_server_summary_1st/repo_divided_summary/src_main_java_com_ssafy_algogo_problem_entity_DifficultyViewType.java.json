@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\DifficultyViewType.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Enum\"],\n  \"role\": \"Defines an enumeration for different types of difficulty views in the application.\",\n  \"key_features\": [\n    \"Enumeration of difficulty types\",\n    \"Categorizes difficulty into USER_DIFFICULTY and PROBLEM_DIFFICULTY\"\n  ],\n  \"key_code\": [\n    \"public enum DifficultyViewType {\",\n    \"USER_DIFFICULTY, PROBLEM_DIFFICULTY\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves problem-solving or algorithm-related challenges.\",\n    \"User and problem difficulty levels may be a key feature of the application.\"\n  ]\n}\n```"
+}

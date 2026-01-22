@@ -1,0 +1,92 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\dto\\AddressDTO.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "주소",
+      "유효성 검사",
+      "DTO"
+    ],
+    "entities": [
+      "AddressEntity",
+      "AddressDTO"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "주소 변환",
+      "verb_object": "주소 변환",
+      "inputs": [
+        "AddressEntity"
+      ],
+      "outputs": [
+        "AddressDTO"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Builder"
+    ],
+    "cross_cutting": [
+      "Validation"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "Lombok 사용으로 코드 간결함",
+      "유효성 검사 어노테이션 사용"
+    ],
+    "risks": [
+      "DTO와 Entity 간의 강한 결합",
+      "ValidationErrors 필드의 null 처리"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 로직",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import jakarta.validation.constraints.*;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Data"
+    },
+    {
+      "type": "call",
+      "text": "AddressDTO.toAddressDTO(AddressEntity)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto",
+      "validation",
+      "entity"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\AddressEntity.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\AddressService.java"
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\entity\\CampaignUser.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "campaign",
+      "user",
+      "penalty"
+    ],
+    "entities": [
+      "CampaignUser",
+      "ProgramUser"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "패널티 카운트 설정",
+      "verb_object": "패널티 카운트 설정",
+      "inputs": [
+        "Long penaltyCnt"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "캠페인 사용자 생성",
+      "verb_object": "캠페인 사용자 생성",
+      "inputs": [
+        "CampaignUser user"
+      ],
+      "outputs": [
+        "CampaignUser createdUser"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 엔티티 정의",
+      "유효성 검사 적용",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "상속으로 인한 복잡성 증가",
+      "null 처리 미비 가능성"
+    ],
+    "missing_standard_checks": [
+      "테스트 케이스",
+      "API 문서화",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "annotation",
+      "text": "@Column(name = \"penalty_cnt\")"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.Column"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.Entity"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+campaign",
+      "validation+user"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\entity\\ProgramUser.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\service\\CampaignUserService.java"
+    ]
+  }
+}

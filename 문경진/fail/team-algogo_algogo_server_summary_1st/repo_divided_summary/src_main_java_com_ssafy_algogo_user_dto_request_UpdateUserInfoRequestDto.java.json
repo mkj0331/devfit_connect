@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\UpdateUserInfoRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for updating user information\",\n  \"key_features\": [\n    \"Validation annotations to ensure required fields are not blank\",\n    \"Builder pattern for object creation\",\n    \"Getter methods for accessing private fields\"\n  ],\n  \"key_code\": [\n    \"@NotBlank(message = \\\"description is required\\\")\",\n    \"private String description;\",\n    \"@NotBlank(message = \\\"nickname is required\\\")\",\n    \"private String nickname;\"\n  ],\n  \"project_hints\": [\n    \"User management system\",\n    \"Profile update functionality\",\n    \"Validation of user input\"\n  ]\n}\n```"
+}

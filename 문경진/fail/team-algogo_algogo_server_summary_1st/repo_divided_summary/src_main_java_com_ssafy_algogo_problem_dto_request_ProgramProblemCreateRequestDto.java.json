@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemCreateRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for creating program problems\",\n  \"key_features\": [\n    \"Validation of the problems list using annotations\",\n    \"Use of Lombok for boilerplate code reduction\",\n    \"Builder pattern for object creation\"\n  ],\n  \"key_code\": [\n    \"@NotNull\",\n    \"@Valid\",\n    \"List<ProgramProblemRequestDto> problems\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves a programming problem management system\",\n    \"The presence of a request DTO suggests a RESTful API design\"\n  ]\n}\n```"
+}

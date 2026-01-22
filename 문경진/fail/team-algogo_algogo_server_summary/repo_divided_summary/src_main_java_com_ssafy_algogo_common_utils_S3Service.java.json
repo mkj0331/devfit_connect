@@ -1,0 +1,136 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\utils\\S3Service.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "AWS SDK"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "S3",
+      "CloudFront",
+      "파일 업로드",
+      "파일 다운로드"
+    ],
+    "entities": [
+      "S3Client",
+      "MultipartFile",
+      "CustomException"
+    ],
+    "modules": [
+      "utils"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "파일 확장자 검증",
+      "verb_object": "확장자 검증",
+      "inputs": [
+        "filename"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "코드 텍스트 다운로드",
+      "verb_object": "코드 다운로드",
+      "inputs": [
+        "cloudFrontUrl"
+      ],
+      "outputs": [
+        "String"
+      ],
+      "side_effects": [
+        "예외 발생"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "문제집 썸네일 업로드",
+      "verb_object": "썸네일 업로드",
+      "inputs": [
+        "MultipartFile"
+      ],
+      "outputs": [
+        "String"
+      ],
+      "side_effects": [
+        "S3에 파일 업로드",
+        "예외 발생"
+      ],
+      "confidence": 0.85
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "S3"
+    ],
+    "patterns": [
+      "Service",
+      "Exception Handling"
+    ],
+    "cross_cutting": [
+      "Logging",
+      "Validation"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "AWS S3 통합",
+      "예외 처리",
+      "파일 확장자 검증"
+    ],
+    "risks": [
+      "파일 크기 제한",
+      "예외 발생 가능성",
+      "잘못된 URL 처리"
+    ],
+    "missing_standard_checks": [
+      "단위 테스트",
+      "로깅 표준",
+      "입력 유효성 검사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import software.amazon.awssdk.services.s3.S3Client;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "call",
+      "text": "s3Client.getObject(getObjectRequest)"
+    },
+    {
+      "type": "config",
+      "text": "@Value(\"${spring.cloud.aws.s3.bucket}\")"
+    },
+    {
+      "type": "call",
+      "text": "validateFile(file)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "file+upload",
+      "s3+service",
+      "cloudfront+integration"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\CustomException.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\ErrorCode.java"
+    ]
+  }
+}

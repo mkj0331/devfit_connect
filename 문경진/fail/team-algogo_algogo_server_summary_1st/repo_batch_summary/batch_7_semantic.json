@@ -1,0 +1,42 @@
+{
+  "batch_id": 7,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Jakarta Persistence (JPA)",
+    "Lombok",
+    "Hibernate",
+    "Java Validation",
+    "Spring Data JPA",
+    "Spring Framework",
+    "QueryDSL"
+  ],
+  "batch_role": "Management of programming problems and their relationships in a coding competition or educational platform.",
+  "key_features": [
+    "Entity classes to represent problems and their relationships.",
+    "Repository interfaces for CRUD operations and custom queries.",
+    "Service interfaces and implementations for managing problem data.",
+    "Support for pagination and sorting of problem data.",
+    "Error handling and validation for program and problem associations."
+  ],
+  "related_files": [
+    "ProgramProblem.java",
+    "UserDifficultyType.java",
+    "ProblemRepository.java",
+    "ProgramProblemRepository.java",
+    "ProgramProblemRepositoryCustom.java",
+    "ProgramProblemRepositoryImpl.java",
+    "ProblemService.java",
+    "ProgramProblemService.java",
+    "ProblemServiceImpl.java",
+    "ProgramProblemServiceImpl.java"
+  ],
+  "project_hints": [
+    "The project involves a platform for programming competitions or educational programs.",
+    "Entities are designed to manage and track problems and participant interactions.",
+    "Focus on user difficulty types and problem difficulty view types suggests a tailored user experience.",
+    "The project likely involves managing problems or challenges, possibly for a coding platform or educational tool.",
+    "Custom exceptions and error codes suggest a focus on robust error handling."
+  ]
+}

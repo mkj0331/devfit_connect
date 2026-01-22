@@ -1,0 +1,114 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\AwsS3Config.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "AWS SDK for Java"
+    ],
+    "layer_guess": "Configuration",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "AWS",
+      "S3",
+      "CloudFront"
+    ],
+    "entities": [
+      "AwsS3Config",
+      "S3Client",
+      "S3Presigner"
+    ],
+    "modules": [
+      "config"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "S3 클라이언트 생성",
+      "verb_object": "S3 클라이언트 생성",
+      "inputs": [
+        "accessKey",
+        "secretKey",
+        "region"
+      ],
+      "outputs": [
+        "S3Client 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "S3 프리사이너 생성",
+      "verb_object": "S3 프리사이너 생성",
+      "inputs": [
+        "accessKey",
+        "secretKey",
+        "region"
+      ],
+      "outputs": [
+        "S3Presigner 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Configuration"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "AWS S3 통합",
+      "비공식 파일 접근 지원",
+      "Spring 기반 설정"
+    ],
+    "risks": [
+      "비밀 키 노출 위험",
+      "잘못된 구성으로 인한 서비스 중단"
+    ],
+    "missing_standard_checks": [
+      "환경 변수 검증",
+      "예외 처리 로직"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.context.annotation.Configuration"
+    },
+    {
+      "type": "import",
+      "text": "import software.amazon.awssdk.services.s3.S3Client"
+    },
+    {
+      "type": "annotation",
+      "text": "@Configuration"
+    },
+    {
+      "type": "call",
+      "text": "S3Client.builder()"
+    },
+    {
+      "type": "call",
+      "text": "S3Presigner.builder()"
+    },
+    {
+      "type": "config",
+      "text": "@Value(\"${spring.cloud.aws.credentials.access-key}\")"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "aws+s3",
+      "config+spring"
+    ],
+    "related_files_guess": []
+  }
+}

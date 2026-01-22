@@ -1,0 +1,147 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\service\\AddressService.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Service Layer",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "주소",
+      "사용자",
+      "유효성 검사"
+    ],
+    "entities": [
+      "AddressEntity",
+      "OrderEntity"
+    ],
+    "modules": [
+      "AddressService",
+      "AddressRepository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "주소 조회",
+      "verb_object": "주소 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "AddressDTO"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "주소 저장",
+      "verb_object": "주소 저장",
+      "inputs": [
+        "AddressDTO"
+      ],
+      "outputs": [
+        "Long"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "주소 유효성 검사",
+      "verb_object": "주소 유효성 검사",
+      "inputs": [
+        "Errors"
+      ],
+      "outputs": [
+        "Map<String, String>"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "주소 ID로 조회",
+      "verb_object": "주소 ID로 조회",
+      "inputs": [
+        "addId"
+      ],
+      "outputs": [
+        "AddressDTO"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "유효성 검사"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 DTO 매핑",
+      "유효성 검사 기능",
+      "트랜잭션 관리",
+      "간결한 코드 구조",
+      "Spring 프레임워크 활용"
+    ],
+    "risks": [
+      "NullPointerException 가능성",
+      "예외 처리 부족",
+      "유효성 검사 미비",
+      "데이터 무결성 문제",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "로깅",
+      "단위 테스트",
+      "API 문서화",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "call",
+      "text": "addressRepository.findMinAddIdByUserId(userId)"
+    },
+    {
+      "type": "call",
+      "text": "addressRepository.findById(minAddId)"
+    },
+    {
+      "type": "call",
+      "text": "addressRepository.save(AddressEntity.toAddressEntity(addressDTO))"
+    },
+    {
+      "type": "call",
+      "text": "errors.getFieldErrors()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "api+service",
+      "validation+errors"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\AddressRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\AddressDTO.java",
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\AddressEntity.java"
+    ]
+  }
+}

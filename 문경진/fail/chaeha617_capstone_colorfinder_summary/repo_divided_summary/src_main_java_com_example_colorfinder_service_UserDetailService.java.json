@@ -1,0 +1,111 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\service\\UserDetailService.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "User",
+      "Detail",
+      "Service"
+    ],
+    "entities": [
+      "USERS"
+    ],
+    "modules": [
+      "UserRepository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 정보 로드",
+      "verb_object": "사용자 정보 로드",
+      "inputs": [
+        "email"
+      ],
+      "outputs": [
+        "USERS"
+      ],
+      "side_effects": [
+        "IllegalArgumentException 발생"
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": [
+      "보안",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "예외 처리 구현",
+      "의존성 주입 사용",
+      "스프링 시큐리티 통합",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "사용자 이메일 유효성 검증 부족",
+      "예외 메시지 노출 가능성",
+      "의존성 주입 실패 시 문제 발생",
+      "성능 저하 가능성",
+      "테스트 부족"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "로깅",
+      "트랜잭션 관리",
+      "API 문서화",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequiredArgsConstructor"
+    },
+    {
+      "type": "call",
+      "text": "userRepository.findByEmail(email)"
+    },
+    {
+      "type": "call",
+      "text": "orElseThrow"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.security.core.userdetails.UserDetailsService"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+user",
+      "service+user",
+      "db+jpa"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\UserRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\USERS.java"
+    ]
+  }
+}

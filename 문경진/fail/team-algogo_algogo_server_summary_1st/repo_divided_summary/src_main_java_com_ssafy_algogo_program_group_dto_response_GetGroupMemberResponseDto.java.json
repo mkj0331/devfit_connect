@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetGroupMemberResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Jackson\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for group member response\",\n  \"key_features\": [\n    \"Encapsulates user information related to a group member\",\n    \"Uses record type for immutability and simplicity\",\n    \"Includes JSON serialization configuration to exclude null values\",\n    \"Provides a static method to create an instance from a GroupsUser entity\"\n  ],\n  \"key_code\": [\n    \"public record GetGroupMemberResponseDto(...)\",\n    \"public static GetGroupMemberResponseDto from(GroupsUser groupsUser)\"\n  ],\n  \"project_hints\": [\n    \"Part of a group management system\",\n    \"Handles user roles within groups\",\n    \"Interacts with user and group entities\"\n  ]\n}\n```"
+}

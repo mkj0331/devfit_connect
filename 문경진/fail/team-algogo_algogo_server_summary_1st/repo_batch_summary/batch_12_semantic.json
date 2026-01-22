@@ -1,0 +1,43 @@
+{
+  "batch_id": 12,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Jackson",
+    "Java Time API",
+    "Lombok",
+    "Enum",
+    "Jakarta Persistence",
+    "Java Validation",
+    "Spring Framework",
+    "Spring Data JPA",
+    "QueryDSL"
+  ],
+  "batch_role": "Group management system for handling group rooms, user roles, and program functionalities.",
+  "key_features": [
+    "Data Transfer Objects (DTOs) for group room responses.",
+    "User role management with hierarchy and access control.",
+    "Entity classes representing group rooms and users.",
+    "Repository interfaces for CRUD operations and custom queries.",
+    "Service layer for managing group-related functionalities such as invitations, member management, and problem handling."
+  ],
+  "related_files": [
+    "MyGroupRoomResponseDto.java",
+    "GroupRole.java",
+    "GroupRoom.java",
+    "GroupsUser.java",
+    "ProgramUserStatus.java",
+    "GroupRepository.java",
+    "GroupUserRepository.java",
+    "GroupQueryRepository.java",
+    "GroupQueryRepositoryImpl.java",
+    "GroupService.java"
+  ],
+  "project_hints": [
+    "The project involves managing group programs or activities.",
+    "Role-based access control for users within groups.",
+    "Functionality related to group invitations and join requests.",
+    "User management system focusing on user roles and statuses within various programs."
+  ]
+}

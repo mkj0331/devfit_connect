@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\generated\\gamza\\project\\gamzaweb\\Entity\\QImageEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Querydsl\"],\n  \"role\": \"이 파일은 ImageEntity에 대한 Querydsl 쿼리 타입을 정의하여 데이터베이스와의 상호작용을 쉽게 해주는 역할을 합니다.\",\n  \"key_features\": [\n    \"ImageEntity의 속성(id, imageId, name, variableKey, project, user)을 정의\",\n    \"Querydsl을 사용하여 타입 안전한 쿼리 생성을 지원\"\n  ],\n  \"key_code\": [\n    \"public final NumberPath<Long> id = createNumber(\\\"id\\\", Long.class);\",\n    \"public final StringPath imageId = createString(\\\"imageId\\\");\",\n    \"public final QProjectEntity project;\",\n    \"public final QUserEntity user;\"\n  ],\n  \"project_hints\": [\n    \"이미지와 관련된 데이터 관리 시스템\",\n    \"사용자와 프로젝트 간의 관계를 포함하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

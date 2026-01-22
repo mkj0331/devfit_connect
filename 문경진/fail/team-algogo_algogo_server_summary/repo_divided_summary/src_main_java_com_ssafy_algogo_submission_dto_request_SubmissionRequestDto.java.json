@@ -1,0 +1,127 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\request\\SubmissionRequestDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Submission",
+      "Request",
+      "DTO"
+    ],
+    "entities": [
+      "SubmissionRequestDto"
+    ],
+    "modules": [
+      "submission",
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 요청 생성",
+      "verb_object": "제출 요청 생성",
+      "inputs": [
+        "programProblemId",
+        "language",
+        "code",
+        "strategy",
+        "execTime",
+        "memory",
+        "isSuccess",
+        "algorithmList"
+      ],
+      "outputs": [
+        "SubmissionRequestDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "유효성 검사",
+      "verb_object": "유효성 검사",
+      "inputs": [
+        "SubmissionRequestDto"
+      ],
+      "outputs": [
+        "ValidationResult"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 유효성 검사",
+      "불변 객체 생성",
+      "Lombok 사용으로 코드 간결",
+      "Null 체크",
+      "명확한 필드 정의"
+    ],
+    "risks": [
+      "유효성 검사 실패 시 예외 처리 필요",
+      "NullPointerException 가능성",
+      "입력 값의 범위 제한 필요",
+      "리스트의 비어있음 체크 필요",
+      "변경 불가능한 필드로 인한 유연성 저하"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "길이 제한",
+      "형식 검증",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotBlank"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotBlank"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotNull"
+    },
+    {
+      "type": "import",
+      "text": "lombok.Builder"
+    },
+    {
+      "type": "import",
+      "text": "lombok.Getter"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+request",
+      "submission+data",
+      "validation+rules"
+    ],
+    "related_files_guess": []
+  }
+}

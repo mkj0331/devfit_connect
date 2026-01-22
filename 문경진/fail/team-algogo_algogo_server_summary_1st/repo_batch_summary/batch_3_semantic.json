@@ -1,0 +1,53 @@
+{
+  "batch_id": 3,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Java Records",
+    "LocalDateTime",
+    "DTO (Data Transfer Object)",
+    "Entity Mapping",
+    "Lombok",
+    "Spring Framework",
+    "Spring Data JPA",
+    "Spring Security",
+    "JPA",
+    "Redis",
+    "JWT",
+    "Jakarta EE",
+    "HTTP Servlet",
+    "HTTP Cookies"
+  ],
+  "batch_role": "User Authentication and Management System",
+  "key_features": [
+    "User authentication using email and password",
+    "Token generation (access and refresh tokens)",
+    "User information retrieval",
+    "Logout functionality",
+    "Error handling with custom exceptions",
+    "Session management using Redis",
+    "Cookie management for authentication tokens",
+    "Role-based access control"
+  ],
+  "related_files": [
+    "MeResponseDto.java",
+    "TokenInfo.java",
+    "AuthRepository.java",
+    "AuthService.java",
+    "AuthServiceImpl.java",
+    "JwtAuthenticationTokenFilter.java",
+    "JwtTokenProvider.java",
+    "RedisJwtService.java",
+    "CookieUtils.java",
+    "CustomUserDetails.java"
+  ],
+  "project_hints": [
+    "The project likely involves user authentication and management.",
+    "It may be part of a larger application dealing with user profiles and roles.",
+    "Focuses on authentication and authorization mechanisms.",
+    "Utilizes JWT for stateless authentication.",
+    "Incorporates Redis for session management.",
+    "Security measures against XSS and CSRF."
+  ]
+}

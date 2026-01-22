@@ -1,0 +1,114 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\AlgorithmServiceImpl.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "알고리즘",
+      "키워드",
+      "검색"
+    ],
+    "entities": [
+      "Algorithm",
+      "AlgorithmListResponseDto",
+      "AlgorithmResponseDto"
+    ],
+    "modules": [
+      "submission",
+      "service",
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "알고리즘 검색",
+      "verb_object": "검색 알고리즘",
+      "inputs": [
+        "keyword"
+      ],
+      "outputs": [
+        "AlgorithmListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "트랜잭션 관리",
+      "DTO 사용",
+      "유사도 검색 기능",
+      "Lombok 사용",
+      "명확한 책임 분리"
+    ],
+    "risks": [
+      "키워드 처리 오류",
+      "대소문자 구분 문제",
+      "공백 처리 문제",
+      "성능 저하 가능성",
+      "예외 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리",
+      "로깅",
+      "단위 테스트",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "annotation",
+      "text": "@Transactional"
+    },
+    {
+      "type": "call",
+      "text": "algorithmRepository.findByKeyword"
+    },
+    {
+      "type": "call",
+      "text": "AlgorithmResponseDto.from"
+    },
+    {
+      "type": "call",
+      "text": "AlgorithmListResponseDto.from"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "api+service",
+      "algorithm+search"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\AlgorithmRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\AlgorithmResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\AlgorithmListResponseDto.java"
+    ]
+  }
+}

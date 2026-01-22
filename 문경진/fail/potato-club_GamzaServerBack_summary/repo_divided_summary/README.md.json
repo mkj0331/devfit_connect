@@ -1,0 +1,4 @@
+{
+  "path": "README.md",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Security\",\n    \"Restful API\",\n    \"MySQL\",\n    \"Redis\",\n    \"Docker\",\n    \"Nginx\"\n  ],\n  \"role\": \"프로젝트의 개요 및 기술 스택, 서비스 소개를 제공하여 전체적인 구조와 기능을 설명하는 문서\",\n  \"key_features\": [\n    \"회원가입 및 로그인 기능\",\n    \"프로젝트 관리 기능\",\n    \"어드민 권한을 통한 프로젝트 및 유저 승인\",\n    \"프로젝트 생성 및 재등록 기능\"\n  ],\n  \"key_code\": [],\n  \"project_hints\": [\n    \"감자 동아리 신입 부원들을 위한 프로젝트 배포 및 관리 시스템\",\n    \"Docker OpenAPI를 활용한 자동 서버 배포\",\n    \"포트폴리오 관리 기능 포함\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetSentGroupJoinListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Data Transfer Object (DTO) for response data\",\n  \"key_features\": [\n    \"Encapsulates a list of group join responses\",\n    \"Uses Java record for concise data structure\"\n  ],\n  \"key_code\": [\n    \"public record GetSentGroupJoinListResponseDto(List<GetSentGroupJoinResponseDto> joins)\"\n  ],\n  \"project_hints\": [\n    \"Part of a group management feature in a program\",\n    \"Handles responses related to group join requests\"\n  ]\n}\n```"
+}

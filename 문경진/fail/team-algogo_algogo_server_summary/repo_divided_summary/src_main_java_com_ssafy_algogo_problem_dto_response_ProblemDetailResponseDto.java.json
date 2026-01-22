@@ -1,0 +1,102 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProblemDetailResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Problem",
+      "PlatformType",
+      "DifficultyType",
+      "UserDifficultyType"
+    ],
+    "entities": [
+      "ProblemDetailResponseDto",
+      "ProgramProblem",
+      "Problem"
+    ],
+    "modules": [
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 상세 조회",
+      "verb_object": "문제 상세 조회",
+      "inputs": [
+        "ProgramProblem pp"
+      ],
+      "outputs": [
+        "ProblemDetailResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "간결한 코드",
+      "유지보수 용이",
+      "재사용 가능성"
+    ],
+    "risks": [
+      "변경에 대한 취약성",
+      "의존성 증가",
+      "테스트 어려움",
+      "성능 저하 가능성",
+      "복잡성 증가"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation",
+      "Logging",
+      "Error handling",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.problem.entity.Problem;"
+    },
+    {
+      "type": "call",
+      "text": "pp.getProblem()"
+    },
+    {
+      "type": "call",
+      "text": "new ProblemDetailResponseDto(...)"
+    },
+    {
+      "type": "annotation",
+      "text": "public record ProblemDetailResponseDto(...)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "problem+entity",
+      "api+response"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\Problem.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProblemRequestDto.java"
+    ]
+  }
+}

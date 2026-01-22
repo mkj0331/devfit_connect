@@ -1,0 +1,99 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\ProblemSetModifyRequestDto.java",
+    "language": "java",
+    "frameworks": [
+      "jakarta.validation",
+      "spring"
+    ],
+    "libraries": [
+      "lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProblemSet",
+      "Modify",
+      "Request"
+    ],
+    "entities": [
+      "ProblemSetModifyRequestDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제집 수정 요청",
+      "verb_object": "문제집 수정",
+      "inputs": [
+        "title",
+        "description",
+        "thumbnail",
+        "categories"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사",
+      "불변성 보장",
+      "명확한 데이터 구조"
+    ],
+    "risks": [
+      "null 처리 미비",
+      "파일 업로드 실패 가능성"
+    ],
+    "missing_standard_checks": [
+      "null 체크",
+      "파일 크기 제한",
+      "파일 형식 검증"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "annotation",
+      "text": "@NoArgsConstructor"
+    },
+    {
+      "type": "annotation",
+      "text": "@AllArgsConstructor"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.validation.constraints.NotBlank"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.web.multipart.MultipartFile"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+request",
+      "problemset+modify"
+    ],
+    "related_files_guess": []
+  }
+}

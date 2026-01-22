@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\utils\\BaseTime.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Persistence\",\n    \"Spring Data JPA\",\n    \"Lombok\"\n  ],\n  \"role\": \"Base class for entity auditing\",\n  \"key_features\": [\n    \"Automatically tracks creation and modification timestamps\",\n    \"Uses annotations for automatic date management\",\n    \"Defines a constant for maximum MySQL timestamp\"\n  ],\n  \"key_code\": [\n    \"@CreatedDate\",\n    \"@LastModifiedDate\",\n    \"protected LocalDateTime createdAt;\",\n    \"protected LocalDateTime modifiedAt;\"\n  ],\n  \"project_hints\": [\n    \"Entity auditing in a Spring Boot application\",\n    \"Database timestamp management\",\n    \"Common utility for JPA entities\"\n  ]\n}\n```"
+}

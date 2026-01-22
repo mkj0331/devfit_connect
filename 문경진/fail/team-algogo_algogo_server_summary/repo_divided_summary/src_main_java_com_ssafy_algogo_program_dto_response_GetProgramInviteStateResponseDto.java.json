@@ -1,0 +1,107 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\GetProgramInviteStateResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProgramInvite",
+      "InviteStatus",
+      "User"
+    ],
+    "entities": [
+      "ProgramInvite",
+      "User"
+    ],
+    "modules": [
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "초대 상태 변환",
+      "verb_object": "초대 상태 변환",
+      "inputs": [
+        "ProgramInvite"
+      ],
+      "outputs": [
+        "GetProgramInviteStateResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 전송 객체",
+      "Null 처리",
+      "간결한 코드"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "의존성 증가"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Error handling"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "call",
+      "text": "programInvite.getUser()"
+    },
+    {
+      "type": "call",
+      "text": "programInvite.getId()"
+    },
+    {
+      "type": "call",
+      "text": "user.getEmail()"
+    },
+    {
+      "type": "call",
+      "text": "user.getProfileImage()"
+    },
+    {
+      "type": "call",
+      "text": "user.getNickname()"
+    },
+    {
+      "type": "call",
+      "text": "programInvite.getInviteStatus()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "invite+status",
+      "user+entity"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\ProgramInvite.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\entity\\InviteStatus.java"
+    ]
+  }
+}

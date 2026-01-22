@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "HELP.md",
+    "language": "Markdown",
+    "frameworks": [
+      "Spring Boot",
+      "Gradle"
+    ],
+    "libraries": [],
+    "layer_guess": "Documentation",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Gradle",
+      "Spring Boot",
+      "REST",
+      "JPA",
+      "Web"
+    ],
+    "entities": [],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "RESTful 웹 서비스 구축",
+      "verb_object": "웹 서비스 구축",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "데이터 접근",
+      "verb_object": "데이터 접근",
+      "inputs": [],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.6
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 문서화",
+      "다양한 가이드 제공"
+    ],
+    "risks": [
+      "문서의 최신성 부족"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "테스트 케이스"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "config",
+      "text": "Spring Boot Gradle Plugin Reference Guide"
+    },
+    {
+      "type": "endpoint",
+      "text": "Building a RESTful Web Service"
+    },
+    {
+      "type": "endpoint",
+      "text": "Accessing Data with JPA"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "gradle+spring",
+      "api+documentation",
+      "data+jpa"
+    ],
+    "related_files_guess": []
+  }
+}

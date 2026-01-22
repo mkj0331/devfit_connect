@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\CategoryListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java 17+\",\n    \"Record (Java 14+)\",\n    \"List (Java Collections Framework)\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for category list response\",\n  \"key_features\": [\n    \"Encapsulates a list of CategoryResponseDto objects\",\n    \"Provides a structured way to return category data in API responses\"\n  ],\n  \"key_code\": [\n    \"public record CategoryListResponseDto(List<CategoryResponseDto> categoryList)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves a problem set or categorization system, possibly for an educational or competitive programming platform.\"\n  ]\n}\n```"
+}

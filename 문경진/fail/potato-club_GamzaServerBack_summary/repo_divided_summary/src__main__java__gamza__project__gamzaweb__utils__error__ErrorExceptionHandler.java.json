@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\error\\ErrorExceptionHandler.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\"\n  ],\n  \"role\": \"예외 처리를 담당하는 클래스\",\n  \"key_features\": [\n    \"특정 예외(BadRequestException, DuplicateException 등)에 대한 처리\",\n    \"HTTP 상태 코드와 에러 메시지를 포함한 응답 생성\"\n  ],\n  \"key_code\": [\n    \"ErrorEntity errorEntity = ErrorEntity.builder()\",\n    \".errorCode(Integer.parseInt(e.getErrorCode().getCode()))\",\n    \".errorMessage(e.getMessage())\",\n    \".build();\",\n    \"return ResponseEntity.status(e.getErrorCode().getHttpStatus()).body(errorEntity);\"\n  ],\n  \"project_hints\": [\n    \"웹 애플리케이션에서 발생할 수 있는 다양한 예외를 처리하는 기능을 가진 프로젝트\"\n  ]\n}\n```"
+}

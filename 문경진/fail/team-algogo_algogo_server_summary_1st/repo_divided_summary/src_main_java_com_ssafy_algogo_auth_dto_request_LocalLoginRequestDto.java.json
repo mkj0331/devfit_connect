@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\request\\LocalLoginRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for local login requests\",\n  \"key_features\": [\n    \"Validation of email and password fields\",\n    \"Uses Lombok annotations for boilerplate code reduction\",\n    \"Provides a builder pattern for object creation\"\n  ],\n  \"key_code\": [\n    \"@NotBlank(message = \\\"Email is required\\\")\",\n    \"@NotBlank(message = \\\"Password is required\\\")\",\n    \"private String email;\",\n    \"private String password;\"\n  ],\n  \"project_hints\": [\n    \"Authentication system\",\n    \"User login functionality\",\n    \"Input validation for user credentials\"\n  ]\n}\n```"
+}

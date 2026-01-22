@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\Entity\\Enums\\ProjectType.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"이 파일은 프로젝트의 유형을 정의하는 열거형(enum)으로, 다양한 프로젝트 타입을 구분하는 역할을 한다.\",\n  \"key_features\": [\n    \"프로젝트의 유형을 정의하여 코드의 가독성을 높임\",\n    \"각 프로젝트 타입에 대한 상수 값을 제공\"\n  ],\n  \"key_code\": [\n    \"public enum ProjectType { BACK, FRONT, WAIT }\"\n  ],\n  \"project_hints\": [\n    \"웹 개발 관련 프로젝트로 추정되며, 프론트엔드와 백엔드 구분이 있는 시스템일 가능성이 있음\"\n  ]\n}\n```"
+}

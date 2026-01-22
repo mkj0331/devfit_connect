@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\SearchUserResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java 11+\",\n    \"Spring Framework\",\n    \"JPA (Java Persistence API)\"\n  ],\n  \"role\": \"Data Transfer Object (DTO) for user search responses\",\n  \"key_features\": [\n    \"Encapsulates user information for response\",\n    \"Immutable data structure using Java records\",\n    \"Static method to convert User entity to DTO\"\n  ],\n  \"key_code\": [\n    \"public record SearchUserResponseDto(...)\",\n    \"public static SearchUserResponseDto from(User user)\"\n  ],\n  \"project_hints\": [\n    \"User management system\",\n    \"API response structure for user-related queries\",\n    \"Integration with user entity for data retrieval\"\n  ]\n}\n```"
+}

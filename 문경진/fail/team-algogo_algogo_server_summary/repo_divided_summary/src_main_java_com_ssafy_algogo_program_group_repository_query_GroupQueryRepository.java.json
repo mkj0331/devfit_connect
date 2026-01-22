@@ -1,0 +1,174 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\query\\GroupQueryRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Group",
+      "Room",
+      "Invite",
+      "User"
+    ],
+    "entities": [
+      "GroupRoomResponseDto",
+      "MyGroupRoomResponseDto",
+      "GetReceivedGroupInviteResponseDto",
+      "GetSentGroupJoinResponseDto"
+    ],
+    "modules": [
+      "group",
+      "repository",
+      "query"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "모든 그룹룸 조회",
+      "verb_object": "그룹룸 조회",
+      "inputs": [
+        "keyword",
+        "pageable"
+      ],
+      "outputs": [
+        "Page<GroupRoomResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "그룹룸 상세 조회",
+      "verb_object": "그룹룸 상세 조회",
+      "inputs": [
+        "programId"
+      ],
+      "outputs": [
+        "GroupRoomResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "내 그룹룸 조회",
+      "verb_object": "내 그룹룸 조회",
+      "inputs": [
+        "programIds",
+        "userId",
+        "pageable"
+      ],
+      "outputs": [
+        "Page<MyGroupRoomResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "그룹룸 멤버 플래그와 함께 조회",
+      "verb_object": "그룹룸 멤버 플래그 조회",
+      "inputs": [
+        "keyword",
+        "pageable",
+        "userId"
+      ],
+      "outputs": [
+        "Page<GroupRoomResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "그룹룸 초대 조회",
+      "verb_object": "그룹룸 초대 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "List<GetReceivedGroupInviteResponseDto>"
+      ],
+      "side_effects": [],
+      "confidence": 0.6
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository",
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "Spring Data JPA 사용",
+      "DTO를 통한 데이터 전송",
+      "페이징 지원",
+      "유저 기반 데이터 조회"
+    ],
+    "risks": [
+      "의존성 주입 실패 가능성",
+      "쿼리 성능 문제",
+      "유효성 검사 부족",
+      "동시성 문제",
+      "예외 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "유효성 검사",
+      "예외 처리 로직",
+      "로깅",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Page;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Pageable;"
+    },
+    {
+      "type": "call",
+      "text": "findAllGroupRooms(String keyword, Pageable pageable)"
+    },
+    {
+      "type": "call",
+      "text": "getGroupRoomDetail(Long programId)"
+    },
+    {
+      "type": "call",
+      "text": "findMyGroupRooms(List<Long> programIds, Long userId, Pageable pageable)"
+    },
+    {
+      "type": "call",
+      "text": "findReceivedGroupInvitesWithRoom(Long userId)"
+    },
+    {
+      "type": "call",
+      "text": "findSentGroupJoinRequestsWithRoom(Long userId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "api+repository",
+      "group+query"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetReceivedGroupInviteResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetSentGroupJoinResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GroupRoomResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\MyGroupRoomResponseDto.java"
+    ]
+  }
+}

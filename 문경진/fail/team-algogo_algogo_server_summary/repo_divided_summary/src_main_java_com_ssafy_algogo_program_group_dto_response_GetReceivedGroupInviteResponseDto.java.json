@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetReceivedGroupInviteResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "Group",
+      "Invite",
+      "Response"
+    ],
+    "entities": [
+      "GetReceivedGroupInviteResponseDto",
+      "InviteStatus",
+      "GroupRoomResponseDto"
+    ],
+    "modules": [
+      "group",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "초대 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "inviteId",
+        "inviteStatus",
+        "groupRoom"
+      ],
+      "outputs": [
+        "GetReceivedGroupInviteResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Null 처리",
+      "간결한 코드"
+    ],
+    "risks": [
+      "데이터 유효성 검사 부족",
+      "변경 시 영향도"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Serialization 체크",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "import",
+      "text": "import com.fasterxml.jackson.annotation.JsonInclude"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.program.entity.InviteStatus"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "group+dto",
+      "response+api"
+    ],
+    "related_files_guess": []
+  }
+}

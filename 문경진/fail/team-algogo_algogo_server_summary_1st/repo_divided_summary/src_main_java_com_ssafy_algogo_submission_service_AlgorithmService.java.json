@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\AlgorithmService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Java Persistence API (JPA)\",\n    \"DTO (Data Transfer Object)\"\n  ],\n  \"role\": \"Interface for Algorithm Service\",\n  \"key_features\": [\n    \"Defines a method for searching algorithms by keyword\",\n    \"Returns a response DTO containing algorithm list\"\n  ],\n  \"key_code\": [\n    \"AlgorithmListResponseDto searchAlgorithmWithKeyword(String keyword)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves algorithm-related functionalities\",\n    \"Focus on searching and retrieving algorithm data based on user input\"\n  ]\n}\n```"
+}

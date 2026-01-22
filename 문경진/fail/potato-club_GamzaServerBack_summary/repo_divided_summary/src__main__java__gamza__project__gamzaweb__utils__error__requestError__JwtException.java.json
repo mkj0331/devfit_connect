@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\error\\requestError\\JwtException.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java Spring\", \"JWT (JSON Web Token)\"],\n  \"role\": \"JWT 관련 예외 처리를 담당하는 클래스\",\n  \"key_features\": [\n    \"JWT 관련 오류 발생 시 예외를 던짐\",\n    \"특정 오류 코드와 메시지를 통해 예외를 구체화\"\n  ],\n  \"key_code\": [\n    \"public JwtException(String message, ErrorJwtCode errorCode) {\",\n    \"super(message, errorCode);\"\n  ],\n  \"project_hints\": [\n    \"보안 관련 기능을 포함한 웹 애플리케이션\",\n    \"사용자 인증 및 권한 부여를 위한 JWT 사용\"\n  ]\n}\n```"
+}

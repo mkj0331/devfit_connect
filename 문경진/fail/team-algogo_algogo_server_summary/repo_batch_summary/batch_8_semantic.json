@@ -1,0 +1,103 @@
+{
+  "batch_id": 8,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Jakarta Persistence",
+    "Lombok",
+    "Spring",
+    "Spring Data JPA",
+    "jakarta.validation",
+    "Jackson"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "캠페인 관리",
+      "domain_tags": [
+        "campaign",
+        "program",
+        "user",
+        "repository",
+        "entity"
+      ],
+      "responsibilities": [
+        "캠페인 생성",
+        "캠페인 조회",
+        "캠페인 저장",
+        "캠페인 삭제",
+        "캠페인 사용자 생성",
+        "패널티 카운트 설정"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "Entity",
+        "Validation",
+        "Spring Data JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\entity\\Campaign.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\entity\\CampaignUser.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\repository\\CampaignRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\campaign\\repository\\CampaignUserRepository.java"
+      ],
+      "evidence": [
+        "import jakarta.persistence.Entity",
+        "import org.springframework.data.jpa.repository.JpaRepository",
+        "@Entity"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "데이터 무결성 문제",
+        "트랜잭션 관리 필요",
+        "동시성 문제 발생 가능"
+      ]
+    },
+    {
+      "cluster_name": "DTO 요청 및 응답 처리",
+      "domain_tags": [
+        "dto",
+        "request",
+        "response",
+        "validation"
+      ],
+      "responsibilities": [
+        "프로그램 초대 요청 생성",
+        "프로그램 초대 상태 목록 조회",
+        "프로그램 참여 상태 목록 조회",
+        "프로그램 응답 생성"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "Builder",
+        "Validation",
+        "Jackson"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\request\\ApplyProgramInviteRequestDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\GetProgramInviteStateListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\GetProgramJoinStateListResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\ProgramResponseDto.java"
+      ],
+      "evidence": [
+        "@NotNull",
+        "@JsonInclude(JsonInclude.Include.NON_NULL)",
+        "public record"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "유효성 검사 실패 시 예외 발생 가능",
+        "확장성 부족",
+        "문서화 부족"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "campaign",
+    "user",
+    "dto",
+    "repository",
+    "validation"
+  ]
+}

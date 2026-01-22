@@ -1,0 +1,38 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\client\\service\\ClientCaService.java",
+  "project_subject_signals": [
+    "client",
+    "ca",
+    "sign",
+    "ci",
+    "mydata"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "Lombok",
+    "Spring Web",
+    "Spring Transaction",
+    "StandardCharsets"
+  ],
+  "core_features": [
+    {
+      "feature_name": "CI 생성 요청 처리",
+      "feature_description": "CreateCiRequestDto를 받아 CA 서버로 CI 생성 요청을 전송하고 응답을 처리합니다.",
+      "implementation_method": "RestTemplate을 사용하여 HTTP POST 요청을 CA 서버 URL로 보내고, 응답 엔티티의 상태 코드를 확인하며, MydataException을 발생시킬 수 있습니다.",
+      "job_value": "외부 API 연동 및 HTTP 통신 기반의 서비스 개발 역량을 보여줍니다."
+    },
+    {
+      "feature_name": "서명 요청 처리",
+      "feature_description": "SignRequestDto를 CA 서버로 전송하여 서명 데이터를 받고, 응답에서 signedInfoList를 추출합니다.",
+      "implementation_method": "RestTemplate의 exchange 메서드를 사용하여 HTTP POST 요청을 CA 서버 URL로 보내고, SignResponseDto 타입으로 응답을 파싱합니다. 응답 상태 코드가 OK가 아니면 MEMBER_SIGNUP_FAILED 예외를 발생시킵니다.",
+      "job_value": "RESTful API 클라이언트 구현 및 응답 데이터 처리 능력을 보여줍니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "HTTP 통신 시 타임아웃 설정을 고려하여 응답 지연에 대한 안정성을 높일 수 있습니다.",
+    "에러 처리 시 좀 더 구체적인 예외 정보를 포함하여 디버깅을 용이하게 할 수 있습니다.",
+    "Constant 문자열(예: \"json\")을 상수로 분리하여 관리하면 가독성과 유지보수성을 향상시킬 수 있습니다."
+  ]
+}

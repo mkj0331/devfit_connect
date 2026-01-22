@@ -1,0 +1,147 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\TestController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "Controller",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "테스트",
+      "인증",
+      "에러"
+    ],
+    "entities": [
+      "CustomUserDetails",
+      "CustomException",
+      "ErrorCode"
+    ],
+    "modules": [
+      "auth",
+      "common"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "API 테스트",
+      "verb_object": "서버 통신",
+      "inputs": [],
+      "outputs": [
+        "성공 메시지"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "커스텀 에러 발생",
+      "verb_object": "에러 발생",
+      "inputs": [],
+      "outputs": [
+        "CustomException"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "일반 에러 발생",
+      "verb_object": "일반 에러 발생",
+      "inputs": [],
+      "outputs": [
+        "Exception"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "사용자 정보 조회",
+      "verb_object": "사용자 정보",
+      "inputs": [
+        "CustomUserDetails"
+      ],
+      "outputs": [
+        "userId",
+        "username"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": [
+      "예외 처리",
+      "보안"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 API 응답",
+      "커스텀 예외 처리",
+      "인증 정보 사용",
+      "RESTful 구조",
+      "간단한 로직"
+    ],
+    "risks": [
+      "예외 처리 부족",
+      "null 체크 미비",
+      "보안 취약점",
+      "에러 메시지 노출",
+      "유효성 검사 부족"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "유효성 검사",
+      "API 문서화",
+      "단위 테스트",
+      "보안 점검"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@RestController"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequestMapping"
+    },
+    {
+      "type": "endpoint",
+      "text": "/test/api"
+    },
+    {
+      "type": "endpoint",
+      "text": "/test/error/1"
+    },
+    {
+      "type": "endpoint",
+      "text": "/test/auth/admin"
+    },
+    {
+      "type": "call",
+      "text": "ResponseEntity.ok()"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.web.bind.annotation.*;"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+controller",
+      "error+handling",
+      "api+test"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\CustomUserDetails.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\CustomException.java"
+    ]
+  }
+}

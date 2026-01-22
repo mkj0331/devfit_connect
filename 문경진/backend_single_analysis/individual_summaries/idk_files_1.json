@@ -1,0 +1,36 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\account\\controller\\AccountController.java",
+  "project_subject_signals": [
+    "계좌",
+    "이체",
+    "입금",
+    "출금",
+    "ATM"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "Lombok",
+    "Swagger"
+  ],
+  "core_features": [
+    {
+      "feature_name": "계좌 관련 API 제공",
+      "feature_description": "계좌 생성, 이체, 입금, 출금 등 계좌와 관련된 다양한 기능을 API 엔드포인트로 제공합니다.",
+      "implementation_method": "Spring Framework의 @RestController, @RequestMapping, @PostMapping 어노테이션을 사용하여 HTTP 요청을 처리하고, AccountService의 메서드를 호출하여 비즈니스 로직을 수행합니다. Swagger를 통해 API 명세를 문서화합니다.",
+      "job_value": "RESTful API 설계 및 구현 능력을 보여주며, Spring 기반의 웹 애플리케이션 개발 경험을 나타냅니다."
+    },
+    {
+      "feature_name": "금액 기반 거래 처리",
+      "feature_description": "입금 및 출금 거래 시 요구되는 금액 정보를 AmountRequestDto를 통해 받아 처리합니다.",
+      "implementation_method": "@RequestBody 어노테이션을 사용하여 요청 본문에서 AmountRequestDto 객체를 추출하여 AccountService의 관련 메서드에 전달합니다.",
+      "job_value": "요청 데이터를 효율적으로 파싱하고 비즈니스 로직에 전달하는 역량을 보여줍니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "계좌 생성 시 중복 계좌 방지 로직 및 예외 처리를 강화할 수 있습니다.",
+    "이체, 입금, 출금 기능에서 거래 후 계좌 잔액 변경에 대한 명확한 응답이나 로깅을 추가하여 추적성을 높일 수 있습니다.",
+    "RequestDto에 대한 입력값 검증(validation)을 추가하여 유효하지 않은 데이터로 인한 오류를 사전에 방지할 수 있습니다."
+  ]
+}

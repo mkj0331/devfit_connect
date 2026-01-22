@@ -1,0 +1,115 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\request\\ProgramProblemRequestDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "problemId",
+      "startDate",
+      "endDate",
+      "userDifficultyType",
+      "difficultyViewType"
+    ],
+    "entities": [
+      "ProgramProblemRequestDto",
+      "UserDifficultyType",
+      "DifficultyViewType"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 요청 생성",
+      "verb_object": "문제 요청 생성",
+      "inputs": [
+        "problemId",
+        "startDate",
+        "endDate",
+        "userDifficultyType",
+        "difficultyViewType"
+      ],
+      "outputs": [
+        "ProgramProblemRequestDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "유효성 검사 수행",
+      "verb_object": "유효성 검사 수행",
+      "inputs": [
+        "problemId",
+        "startDate",
+        "endDate"
+      ],
+      "outputs": [
+        "ValidationResult"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사 어노테이션 사용",
+      "Lombok을 통한 코드 간결성",
+      "명확한 필드 정의"
+    ],
+    "risks": [
+      "유효성 검사 누락 가능성",
+      "null 값 처리 미비",
+      "시간 관련 오류 가능성"
+    ],
+    "missing_standard_checks": [
+      "로그 기록",
+      "예외 처리",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "annotation",
+      "text": "@FutureOrPresent"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.validation.Valid"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+validation",
+      "problem+request",
+      "api+dto"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\UserDifficultyType.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\DifficultyViewType.java"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\platform\\request\\PlatformCreateRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 플랫폼 생성 요청을 처리하는 DTO(Data Transfer Object) 역할을 수행합니다.\",\n  \"key_features\": [\n    \"플랫폼 이름을 저장하는 필드(platformName)\",\n    \"PlatformEntity 객체로 변환하는 메서드(toEntity)\"\n  ],\n  \"key_code\": [\n    \"private String platformName;\",\n    \"@Builder public PlatformEntity toEntity() { return PlatformEntity.builder().platformName(platformName).build(); }\"\n  ],\n  \"project_hints\": [\n    \"이 파일은 플랫폼 관련 기능을 다루고 있으며, 플랫폼 생성과 관련된 요청을 처리하는 것으로 보입니다.\"\n  ]\n}\n```"
+}

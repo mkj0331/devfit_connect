@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\SubmissionAiEvaluationServiceImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\",\n    \"JPA\",\n    \"OpenAI API\"\n  ],\n  \"role\": \"서비스 구현\",\n  \"key_features\": [\n    \"AI 기반 제출 평가 서비스\",\n    \"평가 점수 및 이유 생성\",\n    \"제출 정보 업데이트 및 저장\"\n  ],\n  \"key_code\": [\n    \"openAiEvaluationService.generateEvaluationReason(reasonPrompt)\",\n    \"submission.updateAiEvaluation(score, reason)\",\n    \"submissionRepository.findById(submissionId)\"\n  ],\n  \"project_hints\": [\n    \"AI를 활용한 코드 평가 시스템\",\n    \"제출된 코드의 품질을 평가하고 피드백 제공\",\n    \"JSON 형식으로 평가 결과 출력\"\n  ]\n}\n```"
+}

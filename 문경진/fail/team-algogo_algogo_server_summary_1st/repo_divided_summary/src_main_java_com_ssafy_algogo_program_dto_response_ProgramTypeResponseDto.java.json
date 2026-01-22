@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\ProgramTypeResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java 17\", \"Spring Framework\", \"DTO (Data Transfer Object)\"],\n  \"role\": \"This file defines a data transfer object (DTO) for representing program types in the application.\",\n  \"key_features\": [\n    \"Immutable data structure using Java record\",\n    \"Encapsulates program type information with id and name\"\n  ],\n  \"key_code\": [\n    \"public record ProgramTypeResponseDto(Long id, String name) {}\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves a program management system or application.\",\n    \"The use of DTO suggests a layered architecture, possibly separating concerns between data handling and business logic.\"\n  ]\n}\n```"
+}

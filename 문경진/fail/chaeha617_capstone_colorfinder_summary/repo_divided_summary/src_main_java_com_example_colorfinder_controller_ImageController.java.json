@@ -1,0 +1,128 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\controller\\ImageController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "WebClient"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "파일",
+      "분석",
+      "사용자",
+      "컬러"
+    ],
+    "entities": [
+      "ImageController",
+      "MultipartFile",
+      "ResponseEntity"
+    ],
+    "modules": [
+      "colorfinder",
+      "controller"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "파일 업로드",
+      "verb_object": "파일 업로드",
+      "inputs": [
+        "MultipartFile file"
+      ],
+      "outputs": [
+        "ResponseEntity<String>"
+      ],
+      "side_effects": [
+        "파일 분석 요청"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "사용자 ID 가져오기",
+      "verb_object": "사용자 ID 가져오기",
+      "inputs": [],
+      "outputs": [
+        "String userId"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "파일 분석 요청",
+      "verb_object": "파일 분석 요청",
+      "inputs": [
+        "MultiValueMap<String, Object> formData"
+      ],
+      "outputs": [
+        "String personalColorResponse"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Controller"
+    ],
+    "cross_cutting": [
+      "보안",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "사용자 인증 처리",
+      "파일 유효성 검사",
+      "비동기 요청 처리"
+    ],
+    "risks": [
+      "파일 업로드 실패 시 예외 처리",
+      "서버 응답 지연"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "입력 검증",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.web.bind.annotation.PostMapping"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.web.multipart.MultipartFile"
+    },
+    {
+      "type": "call",
+      "text": "webClient.post()"
+    },
+    {
+      "type": "endpoint",
+      "text": "@PostMapping(\"/analyze\")"
+    },
+    {
+      "type": "annotation",
+      "text": "@Controller"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "file+upload",
+      "user+auth",
+      "api+controller"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\service\\ImageService.java",
+      "src\\main\\java\\com\\example\\colorfinder\\model\\User.java"
+    ]
+  }
+}

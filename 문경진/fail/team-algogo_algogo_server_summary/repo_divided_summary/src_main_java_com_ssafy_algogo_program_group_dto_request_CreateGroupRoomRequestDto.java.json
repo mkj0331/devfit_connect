@@ -1,0 +1,99 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\CreateGroupRoomRequestDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "group",
+      "room",
+      "request",
+      "dto"
+    ],
+    "entities": [
+      "CreateGroupRoomRequestDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹 방 생성 요청",
+      "verb_object": "방 생성",
+      "inputs": [
+        "title",
+        "description",
+        "capacity"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사 포함",
+      "Lombok 사용으로 코드 간결",
+      "명확한 필드 요구사항"
+    ],
+    "risks": [
+      "잘못된 입력 처리 부족",
+      "확장성 문제",
+      "의존성 문제"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotBlank"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "annotation",
+      "text": "@Min"
+    },
+    {
+      "type": "annotation",
+      "text": "@Max"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Builder"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Getter"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "group+room",
+      "dto+request",
+      "validation+constraints"
+    ],
+    "related_files_guess": []
+  }
+}

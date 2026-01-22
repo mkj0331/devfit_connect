@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\User\\response\\ResponseNotApproveDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 사용자 정보 중 승인되지 않은 사용자의 정보를 응답 DTO(Data Transfer Object) 형태로 제공하는 역할을 합니다.\",\n  \"key_features\": [\n    \"사용자 ID, 전공, 이메일, 이름 정보를 포함\",\n    \"UserEntity 객체를 통해 정보를 초기화하는 생성자 제공\",\n    \"Lombok을 사용하여 코드의 간결성을 높임\"\n  ],\n  \"key_code\": [\n    \"public ResponseNotApproveDto(UserEntity userEntity) {\",\n    \"this.id = userEntity.getId();\",\n    \"this.major = userEntity.getMajor();\",\n    \"this.email = userEntity.getEmail();\",\n    \"this.name = userEntity.getFamilyName() + userEntity.getGivenName();\"\n  ],\n  \"project_hints\": [\n    \"사용자 관리 시스템 또는 인증 시스템과 관련된 프로젝트일 가능성이 높음\",\n    \"사용자 승인 프로세스와 관련된 기능을 포함하고 있을 것으로 추측됨\"\n  ]\n}\n```"
+}

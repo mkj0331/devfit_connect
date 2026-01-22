@@ -1,0 +1,98 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetSearchPageResponseDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Jackson"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProblemSet",
+      "Response",
+      "PageInfo"
+    ],
+    "entities": [
+      "ProblemSetSearchPageResponseDto",
+      "PageInfoDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제집 검색 페이지 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "Page<ProblemSetResponseDto> page"
+      ],
+      "outputs": [
+        "ProblemSetSearchPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Null 처리",
+      "페이지 정보 포함"
+    ],
+    "risks": [
+      "데이터 누락 가능성",
+      "페이지 정보 오류"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Error handling",
+      "Logging"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@JsonInclude(JsonInclude.Include.NON_NULL)"
+    },
+    {
+      "type": "call",
+      "text": "page.getNumber()"
+    },
+    {
+      "type": "call",
+      "text": "page.getSize()"
+    },
+    {
+      "type": "call",
+      "text": "page.getTotalElements()"
+    },
+    {
+      "type": "call",
+      "text": "page.getTotalPages()"
+    },
+    {
+      "type": "call",
+      "text": "page.getContent()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "pagination+api"
+    ],
+    "related_files_guess": []
+  }
+}

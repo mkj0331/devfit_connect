@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramCategoryRepository.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Spring Data JPA\",\n    \"Hibernate\"\n  ],\n  \"role\": \"Repository interface for managing ProgramCategory entities in the database.\",\n  \"key_features\": [\n    \"Extends JpaRepository for CRUD operations\",\n    \"Custom method to delete ProgramCategory by program ID\"\n  ],\n  \"key_code\": [\n    \"@Modifying\",\n    \"@Query(\\\"DELETE FROM ProgramCategory pc WHERE pc.program.id = :programId\\\")\",\n    \"void deleteByProgramId(@Param(\\\"programId\\\") Long programId)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves managing programs and their categories.\",\n    \"Database operations related to program categories are a focus.\"\n  ]\n}\n```"
+}

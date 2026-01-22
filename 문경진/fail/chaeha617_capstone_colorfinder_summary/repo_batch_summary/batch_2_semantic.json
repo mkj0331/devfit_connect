@@ -1,0 +1,103 @@
+{
+  "batch_id": 2,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Lombok",
+    "Jakarta EE",
+    "Hibernate Validator",
+    "JPA"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "회원 관리 및 인증 처리",
+      "domain_tags": [
+        "user",
+        "auth",
+        "signup",
+        "logout",
+        "update"
+      ],
+      "responsibilities": [
+        "회원 가입 처리",
+        "로그아웃 처리",
+        "사용자 정보 업데이트",
+        "사용자 정보 조회"
+      ],
+      "implementation_signals": [
+        "JPA repository",
+        "DTO",
+        "Spring Security filter"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\controller\\UserApiController.java",
+        "src\\main\\java\\com\\example\\colorfinder\\controller\\UserViewController.java",
+        "src\\main\\java\\com\\example\\colorfinder\\dto\\AddUserRequest.java",
+        "src\\main\\java\\com\\example\\colorfinder\\dto\\MemberFormDto.java"
+      ],
+      "evidence": [
+        "@PostMapping(\"/user\")",
+        "@GetMapping(\"/logout\")",
+        "userService.save(request)",
+        "userService.updateUser(userId, request)"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "세션 관리 취약점",
+        "입력 검증 부족 가능성",
+        "동시성 문제"
+      ]
+    },
+    {
+      "cluster_name": "DTO 변환 및 유효성 검사",
+      "domain_tags": [
+        "dto",
+        "validation",
+        "address",
+        "order",
+        "product"
+      ],
+      "responsibilities": [
+        "주소 DTO 변환",
+        "주문 DTO 변환",
+        "상품 DTO 변환",
+        "유효성 검사"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "Validation",
+        "JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\example\\colorfinder\\dto\\AddressDTO.java",
+        "src\\main\\java\\com\\example\\colorfinder\\dto\\OrderDTO.java",
+        "src\\main\\java\\com\\example\\colorfinder\\dto\\ProductDTO.java",
+        "src\\main\\java\\com\\example\\colorfinder\\dto\\PersonalColorUpdateRequest.java"
+      ],
+      "evidence": [
+        "@Data",
+        "@NotEmpty",
+        "AddressDTO.toAddressDTO(AddressEntity)",
+        "OrderDTO.toOrderDTO(orderEntity)"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "DTO와 Entity 간의 강한 결합",
+        "유효성 검사 미비 가능성"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "user",
+    "auth",
+    "signup",
+    "dto",
+    "validation",
+    "address",
+    "order",
+    "product"
+  ]
+}

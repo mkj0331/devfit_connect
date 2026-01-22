@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\config\\OpenAIConfig.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\",\n    \"WebClient\"\n  ],\n  \"role\": \"Configuration class for OpenAI API integration\",\n  \"key_features\": [\n    \"Loads API key and model from application properties\",\n    \"Creates a WebClient bean for making HTTP requests to OpenAI API\",\n    \"Sets default headers for authorization and content type\"\n  ],\n  \"key_code\": [\n    \"@Value(\\\"${openai.api.key}\\\")\",\n    \"@Value(\\\"${openai.api.model}\\\")\",\n    \"WebClient.builder()\"\n  ],\n  \"project_hints\": [\n    \"Integration with OpenAI's chat completion API\",\n    \"Usage of reactive programming with WebClient\"\n  ]\n}\n```"
+}

@@ -1,0 +1,147 @@
+{
+  "batch_id": 3,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Spring Data JPA",
+    "Lombok",
+    "Spring Data Redis",
+    "jjwt"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "사용자 인증 및 세션 관리",
+      "domain_tags": [
+        "auth",
+        "login",
+        "logout",
+        "session",
+        "token",
+        "jwt"
+      ],
+      "responsibilities": [
+        "사용자 로그인 처리",
+        "사용자 로그아웃 처리",
+        "토큰 생성 및 검증",
+        "사용자 정보 조회",
+        "세션 관리"
+      ],
+      "implementation_signals": [
+        "Spring Security filter",
+        "JWT token provider",
+        "Redis cache",
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\AuthService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\impl\\AuthServiceImpl.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\JwtAuthenticationTokenFilter.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\JwtTokenProvider.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\RedisJwtService.java"
+      ],
+      "evidence": [
+        "login(LocalLoginRequestDto dto, HttpServletRequest request, HttpServletResponse response)",
+        "logout(Long userId)",
+        "redisJwtService.save(customUserDetails.getUserId(), refreshToken, ip)",
+        "jwtTokenProvider.createAccessToken(authentication, currentIp)",
+        "redisTemplate.opsForHash().put"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "Redis 의존성",
+        "예외 처리 누락 가능성",
+        "보안 취약점",
+        "동시성 문제",
+        "사용자 정보 노출 가능성"
+      ]
+    },
+    {
+      "cluster_name": "토큰 관리 및 저장",
+      "domain_tags": [
+        "token",
+        "management",
+        "redis",
+        "jwt"
+      ],
+      "responsibilities": [
+        "토큰 저장 및 조회",
+        "토큰 유효성 검증",
+        "IP 주소 검증",
+        "토큰 삭제"
+      ],
+      "implementation_signals": [
+        "Redis",
+        "Spring Data Redis",
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\RedisJwtService.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\JwtTokenProvider.java"
+      ],
+      "evidence": [
+        "redisTemplate.opsForHash().put",
+        "redisTemplate.delete",
+        "redisTemplate.hasKey",
+        "redisTemplate.expire",
+        "redisTemplate.opsForHash().get"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "데이터 일관성 문제",
+        "예외 처리 부족",
+        "토큰 유효성 검사 실패 시 처리 미비",
+        "IP 검증의 보안 취약점",
+        "Redis 의존성"
+      ]
+    },
+    {
+      "cluster_name": "사용자 정보 변환 및 DTO 관리",
+      "domain_tags": [
+        "dto",
+        "user",
+        "response"
+      ],
+      "responsibilities": [
+        "사용자 정보 변환",
+        "DTO 객체 생성 및 관리"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "Lombok"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\MeResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\TokenInfo.java"
+      ],
+      "evidence": [
+        "user.getId()",
+        "user.getEmail()",
+        "user.getUserRole()",
+        "@NoArgsConstructor",
+        "@AllArgsConstructor"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "유효성 검사 부족",
+        "변경 불가능성으로 인한 유연성 저하",
+        "null 체크 미비",
+        "예외 처리 미비",
+        "문서화 부족"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "auth",
+    "jwt",
+    "token",
+    "session",
+    "user",
+    "dto",
+    "redis",
+    "security",
+    "management"
+  ]
+}

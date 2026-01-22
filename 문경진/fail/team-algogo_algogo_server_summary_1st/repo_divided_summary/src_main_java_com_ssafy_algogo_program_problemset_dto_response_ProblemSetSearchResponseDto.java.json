@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetSearchResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Jackson\",\n    \"Java Records\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for API response\",\n  \"key_features\": [\n    \"Encapsulates a list of ProblemSetResponseDto objects\",\n    \"Uses Jackson annotations for JSON serialization\",\n    \"Provides a static factory method for object creation\"\n  ],\n  \"key_code\": [\n    \"public record ProblemSetSearchResponseDto(List<ProblemSetResponseDto> problemSetList)\",\n    \"public static ProblemSetSearchResponseDto from(List<ProblemSetResponseDto> list)\"\n  ],\n  \"project_hints\": [\n    \"Part of a problem set management system\",\n    \"Facilitates communication between server and client in an API context\"\n  ]\n}\n```"
+}

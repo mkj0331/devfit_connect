@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProgramProblemListResponseDto.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProgramProblem",
+      "response",
+      "DTO"
+    ],
+    "entities": [
+      "ProgramProblemResponseDto"
+    ],
+    "modules": [
+      "problemset"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 목록 생성",
+      "verb_object": "문제 목록 생성",
+      "inputs": [
+        "isLogined",
+        "programProblems"
+      ],
+      "outputs": [
+        "ProgramProblemListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Spring 프레임워크 사용",
+      "불변 객체 사용"
+    ],
+    "risks": [
+      "의존성 증가",
+      "테스트 어려움"
+    ],
+    "missing_standard_checks": [
+      "유효성 검사",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.problem.dto.response.ProgramProblemResponseDto;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Page;"
+    },
+    {
+      "type": "call",
+      "text": "programProblems.map(ProgramProblemResponseDto::from)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "problemset+api"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProgramProblemResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\controller\\ProgramProblemController.java"
+    ]
+  }
+}

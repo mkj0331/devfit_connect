@@ -1,0 +1,94 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\ProgramUserStatus.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Domain",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Program",
+      "User",
+      "Status"
+    ],
+    "entities": [
+      "ProgramUserStatus"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 상태 관리",
+      "verb_object": "상태 변경",
+      "inputs": [
+        "사용자 ID",
+        "새 상태"
+      ],
+      "outputs": [
+        "변경 결과"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "상태 조회",
+      "verb_object": "상태 조회",
+      "inputs": [
+        "사용자 ID"
+      ],
+      "outputs": [
+        "현재 상태"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 상태 정의",
+      "단순한 구조",
+      "유지보수 용이성"
+    ],
+    "risks": [
+      "상태 추가 시 코드 수정 필요",
+      "상태 관리 로직 복잡해질 가능성"
+    ],
+    "missing_standard_checks": [
+      "상태 변경 시 유효성 검사",
+      "상태 변경 로그 기록",
+      "상태 변경 알림"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": ""
+    },
+    {
+      "type": "annotation",
+      "text": "public enum ProgramUserStatus"
+    },
+    {
+      "type": "call",
+      "text": "ACTIVE"
+    },
+    {
+      "type": "call",
+      "text": "WITHDRAW"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+status",
+      "program+entity"
+    ],
+    "related_files_guess": []
+  }
+}

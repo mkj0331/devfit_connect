@@ -1,0 +1,8 @@
+{
+  "collaboration": "다인 협업",
+  "development_style": {
+    "commit_size": "작은 커밋",
+    "work_nature": "수정 중심"
+  },
+  "developer_traits": "다양한 작성자가 참여하며, 주로 리팩토링 및 수정 작업에 집중하고 있음"
+}

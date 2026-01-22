@@ -1,0 +1,4 @@
+{
+  "path": "chatgptFastapi\\app\\dsearch_recommand.py",
+  "summary": "```json\n{\n  \"language\": \"Python\",\n  \"technologies\": [\n    \"FastAPI\",\n    \"NumPy\",\n    \"Pandas\",\n    \"Matplotlib\",\n    \"Scikit-learn\"\n  ],\n  \"role\": \"이 파일은 사용자에게 관련된 교육 콘텐츠를 추천하는 기능을 담당합니다.\",\n  \"key_features\": [\n    \"사용자가 입력한 검색어에 기반하여 유사한 교육 콘텐츠를 추천\",\n    \"TF-IDF 및 코사인 유사도를 사용하여 콘텐츠 간의 유사성 계산\",\n    \"행렬 분해를 통한 추천 시스템 구현\"\n  ],\n  \"key_code\": [\n    \"data = pd.read_csv('preprocess_inflearn_data.csv', delimiter=',')\",\n    \"content_sim = cosine_similarity(content_mat, content_mat)\",\n    \"similar_course = find_sim_course(course, content_sim_sorted_ind, search, 5)\"\n  ],\n  \"project_hints\": [\n    \"교육 콘텐츠 추천 시스템\",\n    \"사용자 맞춤형 학습 자료 제공\",\n    \"데이터 기반의 추천 알고리즘\"\n  ]\n}\n```"
+}

@@ -1,0 +1,113 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\entity\\Problem.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta Persistence",
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Problem",
+      "PlatformType",
+      "DifficultyType"
+    ],
+    "entities": [
+      "Problem"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 생성",
+      "verb_object": "문제 생성",
+      "inputs": [
+        "PlatformType",
+        "problemNo",
+        "title",
+        "DifficultyType",
+        "problemLink"
+      ],
+      "outputs": [
+        "Problem"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "문제 조회",
+      "verb_object": "문제 조회",
+      "inputs": [
+        "id"
+      ],
+      "outputs": [
+        "Problem"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Entity",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유일성 제약조건",
+      "유효성 검증",
+      "불변 객체 생성"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "변경 불가능성으로 인한 유연성 부족"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "단위 테스트",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@Table"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.persistence.*"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotNull"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "entity+model"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\repository\\ProblemRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\service\\ProblemService.java"
+    ]
+  }
+}

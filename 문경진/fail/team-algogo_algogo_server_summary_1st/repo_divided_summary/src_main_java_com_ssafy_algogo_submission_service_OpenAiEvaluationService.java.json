@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\OpenAiEvaluationService.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [],\n  \"role\": \"Interface for evaluating scores and generating evaluation reasons using OpenAI.\",\n  \"key_features\": [\n    \"Method to evaluate scores based on a prompt with log probabilities.\",\n    \"Method to generate reasoning for evaluations based on a prompt.\"\n  ],\n  \"key_code\": [\n    \"BigDecimal evaluateScoreWithLogprobs(String scorePrompt);\",\n    \"String generateEvaluationReason(String reasonPrompt);\"\n  ],\n  \"project_hints\": [\n    \"Integration with OpenAI for evaluation purposes.\",\n    \"Focus on scoring and reasoning generation.\"\n  ]\n}\n```"
+}

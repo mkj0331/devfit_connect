@@ -1,0 +1,99 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\request\\UpdateGroupInviteStateRequestDto.java",
+    "language": "java",
+    "frameworks": [
+      "jakarta.validation",
+      "lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Group",
+      "Invite",
+      "State",
+      "Request"
+    ],
+    "entities": [
+      "UpdateGroupInviteStateRequestDto"
+    ],
+    "modules": [
+      "group",
+      "dto",
+      "request"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "초대 상태 업데이트",
+      "verb_object": "상태 업데이트",
+      "inputs": [
+        "isAccepted"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검증 포함",
+      "불변성 유지",
+      "명확한 메시지 제공"
+    ],
+    "risks": [
+      "잘못된 값 입력 가능성",
+      "유효성 검증 누락 시 오류 발생"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "annotation",
+      "text": "@Pattern"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.NotNull"
+    },
+    {
+      "type": "import",
+      "text": "jakarta.validation.constraints.Pattern"
+    },
+    {
+      "type": "import",
+      "text": "lombok.Builder"
+    },
+    {
+      "type": "import",
+      "text": "lombok.Getter"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "group+dto",
+      "request+validation"
+    ],
+    "related_files_guess": []
+  }
+}

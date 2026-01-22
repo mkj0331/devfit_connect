@@ -1,0 +1,85 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionResponseDto.java",
+    "language": "java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "submission",
+      "response",
+      "algorithm",
+      "aiScore"
+    ],
+    "entities": [
+      "Submission",
+      "Algorithm",
+      "AlgorithmResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 정보 변환",
+      "verb_object": "제출 정보 변환",
+      "inputs": [
+        "Submission",
+        "List<Algorithm>",
+        "boolean"
+      ],
+      "outputs": [
+        "SubmissionResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "유연한 변환 메서드"
+    ],
+    "risks": [
+      "데이터 무결성 문제",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 유효성 검사",
+      "예외 처리"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import java.time.LocalDateTime;"
+    },
+    {
+      "type": "call",
+      "text": "submission.getId()"
+    },
+    {
+      "type": "call",
+      "text": "usedAlgorithmList.stream().map(AlgorithmResponseDto::from).toList()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "submission+algorithm"
+    ],
+    "related_files_guess": []
+  }
+}

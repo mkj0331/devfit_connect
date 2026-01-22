@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\LocalLoginResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Lombok\",\n    \"Java Record\",\n    \"Spring Framework\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for local login response\",\n  \"key_features\": [\n    \"Encapsulates user information for local login responses\",\n    \"Uses Lombok for boilerplate code reduction\",\n    \"Provides a static method to create an instance from a User entity\"\n  ],\n  \"key_code\": [\n    \"public record LocalLoginResponseDto(...)\",\n    \"public static LocalLoginResponseDto from(User user)\"\n  ],\n  \"project_hints\": [\n    \"User authentication and management\",\n    \"Local login functionality\"\n  ]\n}\n```"
+}

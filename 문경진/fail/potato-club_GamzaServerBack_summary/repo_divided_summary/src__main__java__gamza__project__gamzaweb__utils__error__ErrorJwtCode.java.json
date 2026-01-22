@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\error\\ErrorJwtCode.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Spring Framework\", \"Lombok\"],\n  \"role\": \"이 파일은 JWT 관련 오류 코드 및 메시지를 정의하는 역할을 담당합니다.\",\n  \"key_features\": [\n    \"JWT 형식 오류, 지원되지 않는 JWT 토큰, 유효하지 않은 값, 런타임 예외, 만료된 액세스 토큰 및 리프레시 토큰에 대한 오류 코드와 메시지를 정의\",\n    \"HTTP 상태 코드와 함께 오류 정보를 제공\"\n  ],\n  \"key_code\": [\n    \"INVALID_JWT_FORMAT(\\\"1001\\\",\\\"1001 INVALID JWT FORMAT\\\", HttpStatus.UNAUTHORIZED)\",\n    \"EXPIRED_ACCESS_TOKEN(\\\"5001\\\",\\\"5001 EXPIRED ACCESS TOKEN\\\", HttpStatus.UNAUTHORIZED)\"\n  ],\n  \"project_hints\": [\n    \"이 파일은 JWT(JSON Web Token) 인증 및 권한 부여와 관련된 오류 처리를 다루고 있는 것으로 보입니다.\"\n  ]\n}\n```"
+}

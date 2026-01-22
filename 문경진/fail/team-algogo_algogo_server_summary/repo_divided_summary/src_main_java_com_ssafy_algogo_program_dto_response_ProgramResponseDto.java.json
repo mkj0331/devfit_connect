@@ -1,0 +1,93 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\ProgramResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Program",
+      "Response",
+      "Dto"
+    ],
+    "entities": [
+      "ProgramResponseDto",
+      "ProgramTypeResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "id",
+        "title",
+        "thumbnail",
+        "programType"
+      ],
+      "outputs": [
+        "ProgramResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간결한 데이터 구조",
+      "명확한 타입 정의"
+    ],
+    "risks": [
+      "확장성 부족",
+      "유효성 검사 미비"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "Validation 어노테이션"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "package com.ssafy.algogo.program.dto.response;"
+    },
+    {
+      "type": "annotation",
+      "text": "public record ProgramResponseDto"
+    },
+    {
+      "type": "call",
+      "text": "Long id"
+    },
+    {
+      "type": "call",
+      "text": "String title"
+    },
+    {
+      "type": "call",
+      "text": "String thumbnail"
+    },
+    {
+      "type": "call",
+      "text": "ProgramTypeResponseDto programType"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "program+data"
+    ],
+    "related_files_guess": []
+  }
+}

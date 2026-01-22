@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\dctutil\\FileController.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java Standard Library\",\n    \"Swing (for FileSystemView)\",\n    \"ZipInputStream (for handling zip files)\"\n  ],\n  \"role\": \"파일 저장 및 압축 해제 기능을 제공하는 유틸리티 클래스\",\n  \"key_features\": [\n    \"파일을 지정된 경로에 저장하는 기능\",\n    \"ZIP 파일을 압축 해제하여 파일 시스템에 저장하는 기능\",\n    \"디렉토리가 없을 경우 자동으로 생성하는 기능\"\n  ],\n  \"key_code\": [\n    \"public static String saveFile(InputStream inputStream, String projectId, String fileName)\",\n    \"try (ZipInputStream zipIn = new ZipInputStream(new FileInputStream(zipFile), Charset.forName(\\\"EUC-KR\\\")))\"\n  ],\n  \"project_hints\": [\n    \"파일 업로드 및 다운로드 기능을 포함하는 웹 애플리케이션\",\n    \"사용자가 파일을 저장하고 관리할 수 있는 시스템\"\n  ]\n}\n```"
+}

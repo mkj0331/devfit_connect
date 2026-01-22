@@ -1,0 +1,32 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\analyst\\repository\\AnalystRepository.java",
+  "project_subject_signals": [
+    "Analyst",
+    "Member"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "JpaRepository",
+    "Repository"
+  ],
+  "core_features": [
+    {
+      "feature_name": "Analyst 엔티티 데이터 조회",
+      "feature_description": "Member 엔티티와 연관된 Analyst 엔티티 목록을 조회합니다.",
+      "implementation_method": "JpaRepository의 findAllByMember 메서드를 사용합니다.",
+      "job_value": "데이터베이스에서 특정 조건에 맞는 엔티티를 조회하는 기본적인 JPA Repository 활용 능력을 보여줍니다."
+    },
+    {
+      "feature_name": "Analyst 엔티티 특정 조건 조회",
+      "feature_description": "Member, Year, Month 정보를 기반으로 특정 Analyst 엔티티를 조회합니다.",
+      "implementation_method": "JpaRepository의 findByMemberAndYearAndMonth 메서드를 사용합니다.",
+      "job_value": "복합적인 조건으로 엔티티를 조회하는 JPA Repository 활용 능력을 보여주며, 데이터 검색 기능 구현에 대한 이해도를 나타냅니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "쿼리 성능 최적화를 위해 인덱스 활용을 고려할 수 있습니다.",
+    "조회 로직에 대한 테스트 케이스 작성을 통해 안정성을 높일 수 있습니다."
+  ]
+}

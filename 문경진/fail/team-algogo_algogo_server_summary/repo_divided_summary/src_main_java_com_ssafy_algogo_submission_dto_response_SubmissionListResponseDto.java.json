@@ -1,0 +1,76 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionListResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "submission",
+      "response",
+      "dto"
+    ],
+    "entities": [
+      "SubmissionListResponseDto",
+      "SubmissionResponseDto"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "제출 목록 생성",
+      "verb_object": "제출 목록 생성",
+      "inputs": [
+        "List<SubmissionResponseDto> submissions"
+      ],
+      "outputs": [
+        "SubmissionListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "불변 객체 사용",
+      "간결한 코드"
+    ],
+    "risks": [
+      "확장성 부족",
+      "유효성 검사 미비"
+    ],
+    "missing_standard_checks": [
+      "null 체크",
+      "입력 유효성 검사",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import java.util.List;"
+    },
+    {
+      "type": "call",
+      "text": "new SubmissionListResponseDto(submissions)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "submission+list"
+    ],
+    "related_files_guess": []
+  }
+}

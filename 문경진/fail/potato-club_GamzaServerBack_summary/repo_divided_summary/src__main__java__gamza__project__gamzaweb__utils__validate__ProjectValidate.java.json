@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\ProjectValidate.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\"\n  ],\n  \"role\": \"프로젝트의 유효성 검사 및 권한 확인을 담당하는 유틸리티 클래스\",\n  \"key_features\": [\n    \"사용자가 프로젝트에 참여하고 있는지 확인\",\n    \"프로젝트의 수정 요청 상태 확인\",\n    \"플랫폼에 대한 프로젝트 수 및 유형 검증\"\n  ],\n  \"key_code\": [\n    \"userRepository.findById(userId)\",\n    \"projectRepository.isUserCollaborator(projectId, userId)\",\n    \"project.isFixedState()\",\n    \"platform.getProjects().size() >= 3\"\n  ],\n  \"project_hints\": [\n    \"프로젝트 관리 시스템 또는 협업 플랫폼\",\n    \"사용자 권한 관리 및 프로젝트 상태 관리\"\n  ]\n}\n```"
+}

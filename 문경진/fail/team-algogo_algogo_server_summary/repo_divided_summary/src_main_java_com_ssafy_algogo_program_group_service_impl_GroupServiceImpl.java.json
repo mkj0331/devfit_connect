@@ -1,0 +1,153 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\service\\impl\\GroupServiceImpl.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "JPA"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Group",
+      "Program",
+      "User",
+      "Invite",
+      "Join"
+    ],
+    "entities": [
+      "GroupRoom",
+      "Program",
+      "ProgramUser",
+      "ProgramInvite",
+      "ProgramJoin"
+    ],
+    "modules": [
+      "group",
+      "program"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "그룹방 조회",
+      "verb_object": "그룹방 조회",
+      "inputs": [
+        "userId",
+        "pageable"
+      ],
+      "outputs": [
+        "MyGroupRoomPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "그룹 초대 목록 조회",
+      "verb_object": "그룹 초대 목록 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "GetReceivedGroupInviteListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "그룹 가입 요청 목록 조회",
+      "verb_object": "그룹 가입 요청 목록 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "GetSentGroupJoinListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "문제 삭제",
+      "verb_object": "문제 삭제",
+      "inputs": [
+        "programId",
+        "programProblemDeleteRequestDto"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "트랜잭션 관리",
+      "DTO 사용",
+      "예외 처리",
+      "읽기 전용 트랜잭션"
+    ],
+    "risks": [
+      "예외 처리 누락 가능성",
+      "성능 저하 가능성",
+      "데이터 무결성 문제",
+      "동시성 문제",
+      "의존성 주입 오류"
+    ],
+    "missing_standard_checks": [
+      "로깅",
+      "입력 검증",
+      "API 문서화",
+      "유닛 테스트",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.program.entity.Program;"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.advice.CustomException;"
+    },
+    {
+      "type": "call",
+      "text": "groupRepository.findById(programId)"
+    },
+    {
+      "type": "call",
+      "text": "programProblemService.deleteProgramProblem(programId, programProblemDeleteRequestDto)"
+    },
+    {
+      "type": "annotation",
+      "text": "@Transactional(readOnly = true)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "group+service",
+      "program+service",
+      "db+jpa"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\repository\\GroupRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\MyGroupRoomPageResponseDto.java"
+    ]
+  }
+}

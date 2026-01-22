@@ -1,0 +1,106 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\entity\\OrderId.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Order",
+      "Id"
+    ],
+    "entities": [
+      "OrderId"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "주문 ID 생성",
+      "verb_object": "주문 ID 생성",
+      "inputs": [
+        "Long orderId",
+        "Long productId"
+      ],
+      "outputs": [
+        "OrderId instance"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "주문 ID 비교",
+      "verb_object": "주문 ID 비교",
+      "inputs": [
+        "Object o"
+      ],
+      "outputs": [
+        "boolean"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "주문 ID 해시 코드 생성",
+      "verb_object": "주문 ID 해시 코드 생성",
+      "inputs": [],
+      "outputs": [
+        "int"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Serializable"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 equals 및 hashCode 구현",
+      "Serializable 인터페이스 구현",
+      "기본 생성자 제공"
+    ],
+    "risks": [
+      "equals 메서드에서 null 체크 미비",
+      "hashCode 충돌 가능성"
+    ],
+    "missing_standard_checks": [
+      "Validation",
+      "Null 체크",
+      "Immutable 객체"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import java.io.Serializable;"
+    },
+    {
+      "type": "import",
+      "text": "import java.util.Objects;"
+    },
+    {
+      "type": "call",
+      "text": "Objects.equals(orderId, orderId1.orderId)"
+    },
+    {
+      "type": "call",
+      "text": "Objects.hash(orderId, productId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "entity",
+      "order",
+      "id"
+    ],
+    "related_files_guess": []
+  }
+}

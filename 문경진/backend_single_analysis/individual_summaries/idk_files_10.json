@@ -1,0 +1,26 @@
+{
+  "path": "backend\\idk\\src\\main\\java\\com\\ssafy\\idk\\domain\\autodebit\\repository\\AutoDebitRepository.java",
+  "project_subject_signals": [
+    "자동 이체(AutoDebit)",
+    "납부자(Payer)"
+  ],
+  "frameworks": [
+    "Spring"
+  ],
+  "libraries": [
+    "Spring Data JPA",
+    "Java JPA"
+  ],
+  "core_features": [
+    {
+      "feature_name": "자동 이체 정보 조회",
+      "feature_description": "납부자 번호를 기준으로 자동 이체 정보를 조회하는 기능을 제공합니다.",
+      "implementation_method": "JpaRepository 인터페이스를 확장하고, Spring Data JPA의 메소드 명명 규칙을 활용하여 `findByPayerNumber` 메소드를 정의했습니다.",
+      "job_value": "데이터 접근 계층(Repository)을 명확하게 정의하고, Spring Data JPA를 활용하여 기본적인 데이터 조회 기능을 구현하는 역량을 보여줍니다."
+    }
+  ],
+  "improvement_suggestions": [
+    "이체 정보 조회 시 복합적인 조건(예: 납부자 번호 및 상태)을 함께 조회해야 할 경우, 쿼리 메소드 또는 @Query 어노테이션을 활용하여 보다 복잡한 검색 로직을 추가할 수 있습니다.",
+    "실제 운영 환경에서는 잠재적인 성능 문제 또는 비즈니스 로직의 복잡성에 따라 커스텀 쿼리 작성이 필요할 수 있으므로, 향후 복잡한 쿼리 처리 방안을 고려할 수 있습니다."
+  ]
+}

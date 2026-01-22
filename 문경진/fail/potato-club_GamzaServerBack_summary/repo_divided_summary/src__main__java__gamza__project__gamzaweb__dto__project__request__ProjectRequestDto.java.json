@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\project\\request\\ProjectRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 프로젝트 요청에 대한 데이터 전송 객체(DTO)로, 클라이언트와 서버 간의 데이터 전송을 담당합니다.\",\n  \"key_features\": [\n    \"프로젝트의 기본 정보를 담고 있는 DTO\",\n    \"프로젝트 상태와 유형을 정의하는 열거형 사용\",\n    \"협업자 목록을 관리할 수 있는 기능\"\n  ],\n  \"key_code\": [\n    \"private Long platformId;\",\n    \"private String name;\",\n    \"private ProjectState state;\",\n    \"private List<Integer> collaborators = new ArrayList<>();\"\n  ],\n  \"project_hints\": [\n    \"프로젝트 관리 또는 협업 플랫폼과 관련된 주제\"\n  ]\n}\n```"
+}

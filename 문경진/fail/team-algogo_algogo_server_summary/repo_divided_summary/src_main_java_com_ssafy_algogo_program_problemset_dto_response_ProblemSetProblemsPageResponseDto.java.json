@@ -1,0 +1,104 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\response\\ProblemSetProblemsPageResponseDto.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProblemSet",
+      "ResponseDto",
+      "PageInfo",
+      "SortInfo"
+    ],
+    "entities": [
+      "ProgramProblem",
+      "ProgramProblemResponseDto"
+    ],
+    "modules": [
+      "problemset",
+      "dto",
+      "response"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 세트 응답 생성",
+      "verb_object": "응답 생성",
+      "inputs": [
+        "isLogined",
+        "programProblems",
+        "sortBy",
+        "sortDirection"
+      ],
+      "outputs": [
+        "ProblemSetProblemsPageResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "페이지 정보 포함",
+      "정렬 정보 포함"
+    ],
+    "risks": [
+      "데이터 유효성 검증 부족",
+      "예외 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "입력 값 검증",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.common.dto.PageInfo;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Page;"
+    },
+    {
+      "type": "call",
+      "text": "programProblems.map(ProgramProblemResponseDto::from)"
+    },
+    {
+      "type": "call",
+      "text": "new PageInfo(...)"
+    },
+    {
+      "type": "call",
+      "text": "new SortInfo(sortBy, sortDirection)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto+response",
+      "problemset+api"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\dto\\response\\ProgramProblemResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\common\\dto\\PageInfo.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\common\\dto\\SortInfo.java"
+    ]
+  }
+}

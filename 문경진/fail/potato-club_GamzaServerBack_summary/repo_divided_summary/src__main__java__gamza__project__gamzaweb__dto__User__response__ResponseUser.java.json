@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\User\\response\\ResponseUser.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 사용자 정보를 담고 있는 데이터 전송 객체(DTO)로, 사용자 관련 데이터를 클라이언트와 서버 간에 전송하는 역할을 한다.\",\n  \"key_features\": [\n    \"사용자 ID, 이름, 학생 ID를 포함한 사용자 정보를 저장\",\n    \"Lombok을 사용하여 코드의 간결성을 높임\"\n  ],\n  \"key_code\": [\n    \"@Builder\",\n    \"@Getter\",\n    \"@NoArgsConstructor\",\n    \"@AllArgsConstructor\"\n  ],\n  \"project_hints\": [\n    \"사용자 관리 시스템 또는 학사 관리 시스템과 관련된 프로젝트일 가능성이 높음\"\n  ]\n}\n```"
+}

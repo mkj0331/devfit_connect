@@ -1,0 +1,131 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\service\\impl\\ProgramServiceImpl.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Program",
+      "Invite",
+      "Join",
+      "User",
+      "Status"
+    ],
+    "entities": [
+      "ProgramInvite",
+      "ProgramJoin",
+      "ProgramUser",
+      "User"
+    ],
+    "modules": [
+      "program",
+      "service",
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 초대 삭제",
+      "verb_object": "초대 삭제",
+      "inputs": [
+        "programId",
+        "inviteId"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "CustomException 발생"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "프로그램 초대 상태 조회",
+      "verb_object": "상태 조회",
+      "inputs": [
+        "programId"
+      ],
+      "outputs": [
+        "GetProgramInviteStateListResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "예외 처리",
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 예외 처리",
+      "DTO 사용",
+      "JPA를 통한 데이터 접근",
+      "Lombok을 통한 코드 간결성",
+      "서비스 레이어에서의 비즈니스 로직 처리"
+    ],
+    "risks": [
+      "예외 발생 시 사용자 경험 저하",
+      "초대 정보가 많을 경우 성능 저하 가능성",
+      "잘못된 프로그램 ID로 인한 오류",
+      "상태 관리의 복잡성",
+      "동시성 문제"
+    ],
+    "missing_standard_checks": [
+      "입력 값 검증",
+      "로깅",
+      "성능 모니터링",
+      "보안 검토",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.program.entity.ProgramInvite;"
+    },
+    {
+      "type": "call",
+      "text": "programInviteRepository.findById(inviteId)"
+    },
+    {
+      "type": "call",
+      "text": "programInviteRepository.delete(programInvite)"
+    },
+    {
+      "type": "annotation",
+      "text": "@Transactional(readOnly = true)"
+    },
+    {
+      "type": "query",
+      "text": "programInviteRepository.findByProgramIdWithUser(programId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "program+invite",
+      "program+user",
+      "service+impl"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramInviteRepository.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\GetProgramInviteStateResponseDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\program\\service\\ProgramService.java"
+    ]
+  }
+}

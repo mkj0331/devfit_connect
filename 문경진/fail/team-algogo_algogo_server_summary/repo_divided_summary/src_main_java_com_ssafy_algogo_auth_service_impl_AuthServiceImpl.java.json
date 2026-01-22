@@ -1,0 +1,149 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\impl\\AuthServiceImpl.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "authentication",
+      "token",
+      "user",
+      "login",
+      "logout"
+    ],
+    "entities": [
+      "User",
+      "AuthResultDto",
+      "LocalLoginResponseDto",
+      "TokenInfo",
+      "MeResponseDto"
+    ],
+    "modules": [
+      "auth",
+      "user"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "로그인",
+      "verb_object": "사용자 인증",
+      "inputs": [
+        "email",
+        "password"
+      ],
+      "outputs": [
+        "AuthResultDto"
+      ],
+      "side_effects": [
+        "토큰 생성",
+        "Redis에 refreshToken 저장"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "로그아웃",
+      "verb_object": "사용자 로그아웃",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "Redis에서 refreshToken 삭제"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "name": "내 정보 조회",
+      "verb_object": "사용자 정보 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "MeResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.85
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA",
+      "Redis"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "보안",
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "트랜잭션 관리",
+      "DTO 사용",
+      "예외 처리",
+      "Redis 캐시 활용"
+    ],
+    "risks": [
+      "Redis 의존성",
+      "예외 처리 누락 가능성",
+      "보안 취약점",
+      "동시성 문제",
+      "유저 존재 여부 체크 미비"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "로그 기록",
+      "API 문서화",
+      "단위 테스트",
+      "성능 모니터링"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.auth.service.AuthService;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Service"
+    },
+    {
+      "type": "call",
+      "text": "authenticationManager.authenticate(usernamePasswordAuthenticationToken);"
+    },
+    {
+      "type": "query",
+      "text": "userRepository.findById(userId)"
+    },
+    {
+      "type": "call",
+      "text": "redisJwtService.save(customUserDetails.getUserId(), refreshToken, ip);"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+jwt",
+      "user+repository",
+      "security+token",
+      "api+service"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\controller\\AuthController.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\jwt\\JwtTokenProvider.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\repository\\UserRepository.java"
+    ]
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\service\\OrderService.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Service Layer",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Order",
+      "Cart",
+      "User",
+      "Address"
+    ],
+    "entities": [
+      "OrderEntity",
+      "CartEntity",
+      "AddressEntity"
+    ],
+    "modules": [
+      "OrderService",
+      "CartRepository",
+      "OrderRepository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "주문 조회",
+      "verb_object": "주문 조회",
+      "inputs": [
+        "Long userId"
+      ],
+      "outputs": [
+        "List<OrderDTO>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "주문 저장",
+      "verb_object": "주문 저장",
+      "inputs": [
+        "OrderDTO orderDTO"
+      ],
+      "outputs": [
+        "Long"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "최대 추가 ID 조회",
+      "verb_object": "최대 추가 ID 조회",
+      "inputs": [
+        "Long userId"
+      ],
+      "outputs": [
+        "Long"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "장바구니 삭제",
+      "verb_object": "장바구니 삭제",
+      "inputs": [
+        "Long cartId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "트랜잭션"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 책임 분리",
+      "JPA를 통한 데이터 접근",
+      "Lombok을 통한 코드 간결성"
+    ],
+    "risks": [
+      "예외 처리 부족",
+      "트랜잭션 관리 미비",
+      "입력 검증 부족"
+    ],
+    "missing_standard_checks": [
+      "로그 기록",
+      "입력 검증",
+      "예외 처리",
+      "API 문서화",
+      "유닛 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.stereotype.Service"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.transaction.annotation.Transactional"
+    },
+    {
+      "type": "call",
+      "text": "orderRepository.findByUserId(userId)"
+    },
+    {
+      "type": "call",
+      "text": "orderRepository.save(OrderEntity.toOrderEntity(orderDTO))"
+    },
+    {
+      "type": "call",
+      "text": "cartRepository.deleteById(cartId)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "order+service",
+      "cart+service",
+      "db+jpa"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\OrderRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\CartRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\OrderDTO.java",
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\OrderEntity.java"
+    ]
+  }
+}

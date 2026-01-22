@@ -1,0 +1,160 @@
+{
+  "batch_id": 20,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Jakarta EE",
+    "Lombok",
+    "Hibernate",
+    "Jackson"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "제출 통계 응답 처리",
+      "domain_tags": [
+        "submission",
+        "stats",
+        "dto",
+        "response"
+      ],
+      "responsibilities": [
+        "제출 통계 페이지 응답 생성",
+        "제출 통계 조회"
+      ],
+      "implementation_signals": [
+        "DTO",
+        "JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionStatsPageResponseDto.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\SubmissionStatsResponseDto.java"
+      ],
+      "evidence": [
+        "SubmissionStatsPageResponseDto.java",
+        "SubmissionStatsResponseDto.java",
+        "Page<SubmissionStatsResponseDto>"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "유효성 검사 부족",
+        "확장성 문제"
+      ]
+    },
+    {
+      "cluster_name": "트렌드 ID 응답 처리",
+      "domain_tags": [
+        "submission",
+        "trend",
+        "dto",
+        "response"
+      ],
+      "responsibilities": [
+        "트렌드 ID 응답 생성"
+      ],
+      "implementation_signals": [
+        "DTO"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\response\\TrendIdsResponseDto.java"
+      ],
+      "evidence": [
+        "TrendIdsResponseDto.java",
+        "new TrendIdsResponseDto()"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "유효성 검사 부족"
+      ]
+    },
+    {
+      "cluster_name": "알고리즘 엔티티 관리",
+      "domain_tags": [
+        "algorithm",
+        "entity"
+      ],
+      "responsibilities": [
+        "알고리즘 생성",
+        "알고리즘 조회"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "Entity"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Algorithm.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\AlgorithmKeyword.java"
+      ],
+      "evidence": [
+        "Algorithm.java",
+        "@Entity"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "데이터 무결성 문제"
+      ]
+    },
+    {
+      "cluster_name": "제출 정보 관리",
+      "domain_tags": [
+        "submission",
+        "entity"
+      ],
+      "responsibilities": [
+        "제출 정보 증가",
+        "AI 평가 업데이트",
+        "조회 수 증가"
+      ],
+      "implementation_signals": [
+        "JPA",
+        "Entity"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\entity\\Submission.java"
+      ],
+      "evidence": [
+        "Submission.java",
+        "@Entity"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "NullPointerException 가능성"
+      ]
+    },
+    {
+      "cluster_name": "제출 이벤트 처리",
+      "domain_tags": [
+        "submission",
+        "event"
+      ],
+      "responsibilities": [
+        "제출 이벤트 생성",
+        "리뷰 재매칭 이벤트 생성"
+      ],
+      "implementation_signals": [
+        "record"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\SubmissionEvent.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\SubmissionRematchEvent.java"
+      ],
+      "evidence": [
+        "SubmissionEvent.java",
+        "SubmissionRematchEvent.java"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "확장성 문제"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "dto",
+    "response",
+    "submission",
+    "event",
+    "algorithm"
+  ]
+}

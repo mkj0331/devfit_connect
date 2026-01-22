@@ -1,0 +1,152 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\controller\\UserController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "회원가입",
+      "이메일 인증",
+      "비밀번호 찾기",
+      "유저 조회"
+    ],
+    "entities": [
+      "User",
+      "SignupRequestDto",
+      "CheckDuplicateEmailRequestDto"
+    ],
+    "modules": [
+      "UserService"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "회원가입",
+      "verb_object": "회원가입",
+      "inputs": [
+        "SignupRequestDto"
+      ],
+      "outputs": [
+        "SignupResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "이메일 중복 확인",
+      "verb_object": "이메일 중복 확인",
+      "inputs": [
+        "CheckDuplicateEmailRequestDto"
+      ],
+      "outputs": [
+        "CheckDuplicateEmailResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "이메일 인증 요청",
+      "verb_object": "인증번호 발송",
+      "inputs": [
+        "SendEmailCodeRequestDto"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "비밀번호 찾기",
+      "verb_object": "임시 비밀번호 전송",
+      "inputs": [
+        "String email"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "유저 검색",
+      "verb_object": "유저 조회",
+      "inputs": [
+        "String content"
+      ],
+      "outputs": [
+        "ListSearchUserResponseDto"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Service"
+    ],
+    "cross_cutting": [
+      "Validation",
+      "Security"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 API 설계",
+      "유효성 검사 적용",
+      "RESTful 원칙 준수"
+    ],
+    "risks": [
+      "예외 처리 부족",
+      "보안 취약점 가능성",
+      "의존성 주입 실패 가능성"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "로깅",
+      "단위 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@RestController"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequestMapping"
+    },
+    {
+      "type": "call",
+      "text": "userService.signup(signupRequestDto)"
+    },
+    {
+      "type": "endpoint",
+      "text": "/api/v1/users/signup"
+    },
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.user.service.UserService;"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+controller",
+      "auth+email",
+      "user+service"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\UserService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\SignupRequestDto.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\response\\SignupResponseDto.java"
+    ]
+  }
+}

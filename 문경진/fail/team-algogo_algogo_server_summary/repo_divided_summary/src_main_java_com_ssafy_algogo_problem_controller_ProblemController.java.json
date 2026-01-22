@@ -1,0 +1,118 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\controller\\ProblemController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "문제",
+      "조회",
+      "검색"
+    ],
+    "entities": [
+      "Problem",
+      "ProblemService"
+    ],
+    "modules": [
+      "controller",
+      "service"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "문제 조회",
+      "verb_object": "문제 조회",
+      "inputs": [
+        "programProblemId"
+      ],
+      "outputs": [
+        "SuccessResponse"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "문제 검색",
+      "verb_object": "문제 검색",
+      "inputs": [
+        "keyword"
+      ],
+      "outputs": [
+        "SuccessResponse"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": [
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "RESTful API 구조",
+      "Lombok 사용으로 코드 간결",
+      "명확한 응답 구조"
+    ],
+    "risks": [
+      "예외 처리 미비",
+      "입력 검증 부족"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "유닛 테스트",
+      "보안 검토"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@RestController"
+    },
+    {
+      "type": "annotation",
+      "text": "@RequestMapping"
+    },
+    {
+      "type": "endpoint",
+      "text": "/api/v1/problems/{programProblemId}"
+    },
+    {
+      "type": "endpoint",
+      "text": "/api/v1/problems/search"
+    },
+    {
+      "type": "call",
+      "text": "problemService.getProblem(programProblemId)"
+    },
+    {
+      "type": "call",
+      "text": "problemService.searchProblems(keyword)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "api+controller",
+      "problem+service"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\problem\\service\\ProblemService.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\common\\advice\\SuccessResponse.java"
+    ]
+  }
+}

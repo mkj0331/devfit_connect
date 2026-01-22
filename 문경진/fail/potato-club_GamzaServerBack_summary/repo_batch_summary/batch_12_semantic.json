@@ -1,0 +1,39 @@
+{
+  "batch_id": 12,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Framework",
+    "AspectJ",
+    "Lombok",
+    "Jakarta Servlet",
+    "AWS SDK for Java",
+    "JUnit"
+  ],
+  "batch_role": "이 프로젝트는 사용자 인증 및 권한 관리, 배포 관리, 파일 업로드 기능을 포함하는 웹 애플리케이션입니다.",
+  "key_features": [
+    "관리자 권한 체크 및 사용자 인증 기능",
+    "배포 단계 관리 및 업데이트 요청 처리",
+    "파일 업로드 및 관리 기능",
+    "프로젝트 유효성 검사 및 사용자 역할 검증"
+  ],
+  "related_files": [
+    "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\aop\\AdminCheckAOP.java",
+    "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\aop\\AdminCheckParamAOP.java",
+    "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\aop\\AuthCheckParam.java",
+    "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\DeploymentStepQueue.java",
+    "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\FileUploader.java",
+    "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\JpaAssistance.java",
+    "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\ProjectTaskScheduler.java",
+    "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\ProjectValidate.java",
+    "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\UserValidate.java",
+    "src\\test\\java\\gamza\\project\\gamzaweb\\GamzaWebApplicationTests.java"
+  ],
+  "project_hints": [
+    "이 프로젝트는 사용자 인증 및 권한 관리와 관련된 웹 애플리케이션으로 보입니다.",
+    "배포 관리 시스템 또는 CI/CD 관련 프로젝트의 일부일 가능성이 높습니다.",
+    "파일 업로드 및 관리 기능을 제공하는 웹 애플리케이션입니다.",
+    "사용자 권한 관리 및 프로젝트 상태 관리 기능을 포함합니다."
+  ]
+}

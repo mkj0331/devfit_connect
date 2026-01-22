@@ -1,0 +1,45 @@
+{
+  "batch_id": 5,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring Security",
+    "JWT (JSON Web Token)",
+    "BCrypt",
+    "CORS",
+    "Spring Framework",
+    "Java Records",
+    "Jakarta Persistence",
+    "Spring Data JPA",
+    "Lombok",
+    "AWS SDK for Java",
+    "Jakarta Validation"
+  ],
+  "batch_role": "Web Application Development",
+  "key_features": [
+    "User authentication and authorization management",
+    "Pagination and sorting for data handling",
+    "File upload and download functionality using AWS S3",
+    "Entity auditing with timestamps",
+    "Random password generation for secure user accounts",
+    "RESTful API for managing programming problems"
+  ],
+  "related_files": [
+    "SecurityConfig.java",
+    "PageInfo.java",
+    "SortInfo.java",
+    "BaseTime.java",
+    "RandomPasswordGenerator.java",
+    "S3Service.java",
+    "ProblemController.java",
+    "ProgramProblemCreateRequestDto.java",
+    "ProgramProblemDeleteRequestDto.java",
+    "ProgramProblemRequestDto.java"
+  ],
+  "project_hints": [
+    "The project involves a web application with user authentication and problem management features.",
+    "It utilizes AWS for file storage and implements pagination and sorting for data presentation.",
+    "The use of DTOs indicates a structured approach to handling requests and responses in the API."
+  ]
+}

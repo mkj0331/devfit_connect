@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\dto\\response\\LocalLoginResponseDto.java",
+    "language": "Java",
+    "frameworks": [],
+    "libraries": [
+      "Lombok"
+    ],
+    "layer_guess": "DTO",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "LocalLogin",
+      "Response",
+      "User"
+    ],
+    "entities": [
+      "User"
+    ],
+    "modules": [
+      "auth",
+      "dto"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 정보 변환",
+      "verb_object": "정보 변환",
+      "inputs": [
+        "User 객체"
+      ],
+      "outputs": [
+        "LocalLoginResponseDto 객체"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 구조",
+      "Lombok 사용으로 코드 간결",
+      "Immutable 객체"
+    ],
+    "risks": [
+      "User 객체의 변경에 따른 영향",
+      "NullPointerException 가능성"
+    ],
+    "missing_standard_checks": [
+      "Validation 체크",
+      "Null 체크",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import com.ssafy.algogo.user.entity.User;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Builder"
+    },
+    {
+      "type": "call",
+      "text": "LocalLoginResponseDto.from(User user)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+dto",
+      "user+entity"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\auth\\controller\\AuthController.java"
+    ]
+  }
+}

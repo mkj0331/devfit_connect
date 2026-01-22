@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\FileUploader.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"AWS SDK for Java\",\n    \"Lombok\"\n  ],\n  \"role\": \"파일 업로드 및 관리 기능을 제공하는 유틸리티 클래스\",\n  \"key_features\": [\n    \"S3 버킷에 파일 업로드\",\n    \"파일 메타데이터 설정\",\n    \"파일 URL 저장 및 조회\"\n  ],\n  \"key_code\": [\n    \"amazonS3Client.putObject(bucket, uniqueFileName, file.getInputStream(), metadata);\",\n    \"fileRepository.save(fileEntity);\",\n    \"fileRepository.findFirstByApplicationOrderByIdDesc(project.getApplication());\"\n  ],\n  \"project_hints\": [\n    \"파일 업로드 및 관리 기능을 제공하는 웹 애플리케이션\",\n    \"AWS S3를 사용하여 파일 저장\"\n  ]\n}\n```"
+}

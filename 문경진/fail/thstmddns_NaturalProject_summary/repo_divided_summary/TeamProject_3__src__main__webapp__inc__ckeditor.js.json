@@ -1,0 +1,4 @@
+{
+  "path": "TeamProject_3\\src\\main\\webapp\\inc\\ckeditor.js",
+  "summary": "```json\n{\n  \"language\": \"JavaScript\",\n  \"technologies\": [\"CKEditor 5\"],\n  \"role\": \"이 파일은 CKEditor 5의 설정을 정의하여 텍스트 편집기 기능을 구성하는 역할을 합니다.\",\n  \"key_features\": [\n    \"다양한 텍스트 포맷팅 옵션 제공 (볼드, 이탤릭, 밑줄 등)\",\n    \"리스트 및 테이블 삽입 기능\",\n    \"이미지 및 미디어 삽입 기능\",\n    \"실시간 협업 기능 (댓글, 변경 추적 등)\",\n    \"문서 내비게이션 및 템플릿 기능\"\n  ],\n  \"key_code\": [\n    \"toolbar: { items: [...] }\",\n    \"list: { properties: { styles: true, startIndex: true } }\",\n    \"'RealTimeCollaborativeComments', 'TrackChanges', 'MathType'\"\n  ],\n  \"project_hints\": [\n    \"사용자 간의 협업을 지원하는 문서 편집 플랫폼\",\n    \"문서 작성 및 편집을 위한 기능이 포함된 웹 애플리케이션\"\n  ]\n}\n```"
+}

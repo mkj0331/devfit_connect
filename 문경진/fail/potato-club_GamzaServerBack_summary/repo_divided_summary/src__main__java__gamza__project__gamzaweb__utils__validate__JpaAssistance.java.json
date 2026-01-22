@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\validate\\JpaAssistance.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\"\n  ],\n  \"role\": \"데이터베이스에서 사용자 및 프로젝트 정보를 조회하고 유효성을 검사하는 유틸리티 클래스\",\n  \"key_features\": [\n    \"사용자 ID를 통해 UserEntity를 조회하고, 존재하지 않을 경우 예외를 발생시킴\",\n    \"프로젝트 ID를 통해 ProjectEntity를 조회하고, 존재하지 않을 경우 예외를 발생시킴\"\n  ],\n  \"key_code\": [\n    \"return userRepository.findById(id).orElseThrow(() -> new UnAuthorizedException(\\\"잘못된 요청입니다 - 해당 유저가 존재하지 않습니다.\\\", ErrorCode.BAD_REQUEST_EXCEPTION));\",\n    \"return projectRepository.findById(id).orElseThrow(() -> new NotFoundException(\\\"잘못된 요청입니다 - 해당 유저가 존재하지 않습니다.\\\", ErrorCode.BAD_REQUEST_EXCEPTION));\"\n  ],\n  \"project_hints\": [\n    \"사용자 및 프로젝트 관리 시스템\",\n    \"유저 인증 및 권한 관리 기능 포함\"\n  ]\n}\n```"
+}

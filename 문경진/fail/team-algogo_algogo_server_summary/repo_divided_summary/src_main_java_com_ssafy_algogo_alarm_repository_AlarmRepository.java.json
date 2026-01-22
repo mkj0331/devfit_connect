@@ -1,0 +1,135 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\alarm\\repository\\AlarmRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Alarm",
+      "User",
+      "Repository"
+    ],
+    "entities": [
+      "Alarm"
+    ],
+    "modules": [
+      "alarm"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "알림 조회",
+      "verb_object": "findByUserIdOrderByCreatedAtDesc",
+      "inputs": [
+        "Long userId"
+      ],
+      "outputs": [
+        "List<Alarm>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "읽지 않은 알림 수 카운트",
+      "verb_object": "countByUserIdAndIsReadFalse",
+      "inputs": [
+        "Long userId"
+      ],
+      "outputs": [
+        "long"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "알림 삭제",
+      "verb_object": "deleteAllByIdsAndUserId",
+      "inputs": [
+        "List<Long> ids",
+        "Long userId"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.7
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": [
+      "Security"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 메서드 이름",
+      "JPA를 통한 데이터 접근",
+      "사용자 기반의 알림 관리",
+      "보안 고려",
+      "모듈화된 구조"
+    ],
+    "risks": [
+      "SQL 인젝션 가능성",
+      "사용자 인증 미비",
+      "예외 처리 부족",
+      "동시성 문제",
+      "성능 저하 가능성"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리",
+      "로깅",
+      "트랜잭션 관리",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.Modifying"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.Query"
+    },
+    {
+      "type": "call",
+      "text": "findByUserIdOrderByCreatedAtDesc"
+    },
+    {
+      "type": "call",
+      "text": "countByUserIdAndIsReadFalse"
+    },
+    {
+      "type": "query",
+      "text": "delete from Alarm a where a.id in :ids and a.user.id = :userId"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "alarm+repository",
+      "db+jpa",
+      "api+repository"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\alarm\\entity\\Alarm.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\alarm\\service\\AlarmService.java"
+    ]
+  }
+}

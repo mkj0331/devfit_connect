@@ -1,0 +1,140 @@
+{
+  "repo_analysis_id": "team-algogo_algogo_server",
+  "project_domain": "온라인 알고리즘 문제 풀이 및 리뷰 플랫폼",
+  "tech_stack": {
+    "frameworks": [
+      "Spring",
+      "Jakarta EE"
+    ],
+    "libraries": [
+      "JPA",
+      "Lombok",
+      "Jackson",
+      "QueryDSL",
+      "JavaMail"
+    ],
+    "languages": [
+      "Java"
+    ]
+  },
+  "core_features": [
+    {
+      "feature_name": "사용자 인증 및 관리",
+      "feature_description": "회원가입, 로그인, 비밀번호 변경, 이메일 인증 및 사용자 정보 업데이트 기능을 포함하여 사용자 관리 전반을 담당.",
+      "implementation": {
+        "implementation_method": "Spring Security와 JPA를 활용하여 사용자 인증 및 데이터 관리를 수행.",
+        "related_code_paths": [
+          "src/main/java/com/ssafy/algogo/user/controller/UserController.java",
+          "src/main/java/com/ssafy/algogo/user/service/UserService.java",
+          "src/main/java/com/ssafy/algogo/user/repository/UserRepository.java"
+        ]
+      },
+      "industry_standard_comparison": {
+        "standard_approach": "Spring Security를 통한 인증 및 인가 처리",
+        "comparison_result": "현업에서 널리 사용되는 방법으로, 보안성이 높고 유지보수 용이."
+      },
+      "strengths": [
+        "JPA와 Spring Security 통합 → 데이터베이스와의 원활한 상호작용 및 보안성 강화",
+        "DTO를 통한 데이터 전송 → 데이터 무결성 및 유효성 검사 용이"
+      ],
+      "future_development_suggestions": [
+        {
+          "suggestion": "OAuth2 및 소셜 로그인 기능 추가",
+          "expected_effect": "사용자 편의성 증대 및 다양한 인증 방식 지원"
+        }
+      ]
+    },
+    {
+      "feature_name": "문제 및 문제집 관리",
+      "feature_description": "문제 생성, 조회, 수정 및 문제집 관리 기능을 제공.",
+      "implementation": {
+        "implementation_method": "JPA와 QueryDSL을 활용하여 문제 및 문제집 데이터의 CRUD 작업을 수행.",
+        "related_code_paths": [
+          "src/main/java/com/ssafy/algogo/problem/controller/ProblemController.java",
+          "src/main/java/com/ssafy/algogo/problem/service/ProblemService.java",
+          "src/main/java/com/ssafy/algogo/problem/repository/ProblemRepository.java"
+        ]
+      },
+      "industry_standard_comparison": {
+        "standard_approach": "Repository 패턴을 통한 데이터 접근",
+        "comparison_result": "효율적인 데이터 접근 및 유지보수 용이성 확보."
+      },
+      "strengths": [
+        "QueryDSL을 통한 동적 쿼리 생성 → 복잡한 검색 조건 처리 용이",
+        "문제 및 문제집에 대한 DTO 사용 → 데이터 전송 시 유효성 검사 및 변환 용이"
+      ],
+      "future_development_suggestions": [
+        {
+          "suggestion": "문제 추천 알고리즘 추가",
+          "expected_effect": "사용자 맞춤형 문제 추천으로 사용자 경험 향상"
+        }
+      ]
+    },
+    {
+      "feature_name": "리뷰 및 피드백 시스템",
+      "feature_description": "코드 리뷰 요청, 리뷰 상태 관리 및 리뷰어 매칭 기능을 포함.",
+      "implementation": {
+        "implementation_method": "JPA와 Spring의 트랜잭션 관리를 통해 리뷰 요청 및 상태를 관리.",
+        "related_code_paths": [
+          "src/main/java/com/ssafy/algogo/review/controller/ReviewController.java",
+          "src/main/java/com/ssafy/algogo/review/service/ReviewService.java",
+          "src/main/java/com/ssafy/algogo/review/repository/ReviewRepository.java"
+        ]
+      },
+      "industry_standard_comparison": {
+        "standard_approach": "트랜잭션 관리 및 비동기 처리",
+        "comparison_result": "효율적인 데이터 처리 및 사용자 경험 개선."
+      },
+      "strengths": [
+        "비동기 처리 및 트랜잭션 관리 → 성능 최적화 및 데이터 일관성 유지",
+        "리뷰어 매칭 알고리즘 → 효율적인 리뷰 프로세스 지원"
+      ],
+      "future_development_suggestions": [
+        {
+          "suggestion": "리뷰 피드백 자동화 기능 추가",
+          "expected_effect": "리뷰 효율성 향상 및 사용자 만족도 증가"
+        }
+      ]
+    },
+    {
+      "feature_name": "알고리즘 검색 및 제출 관리",
+      "feature_description": "사용자가 제출한 알고리즘을 관리하고, 알고리즘 검색 기능을 제공.",
+      "implementation": {
+        "implementation_method": "JPA와 QueryDSL을 통해 알고리즘 데이터의 CRUD 작업 및 검색 기능을 구현.",
+        "related_code_paths": [
+          "src/main/java/com/ssafy/algogo/submission/controller/AlgorithmController.java",
+          "src/main/java/com/ssafy/algogo/submission/service/AlgorithmService.java",
+          "src/main/java/com/ssafy/algogo/submission/repository/AlgorithmRepository.java"
+        ]
+      },
+      "industry_standard_comparison": {
+        "standard_approach": "RESTful API 및 JPA를 통한 데이터 접근",
+        "comparison_result": "현업에서 일반적으로 사용되는 방식으로, 확장성과 유지보수 용이."
+      },
+      "strengths": [
+        "RESTful API 설계 → 클라이언트와의 원활한 데이터 통신",
+        "QueryDSL을 통한 효율적인 검색 기능 → 사용자 편의성 증대"
+      ],
+      "future_development_suggestions": [
+        {
+          "suggestion": "AI 기반 알고리즘 추천 시스템 개발",
+          "expected_effect": "사용자 맞춤형 알고리즘 추천으로 사용자 경험 향상"
+        }
+      ]
+    }
+  ],
+  "collaboration_style": {
+    "collaboration_type": "Active collaboration with multiple contributors",
+    "collaboration_signals": {
+      "rules_presence": "Consistent use of commit message prefixes and pull request merges",
+      "rules_evidence": [
+        "Use of prefixes like 'feat' and 'fix' in commit messages",
+        "Multiple merge pull requests indicating collaborative feature development"
+      ],
+      "coordination_signals": [
+        "Repeated mentions of similar features (e.g., group-related functionalities)",
+        "Fixes and features being addressed multiple times, indicating ongoing adjustments"
+      ]
+    }
+  }
+}

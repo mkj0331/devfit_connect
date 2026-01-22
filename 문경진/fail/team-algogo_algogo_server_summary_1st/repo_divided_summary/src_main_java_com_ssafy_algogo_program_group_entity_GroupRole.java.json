@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\entity\\GroupRole.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Lombok\",\n    \"Enum\"\n  ],\n  \"role\": \"Defines user roles within a group and their hierarchy.\",\n  \"key_features\": [\n    \"Enum representation of user roles (ADMIN, MANAGER, USER)\",\n    \"Each role has an associated level for comparison\",\n    \"Method to check if one role has at least the level of another role\"\n  ],\n  \"key_code\": [\n    \"public enum GroupRole { ... }\",\n    \"private final int level;\",\n    \"public boolean hasAtLeast(GroupRole required) { ... }\"\n  ],\n  \"project_hints\": [\n    \"User management system\",\n    \"Role-based access control\",\n    \"Group collaboration platform\"\n  ]\n}\n```"
+}

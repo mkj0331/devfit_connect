@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\generated\\gamza\\project\\gamzaweb\\Entity\\QUserEntity.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"QueryDSL\"\n  ],\n  \"role\": \"이 파일은 UserEntity에 대한 Querydsl 쿼리 타입을 정의하여 데이터베이스 쿼리를 쉽게 작성할 수 있도록 돕는 역할을 합니다.\",\n  \"key_features\": [\n    \"사용자 정보를 쿼리할 수 있는 기능\",\n    \"UserEntity의 다양한 속성에 대한 접근을 제공\",\n    \"CollaboratorEntity와의 관계를 정의\"\n  ],\n  \"key_code\": [\n    \"public final StringPath email = createString(\\\"email\\\");\",\n    \"public final NumberPath<Long> id = createNumber(\\\"id\\\", Long.class);\",\n    \"public final ListPath<CollaboratorEntity, QCollaboratorEntity> projects = this.<CollaboratorEntity, QCollaboratorEntity>createList(\\\"projects\\\", CollaboratorEntity.class, QCollaboratorEntity.class, PathInits.DIRECT2);\"\n  ],\n  \"project_hints\": [\n    \"사용자 관리 시스템 또는 웹 애플리케이션\",\n    \"사용자와 프로젝트 간의 관계를 관리하는 기능\"\n  ]\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\dto\\platform\\response\\PlatformListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"이 파일은 플랫폼 목록에 대한 응답 DTO(Data Transfer Object)를 정의하여, 클라이언트에게 플랫폼 정보를 전달하는 역할을 담당합니다.\",\n  \"key_features\": [\n    \"플랫폼 응답 DTO를 리스트 형태로 포함\",\n    \"Lombok을 사용하여 코드의 간결성을 높임\",\n    \"기본 생성자, 모든 필드를 포함한 생성자, 빌더 패턴을 지원\"\n  ],\n  \"key_code\": [\n    \"private List<PlatformResponseDto> platformResponseDtos;\"\n  ],\n  \"project_hints\": [\n    \"이 파일은 플랫폼 관련 데이터를 다루는 웹 애플리케이션의 일부로 보이며, 여러 플랫폼의 정보를 클라이언트에 전달하는 기능을 수행하는 것으로 추측됩니다.\"\n  ]\n}\n```"
+}

@@ -1,0 +1,148 @@
+{
+  "batch_id": 21,
+  "batch_mixture_flag": true,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Spring",
+    "Lombok",
+    "Spring Data JPA",
+    "QueryDSL"
+  ],
+  "feature_clusters": [
+    {
+      "cluster_name": "제출 이벤트 처리",
+      "domain_tags": [
+        "submission",
+        "event",
+        "review",
+        "matching"
+      ],
+      "responsibilities": [
+        "제출 이벤트 처리",
+        "재매칭 이벤트 처리",
+        "리뷰어 매칭"
+      ],
+      "implementation_signals": [
+        "Event Listener",
+        "Transactional Event",
+        "Spring"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\listener\\SubmissionAiEvaluationEventListener.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\event\\listener\\SubmissionEventListener.java"
+      ],
+      "evidence": [
+        "@Component",
+        "@Async",
+        "@TransactionalEventListener"
+      ],
+      "confidence": 0.9,
+      "risks_or_unknowns": [
+        "비동기 처리로 인한 오류 추적 어려움",
+        "트랜잭션 실패 시 상태 불일치 가능성"
+      ]
+    },
+    {
+      "cluster_name": "알고리즘 저장 및 조회",
+      "domain_tags": [
+        "algorithm",
+        "repository",
+        "db",
+        "jpa"
+      ],
+      "responsibilities": [
+        "알고리즘 저장",
+        "알고리즘 조회"
+      ],
+      "implementation_signals": [
+        "Spring Data JPA",
+        "JpaRepository"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\AlgorithmRepository.java",
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\query\\AlgorithmQueryRepository.java"
+      ],
+      "evidence": [
+        "extends JpaRepository<Algorithm, Long>",
+        "import org.springframework.data.jpa.repository.JpaRepository"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "JPA 쿼리 성능 문제",
+        "의존성 주입 실패 가능성"
+      ]
+    },
+    {
+      "cluster_name": "제출 저장 및 조회",
+      "domain_tags": [
+        "submission",
+        "repository",
+        "db",
+        "jpa"
+      ],
+      "responsibilities": [
+        "제출 목록 조회",
+        "제출 상세 조회",
+        "제출 존재 여부 확인"
+      ],
+      "implementation_signals": [
+        "Spring Data JPA",
+        "JpaRepository"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\SubmissionRepository.java"
+      ],
+      "evidence": [
+        "extends JpaRepository<Submission, Long>",
+        "import org.springframework.data.jpa.repository.JpaRepository"
+      ],
+      "confidence": 0.85,
+      "risks_or_unknowns": [
+        "JPA 쿼리 성능 문제",
+        "Optional 사용으로 인한 복잡성 증가"
+      ]
+    },
+    {
+      "cluster_name": "제출 쿼리 처리",
+      "domain_tags": [
+        "submission",
+        "query",
+        "repository",
+        "db"
+      ],
+      "responsibilities": [
+        "사용자 제출 목록 조회",
+        "리뷰 후보 조회",
+        "제출자 활성 상태 확인"
+      ],
+      "implementation_signals": [
+        "QueryDSL",
+        "JPA"
+      ],
+      "related_files": [
+        "src\\main\\java\\com\\ssafy\\algogo\\submission\\repository\\query\\SubmissionQueryRepository.java"
+      ],
+      "evidence": [
+        "import org.springframework.data.domain.Page",
+        "findAllUserSubmissionList"
+      ],
+      "confidence": 0.8,
+      "risks_or_unknowns": [
+        "복잡한 쿼리로 인한 성능 저하 가능성",
+        "입력 유효성 검사 부족"
+      ]
+    }
+  ],
+  "suggested_cluster_keys": [
+    "submission",
+    "event",
+    "algorithm",
+    "repository",
+    "jpa",
+    "query",
+    "review",
+    "matching"
+  ]
+}

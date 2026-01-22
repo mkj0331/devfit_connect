@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\problem\\service\\impl\\ProblemServiceImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\",\n    \"JPA (Java Persistence API)\"\n  ],\n  \"role\": \"Service Implementation for Problem Management\",\n  \"key_features\": [\n    \"Retrieves problem details by programProblemId\",\n    \"Searches for problems based on a keyword\",\n    \"Handles exceptions for non-existing program problems\",\n    \"Escapes special characters in search keywords\"\n  ],\n  \"key_code\": [\n    \"programProblemRepository.findById(programProblemId)\",\n    \"problemRepository.searchByKeyword(escapeKeyword)\",\n    \"escapeLike(String s)\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves a problem-solving platform or educational tool.\",\n    \"Focus on managing and retrieving programming problems.\"\n  ]\n}\n```"
+}

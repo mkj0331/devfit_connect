@@ -1,0 +1,112 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\user\\dto\\request\\UpdateUserInfoRequestDto.java",
+    "language": "java",
+    "frameworks": [
+      "jakarta.validation",
+      "lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "user",
+      "update",
+      "info",
+      "request",
+      "dto"
+    ],
+    "entities": [
+      "UpdateUserInfoRequestDto"
+    ],
+    "modules": [
+      "user"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "사용자 정보 업데이트",
+      "verb_object": "정보 업데이트",
+      "inputs": [
+        "description",
+        "nickname"
+      ],
+      "outputs": [],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "유효성 검사 적용",
+      "명확한 DTO 구조",
+      "간결한 코드",
+      "Lombok 사용으로 코드 간소화",
+      "유지보수 용이"
+    ],
+    "risks": [
+      "유효성 검사 미비 시 오류 발생 가능",
+      "필드 추가 시 DTO 수정 필요",
+      "의존성 증가"
+    ],
+    "missing_standard_checks": [
+      "Null 체크",
+      "길이 제한",
+      "형식 검증",
+      "예외 처리",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@NotBlank(message = \"description is required\")"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotBlank(message = \"nickname is required\")"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.validation.constraints.NotBlank;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.AllArgsConstructor;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Builder;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.Getter;"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.NoArgsConstructor;"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+dto",
+      "validation+request",
+      "update+user"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\controller\\UserController.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\service\\UserService.java"
+    ]
+  }
+}

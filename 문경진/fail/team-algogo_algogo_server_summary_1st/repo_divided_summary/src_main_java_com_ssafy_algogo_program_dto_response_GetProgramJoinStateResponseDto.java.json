@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\GetProgramJoinStateResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Jackson\",\n    \"Java Records\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for representing the response of a program join state.\",\n  \"key_features\": [\n    \"Encapsulates user information related to a program join.\",\n    \"Uses Jackson annotations for JSON serialization.\",\n    \"Provides a static method to create an instance from a ProgramJoin entity.\"\n  ],\n  \"key_code\": [\n    \"public record GetProgramJoinStateResponseDto(...)\",\n    \"public static GetProgramJoinStateResponseDto from(ProgramJoin programJoin)\"\n  ],\n  \"project_hints\": [\n    \"Involves user participation in programs.\",\n    \"Tracks the status of user joins in a program.\"\n  ]\n}\n```"
+}

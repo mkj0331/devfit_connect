@@ -1,0 +1,124 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\dto\\CartDTO.java",
+    "language": "Java",
+    "frameworks": [
+      "Lombok"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.85
+  },
+  "domain_signals": {
+    "keywords": [
+      "Cart",
+      "Product",
+      "User"
+    ],
+    "entities": [
+      "CartDTO",
+      "CartEntity",
+      "ProductDTO"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "장바구니 DTO 변환",
+      "verb_object": "DTO 변환",
+      "inputs": [
+        "CartEntity"
+      ],
+      "outputs": [
+        "CartDTO"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "가격 포맷팅",
+      "verb_object": "가격 포맷팅",
+      "inputs": [
+        "Integer productPrice",
+        "Integer cartCnt"
+      ],
+      "outputs": [
+        "String priceFormat",
+        "String totalFormat"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "이미지 URL 생성",
+      "verb_object": "이미지 URL 생성",
+      "inputs": [
+        "Long productId",
+        "Long cateId"
+      ],
+      "outputs": [
+        "String imageUrl"
+      ],
+      "side_effects": [],
+      "confidence": 0.75
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 DTO 구조",
+      "Lombok 사용으로 코드 간결",
+      "가격 포맷팅 기능 포함"
+    ],
+    "risks": [
+      "DTO와 Entity 간의 강한 결합",
+      "변경 시 DTO 수정 필요"
+    ],
+    "missing_standard_checks": [
+      "Validation 어노테이션",
+      "Null 체크",
+      "API 문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Getter"
+    },
+    {
+      "type": "annotation",
+      "text": "@Setter"
+    },
+    {
+      "type": "call",
+      "text": "CartDTO.toCartDTO(CartEntity cartEntity)"
+    },
+    {
+      "type": "import",
+      "text": "import lombok.*;"
+    },
+    {
+      "type": "call",
+      "text": "DecimalFormat.format()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto",
+      "cart",
+      "product"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\entity\\CartEntity.java",
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\ProductDTO.java"
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\alarm\\entity\\Alarm.java",
+    "language": "Java",
+    "frameworks": [
+      "Jakarta EE",
+      "Spring"
+    ],
+    "libraries": [
+      "Lombok",
+      "Hibernate"
+    ],
+    "layer_guess": "Entity",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Alarm",
+      "User",
+      "AlarmType",
+      "AlarmPayload"
+    ],
+    "entities": [
+      "Alarm",
+      "User",
+      "AlarmType"
+    ],
+    "modules": [
+      "alarm",
+      "user"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "알림 생성",
+      "verb_object": "생성 알림",
+      "inputs": [
+        "AlarmType",
+        "AlarmPayload",
+        "message",
+        "user"
+      ],
+      "outputs": [
+        "Alarm"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "알림 읽음 표시",
+      "verb_object": "표시 읽음 알림",
+      "inputs": [
+        "Alarm"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "isRead 상태 변경"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "name": "알림 조회",
+      "verb_object": "조회 알림",
+      "inputs": [
+        "user"
+      ],
+      "outputs": [
+        "List<Alarm>"
+      ],
+      "side_effects": [],
+      "confidence": 0.6
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Builder",
+      "Validation"
+    ],
+    "cross_cutting": [
+      "트랜잭션",
+      "예외 처리"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 데이터 모델",
+      "유효성 검사",
+      "Lazy Loading 사용",
+      "JSON 타입 지원",
+      "Lombok 사용으로 코드 간결"
+    ],
+    "risks": [
+      "Lazy Loading으로 인한 N+1 문제",
+      "NullPointerException 가능성",
+      "데이터 무결성 문제"
+    ],
+    "missing_standard_checks": [
+      "API 문서화",
+      "유닛 테스트",
+      "로깅",
+      "보안 검토",
+      "성능 모니터링"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "annotation",
+      "text": "@Entity"
+    },
+    {
+      "type": "annotation",
+      "text": "@ManyToOne"
+    },
+    {
+      "type": "annotation",
+      "text": "@NotNull"
+    },
+    {
+      "type": "call",
+      "text": "markAsRead()"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.persistence.*"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "alarm+entity",
+      "db+jpa",
+      "user+entity"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\ssafy\\algogo\\alarm\\entity\\AlarmType.java",
+      "src\\main\\java\\com\\ssafy\\algogo\\user\\entity\\User.java"
+    ]
+  }
+}

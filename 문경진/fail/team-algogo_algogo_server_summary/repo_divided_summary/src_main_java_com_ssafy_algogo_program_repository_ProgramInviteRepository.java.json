@@ -1,0 +1,109 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\repository\\ProgramInviteRepository.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "JPA"
+    ],
+    "layer_guess": "Repository",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "ProgramInvite",
+      "InviteStatus"
+    ],
+    "entities": [
+      "ProgramInvite",
+      "User"
+    ],
+    "modules": [
+      "repository"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "프로그램 초대 조회",
+      "verb_object": "초대 조회",
+      "inputs": [
+        "programId",
+        "userId",
+        "inviteStatus"
+      ],
+      "outputs": [
+        "Optional<ProgramInvite>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    },
+    {
+      "name": "프로그램 초대 사용자 조회",
+      "verb_object": "사용자 조회",
+      "inputs": [
+        "programId"
+      ],
+      "outputs": [
+        "List<ProgramInvite>"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "Repository"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "명확한 인터페이스 정의",
+      "JPA를 통한 데이터 접근",
+      "Optional 사용으로 Null 처리"
+    ],
+    "risks": [
+      "JPA 쿼리 성능 문제",
+      "Optional 사용으로 인한 복잡성 증가"
+    ],
+    "missing_standard_checks": [
+      "트랜잭션 관리",
+      "예외 처리",
+      "로깅"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.JpaRepository;"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.data.jpa.repository.Query;"
+    },
+    {
+      "type": "call",
+      "text": "findByProgramIdAndUserIdAndInviteStatus"
+    },
+    {
+      "type": "call",
+      "text": "findByProgramIdWithUser"
+    },
+    {
+      "type": "annotation",
+      "text": "@Repository"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "db+jpa",
+      "repository+data_access"
+    ],
+    "related_files_guess": []
+  }
+}

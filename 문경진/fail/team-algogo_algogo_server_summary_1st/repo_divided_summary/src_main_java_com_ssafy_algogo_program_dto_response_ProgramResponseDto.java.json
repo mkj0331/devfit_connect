@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\dto\\response\\ProgramResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Java Records\", \"DTO (Data Transfer Object)\", \"Java 11+\"],\n  \"role\": \"Defines a data transfer object for program responses.\",\n  \"key_features\": [\n    \"Immutable data structure using Java Records\",\n    \"Encapsulates program-related information\",\n    \"Includes fields for ID, title, thumbnail, and program type\"\n  ],\n  \"key_code\": [\n    \"public record ProgramResponseDto(Long id, String title, String thumbnail, ProgramTypeResponseDto programType) {}\"\n  ],\n  \"project_hints\": [\n    \"Part of a larger application likely related to programming or educational content\",\n    \"Utilizes DTO pattern for data handling between layers\"\n  ]\n}\n```"
+}

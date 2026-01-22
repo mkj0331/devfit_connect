@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\service\\impl\\AlgorithmServiceImpl.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Lombok\",\n    \"JPA (Java Persistence API)\"\n  ],\n  \"role\": \"알고리즘 검색 서비스 구현\",\n  \"key_features\": [\n    \"알고리즘을 키워드로 검색\",\n    \"검색 결과를 DTO로 변환\",\n    \"트랜잭션 관리\"\n  ],\n  \"key_code\": [\n    \"algorithmRepository.findByKeyword(keyword.toLowerCase().trim().replaceAll(\\\" \\\", \\\"\\\"))\",\n    \"searchedAlgorithms.stream().map(AlgorithmResponseDto::from).toList()\",\n    \"AlgorithmListResponseDto.from(searchedAlgorithmResponses)\"\n  ],\n  \"project_hints\": [\n    \"알고리즘 관련 데이터 검색 기능\",\n    \"사용자가 입력한 키워드에 기반한 검색\",\n    \"DTO를 사용하여 데이터 전송\"\n  ]\n}\n```"
+}

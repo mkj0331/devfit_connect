@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\problemset\\dto\\request\\ProblemSetCreateRequestDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Spring Framework\",\n    \"Jakarta Validation\",\n    \"Lombok\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for creating a problem set\",\n  \"key_features\": [\n    \"Validation annotations (@NotBlank) to ensure title and description are not empty\",\n    \"Builder pattern for object creation\",\n    \"Support for optional categories as a list of strings\"\n  ],\n  \"key_code\": [\n    \"@NotBlank private String title;\",\n    \"@NotBlank private String description;\",\n    \"private List<String> categories;\"\n  ],\n  \"project_hints\": [\n    \"The project likely involves a problem set management system, possibly for educational or competitive programming purposes.\"\n  ]\n}\n```"
+}

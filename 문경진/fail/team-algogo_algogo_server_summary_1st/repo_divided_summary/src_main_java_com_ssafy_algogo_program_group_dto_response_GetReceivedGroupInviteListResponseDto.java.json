@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\program\\group\\dto\\response\\GetReceivedGroupInviteListResponseDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java 17 (record feature)\",\n    \"Spring Framework (추정)\"\n  ],\n  \"role\": \"DTO (Data Transfer Object) for receiving a list of group invites\",\n  \"key_features\": [\n    \"Encapsulates a list of group invite responses\",\n    \"Uses Java record for concise data representation\"\n  ],\n  \"key_code\": [\n    \"public record GetReceivedGroupInviteListResponseDto(List<GetReceivedGroupInviteResponseDto> invites)\"\n  ],\n  \"project_hints\": [\n    \"Group management or collaboration application\",\n    \"Functionality related to group invitations\"\n  ]\n}\n```"
+}

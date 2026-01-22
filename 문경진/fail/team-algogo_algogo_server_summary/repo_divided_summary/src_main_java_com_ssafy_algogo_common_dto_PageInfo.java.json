@@ -1,0 +1,89 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\common\\dto\\PageInfo.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [],
+    "layer_guess": "DTO",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "Page",
+      "PageInfo"
+    ],
+    "entities": [
+      "PageInfo"
+    ],
+    "modules": []
+  },
+  "feature_candidates": [
+    {
+      "name": "페이지 정보 생성",
+      "verb_object": "페이지 생성",
+      "inputs": [
+        "Page<?> page"
+      ],
+      "outputs": [
+        "PageInfo"
+      ],
+      "side_effects": [],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "DTO"
+    ],
+    "cross_cutting": []
+  },
+  "quality_signals": {
+    "strengths": [
+      "간결한 코드",
+      "불변 객체 사용",
+      "명확한 책임"
+    ],
+    "risks": [
+      "타입 안전성 문제",
+      "페이지 정보의 유효성 검증 부족"
+    ],
+    "missing_standard_checks": [
+      "null 체크",
+      "예외 처리",
+      "유효성 검사"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.data.domain.Page;"
+    },
+    {
+      "type": "call",
+      "text": "page.getNumber()"
+    },
+    {
+      "type": "call",
+      "text": "page.getSize()"
+    },
+    {
+      "type": "call",
+      "text": "page.getTotalElements()"
+    },
+    {
+      "type": "call",
+      "text": "page.getTotalPages()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "dto",
+      "pagination",
+      "api+response"
+    ],
+    "related_files_guess": []
+  }
+}

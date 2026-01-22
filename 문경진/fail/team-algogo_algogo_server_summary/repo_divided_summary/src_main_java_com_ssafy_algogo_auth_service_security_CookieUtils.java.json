@@ -1,0 +1,140 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\ssafy\\algogo\\auth\\service\\security\\CookieUtils.java",
+    "language": "java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "jakarta.servlet"
+    ],
+    "layer_guess": "service",
+    "confidence": 0.8
+  },
+  "domain_signals": {
+    "keywords": [
+      "cookie",
+      "token",
+      "http"
+    ],
+    "entities": [
+      "CookieUtils"
+    ],
+    "modules": [
+      "auth",
+      "security"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "토큰 추가",
+      "verb_object": "토큰 추가",
+      "inputs": [
+        "HttpServletResponse response",
+        "String name",
+        "String value",
+        "long maxAgeMs"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "Set-Cookie header added to response"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "name": "토큰 조회",
+      "verb_object": "토큰 조회",
+      "inputs": [
+        "String tokenType",
+        "HttpServletRequest request"
+      ],
+      "outputs": [
+        "String token value or null"
+      ],
+      "side_effects": [],
+      "confidence": 0.9
+    },
+    {
+      "name": "토큰 삭제",
+      "verb_object": "토큰 삭제",
+      "inputs": [
+        "HttpServletResponse response"
+      ],
+      "outputs": [],
+      "side_effects": [
+        "Set-Cookie header added to response with empty value"
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "technique_signals": {
+    "data_access": [],
+    "patterns": [
+      "Utility class"
+    ],
+    "cross_cutting": [
+      "보안"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "XSS 방어",
+      "HTTPS 보안",
+      "Strict SameSite 정책",
+      "간단한 API",
+      "재사용 가능성"
+    ],
+    "risks": [
+      "쿠키가 클라이언트에 저장됨",
+      "토큰 유효성 검증 없음",
+      "예외 처리 부족",
+      "HTTPS 미사용 시 보안 위험",
+      "쿠키 만료 관리 필요"
+    ],
+    "missing_standard_checks": [
+      "예외 처리",
+      "로깅",
+      "유효성 검증",
+      "테스트 케이스",
+      "문서화"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import jakarta.servlet.http.Cookie"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.servlet.http.HttpServletRequest"
+    },
+    {
+      "type": "import",
+      "text": "import jakarta.servlet.http.HttpServletResponse"
+    },
+    {
+      "type": "import",
+      "text": "import org.springframework.http.ResponseCookie"
+    },
+    {
+      "type": "annotation",
+      "text": "@Component"
+    },
+    {
+      "type": "call",
+      "text": "response.addHeader(\"Set-Cookie\", cookie.toString())"
+    },
+    {
+      "type": "call",
+      "text": "request.getCookies()"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "auth+security",
+      "cookie+token",
+      "http+response"
+    ],
+    "related_files_guess": []
+  }
+}

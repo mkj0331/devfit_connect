@@ -1,0 +1,38 @@
+{
+  "batch_id": 24,
+  "languages": [
+    "Java"
+  ],
+  "technologies": [
+    "Java 11+",
+    "Java 17",
+    "Spring Framework",
+    "JPA (Java Persistence API)",
+    "Jakarta Persistence",
+    "Lombok"
+  ],
+  "batch_role": "User Management System",
+  "key_features": [
+    "Data Transfer Objects (DTOs) for various user-related operations",
+    "Encapsulation of user information for API responses",
+    "Immutable data structures using Java records",
+    "Static methods for creating DTOs from User entities",
+    "User entity management with attributes and constraints"
+  ],
+  "related_files": [
+    "CheckDuplicateNicknameResponseDto.java",
+    "ListSearchUserResponseDto.java",
+    "SearchUserResponseDto.java",
+    "SignupResponseDto.java",
+    "UpdateUserInfoResponseDto.java",
+    "UpdateUserProfileImageResponseDto.java",
+    "UserInfoResponseDto.java",
+    "UserSimpleResponseDto.java",
+    "User.java",
+    "UserRole.java"
+  ],
+  "project_hints": [
+    "The project involves user management functionalities including signup, profile updates, and user searches.",
+    "It includes features for ensuring unique user identifiers and role-based access control."
+  ]
+}

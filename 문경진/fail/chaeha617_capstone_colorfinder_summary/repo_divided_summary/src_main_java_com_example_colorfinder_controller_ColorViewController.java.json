@@ -1,0 +1,136 @@
+{
+  "file": {
+    "path": "src\\main\\java\\com\\example\\colorfinder\\controller\\ColorViewController.java",
+    "language": "Java",
+    "frameworks": [
+      "Spring"
+    ],
+    "libraries": [
+      "Spring Data JPA"
+    ],
+    "layer_guess": "Controller",
+    "confidence": 0.9
+  },
+  "domain_signals": {
+    "keywords": [
+      "퍼스널 컬러",
+      "사용자",
+      "컬러 업데이트"
+    ],
+    "entities": [
+      "PERSONALCOLOR",
+      "USERS"
+    ],
+    "modules": [
+      "UserRepository",
+      "UserService"
+    ]
+  },
+  "feature_candidates": [
+    {
+      "name": "퍼스널 컬러 업데이트",
+      "verb_object": "컬러 업데이트",
+      "inputs": [
+        "PersonalColorUpdateRequest"
+      ],
+      "outputs": [
+        "redirect:/colorfinder"
+      ],
+      "side_effects": [
+        "사용자 엔티티 저장"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "name": "사용자 조회",
+      "verb_object": "사용자 조회",
+      "inputs": [
+        "userId"
+      ],
+      "outputs": [
+        "USERS"
+      ],
+      "side_effects": [],
+      "confidence": 0.7
+    },
+    {
+      "name": "페이지 리다이렉트",
+      "verb_object": "페이지 리다이렉트",
+      "inputs": [],
+      "outputs": [
+        "redirect:/colorfinder"
+      ],
+      "side_effects": [],
+      "confidence": 0.6
+    }
+  ],
+  "technique_signals": {
+    "data_access": [
+      "JPA"
+    ],
+    "patterns": [
+      "DTO",
+      "Repository"
+    ],
+    "cross_cutting": [
+      "보안"
+    ]
+  },
+  "quality_signals": {
+    "strengths": [
+      "Spring 프레임워크 사용",
+      "JPA를 통한 데이터 접근",
+      "명확한 URL 매핑",
+      "사용자 인증 처리",
+      "리다이렉트 처리"
+    ],
+    "risks": [
+      "사용자 입력 검증 부족",
+      "예외 처리 미비",
+      "보안 취약점 가능성",
+      "의존성 주입 오류 가능성",
+      "사용자 엔티티 조회 실패 시 처리 미비"
+    ],
+    "missing_standard_checks": [
+      "입력 검증",
+      "예외 처리",
+      "로깅",
+      "API 문서화",
+      "유닛 테스트"
+    ]
+  },
+  "evidence": [
+    {
+      "type": "import",
+      "text": "import org.springframework.web.bind.annotation.*;"
+    },
+    {
+      "type": "annotation",
+      "text": "@Controller"
+    },
+    {
+      "type": "call",
+      "text": "userRepository.findById(Long.parseLong(userId))"
+    },
+    {
+      "type": "endpoint",
+      "text": "@GetMapping(\"/updatePersonalColor\")"
+    },
+    {
+      "type": "query",
+      "text": "userRepository.save(user)"
+    }
+  ],
+  "handoff_tags": {
+    "cluster_keys": [
+      "user+controller",
+      "color+update",
+      "api+redirect"
+    ],
+    "related_files_guess": [
+      "src\\main\\java\\com\\example\\colorfinder\\dto\\PersonalColorUpdateRequest.java",
+      "src\\main\\java\\com\\example\\colorfinder\\repository\\UserRepository.java",
+      "src\\main\\java\\com\\example\\colorfinder\\service\\UserService.java"
+    ]
+  }
+}

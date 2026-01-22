@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\gamza\\project\\gamzaweb\\utils\\error\\requestError\\BusinessException.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\"Lombok\"],\n  \"role\": \"비즈니스 로직에서 발생하는 예외를 처리하는 클래스\",\n  \"key_features\": [\n    \"사용자 정의 예외 처리\",\n    \"에러 코드와 메시지를 포함한 예외 생성\"\n  ],\n  \"key_code\": [\n    \"public BusinessException(String message, ErrorCode errorCode) {\",\n    \"super(message);\",\n    \"this.errorCode = errorCode;\"\n  ],\n  \"project_hints\": [\n    \"비즈니스 로직에서의 오류 처리를 관리하는 웹 애플리케이션\"\n  ]\n}\n```"
+}

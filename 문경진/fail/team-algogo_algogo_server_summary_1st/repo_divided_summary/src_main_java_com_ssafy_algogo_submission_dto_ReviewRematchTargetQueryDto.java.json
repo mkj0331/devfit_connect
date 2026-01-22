@@ -1,0 +1,4 @@
+{
+  "path": "src\\main\\java\\com\\ssafy\\algogo\\submission\\dto\\ReviewRematchTargetQueryDto.java",
+  "summary": "```json\n{\n  \"language\": \"Java\",\n  \"technologies\": [\n    \"Java Records\",\n    \"Java Collections\",\n    \"DTO (Data Transfer Object)\"\n  ],\n  \"role\": \"This file defines a Data Transfer Object (DTO) that encapsulates the data needed for reviewing a rematch target in a submission context.\",\n  \"key_features\": [\n    \"Encapsulates a Submission object\",\n    \"Contains a list of Algorithm objects\",\n    \"Uses Java's record feature for concise data representation\"\n  ],\n  \"key_code\": [\n    \"public record ReviewRematchTargetQueryDto(Submission submission, List<Algorithm> algorithmList)\"\n  ],\n  \"project_hints\": [\n    \"The project appears to be related to algorithm submissions and reviews, possibly in a competitive programming or educational context.\"\n  ]\n}\n```"
+}
